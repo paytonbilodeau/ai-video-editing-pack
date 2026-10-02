@@ -7,13 +7,13 @@ description: Offer an optional local no-paid-AI-service first pass using the sep
 
 Use this only if the person wants a conservative automatic first pass on a
 talking-head recording. The tool belongs to the separate free
-[System 05 release](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/v4.0.1/05%20Video%20Pre-Edit%20System);
+[System 05 release](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/v4.0.2/05%20Video%20Pre-Edit%20System);
 it is not bundled in this plugin. Fetch the
-[versioned repository source ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/archive/refs/tags/v4.0.1.zip)
+[versioned repository source ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/archive/refs/tags/v4.0.2.zip)
 or use a clean local copy of that release. Read its
-[START HERE](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/v4.0.1/05%20Video%20Pre-Edit%20System/START%20HERE.md),
-[INSTALL](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/v4.0.1/05%20Video%20Pre-Edit%20System/INSTALL.md),
-and [tool source](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/v4.0.1/05%20Video%20Pre-Edit%20System/tools/video_pre_edit.py)
+[START HERE](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/v4.0.2/05%20Video%20Pre-Edit%20System/START%20HERE.md),
+[INSTALL](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/v4.0.2/05%20Video%20Pre-Edit%20System/INSTALL.md),
+and [tool source](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/v4.0.2/05%20Video%20Pre-Edit%20System/tools/video_pre_edit.py)
 before execution. Do not pipe a network download into a shell.
 
 The core utility needs Python 3.11+, FFmpeg, ffprobe and the `libx264`

@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.2 - 2026-10-02
+
+Updated the source-credit label to AI Video Editing Pack and refreshed the versioned setup references. The native plugin is version 1.0.5. Editing behavior is unchanged.
+
 ## 4.0.1 - 2026-10-02
 
 Renamed this repository to AI Video Editing Pack and made its scope explicit: the editing pack, supporting tools and Kit email workflow. Today in AI, AI Mentorship and Echo Improvement each have their own repositories. Updated setup, download and plugin-install links to the new address; existing links continue through the GitHub rename redirect. The plugin is version 1.0.4. Editing behavior is unchanged.
