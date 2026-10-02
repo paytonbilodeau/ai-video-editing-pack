@@ -52,9 +52,11 @@ Local editor tools are a sensible first choice when they solve the problem.
 An external service is optional. Explain which media leaves the computer, any
 charge, and the output format before uploading. Obtain the user's permission.
 
-For an external finishing pass, lock the cut first so another edit does not
-force a second paid run. Keep the pre-service version. Disable any automatic
-cutting or filler removal that would change approved timing. When the result
+For an external finishing pass, finish the cuts, color, captions and graphics
+before uploading the final export. Select the agreed microphone preset and run
+it once. Keep the pre-service version. Make each derivative from that untreated
+master, finish its visual edit, and apply its agreed audio pass once. Revisions
+return to the untreated source so an enhanced track is never processed twice. Disable any automatic cutting or filler removal that would change approved timing. When the result
 returns, check duration, start/middle/end sync, complete words, and whether it
 added an introduction, outro, or other unwanted material. Do not stack the same
 cleanup again on an already processed track.

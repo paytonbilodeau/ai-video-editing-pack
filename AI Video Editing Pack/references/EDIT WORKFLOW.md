@@ -34,7 +34,11 @@ working folder, never in this public pack.
    version, check the file decodes and ends properly, then watch and listen
    to it. Record what was technically checked, what a person reviewed, and
    what remains open in [delivery and learning](../templates/DELIVERY%20AND%20LEARNING.md).
-   Preserve the accepted timeline before revisions.
+   Preserve the accepted timeline before revisions. If an external audio finish
+   is selected, run it once after all visual work, using the agreed preset. Keep
+   the pre-service master and verify the returned file before delivery. Build
+   derivatives from the pre-service master so each finished version receives
+   only one audio pass.
 7. **Learn and optionally repurpose.** Compare manual corrections with the
    prior version; save narrow accepted preferences with examples. Test them
    on a later clip. After the source edit is approved, make only requested

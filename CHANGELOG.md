@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.3 - 2026-10-02
+
+Clarify the optional external audio finish: complete the visual edit first, use the agreed microphone preset once, retain the untreated master, and build derivatives without processing enhanced audio again. Plugin version is 1.0.6. All 22 lesson resources and stable setup and download paths are preserved.
+
 ## 4.0.2 - 2026-10-02
 
 Updated the source-credit label to AI Video Editing Pack and refreshed the versioned setup references. The native plugin is version 1.0.5. Editing behavior is unchanged.
