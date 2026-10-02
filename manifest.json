@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "version": "4.0.3",
+  "version": "4.0.4",
   "publicScope": "AI Video Editing Pack only, including supporting editing tools and the Kit email workflow.",
   "systems": [
     {
@@ -19,6 +19,16 @@
   "files": [
     ".agents/plugins/marketplace.json",
     ".claude-plugin/marketplace.json",
+    ".github/CODEOWNERS",
+    ".github/CONTRIBUTING.md",
+    ".github/ISSUE_TEMPLATE/bug-report.yml",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/SECURITY.md",
+    ".github/dependabot.yml",
+    ".github/pull_request_template.md",
+    ".github/scripts/check_repository.py",
+    ".github/scripts/test_check_repository.py",
+    ".github/workflows/quality.yml",
     ".gitignore",
     "05 Video Pre-Edit System/INSTALL.md",
     "05 Video Pre-Edit System/START HERE.md",

@@ -1,0 +1,20 @@
+name: Bug report
+description: Report a reproducible problem with the current template or tools.
+body:
+  - type: markdown
+    attributes:
+      value: "Please remove credentials, account details and private files from your report. For a security issue, use the Security tab to report it privately."
+  - type: input
+    id: version
+    attributes:
+      label: Version and environment
+      description: "Which release, operating system and relevant tools are you using?"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: What happened?
+      description: "Give the steps to reproduce the problem, the expected behavior and the actual result. Include redacted error text if it helps."
+    validations:
+      required: true

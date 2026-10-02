@@ -7,6 +7,7 @@ import hashlib
 import importlib.util
 import io
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -45,6 +46,22 @@ def file_hash(path: Path) -> str:
 
 
 class RenderSafetyTests(unittest.TestCase):
+    @unittest.skipUnless(os.name == "posix", "POSIX permissions required")
+    def test_fallback_output_is_private_even_with_permissive_umask(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            temporary = Path(directory) / "temporary"
+            destination = Path(directory) / "output"
+            temporary.write_bytes(b"private media")
+            previous_mask = os.umask(0)
+            try:
+                with mock.patch.object(video_pre_edit.os, "link", side_effect=OSError("no hard links")):
+                    video_pre_edit.install_new_file(temporary, destination, overwrite=False, label="Output")
+            finally:
+                os.umask(previous_mask)
+            self.assertEqual(0o600, destination.stat().st_mode & 0o777)
+            self.assertEqual(b"private media", destination.read_bytes())
+            self.assertFalse(temporary.exists())
+
     def test_render_preserves_existing_filter_sidecar(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             base = Path(directory)
@@ -318,10 +335,11 @@ class SafetyTests(unittest.TestCase):
             for line in requirements.splitlines()
             if line and not line.startswith("#")
         ]
-        self.assertEqual(
-            packages,
-            ["openai-whisper==20240930", "torch==2.2.2"],
-        )
+        self.assertEqual({line.split("==", 1)[0] for line in packages}, {"openai-whisper", "torch"})
+        self.assertTrue(all("==" in line for line in packages))
+        versions = dict(line.split("==", 1) for line in packages)
+        self.assertGreaterEqual(tuple(map(int, versions["torch"].split("."))), (2, 10, 0))
+        self.assertGreaterEqual(int(versions["openai-whisper"]), 20250625)
 
 
 @unittest.skipUnless(

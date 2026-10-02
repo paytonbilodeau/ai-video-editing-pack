@@ -126,6 +126,8 @@ downloads the selected model. This needs internet access, disk space, and
 explicit approval. Transcription then runs locally; the included tool does not
 send the recording to an API.
 
+Use the pinned packages rather than downgrading PyTorch to make an old environment work. Older PyTorch releases have known checkpoint-loading vulnerabilities. Load models only through the official Whisper package. If your platform cannot install the supported packages, use `--words-json` with an existing timed transcript instead of installing an unsupported PyTorch version.
+
 Start with the `base` model:
 
 ```text
