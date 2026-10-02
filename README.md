@@ -4,7 +4,7 @@
 
 Edit videos faster and better with AI. Free skills, project templates and practical guides for cuts, pacing, audio, color, motion graphics and repurposing.
 
-**[Get the free pack and 22-day email guide](https://paytonbilodeau.com/ai-editing)**. The first lesson arrives after you confirm your email, and the rest follow daily. You can download the pack immediately.
+**[Get the free pack and 22-day email guide at VibeEditors.com](https://vibeeditors.com)**. The first lesson arrives after you confirm your email, and the rest follow daily. You can download the pack immediately.
 
 Prefer to start here? **[Download the pack](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip)**, unzip it, and open **[START HERE](AI%20Video%20Editing%20Pack/START%20HERE.md)**. GitHub is where the files live. You do not need to understand GitHub or write code to begin.
 
