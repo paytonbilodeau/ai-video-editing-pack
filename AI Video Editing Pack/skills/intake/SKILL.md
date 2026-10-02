@@ -1,0 +1,23 @@
+---
+name: video-edit-intake
+description: Interview a video editor and prepare a private, testable project brief before touching footage.
+---
+
+# Video Edit Intake
+
+Use [PROJECT INTAKE](../../templates/PROJECT%20INTAKE.md). Ask in two passes:
+first the intended result and source, then only the unanswered setup and
+privacy questions. Accept "unknown" where a test can answer later.
+
+Identify the AI app and whether it can read local files or run tools; operating
+system; editor, edition and version; footage, separate audio and camera
+sources; project stage; audience and format; words or demonstrations to
+protect; visual references and permission to use them; desired style; and
+what may leave the local machine. Record the user's chosen working folder.
+
+Create the brief in that private folder. Keep source originals unchanged,
+create a separate working copy, and name the intended first export. Ask which
+installed tools to use before proposing additions. State the first test and
+what would count as success. Route to
+[platform refresh](../platform-refresh/SKILL.md), then
+[cuts and pacing](../cuts-pacing/SKILL.md).

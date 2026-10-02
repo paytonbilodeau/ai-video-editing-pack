@@ -1,0 +1,39 @@
+{
+  "schema": "ai-mentorship-motion-plan-v1",
+  "title": "Review Gate",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "beats": [
+    {
+      "id": "beat-01",
+      "startFrame": 0,
+      "endFrame": 45,
+      "meaning": "Creation alone is incomplete.",
+      "lane": "designed_explanation",
+      "caption": "CREATION IS NOT COMPLETION",
+      "factIds": [],
+      "asset": {"kind": "original_design", "source": "none", "rights": "original"}
+    },
+    {
+      "id": "beat-02",
+      "startFrame": 45,
+      "endFrame": 90,
+      "meaning": "A review gate controls quality.",
+      "lane": "physical_metaphor",
+      "caption": "CHECK THE OUTPUT",
+      "factIds": [],
+      "asset": {"kind": "original_design", "source": "none", "rights": "original"}
+    },
+    {
+      "id": "beat-03",
+      "startFrame": 90,
+      "endFrame": 150,
+      "meaning": "A receipt proves what happened.",
+      "lane": "restrained_hybrid",
+      "caption": "LEAVE A RECEIPT",
+      "factIds": [],
+      "asset": {"kind": "original_design", "source": "none", "rights": "original"}
+    }
+  ]
+}

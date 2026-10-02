@@ -1,0 +1,15 @@
+{
+  "name": "payton-ai-tools",
+  "description": "Free reusable AI skills and editing tools maintained by Payton Bilodeau.",
+  "owner": {
+    "name": "Payton Bilodeau"
+  },
+  "plugins": [
+    {
+      "name": "ai-video-editing-pack",
+      "description": "Skills and practical guides for editing your own videos with AI.",
+      "version": "1.0.3",
+      "source": "./AI Video Editing Pack"
+    }
+  ]
+}

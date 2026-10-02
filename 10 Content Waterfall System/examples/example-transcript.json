@@ -1,0 +1,35 @@
+{
+  "schema": "ai-mentorship-transcript-v1",
+  "sourceLabel": "neutral-source.mp4",
+  "durationSeconds": 24.0,
+  "segments": [
+    {
+      "start": 1.0,
+      "end": 8.0,
+      "text": "A useful automation leaves a receipt.",
+      "words": [
+        {"word": "A", "start": 1.0, "end": 1.3},
+        {"word": "useful", "start": 1.4, "end": 2.0},
+        {"word": "automation", "start": 2.1, "end": 3.0},
+        {"word": "leaves", "start": 3.1, "end": 3.7},
+        {"word": "a", "start": 3.8, "end": 4.0},
+        {"word": "receipt.", "start": 4.1, "end": 5.0}
+      ]
+    },
+    {
+      "start": 9.0,
+      "end": 18.0,
+      "text": "The receipt shows what ran and what failed.",
+      "words": [
+        {"word": "The", "start": 9.0, "end": 9.3},
+        {"word": "receipt", "start": 9.4, "end": 10.1},
+        {"word": "shows", "start": 10.2, "end": 10.7},
+        {"word": "what", "start": 10.8, "end": 11.2},
+        {"word": "ran", "start": 11.3, "end": 11.7},
+        {"word": "and", "start": 11.8, "end": 12.1},
+        {"word": "what", "start": 12.2, "end": 12.6},
+        {"word": "failed.", "start": 12.7, "end": 13.4}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ai-mentorship-neutral-motion-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Neutral original Remotion starter for one approved motion plan.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts NeutralMotion out/neutral-motion.mp4 --muted",
+    "test": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.499",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.499"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.1",
+    "typescript": "5.5.4"
+  }
+}

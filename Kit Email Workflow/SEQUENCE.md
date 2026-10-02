@@ -1,0 +1,26 @@
+# The 22-day lesson sequence
+
+Lesson 1 follows the confirmed signup immediately. Every later lesson is delayed by one day.
+
+- [Lesson 1: Your AI editing pack is here (let's use it)](lessons/01.md)
+- [Lesson 2: Before AI gets the keys to your laptop](lessons/02.md)
+- [Lesson 3: Tell it which video. Exactly which video.](lessons/03.md)
+- [Lesson 4: Please stop cutting off the end of my words](lessons/04.md)
+- [Lesson 5: The boring first pass can be automatic](lessons/05.md)
+- [Lesson 6: Your audio doesn't need to sound aggressively clean](lessons/06.md)
+- [Lesson 7: Fix the picture before making it cinematic](lessons/07.md)
+- [Lesson 8: Yes, AI can help you make a LUT](lessons/08.md)
+- [Lesson 9: How I got AI to understand the look I wanted](lessons/09.md)
+- [Lesson 10: Give your AI a better editing education](lessons/10.md)
+- [Lesson 11: You can prompt the motion graphics too](lessons/11.md)
+- [Lesson 12: The graphic looks good. Can anyone read it?](lessons/12.md)
+- [Lesson 13: “Make it better” is a terrible revision note](lessons/13.md)
+- [Lesson 14: Make the last few cuts yourself](lessons/14.md)
+- [Lesson 15: Don't waste the correction you just made](lessons/15.md)
+- [Lesson 16: One video can give you a very good short](lessons/16.md)
+- [Lesson 17: Your vertical crop can hide the whole point](lessons/17.md)
+- [Lesson 18: The MP4 isn't your project](lessons/18.md)
+- [Lesson 19: Watch the file, not just your timeline](lessons/19.md)
+- [Lesson 20: Your next edit starts before you record](lessons/20.md)
+- [Lesson 21: Did AI actually save time on this edit?](lessons/21.md)
+- [Lesson 22: What worked on your first edit?](lessons/22.md)

@@ -1,0 +1,36 @@
+{
+  "schema": "ai-mentorship-content-map-v1",
+  "source": {
+    "label": "neutral-source.mp4",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "durationSeconds": 24.0
+  },
+  "claimLedger": [
+    {
+      "id": "claim-01",
+      "text": "A useful automation leaves a receipt that shows what ran and failed.",
+      "sourceStart": 1.0,
+      "sourceEnd": 18.0
+    }
+  ],
+  "outputs": [
+    {
+      "id": "short-01",
+      "type": "short",
+      "title": "A Useful Automation Leaves a Receipt",
+      "sourceStart": 1.0,
+      "sourceEnd": 22.0,
+      "claimIds": ["claim-01"],
+      "approved": true
+    },
+    {
+      "id": "email-01",
+      "type": "email",
+      "title": "The Receipt Test",
+      "sourceStart": 1.0,
+      "sourceEnd": 18.0,
+      "claimIds": ["claim-01"],
+      "approved": true
+    }
+  ]
+}

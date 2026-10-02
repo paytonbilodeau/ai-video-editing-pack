@@ -1,0 +1,24 @@
+{
+  "schema": "human-setup-checklist-not-api-payload",
+  "landing_page": "YOUR_LANDING_PAGE_URL",
+  "sender_name": "YOUR_INSTRUCTOR_NAME",
+  "reply_address": "YOUR_VERIFIED_REPLY_ADDRESS",
+  "double_opt_in": true,
+  "auto_confirm": false,
+  "confirmation_link": "PROVIDER_GENERATED_CONFIRMATION_LINK",
+  "post_confirmation_url": "https://github.com/paytonbilodeau/paytons-ai-systems/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md",
+  "sequence_emails": 22,
+  "first_delay_hours": 0,
+  "remaining_delay_days": 1,
+  "send_days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+    "sunday"
+  ],
+  "subscribe_only_after_confirmation": true,
+  "require_real_signup_test": true
+}
