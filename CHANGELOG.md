@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.4 - 2026-10-02
+
+Add automated repository and editing-tool checks, dependency update pull requests, and private vulnerability reporting guidance. Update vulnerable optional PyTorch and motion-starter dependencies. Create fallback media outputs with owner-only permissions, including when the system has a permissive umask. The standalone pack and all 22 lessons are unchanged.
+
 ## 4.0.3 - 2026-10-02
 
 Clarify the optional external audio finish: complete the visual edit first, use the agreed microphone preset once, retain the untreated master, and build derivatives without processing enhanced audio again. Plugin version is 1.0.6. All 22 lesson resources and stable setup and download paths are preserved.

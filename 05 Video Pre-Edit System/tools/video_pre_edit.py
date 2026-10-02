@@ -1172,7 +1172,7 @@ def install_new_file(
         descriptor = os.open(
             destination,
             os.O_WRONLY | os.O_CREAT | os.O_EXCL,
-            0o666,
+            0o600,
         )
         created_destination = True
         with os.fdopen(descriptor, "wb") as output_handle:

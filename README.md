@@ -1,5 +1,7 @@
 # AI Video Editing Pack
 
+[![Repository quality](https://github.com/paytonbilodeau/ai-video-editing-pack/actions/workflows/quality.yml/badge.svg)](https://github.com/paytonbilodeau/ai-video-editing-pack/actions/workflows/quality.yml)
+
 Edit videos faster and better with AI. Free skills, project templates and practical guides for cuts, pacing, audio, color, motion graphics and repurposing.
 
 **[Get the free pack and 22-day email guide](https://paytonbilodeau.com/ai-editing)**. The first lesson arrives after you confirm your email, and the rest follow daily. You can download the pack immediately.

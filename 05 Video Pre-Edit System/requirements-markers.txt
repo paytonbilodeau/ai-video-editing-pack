@@ -1,4 +1,5 @@
 # Optional only: local exact spoken-marker detection.
 # The core Video Pre-Edit tool does not need these packages.
-openai-whisper==20240930
-torch==2.2.2
+# Install in a dedicated environment and load only trusted model checkpoints.
+openai-whisper==20250625
+torch==2.14.1
