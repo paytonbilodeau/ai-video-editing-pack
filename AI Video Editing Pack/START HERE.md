@@ -1,16 +1,26 @@
 # Start Here: AI Video Editing Pack
 
-This is the stable entry page for the portable pack:
-[open it on GitHub](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md).
-You can paste that URL into an AI assistant or paste the setup message below.
-The [standalone ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip)
-contains the skills, guides and templates. Keep footage and projects in a
-separate private working folder.
+The pack contains instructions, guides and worksheets for your AI. It is not a
+video editor or an app that edits automatically when opened. You bring the
+footage, direct the work and review the result.
 
-Before connecting an editor or adding API keys, read
-[Safety and API Keys](references/SAFETY%20AND%20API%20KEYS.md). Keep credentials
-out of the pack, chat prompts and editing profiles. Start with the access
-needed for one copied test clip.
+## Your first three steps
+
+1. [Download the ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip).
+   A ZIP is a compressed folder. Double-click it on a Mac; on Windows,
+   right-click and choose **Extract All**. No GitHub account is needed.
+2. Open **START HERE.md**. The `.md` file is a text guide. Read it on
+   [GitHub](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md)
+   or in a text editor. You do not need Python for the normal setup.
+3. Give the unzipped folder and the message below to your local AI assistant.
+   File access and control of your editor are separate connections. Have the
+   assistant verify both, then test a copied 20- to 60-second recording.
+
+Keep originals, projects and your filled-in editing profile outside this pack.
+Read [Safety and API Keys](references/SAFETY%20AND%20API%20KEYS.md) before
+connecting tools. The message below guides the setup; experienced users can
+jump to [the editing workflow](references/EDIT%20WORKFLOW.md) after verifying
+their connection.
 
 ## Give your AI this message
 

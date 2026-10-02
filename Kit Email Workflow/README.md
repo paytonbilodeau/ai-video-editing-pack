@@ -20,8 +20,27 @@ Before launch, authenticate your sending domain using the provider's current ins
 
 ## The 22 lessons
 
-[The sequence map](SEQUENCE.md) links all lesson templates. Customize the instructor name, URLs and first-person examples before importing. Those examples come from the original guide; use only experiences and results you can honestly claim. The lesson copy is separate from your provider's unsubscribe footer, which you must retain.
+[The sequence map](SEQUENCE.md) links all lesson templates. Customize the instructor name, URLs and first-person examples before importing. Some first-person examples come from the original guide; replace them with experiences and tool choices you can honestly claim. Add a percentage result only if your own test supports it, and identify it as your experience rather than a reader guarantee. The lesson copy is separate from your provider's unsubscribe footer, which you must retain.
 
 Add an illustration only when it explains the lesson. Put it next to the relevant instructions rather than above an unrelated introduction. Use a public-safe visual style of your own; this workflow does not include a private brand recipe. In the permission lesson, the diagram belongs before the API-key and connector guidance, then the copied-clip test.
 
 Validate on desktop and a narrow phone preview, check every link, and complete the real unconfirmed/confirmed signup test. Save what actually happened rather than calling a configured automation “working.”
+
+## Write and format for the reader
+
+Start with the point rather than a repeated greeting. Explain a new term where
+the reader first needs it, then show one concrete example. Give one useful
+action and explain how the reader can check the result. Experienced editors
+can skip an explanation; beginners should not have to guess a missing step.
+
+Keep paragraphs short, use complete sentences and put copyable prompts in
+their own blocks. Use light humor when it helps the explanation. Cut vague
+claims and invented results. An illustration should explain the nearby idea,
+then the instructions should tell the reader what to do with that idea.
+
+Use a comfortable body size, roughly 17 pixels, generous line spacing and
+visible paragraph breaks. Keep the reading column about 600 pixels wide on
+desktop and make it fit narrow phones. Images should scale to the column,
+preserve their aspect ratio and have useful alternative text. Allow long URLs
+and prompts to wrap. Test the actual provider preview as well as the source
+HTML; the provider adds its own wrapper, footer and tracked links.

@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.5 - 2026-10-02
+
+Clarify all 22 email lesson templates and the greeting-free confirmation email, with definitions beside new terms, concrete exercises, shorter prompt blocks and result checks. Explain the first download in three steps and preserve the immediate-first-lesson/daily cadence. Describe optional final audio processing and derivative handling without repeating enhancement.
+
+Add a short beginner entry path to START HERE. Point the optional pre-edit tool at the tested 4.0.4 supporting release, including its updated dependency requirements, instead of 4.0.2. Plugin version is 1.0.7. Existing setup/download URLs, skill behavior and human review gates are preserved.
+
 ## 4.0.4 - 2026-10-02
 
 Add automated repository and editing-tool checks, dependency update pull requests, and private vulnerability reporting guidance. Update vulnerable optional PyTorch and motion-starter dependencies. Create fallback media outputs with owner-only permissions, including when the system has a permissive umask. The standalone pack and all 22 lessons are unchanged.
