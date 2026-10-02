@@ -1,6 +1,6 @@
 # Start Here: AI Video Editing System
 
-Part of Payton's AI Systems, created and maintained by Payton Bilodeau.
+Part of the AI Video Editing Pack, created and maintained by Payton Bilodeau.
 
 Use this system to help an AI edit a recording in DaVinci Resolve, build motion
 graphics from your references, and deliver a finished video plus an editable

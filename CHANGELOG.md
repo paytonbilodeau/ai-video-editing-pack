@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.1 - 2026-10-02
+
+Renamed this repository to AI Video Editing Pack and made its scope explicit: the editing pack, supporting tools and Kit email workflow. Today in AI, AI Mentorship and Echo Improvement each have their own repositories. Updated setup, download and plugin-install links to the new address; existing links continue through the GitHub rename redirect. The plugin is version 1.0.4. Editing behavior is unchanged.
+
 ## 4.0.0 - 2026-10-02
 
 Reorganized the public release around AI Video Editing Pack, Today in AI, AI Mentorship and Echo Improvement, in that order. The broader personal library is no longer part of this public repository or its history. Existing main-branch editing paths and the latest-pack download URL are preserved.

@@ -1,7 +1,7 @@
 {
   "name": "payton-ai-tools",
   "interface": {
-    "displayName": "Payton's AI Tools"
+    "displayName": "AI Video Editing Pack"
   },
   "plugins": [
     {

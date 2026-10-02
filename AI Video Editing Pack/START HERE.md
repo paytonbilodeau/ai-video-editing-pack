@@ -1,9 +1,9 @@
 # Start Here: AI Video Editing Pack
 
 This is the stable entry page for the portable pack:
-[open it on GitHub](https://github.com/paytonbilodeau/paytons-ai-systems/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md).
+[open it on GitHub](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md).
 You can paste that URL into an AI assistant or paste the setup message below.
-The [standalone ZIP](https://github.com/paytonbilodeau/paytons-ai-systems/releases/latest/download/ai-video-editing-pack.zip)
+The [standalone ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip)
 contains the skills, guides and templates. Keep footage and projects in a
 separate private working folder.
 
@@ -16,7 +16,7 @@ needed for one copied test clip.
 
 ```text
 Help me edit a recorded video using the AI Video Editing Pack. Start here:
-https://github.com/paytonbilodeau/paytons-ai-systems/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md
+https://github.com/paytonbilodeau/ai-video-editing-pack/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md
 Read that guide and its linked skills, beginning with
 skills/vibe-editing-setup/SKILL.md, then the umbrella, intake and
 platform-refresh skills. If you cannot open the links, tell me and ask me to

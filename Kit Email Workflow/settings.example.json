@@ -6,7 +6,7 @@
   "double_opt_in": true,
   "auto_confirm": false,
   "confirmation_link": "PROVIDER_GENERATED_CONFIRMATION_LINK",
-  "post_confirmation_url": "https://github.com/paytonbilodeau/paytons-ai-systems/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md",
+  "post_confirmation_url": "https://github.com/paytonbilodeau/ai-video-editing-pack/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md",
   "sequence_emails": 22,
   "first_delay_hours": 0,
   "remaining_delay_days": 1,

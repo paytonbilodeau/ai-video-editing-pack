@@ -6,9 +6,9 @@ import { spawnSync } from 'node:child_process';
 
 const root=path.dirname(fileURLToPath(import.meta.url));
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8'));
-const expectedNames=['AI Video Editing Pack','Today in AI','AI Mentorship','Echo Improvement'];
+const expectedNames=['AI Video Editing Pack'];
 const errors=[];
-if (JSON.stringify(manifest.systems.map(s=>s.name))!==JSON.stringify(expectedNames)) errors.push('Public catalog must contain exactly the four authorized systems in order.');
+if (JSON.stringify(manifest.systems.map(s=>s.name))!==JSON.stringify(expectedNames) || manifest.systems[0]?.id!=='01' || manifest.repository!=='paytonbilodeau/ai-video-editing-pack') errors.push('This repository must contain only the AI Video Editing Pack under its canonical repository name.');
 const expected=new Set(manifest.files);
 const actual=[];
 function walk(dir) {
@@ -59,4 +59,4 @@ if (!process.argv.includes('--structure-only')) {
     process.stdout.write(dir+': '+(run.stderr||run.stdout).trim()+'\n');
   }
 }
-console.log('Public validation passed: four ordered projects, '+actual.length+' declared files, no private-system folders, no broken internal links'+(process.argv.includes('--structure-only')?'':', five editing tool suites')+'.');
+console.log('Public validation passed: standalone AI Video Editing Pack, '+actual.length+' declared files, no private-system folders, no broken internal links'+(process.argv.includes('--structure-only')?'':', five editing tool suites')+'.');

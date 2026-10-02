@@ -7,7 +7,7 @@ corrections. It does not install an editor plugin or grant an assistant control
 of your tools.
 
 **Start with [START HERE.md](START%20HERE.md)** or give your assistant its
-[stable public URL](https://github.com/paytonbilodeau/paytons-ai-systems/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md).
+[stable public URL](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md).
 Its copyable message also works with an assistant that can read this folder.
 A browser-only chat can help plan and
 review, but cannot inspect local files, operate your editor, or verify an
@@ -16,8 +16,8 @@ what your particular assistant and editor can do today.
 
 ## Get a working copy
 
-Download the [standalone pack ZIP](https://github.com/paytonbilodeau/paytons-ai-systems/releases/latest/download/ai-video-editing-pack.zip),
-the [free repository ZIP](https://github.com/paytonbilodeau/paytons-ai-systems/archive/refs/heads/main.zip),
+Download the [standalone pack ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip),
+the [free repository ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/archive/refs/heads/main.zip),
 or clone the repository. Extract it, keep one clean reference copy, and put footage, references,
 account information and working projects in a separate private folder.
 
@@ -33,7 +33,7 @@ installation.
 To install the native plugin through Codex, add this repository's marketplace:
 
 ```sh
-codex plugin marketplace add paytonbilodeau/paytons-ai-systems --ref main
+codex plugin marketplace add paytonbilodeau/ai-video-editing-pack --ref main
 ```
 
 Refresh ChatGPT desktop, then install **ai-video-editing-pack** from the
@@ -44,7 +44,7 @@ if those controls have changed.
 In Claude Code, use:
 
 ```text
-/plugin marketplace add paytonbilodeau/paytons-ai-systems
+/plugin marketplace add paytonbilodeau/ai-video-editing-pack
 /plugin install ai-video-editing-pack@payton-ai-tools
 ```
 
@@ -98,10 +98,10 @@ current skill instructions before installing these files. This pack makes no
 universal plugin compatibility claim.
 
 For deeper examples and optional utilities, see the original free systems:
-[05 Video Pre-Edit](https://github.com/paytonbilodeau/paytons-ai-systems/tree/main/05%20Video%20Pre-Edit%20System),
-[09 Visual Storytelling and Motion](https://github.com/paytonbilodeau/paytons-ai-systems/tree/main/09%20Visual%20Storytelling%20and%20Motion%20System),
-[10 Content Waterfall](https://github.com/paytonbilodeau/paytons-ai-systems/tree/main/10%20Content%20Waterfall%20System),
-and [14 AI Video Editing](https://github.com/paytonbilodeau/paytons-ai-systems/tree/main/14%20AI%20Video%20Editing%20System).
+[05 Video Pre-Edit](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/main/05%20Video%20Pre-Edit%20System),
+[09 Visual Storytelling and Motion](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/main/09%20Visual%20Storytelling%20and%20Motion%20System),
+[10 Content Waterfall](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/main/10%20Content%20Waterfall%20System),
+and [14 AI Video Editing](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/main/14%20AI%20Video%20Editing%20System).
 These are optional references, not duplicate files in this pack.
 
 Updates do not overwrite customized projects. Check the pack and build a

@@ -1,39 +1,35 @@
-# AI Video Editing Pack and Public Workflows
+# AI Video Editing Pack
 
-The free systems behind the AI work I share publicly. Start with video editing, or explore how I produce the daily brief and two newsletters.
+Edit videos faster and better with AI. Free skills, project templates and practical guides for cuts, pacing, audio, color, motion graphics and repurposing.
 
-| Order | Public system | Start here |
-|---|---|---|
-| 1 | **AI Video Editing Pack** | [Get the free pack and 22-day email guide](https://paytonbilodeau.com/ai-editing), [open the setup guide](AI%20Video%20Editing%20Pack/START%20HERE.md), or [download the pack](https://github.com/paytonbilodeau/paytons-ai-systems/releases/latest/download/ai-video-editing-pack.zip) |
-| 2 | **Today in AI** | [The daily research, writing, image and publishing system](https://github.com/paytonbilodeau/today-in-ai) |
-| 3 | **AI Mentorship** | [The practical AI newsletter workflow and templates](https://github.com/paytonbilodeau/ai-mentorship) |
-| 4 | **Echo Improvement** | [The essay, research and carousel workflow and templates](https://github.com/paytonbilodeau/echo-improvement) |
+**[Get the free pack and 22-day email guide](https://paytonbilodeau.com/ai-editing)**. The first lesson arrives after you confirm your email, and the rest follow daily. You can download the pack immediately.
 
-## 1. AI Video Editing Pack
+Prefer to start here? **[Download the pack](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip)**, unzip it, and open **[START HERE](AI%20Video%20Editing%20Pack/START%20HERE.md)**. GitHub is where the files live. You do not need to understand GitHub or write code to begin.
 
-Edit videos faster and better with AI. The pack helps your assistant interview you about your tools and preferences, prove a connection on a copied clip, and guide cuts, pacing, audio, color, motion graphics, review and repurposing. You keep the editing decisions and final review.
+## How it works
 
-- [START HERE](AI%20Video%20Editing%20Pack/START%20HERE.md): the setup message and first useful edit.
-- [The modular skills and project templates](AI%20Video%20Editing%20Pack/README.md): customize a private working copy for your own videos.
-- [Safety and API keys](AI%20Video%20Editing%20Pack/references/SAFETY%20AND%20API%20KEYS.md): credentials, trusted connectors and permission boundaries.
-- [The Kit email workflow](Kit%20Email%20Workflow/README.md): a reusable signup, confirmation, immediate first lesson and daily sequence.
+1. Give your AI assistant the setup message in START HERE. It asks about your editor, computer, video and editing preferences.
+2. Save your own editing profile in a separate private folder. The assistant checks the available tools and proves a connection on a copied clip.
+3. Work through the edit, review the result and add your final touches. Keep the original footage and your private configuration separate from the downloaded pack.
 
-The numbered editing folders are supporting parts of this one offer: optional local pre-editing in 05, motion in 09, repurposing in 10, and the full editor workflow in 14. Their paths remain stable for existing lessons and links. You do not need to install every tool to begin.
+The pack supports DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut. What your assistant can control depends on your editor, edition, installed tools and permissions. The connection guides help you verify those details before a real edit.
 
-## 2. Today in AI
+## What's included
 
-[Today in AI](https://github.com/paytonbilodeau/today-in-ai) shows how the daily brief researches stories, checks claims and novelty, writes the edition, creates an image, and verifies publication. Its repository contains reusable prompts, scripts and process notes. Bring your own accounts, sources and brand.
+| Resource | What it helps you do |
+|---|---|
+| [Editing skills and templates](AI%20Video%20Editing%20Pack/README.md) | Set up your preferences, tighten cuts and pacing, improve audio and color, plan motion, review and deliver. |
+| [Safety and API keys](AI%20Video%20Editing%20Pack/references/SAFETY%20AND%20API%20KEYS.md) | Protect credentials, choose trusted connectors and set permission boundaries. |
+| [Optional local pre-edit tool](05%20Video%20Pre-Edit%20System/START%20HERE.md) | Prepare a first pass and review suggested cuts. |
+| [Motion planning](09%20Visual%20Storytelling%20and%20Motion%20System/START%20HERE.md) | Map narration into a visual plan before rendering graphics. |
+| [Repurposing workflow](10%20Content%20Waterfall%20System/START%20HERE.md) | Turn one recording into useful content for different platforms. |
+| [Full editing workflow](14%20AI%20Video%20Editing%20System/START%20HERE.md) | Connect an editor, plan post-production and check a finished export. |
+| [Kit email workflow](Kit%20Email%20Workflow/README.md) | Understand the signup, confirmation, immediate first lesson and 22-day sequence, with reusable lesson templates. |
 
-## 3. AI Mentorship
+Start with one video and the editor you already use. You can add optional tools when you need them. You keep the creative decisions and final review.
 
-[AI Mentorship](https://github.com/paytonbilodeau/ai-mentorship) documents a weekly practical AI newsletter: source research, one clear thesis, useful examples, an editorial review, a saved draft and a related carousel. [Read the publication](https://www.aimentorship.co).
+## Updates and use
 
-## 4. Echo Improvement
+This repository contains the AI Video Editing Pack and its supporting tools and email workflow. The numbered folders keep their existing paths so links in earlier lessons continue to work. The other public projects have their own repositories on [my profile](https://github.com/paytonbilodeau).
 
-[Echo Improvement](https://github.com/paytonbilodeau/echo-improvement) documents the weekly essay workflow: original sources, clear explanations, a useful ending and a visual adaptation. [Read the publication](https://www.echoimprovement.com).
-
-## Use and updates
-
-These are public templates. They contain no personal API keys, subscriber exports or private editing profile. Choose one workflow, put your configuration in a separate private folder, and prove a small result before expanding it. Publication and account access need your own authorization.
-
-This repository covers only the four public projects above. My broader personal AI operating systems are maintained privately. Updates here are scoped to these public workflows; read [CHANGELOG.md](CHANGELOG.md) before adopting them. Terms are in [LICENSE AND USE.md](LICENSE%20AND%20USE.md).
+The files are public templates. Bring your own accounts and save your API keys and editing preferences privately. Read [CHANGELOG.md](CHANGELOG.md) for updates and [LICENSE AND USE.md](LICENSE%20AND%20USE.md) for the terms.

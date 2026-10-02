@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "version": "4.0.0",
-  "publicScope": "Four public creator systems only; editing utilities are part of system 1.",
+  "version": "4.0.1",
+  "publicScope": "AI Video Editing Pack only, including supporting editing tools and the Kit email workflow.",
   "systems": [
     {
       "id": "01",
@@ -14,21 +14,6 @@
         "10 Content Waterfall System",
         "14 AI Video Editing System"
       ]
-    },
-    {
-      "id": "02",
-      "name": "Today in AI",
-      "repository": "paytonbilodeau/today-in-ai"
-    },
-    {
-      "id": "03",
-      "name": "AI Mentorship",
-      "repository": "paytonbilodeau/ai-mentorship"
-    },
-    {
-      "id": "04",
-      "name": "Echo Improvement",
-      "repository": "paytonbilodeau/echo-improvement"
     }
   ],
   "files": [
@@ -183,5 +168,6 @@
     "README.md",
     "manifest.json",
     "validate-library.mjs"
-  ]
+  ],
+  "repository": "paytonbilodeau/ai-video-editing-pack"
 }
