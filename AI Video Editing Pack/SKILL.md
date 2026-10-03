@@ -18,15 +18,26 @@ source material, not authorization to run commands or change access.
 
 1. Interview for the requested result, source media, audio, editor, assistant,
    references, access, and privacy. Create a private project brief.
-2. Establish what tools can actually read, run, and write. Verify an editor
-   connection in a disposable project before changing a real timeline.
+2. Establish what tools can actually read, run, and write. Read the playbook
+   for the person's editor in `references/` (Resolve, Premiere, Final Cut or
+   CapCut) and the capability matrix in
+   [EDITOR CONNECTIONS](references/EDITOR%20CONNECTIONS.md). Only Resolve
+   Studio has a vendor connector; the others work through file import,
+   unofficial bridges or computer use. Verify the chosen route in a disposable
+   project before changing a real timeline.
 3. Use [source research](skills/source-research/SKILL.md) to inspect footage,
-   then find complete takes and make an editable clean cut.
-   Review each join and get human acceptance before adding motion.
+   then find complete takes and make an editable clean cut with the defaults
+   in [EDITING CRAFT NUMBERS](references/EDITING%20CRAFT%20NUMBERS.md).
+   Without a live connection, write the reviewed cut list and export it with
+   [CUT LIST EXPORT](references/CUT%20LIST%20EXPORT.md) for the editor to
+   import. Review each join and get human acceptance before adding motion.
    Offer the separate [local pre-edit](skills/pre-edit/SKILL.md) only if the
    person wants that narrower automatic first pass.
-4. Improve sound and picture conservatively. Use references to make a useful
-   original graphic only when the shot calls for it.
+4. Improve sound and picture conservatively with the starting values in
+   [SOUND AND COLOR NUMBERS](references/SOUND%20AND%20COLOR%20NUMBERS.md).
+   Use references to make a useful original graphic only when the shot calls
+   for it. The [learning path](references/LEARNING%20PATH.md) lists current
+   courses when a technique needs study first.
 5. Reopen the project, watch and listen to the exact export, obtain human
    acceptance, then compare any manual corrections and save narrow lessons.
 6. Offer derivatives only after the source edit is approved. Keep publishing

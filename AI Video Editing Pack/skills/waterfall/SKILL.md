@@ -15,7 +15,9 @@ For each chosen output, set aspect ratio, crop, captions, and platform
 controls from current destination requirements. Check safe zones on actual
 frames, particularly subtitles, faces, on-screen demonstrations, and logos.
 Use the [visible-area check](../../references/MOTION%20AND%20LUTS.md) for
-each derivative.
+each derivative and the shorts section of
+[EDITING CRAFT NUMBERS](../../references/EDITING%20CRAFT%20NUMBERS.md) for
+hook, length, caption size and safe-band defaults.
 Watch the entire derivative with sound. Record the exported file and human
 approval in [DELIVERY AND LEARNING](../../templates/DELIVERY%20AND%20LEARNING.md).
 Exporting does not publish. Publishing requires a separate instruction.

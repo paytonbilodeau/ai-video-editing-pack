@@ -4,6 +4,13 @@ MCP is a way for the assistant to discover and call an application's tools.
 Resolve still performs the editing and rendering. The assistant must understand
 the installed tool descriptions and inspect the result of each operation.
 
+**October 3, 2026 update.** Resolve 21.1 adds a **File > Setup AI Assistants**
+menu that writes the MCP configuration for Claude Desktop, Claude Code and Codex
+(documented in the 21.1 manual), and moves Python scripting and the bundled MCP
+server to the Studio edition. On the free edition use file import (FCPXML or EDL
+from the pack's cut list exporter) plus computer use. The per-editor playbook in
+the pack's references folder carries the current capability map.
+
 ## Choose the supported route
 
 1. Open Resolve and check its edition and version in About. Install or update

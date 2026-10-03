@@ -1,5 +1,10 @@
 # Make the Voice Clearer Without Making It Strange
 
+This guide chooses the treatment. Starting values for each stage (high-pass,
+EQ bands, de-esser, compressor, limiter, loudness targets, music ducking), the
+tool names in each editor and the color order live in
+[SOUND AND COLOR NUMBERS](SOUND%20AND%20COLOR%20NUMBERS.md).
+
 First identify what was recorded, then choose the treatment. A phone recording
 may use a good external microphone. A stereo file may hold two separate people,
 or a normal track and a quieter safety copy. Ask if those facts are unknown.

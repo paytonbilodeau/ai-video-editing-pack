@@ -8,6 +8,14 @@ Systems 05, 09, 10, and 14 without copying their system files or private
 project material. The included free-use terms are the repository's
 [LICENSE AND USE.md](LICENSE%20AND%20USE.md).
 
+The editor playbooks, capability matrix, craft numbers and learning path were
+researched on October 3, 2026 from vendor documentation, installed copies of
+DaVinci Resolve Studio 21.1, Final Cut Pro 12.4 and CapCut 9.5, public course
+metadata and published standards; each file labels its claims as documented,
+verified, reported or opinion and lists its sources inline. Premiere Pro
+statements are documentary because it was not installed on the checking
+machine.
+
 AI apps, editors, connectors, Remotion, Hyperframes, fonts, models, and media
 remain separate third-party products or materials. Their capabilities and
 terms must be checked at the time of use. The pack does not include them or

@@ -10,7 +10,10 @@ Read the pack's [umbrella skill](../../SKILL.md), then use
 [platform refresh](../platform-refresh/SKILL.md). Ask for the user's existing
 editor and tools first. Keep Final Cut, Premiere, CapCut, Resolve, or another
 editor when it fits. If they are choosing from scratch, suggest DaVinci
-Resolve and verify current edition and setup requirements.
+Resolve and verify current edition and setup requirements. Read that editor's
+playbook in `references/` before promising any operation; only Resolve Studio
+has a vendor connector, and the other editors work through file import,
+unofficial bridges or computer use.
 
 Read [Safety and API Keys](../../references/SAFETY%20AND%20API%20KEYS.md)
 before connecting tools. Record approved access and private secret-storage

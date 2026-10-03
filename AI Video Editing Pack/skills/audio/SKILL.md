@@ -11,7 +11,9 @@ dialogue source and channel layout, then listen to the whole cut, especially
 joins and recording changes. Check intelligibility, sync, clipping, level
 jumps, background changes, music masking, and abrupt starts or endings.
 Use the [audio guide](../../references/AUDIO%20GUIDE.md) to choose treatment
-for the actual microphone and defect.
+for the actual microphone and defect, and
+[SOUND AND COLOR NUMBERS](../../references/SOUND%20AND%20COLOR%20NUMBERS.md)
+for the chain order, starting values and the tool names in each editor.
 
 Apply one conservative change at a time on the editable timeline. Compare
 noise or echo treatment with the original at similar listening volume;

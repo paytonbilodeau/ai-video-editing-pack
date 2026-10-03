@@ -19,13 +19,51 @@ optional adapter and verify current requirements before installation:
 
 | Route | Practical first test | Current source and limit |
 |---|---|---|
-| Remotion | After approval, run `npx create-video@latest`, install the generated project's dependencies, make one short composition, and render a sample for import into the editor. | [Remotion docs](https://www.remotion.dev/docs). It uses React/TypeScript; check current Node/OS and [license terms](https://www.remotion.dev/docs/license/pricing) before team or hosted use. |
-| HyperFrames | After approval, follow the [current quick start](https://github.com/heygen-com/hyperframes/blob/main/docs/quickstart.mdx): `npx skills add heygen-com/hyperframes`, select Core Skills, run `npx hyperframes doctor`, then preview a small project. Use the installed CLI's current render help and [render guide](https://github.com/heygen-com/hyperframes/blob/main/docs/guides/rendering.mdx) for the chosen project. | Local render can avoid hosted credits; optional generation, agents or hosted rendering may have costs and data flows. Check Chrome/FFmpeg prerequisites and third-party terms. |
+| Remotion (4.0.532 on October 3, 2026; 5.0 unreleased) | After approval, run `npx create-video@latest`, pin the exact version, make one short composition, and render a sample for import into the editor. Install the vendor's agent skills with `npx skills add remotion-dev/skills` so the assistant can check the current API before coding. | [Remotion docs](https://www.remotion.dev/docs). React and TypeScript; free for individuals and companies of up to three people, otherwise a [company license](https://www.remotion.dev/docs/license/pricing). `@remotion/captions` builds word-by-word pages from transcript JSON; `@remotion/media` is the current video and audio component. |
+| HyperFrames (0.8.x, Apache 2.0) | After approval, follow the [current quick start](https://github.com/heygen-com/hyperframes/blob/main/docs/quickstart.mdx): `npx skills add heygen-com/hyperframes`, run `npx hyperframes doctor` (gate on `.ok` in the JSON; the command always exits 0), `lint` while authoring, `check` as the final gate, then `render`. Pin the version; it publishes several releases a week. | HTML, CSS and GSAP rendered through headless Chrome and FFmpeg; local rendering has no per-render fee; hosted rendering, publishing and telemetry are separate paid or data-sending features to leave off unless chosen. Fonts must be local `@font-face` files; anything visible at frame zero must be in static CSS. |
 
 Do not install both just because they are listed. Pin the tool and dependencies
 for a project whose look must reproduce. A browser preview is not a final
 encoded export. Import the sample, inspect motion and alpha over the shot,
 then watch and listen to the final render.
+
+Hand the graphic to the editor as video with an alpha channel, at the timeline's
+frame rate and size, video only, named with its in-point timecode. Remotion:
+`npx remotion render <comp> out.mov --codec=prores --prores-profile=4444 --pixel-format=yuva444p10le --image-format=png --muted`.
+HyperFrames: `--format mov` (ProRes 4444) or `--format webm` for VP9 alpha, or
+`--format png-sequence` for compositing apps. Resolve, Premiere and Final Cut
+read ProRes 4444 alpha; confirm it on import (Resolve: Clip Attributes > Alpha
+mode) and check one frame over the footage. Route by task: native titles and
+caption tools for a graphic that appears once and must stay editable by a
+person; Remotion when a component library exists or exact transcript cues
+matter; HyperFrames when an HTML and GSAP look or its caption workflows fit.
+Masks of a person are always made in the editor.
+
+## Put a graphic behind the person
+
+The method is the same in every editor. Track 1 holds the original footage and
+its audio, the only voice path. Track 2 holds the graphic. Track 3 holds a
+duplicate of the footage trimmed to the overlap, with a person mask that keeps
+the subject and makes the rest transparent; mute its audio. Then review at full
+size and phone size and scrub the overlap at 2x for flicker.
+
+- DaVinci Resolve Studio: Color page Magic Mask on the duplicate (click the
+  subject, track forward and back), add an Alpha Output and connect the key,
+  refine with Matte Finesse; Resolve 21 can render the mask in place as an
+  external matte for reuse (documented). Magic Mask is Studio-only.
+- Premiere Pro 26: Object Mask on the duplicate (one click, track; Smooth edge
+  mode for hair); a feathered pen mask tracked forward when it misfires.
+- Final Cut Pro 12: Magnetic Mask on the connected duplicate (click, Analyze;
+  negative Feather tightens hair); Auto Mask for recognized objects. Mask data
+  does not travel through FCPXML (reported).
+- CapCut: Video > Remove BG > Auto removal on the duplicated top layer.
+
+Check hair and beard edges for chewing or halo, hands and held objects that
+segmenters drop intermittently, motion blur across the matte edge, and complete
+occlusion when the subject crosses the graphic. When the mask fails, use a
+layout that never intersects the subject: side by side, a framed inset, a
+pull-back with negative space, or a full-frame cutaway with the voice
+continuing. A graphic the viewer cannot read behind a moving head helps no one.
 
 ## Build a look, then decide if a LUT helps
 

@@ -14,7 +14,7 @@ Prefer to start here? **[Download the pack](https://github.com/paytonbilodeau/ai
 2. Save your own editing profile in a separate private folder. The assistant checks the available tools and proves a connection on a copied clip.
 3. Work through the edit, review the result and add your final touches. Keep the original footage and your private configuration separate from the downloaded pack.
 
-The pack supports DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut. What your assistant can control depends on your editor, edition, installed tools and permissions. The connection guides help you verify those details before a real edit.
+The pack supports DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut. Each has its own playbook in the pack's references folder with current version facts, control routes, shortcuts, workflow and a smoke test, and a capability matrix states plainly what an assistant can script, import, drive by computer use or must leave to you. One reviewed cut list exports to FCPXML, Premiere XML, EDL and a cut sheet, so the same edit decisions reach any of the four editors.
 
 ## What's included
 
