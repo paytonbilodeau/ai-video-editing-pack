@@ -7,7 +7,7 @@ project; unknown answers can become setup tests.
 
 - Finished video and audience:
 - Format, length, destination, and deadline if any:
-- First useful test result:
+- Requested deliverables:
 - Source footage location and working-copy location:
 - Separate audio, camera angles, screen recording, and known sync issues:
 - Protected words, claims, demonstrations, or previously approved material:
@@ -27,12 +27,12 @@ project; unknown answers can become setup tests.
 - LUT or brand assets supplied and permitted for this project:
 - Private media or client material that must stay local:
 - Private cross-project editing profile path, if one exists:
-- Who reviews the clean cut and final export:
+- Review mode from profile: Full pass unless checkpoints were requested:
 
 ## Setup handoff
 
-- Working project path and copied test clip:
+- Working project and media paths:
 - Original and accepted version backup locations:
 - Official capability sources with access dates; reported versus tested facts:
-- First reversible test, expected evidence, and result:
+- Assistant-run connection checks and any untested capabilities:
 - Next action and person responsible:

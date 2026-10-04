@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ai-video-editing-pack",
-  "version": "1.0.8",
-  "description": "Portable skills for source-grounded video editing, review, and delivery with a human editor.",
+  "version": "1.1.0",
+  "description": "Skills for a ready-to-use AI editing setup, complete requested edits and a private taste profile.",
   "author": {
     "name": "Payton Bilodeau"
   }

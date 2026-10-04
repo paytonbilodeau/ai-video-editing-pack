@@ -29,7 +29,8 @@ source, installation command and requested permissions before installing it.
 Prefer an official editor integration when available. An unofficial connection
 needs its own source review; a familiar product name is not proof of trust.
 
-Start with the named project folder and a copied 20 to 60 second clip. Prove a
+Start with the named project folder. The AI can check its route with a
+disposable fixture; you do not need to supply a test recording. Prove a
 read-only connection before allowing an edit. Do not disable safeguards or
 grant full-computer access to get past a setup error. Keep a local editor
 connection on the local computer by default. If remote access is needed, use

@@ -1,5 +1,9 @@
 # Editor Playbook: Adobe Premiere Pro
 
+Version details are a dated snapshot. Have the AI check current official docs
+and the installed edition before using a version-specific command. Any smoke
+test below is an assistant-run capability check, not homework for the user.
+
 **Checked October 3, 2026** against Adobe's release notes (current release
 26.5.2, September 2026), Adobe's help pages, the UXP developer documentation
 and the community bridge projects. Premiere was not installed on the checking

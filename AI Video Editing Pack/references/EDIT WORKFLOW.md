@@ -1,6 +1,8 @@
 # Editing Workflow
 
-Use only the stages a project needs. Record exact source and timeline versions
+Use only the stages a project needs. Complete the requested work in one pass
+unless the person asks for checkpoints. These stages are the AI's workflow,
+not daily assignments for the user. Setup alone requires no footage. Record exact source and timeline versions
 in the [edit plan](../templates/EDIT%20PLAN%20AND%20REVIEW.md). Source footage,
 private references, and account information belong in the user's private
 working folder, never in this public pack.
@@ -22,8 +24,9 @@ working folder, never in this public pack.
    send private source material to a new service without approval.
 3. **Clean cut.** Mark protected words and demonstrations, select complete
    takes, remove mistakes and dead time, and play every join. Preserve
-   full words, useful breaths, and enough time to see the action. Export a
-   review copy. Human acceptance gates graphics and further polish. Use the
+   full words, useful breaths, and enough time to see the action. Save a
+   recoverable clean-cut version. Continue within the brief; pause for a preview
+   only when requested or when a material ambiguity needs the person's judgment. Use the
    [editing judgment guide](EDITING%20JUDGMENT.md) for pacing decisions and
    [EDITING CRAFT NUMBERS](EDITING%20CRAFT%20NUMBERS.md) for the defaults.
    Without a live editor connection, write the reviewed cut list and export it
@@ -33,8 +36,9 @@ working folder, never in this public pack.
    balance, and shot matching. Test any LUT against the actual footage and
    discard it if it damages detail or skin. Keep adjustments editable. The
    [audio guide](AUDIO%20GUIDE.md) shows source-specific comparisons.
-5. **One useful visual.** Make an original title or annotation on a separate
-   track. Use an authorized reference for a specific purpose, then test its
+5. **Graphics when useful.** If the brief calls for a title or annotation, put
+   it on a separate track. Skip this stage when the recording already explains
+   the point clearly and no graphics were requested. Use an authorized reference for a specific purpose, then test its
    timing, reading time, contrast and coverage on moving footage. Native
    editor tools come first; Remotion or Hyperframes are optional, separately
    checked routes for a justified shot.
@@ -49,7 +53,7 @@ working folder, never in this public pack.
    only one audio pass.
 7. **Learn and optionally repurpose.** Compare manual corrections with the
    prior version; save narrow accepted preferences with examples. Test them
-   on a later clip. After the source edit is approved, make only requested
+   during later suitable work. Once the source timing is settled, make only requested
    derivatives. Check framing, captions and safe zones for each format and
    review every exported result. Publishing is separate.
 

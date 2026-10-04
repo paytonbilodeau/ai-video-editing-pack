@@ -1,5 +1,9 @@
 # Editor Playbook: DaVinci Resolve
 
+Version details are a dated snapshot. Have the AI check current official docs
+and the installed edition before using a version-specific command. Any smoke
+test below is an assistant-run capability check, not homework for the user.
+
 **Checked October 3, 2026** against the installed Resolve Studio 21.1 (build
 21.1.0.17), its bundled scripting stubs, its bundled MCP server and the current
 Blackmagic release notes. Labels: **documented** (Blackmagic manual, readme,
@@ -21,8 +25,9 @@ shortcut or a feature name.
   silence), transcription and text-based editing, Create Subtitles from Audio,
   AI Animated Subtitles, Magic Mask, Smart Reframe, SuperScale, UltraNR, Film
   Look Creator, IntelliScript, hardware H.264/H.265 encoding (documented).
-  Dialogue Leveler, ColorSlice, Color Warper, Resolve Color Management, Fusion,
-  Fairlight EQ and dynamics are in the free edition (documented).
+  ColorSlice, Color Warper, Resolve Color Management, Fusion, Fairlight EQ
+  and dynamics are in the free edition (documented). Dialogue Leveler in Free
+  is reported; verify availability on the installed edition before relying on it.
 - Free edition caps output at 3840x2160 and 60 fps (documented).
 
 ## 2. The three control routes, in order of preference

@@ -48,10 +48,11 @@ and keep package lockfiles. Do not install both frameworks merely because they
 are listed here. Local rendering and optional hosted generation have different
 costs and data flows; verify those before choosing a provider.
 
-## 4. Run the small edit
+## 4. Edit when ready
 
-Complete the project brief. Make a clean 20 to 60 second cut from a copy,
-review its joins, then add one approved visual. Save a clean master, decorated
+Setup can finish without footage. When a video is supplied, fill the missing
+brief details, work from a copy and check the joins. Add graphics only when
+the requested result needs them. A small sample is optional. Save a clean master, decorated
 master and editable project if all three are useful. Reopen the project,
 decode the outputs and have someone watch and listen to the exact export.
 Use `examples/EXAMPLE EDITING RUN.md` as a fictional filled-in reference.

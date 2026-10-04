@@ -1,9 +1,10 @@
 # Post-Production Walkthrough: One Clip to a Finished Edit
 
-Start with a copied 20 to 60 second recording that contains one complete idea,
-one mistake you can remove, and one place where a visual would help. Keep the
-original untouched. Your first useful result is a saved, editable clean cut that
-you have watched and listened to. The graphic and second export come after that.
+This walkthrough describes the AI's work after a video is supplied. Use a
+short clip or a full recording as you prefer. Setup itself needs no footage.
+The default is a complete requested edit with internal checks, an editable
+project, export and report. Pause between stages only when checkpoints were
+requested or a real blocker needs the person's decision.
 The [fictional example](../examples/EXAMPLE%20EDITING%20RUN.md) shows what a filled-in run looks like.
 
 ## 1. Set up only the route you need
@@ -42,15 +43,15 @@ clear across recording changes and in sync. Compare any noise or echo treatment
 with the original at similar listening volume. Match exposure, white balance
 and skin between shots before adding a shared look. Keep these changes editable.
 Export a clean review copy with the cuts, sound, color and original recorded
-visuals. Watch and listen to that exact file, then either approve the cut or
-record the specific changes needed. Save the approved timeline before adding
-graphics.
+visuals. Check that exact file and record any unresolved issues. Save this timeline
+version before adding any requested graphics.
 
-## 4. Add one useful visual
+## 4. Add graphics when the brief calls for them
 
 Use an authorized reference and the [style brief](../templates/STYLE%20BRIEF.md)
 to describe what you observed, what you want to make, and when it should appear.
-Put one original title or annotation on a separate track. Check that it becomes
+Put requested titles or annotations on separate tracks. Skip this stage
+when the recording already explains the point and no graphics are requested. Check that it becomes
 readable when its spoken point arrives, stays long enough to read, and never
 covers the action the viewer needs to see. Native Resolve titles are enough for
 this first test. If the shot needs more, follow [motion tool setup](MOTION%20TOOL%20SETUP.md)
@@ -78,6 +79,6 @@ is not another edit. Put an accepted, narrow rule and its example in the
 working assets. Test it on another suitable clip before treating it as reusable.
 This is a durable instruction, reference and feedback loop, not model training.
 
-Once the finished source is approved, use [System 10](../../10%20Content%20Waterfall%20System/START%20HERE.md)
+Once source timing is settled, use [the content waterfall](../../10%20Content%20Waterfall%20System/START%20HERE.md)
 if you want shorts or other derivatives. Exporting a finished video does not
 publish it.

@@ -14,7 +14,7 @@ This is a reusable version of the free editing-pack funnel. It collects an email
 
 Create your own landing page, incentive/confirmation email, sequence and visual automation. Turn on native double opt-in and disable automatic confirmation. Use the landing-page entry in an active visual automation that adds confirmed subscribers to the sequence. Check current Kit behavior with a new test address: an unconfirmed subscriber must receive zero marketing lessons, then receive lesson 1 after the real confirmation click. Do not approximate this by using a fixed delay.
 
-Set the post-confirmation destination to your pack's setup URL. Set the signup success message to “Check your inbox and confirm your email. Then I’ll send your first lesson and open the editing pack.” Customize the confirmation copy in [CONFIRMATION.md](CONFIRMATION.md). Use [settings.example.json](settings.example.json) as a checklist, not an API payload. No live account IDs are supplied.
+Set the post-confirmation destination to your pack's setup URL. Set the signup success message to “Check your inbox and confirm your email. The confirmation button opens the setup guide, and your first email follows.” Customize the confirmation copy in [CONFIRMATION.md](CONFIRMATION.md). Use [settings.example.json](settings.example.json) as a checklist, not an API payload. No live account IDs are supplied.
 
 Before launch, authenticate your sending domain using the provider's current instructions. Check the received email's SPF, DKIM and DMARC results, unsubscribe behavior, sender identity and reply address. Double opt-in improves consent and list quality; it cannot guarantee Inbox or Primary placement. Test with your own address and inspect a real received message.
 
@@ -22,21 +22,21 @@ Before launch, authenticate your sending domain using the provider's current ins
 
 [The sequence map](SEQUENCE.md) links all lesson templates. Customize the instructor name, URLs and first-person examples before importing. Some first-person examples come from the original guide; replace them with experiences and tool choices you can honestly claim. Add a percentage result only if your own test supports it, and identify it as your experience rather than a reader guarantee. The lesson copy is separate from your provider's unsubscribe footer, which you must retain.
 
-Add an illustration only when it explains the lesson. Put it next to the relevant instructions rather than above an unrelated introduction. Use a public-safe visual style of your own; this workflow does not include a private brand recipe. In the permission lesson, the diagram belongs before the API-key and connector guidance, then the copied-clip test.
+Add an illustration only when it explains the lesson. Put it next to the relevant instructions rather than above an unrelated introduction. Use a public-safe visual style of your own; this workflow does not include a private brand recipe. In the permission lesson, the diagram belongs before the API-key and connector guidance, followed by a plain explanation of the available editing route.
 
 Validate on desktop and a narrow phone preview, check every link, and complete the real unconfirmed/confirmed signup test. Save what actually happened rather than calling a configured automation “working.”
 
 ## Write and format for the reader
 
 Start with the point rather than a repeated greeting. Explain a new term where
-the reader first needs it, then show one concrete example. Give one useful
-action and explain how the reader can check the result. Experienced editors
+the reader first needs it, then show one concrete example. Explain one useful idea and show how it affects an edit. Offer a prompt when
+it makes the advice easier to use; do not assign a daily exercise. Experienced editors
 can skip an explanation; beginners should not have to guess a missing step.
 
 Keep paragraphs short, use complete sentences and put copyable prompts in
 their own blocks. Use light humor when it helps the explanation. Cut vague
 claims and invented results. An illustration should explain the nearby idea,
-then the instructions should tell the reader what to do with that idea.
+with enough context to make that idea useful.
 
 Use a comfortable body size, roughly 17 pixels, generous line spacing and
 visible paragraph breaks. Keep the reading column about 600 pixels wide on
@@ -44,3 +44,9 @@ desktop and make it fit narrow phones. Images should scale to the column,
 preserve their aspect ratio and have useful alternative text. Allow long URLs
 and prompts to wrap. Test the actual provider preview as well as the source
 HTML; the provider adds its own wrapper, footer and tracked links.
+
+The full pack is available on day one. Setup saves a private editing profile
+and can finish without footage. Later emails offer advice to use at the
+reader's pace. Default to complete requested edits; previews, manual finishing
+and staged approval are choices. Do not promise universal editor control or
+that saving a profile retrains a model.

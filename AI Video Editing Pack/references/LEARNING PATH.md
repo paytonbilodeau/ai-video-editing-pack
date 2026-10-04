@@ -13,7 +13,7 @@ section when you want a technique adopted (see lesson 10 of the email guide).
 1. Pick one technique for the edit in front of you, not the whole course.
 2. Have the assistant check the app-version-specific steps against the current
    official documentation and your installed version.
-3. Test on a short section; approve the result; then save a narrow reusable
+3. Have the AI check the technique on a suitable section; then save a narrow reusable
    instruction in your private editing profile with the condition it applies to.
 
 ## DaVinci Resolve
