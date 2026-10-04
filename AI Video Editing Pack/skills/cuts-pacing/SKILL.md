@@ -8,7 +8,12 @@ description: Make and review an editable clean cut from actual source footage wh
 Use the source and timeline fields in
 [EDIT PLAN AND REVIEW](../../templates/EDIT%20PLAN%20AND%20REVIEW.md).
 The [editing judgment guide](../../references/EDITING%20JUDGMENT.md) gives
-concrete examples of what to preserve and how to review a returned timeline.
+concrete examples of what to preserve and how to review a returned timeline;
+[EDITING CRAFT NUMBERS](../../references/EDITING%20CRAFT%20NUMBERS.md) gives
+the pause, handle, take, punch-in and caption defaults. When the editor has no
+live connection, turn the reviewed cut list into FCPXML, Premiere XML, EDL or a
+cut sheet with [CUT LIST EXPORT](../../references/CUT%20LIST%20EXPORT.md) and
+import it.
 If the person wants a separate local automatic first pass, see
 [pre-edit](../pre-edit/SKILL.md) and explain its flattened-output limit.
 Transcribe or index the recording, then play the opening, ending, failed

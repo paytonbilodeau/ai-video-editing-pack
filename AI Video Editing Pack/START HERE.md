@@ -43,8 +43,12 @@ Ask only for answers you cannot verify: my AI app and its local access, operatin
 editor and version, footage and audio sources, intended content and audience,
 visual references, privacy limits, and the result I want.
 
-First tell me what you can actually inspect, change, and run. Check current
-capabilities before proposing an editor connection. A browser-only chat can
+First tell me what you can actually inspect, change, and run. Read the playbook
+for my editor in references/ and the capability matrix in
+references/EDITOR CONNECTIONS.md, then check current capabilities before
+proposing an editor connection. If there is no live connection, build the
+reviewed cut list and export it with tools/cut_list_to_timeline.py for me to
+import. A browser-only chat can
 plan and guide; it cannot edit local media or verify an export. Let me choose
 tools. Keep my existing editor if it works; if I am choosing from scratch,
 recommend DaVinci Resolve and verify the current edition and setup. For a

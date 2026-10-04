@@ -1,0 +1,21 @@
+{
+  "name": "desk-tutorial clean cut v1",
+  "source": "desk-tutorial-take-2.mp4",
+  "fps": 30,
+  "width": 3840,
+  "height": 2160,
+  "duration": 95.5,
+  "audio_channels": 2,
+  "audio_rate": 48000,
+  "min_clip_frames": 2,
+  "keep": [
+    {"start": 3.7, "end": 22.15, "note": "opening, take 2"},
+    {"start": "0:27.900", "end": "0:41.300", "note": "the three-file explanation"},
+    {"start": "00:00:46:12", "end": "00:01:08:03", "note": "demo; result screen held 1.5 s"},
+    {"start": 71.0, "end": 93.9, "note": "closing line, complete final take"}
+  ],
+  "markers": [
+    {"time": 30.2, "name": "check word tail", "note": "listen for the end of 'files'"},
+    {"time": 60.0, "name": "result readable?", "note": "hold until the value changes"}
+  ]
+}

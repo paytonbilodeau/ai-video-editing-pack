@@ -7,7 +7,12 @@ description: Verify current AI, editor, and connector capabilities without assum
 
 Use [PROVIDER CHECK](../../references/PROVIDER%20CHECK.md),
 [AI APP SETUP](../../references/AI%20APP%20SETUP.md),
-[EDITOR CONNECTIONS](../../references/EDITOR%20CONNECTIONS.md), and the setup
+[EDITOR CONNECTIONS](../../references/EDITOR%20CONNECTIONS.md) with its
+capability matrix, the editor's playbook
+([Resolve](../../references/EDITOR%20PLAYBOOK%20RESOLVE.md),
+[Premiere](../../references/EDITOR%20PLAYBOOK%20PREMIERE.md),
+[Final Cut](../../references/EDITOR%20PLAYBOOK%20FINAL%20CUT.md),
+[CapCut](../../references/EDITOR%20PLAYBOOK%20CAPCUT.md)), and the setup
 section of [PROJECT INTAKE](../../templates/PROJECT%20INTAKE.md). Distinguish
 reported, documentation-supported, and directly tested capabilities.
 

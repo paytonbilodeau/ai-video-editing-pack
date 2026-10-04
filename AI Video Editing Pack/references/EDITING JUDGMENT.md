@@ -1,5 +1,10 @@
 # What a Good Edit Should Preserve
 
+This guide explains the reasoning. Measurable defaults for pauses, breaths,
+word-edge handles, take selection, non-speech sounds, pacing, punch-in scales,
+captions, graphic timing, shorts and the QC checklist live in
+[EDITING CRAFT NUMBERS](EDITING%20CRAFT%20NUMBERS.md).
+
 The useful result is a video someone can follow and enjoy. A low duration or
 a high number of cuts does not establish that. Choose the audience and tone
 before deciding how tight the edit should feel.

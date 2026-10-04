@@ -8,7 +8,12 @@ working folder, never in this public pack.
 1. **Interview and setup.** Complete [project intake](../templates/PROJECT%20INTAKE.md).
    Identify the AI app, editor, OS, source media, audience, style, privacy
    limits, and chosen first result. Use the [provider check](PROVIDER%20CHECK.md)
-   to verify the route. Keep originals untouched and duplicate the timeline.
+   to verify the route and the editor's own playbook for its version facts,
+   shortcuts and smoke test ([Resolve](EDITOR%20PLAYBOOK%20RESOLVE.md),
+   [Premiere](EDITOR%20PLAYBOOK%20PREMIERE.md),
+   [Final Cut](EDITOR%20PLAYBOOK%20FINAL%20CUT.md),
+   [CapCut](EDITOR%20PLAYBOOK%20CAPCUT.md)). Keep originals untouched and
+   duplicate the timeline.
 2. **Source research.** Use the [source-research skill](../skills/source-research/SKILL.md)
    to inventory the actual clips, audio takes, camera or
    screen recordings, and authorized references. Transcribe or index footage
@@ -19,7 +24,10 @@ working folder, never in this public pack.
    takes, remove mistakes and dead time, and play every join. Preserve
    full words, useful breaths, and enough time to see the action. Export a
    review copy. Human acceptance gates graphics and further polish. Use the
-   [editing judgment guide](EDITING%20JUDGMENT.md) for pacing decisions.
+   [editing judgment guide](EDITING%20JUDGMENT.md) for pacing decisions and
+   [EDITING CRAFT NUMBERS](EDITING%20CRAFT%20NUMBERS.md) for the defaults.
+   Without a live editor connection, write the reviewed cut list and export it
+   with [CUT LIST EXPORT](CUT%20LIST%20EXPORT.md) for import into the editor.
 4. **Sound and color.** Listen to the entire clean cut; check sync, speech,
    joins and any processing against the original. Correct exposure, white
    balance, and shot matching. Test any LUT against the actual footage and

@@ -78,6 +78,17 @@ skill at a time:
 | Review, export and learn from corrections | [Review and delivery](skills/review-delivery/SKILL.md) |
 | Make approved derivatives | [Waterfall](skills/waterfall/SKILL.md) |
 
+Reference files the skills lean on:
+
+| Reference | Use it for |
+|---|---|
+| [Editor connections](references/EDITOR%20CONNECTIONS.md) | What an assistant can script, import, drive by computer use or must leave to you, per editor, with the interchange formats each one reads |
+| Editor playbooks: [Resolve](references/EDITOR%20PLAYBOOK%20RESOLVE.md), [Premiere](references/EDITOR%20PLAYBOOK%20PREMIERE.md), [Final Cut](references/EDITOR%20PLAYBOOK%20FINAL%20CUT.md), [CapCut](references/EDITOR%20PLAYBOOK%20CAPCUT.md) | Current version facts, control routes, shortcuts, the talking-head workflow in order, a smoke test and a learning path for each editor |
+| [Cut list export](references/CUT%20LIST%20EXPORT.md) | Turn one reviewed cut list into FCPXML, Premiere XML, EDL and a cut sheet with `tools/cut_list_to_timeline.py` |
+| [Editing craft numbers](references/EDITING%20CRAFT%20NUMBERS.md) | Measurable defaults for takes, pauses, breaths, word edges, non-speech sounds, pacing, punch-ins, captions, graphics timing, QC and shorts |
+| [Sound and color numbers](references/SOUND%20AND%20COLOR%20NUMBERS.md) | The dialogue chain with starting values, loudness targets, per-microphone moves, tool names per editor, color order, scope targets and LUT practice |
+| [Learning path](references/LEARNING%20PATH.md) | Current courses by editor and level, and the craft sources behind the numbers |
+
 The [editing workflow](references/EDIT%20WORKFLOW.md) gives the stage order and
 acceptance checks. [Project intake](templates/PROJECT%20INTAKE.md),
 [edit plan and review](templates/EDIT%20PLAN%20AND%20REVIEW.md), and

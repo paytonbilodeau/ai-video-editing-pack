@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.1.0 - 2026-10-03
+
+Make the pack work the same way on all four editors. Add a per-editor playbook for DaVinci Resolve Studio 21.1, Premiere Pro 26.5, Final Cut Pro 12.4 and CapCut 9.5 desktop: current version facts, every control route (vendor connector, unofficial bridge, file import, computer use), the scripting or interchange surface, default shortcuts, the talking-head workflow in order, a smoke test and a short learning path. Rewrite EDITOR CONNECTIONS around a truthful capability matrix and the interchange formats each editor reads.
+
+Add `tools/cut_list_to_timeline.py`, which turns one reviewed cut list into FCPXML (Final Cut and Resolve), Final Cut Pro 7 XML (Premiere and Resolve), a CMX3600 EDL and a cut sheet for CapCut, with frame-exact rational timing, linked audio, markers and a summary; 16 offline tests plus a DTD validation test; FCPXML output validated against Apple's shipped FCPXML 1.11 DTD. Add EDITING CRAFT NUMBERS (takes, restarts, pauses, breaths, word-edge handles, non-speech sounds, pacing, punch-in scales, captions, graphic timing, QC, shorts), SOUND AND COLOR NUMBERS (dialogue chain with starting values, loudness targets, per-microphone moves, tool names in each editor, color order, scope targets, LUT practice, monitoring) and LEARNING PATH (current courses by editor and level). Refresh MOTION AND LUTS for Remotion 4.0.5xx and HyperFrames 0.8.x, alpha hand-off commands and the behind-the-person method per editor. Link the new references from the umbrella skill, START HERE, the workflow and the cuts, platform, setup, audio, color, motion and waterfall skills. Plugin version is 1.0.8. Email lessons, setup and download URLs and the human review gates are unchanged.
+
 ## 4.0.5 - 2026-10-02
 
 Clarify all 22 email lesson templates and the greeting-free confirmation email, with definitions beside new terms, concrete exercises, shorter prompt blocks and result checks. Explain the first download in three steps and preserve the immediate-first-lesson/daily cadence. Describe optional final audio processing and derivative handling without repeating enhancement.

@@ -11,7 +11,10 @@ authorized reference contributes: composition, timing, typography, movement,
 or material. Do not copy a private recipe, exact frame, trademarked mark, or
 unlicensed asset. State what new visual helps the viewer understand.
 See [MOTION AND LUTS](../../references/MOTION%20AND%20LUTS.md) for optional
-Remotion and Hyperframes setup, reference translation and output checks.
+Remotion and Hyperframes setup, alpha hand-off, the behind-the-person method in
+each editor, reference translation and output checks. Graphic entrance, hold
+and exit timing and caption rules are in
+[EDITING CRAFT NUMBERS](../../references/EDITING%20CRAFT%20NUMBERS.md).
 
 Place one native editor title or annotation on a separate editable track for
 the first test. Check entrance timing, reading time, contrast, safe area, and

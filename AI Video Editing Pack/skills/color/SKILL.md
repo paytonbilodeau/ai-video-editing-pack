@@ -11,7 +11,9 @@ lighting changes, log footage, baked-in looks, and any source whose color
 interpretation is uncertain. Check the editor's color management for this
 project instead of assuming a LUT or transform is appropriate.
 Use the [motion and LUT guide](../../references/MOTION%20AND%20LUTS.md) if a
-reference look or generated `.cube` is requested.
+reference look or generated `.cube` is requested, and the color half of
+[SOUND AND COLOR NUMBERS](../../references/SOUND%20AND%20COLOR%20NUMBERS.md)
+for the order of operations, scope targets and per-editor panel order.
 
 Correct exposure, white balance, and shot-to-shot skin and background
 consistency first. Use scopes and actual frames together. If trying a LUT,
