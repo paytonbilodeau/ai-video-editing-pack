@@ -27,7 +27,8 @@ time a viewer needs to understand visible action. Save a version before fine
 trimming. Play every join with its outgoing and incoming words together.
 Review the entire clean cut and log uncertainty by source and timeline range.
 
-Show the person the editable cut and exact review export. Record acceptance
-or requested changes. Preserve accepted cuts; route sound to
+Preserve the clean-cut version and continue to finishing within the brief.
+Pause here only if checkpoints were requested or a material question blocks
+the edit. Record any later corrections; route sound to
 [audio](../audio/SKILL.md) and picture to [color](../color/SKILL.md). A
 transcript or silence detector is a lead for inspection, not cut approval.

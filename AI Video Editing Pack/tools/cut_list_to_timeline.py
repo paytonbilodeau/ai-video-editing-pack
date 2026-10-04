@@ -217,11 +217,19 @@ def build_cut_list(data: dict, base_dir: Path, probe: bool = False) -> CutList:
     source = Path(source_value).expanduser()
     if not source.is_absolute():
         source = (base_dir / source).resolve()
+    explicit_fps = "fps" in data
     if probe:
         data = {**data, **probe_source(source, data)}
     elif not source.exists():
         warnings.append(f"source file was not found at {source}; the editor will ask you to relink it")
     rate = parse_rate(data.get("fps"))
+    standard_rates = {Fraction(n) for n in (24, 25, 30, 48, 50, 60, 100, 120)}
+    standard_rates.update(Fraction(n, 1001) for n in (24000, 30000, 60000, 120000))
+    if probe and not explicit_fps and rate not in standard_rates:
+        warnings.append(
+            f"probed average frame rate {rate} is unusual and may indicate variable-frame-rate footage; "
+            "confirm the editor timeline rate and supply fps explicitly before relying on cut boundaries"
+        )
     width = _as_int(data.get("width"), "width", 1920)
     height = _as_int(data.get("height"), "height", 1080)
     audio_channels = _as_int(data.get("audio_channels"), "audio_channels", 2)
@@ -360,8 +368,6 @@ def probe_source(source: Path, data: dict) -> dict:
     filled = dict(data)
     for stream in info.get("streams", []):
         if stream.get("codec_type") == "video" and "width" in stream and "fps" not in data:
-            filled.setdefault("width", stream["width"])
-            filled.setdefault("height", stream["height"])
             rate_text = stream.get("avg_frame_rate") or stream.get("r_frame_rate") or ""
             if rate_text and rate_text != "0/0":
                 filled["fps"] = rate_text

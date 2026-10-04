@@ -1,5 +1,9 @@
 # Editor Playbook: CapCut Desktop
 
+Version details are a dated snapshot. Have the AI check current official docs
+and the installed edition before using a version-specific command. Any smoke
+test below is an assistant-run capability check, not homework for the user.
+
 **Checked October 3, 2026** against CapCut's help and tool pages, the CapCut
 hosted installer for its Codex plugin, an installed CapCut 9.5.0 for Mac (its
 draft files were read, not changed) and the community draft tools. Labels:

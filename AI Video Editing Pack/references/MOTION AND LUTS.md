@@ -1,6 +1,6 @@
 # Motion and LUTs
 
-Use this after the clean cut has human approval. Start with a native editor
+Use this when the clean cut is ready and graphics or a look fit the brief. Start with a native editor
 title or annotation, then choose a separate motion tool only if the shot needs
 it. Keep the graphic editable and test it over the actual moving footage.
 
@@ -93,7 +93,7 @@ instead of forcing the change into a global LUT.
 5. Test the held-out clip and neighboring shots. Keep exposure, white balance,
    windows, keys and skin repair as shot-specific editable adjustments outside
    the LUT. Reject hue breaks or damage that needs extensive repair.
-6. Ask the person to approve the actual graded export. Save the LUT's intended
+6. Deliver the checked graded export for the person to review when ready. Save the LUT's intended
    input/output spaces, tested sources, version and observed limits. Do not
    claim it will match every future camera or train a model.
 

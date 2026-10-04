@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 from fractions import Fraction
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -55,6 +56,29 @@ class TimeTests(unittest.TestCase):
 
 
 class CutListTests(unittest.TestCase):
+    def test_unusual_probed_rate_warns_without_changing_it(self):
+        data = json.loads(EXAMPLE.read_text())
+        del data["fps"]
+        with patch.object(exporter, "probe_source", return_value={**data, "fps": "14985/499"}):
+            cut = exporter.build_cut_list(data, base_dir=EXAMPLE.parent, probe=True)
+        self.assertEqual(cut.rate, Fraction(14985, 499))
+        self.assertTrue(any("supply fps explicitly" in w for w in cut.warnings))
+
+    def test_explicit_rate_survives_probe_and_avoids_average_rate_warning(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "source.mp4"
+            source.touch()
+            data = {"source": str(source), "fps": 30, "keep": [[0, 1]]}
+            probe_json = {"streams": [{"codec_type": "video", "width": 640, "height": 360,
+                                       "avg_frame_rate": "14985/499", "r_frame_rate": "30/1"}],
+                          "format": {"duration": "10"}}
+            result = subprocess.CompletedProcess([], 0, json.dumps(probe_json), "")
+            with patch.object(exporter.shutil, "which", return_value="ffprobe"), patch.object(exporter.subprocess, "run", return_value=result):
+                cut = exporter.build_cut_list(data, base_dir=Path(directory), probe=True)
+            self.assertEqual(cut.rate, Fraction(30))
+            self.assertEqual(cut.total_frames, 30)
+            self.assertFalse(any("probed average" in w for w in cut.warnings))
+
     def test_example_loads_sorted_with_record_positions(self):
         cut = load_example()
         self.assertEqual(len(cut.segments), 4)

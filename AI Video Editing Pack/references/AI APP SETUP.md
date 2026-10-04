@@ -1,104 +1,112 @@
-# Set Up Your AI App for Local Video Editing
+# Set Up Your AI App for Video Editing
 
-**Verified September 28, 2026.** AI apps change quickly. Open the linked official setup page before you grant access, and confirm that the feature is available on your current plan, operating system, region, and workspace.
+**Checked October 3, 2026.** Use a local assistant such as Codex or Claude Code
+with a folder on your computer. It can read the pack, work with files and run
+editing tools. A normal browser chat can discuss an edit, but that alone does
+not connect it to your local video editor.
 
-## Recommended setup: ChatGPT desktop with Codex Local
+Start with the subscription and editor you already have. Give the assistant
+the pack and its [setup message](../START%20HERE.md). It should inspect the
+available tools, save your private editing profile and explain any missing
+connection. You do not need a recording ready, and there is no practice clip
+to complete before you can use it.
 
-Payton's setup is **ChatGPT desktop → Codex → Local → a dedicated video project folder**. This gives the assistant a real working folder, local tools, and an optional way to operate approved desktop apps. A normal browser chat can help plan an edit, but it cannot reach into your computer or control DaVinci Resolve by itself.
+## Which plan and model?
 
-Use a capable model with enough reasoning time for source review and revision comparison. Check the current model choices in your app instead of relying on a model name printed in an old guide.
+A plan pays for access and usage. A model does the reasoning. Neither one,
+by itself, gives the AI control of your editor.
 
-### 1. Start a local Codex task
+At this check, OpenAI lists **Plus at US$20/month** and **Pro from US$100/month**.
+Start with an eligible plan you already pay for. Consider a higher allowance
+when real editing work repeatedly hits your limits, or when a model or feature
+you need is unavailable. Check the [current plans](https://learn.chatgpt.com/docs/pricing)
+before paying: access, limits and regional prices can change. A ChatGPT
+subscription does not include separate API usage for another tool.
 
-1. Install the [ChatGPT desktop app](https://learn.chatgpt.com/docs/app). OpenAI currently documents desktop apps for macOS, Windows, and Linux.
-2. Choose **Codex**.
-3. Start a new task, choose **Local**, and select the folder for this video project. OpenAI also offers Worktree and Cloud environments, but Local is the direct route for files on this computer ([Codex environments](https://learn.chatgpt.com/docs/environments/modes)).
-4. Keep original footage outside the pack. Work from copies inside a dedicated project folder.
+For editing, the difficult part is often judgment: choosing the complete take,
+keeping a useful pause, comparing references and diagnosing a bad transition.
+Payton prefers **GPT-6 Astra with High reasoning** for that work. This is a
+workflow preference, not a measured claim that it wins every video-editing task.
 
-### 2. Choose a permission mode
+**GPT-6.1 Sol** is a capable everyday option designed to offer much of Astra's
+capability at lower usage cost. **Luna** suits narrower tasks with clear checks,
+such as renaming files or formatting notes. A higher reasoning setting gives a
+model more time to work through a problem; it does not add an editor connection
+or guarantee better taste. There is no need to choose Max or Ultra for every
+task. See [OpenAI's model guide](https://learn.chatgpt.com/docs/models) and the
+choices available in your own app.
 
-Open **Settings → General → Permissions**, then choose the mode in the task menu ([OpenAI permission modes](https://learn.chatgpt.com/docs/permission-modes)).
+Claude Code is another local route. Anthropic currently includes it in paid
+Claude plans, with usage shared across Claude and Claude Code; API billing is
+separate. Use an available model suited to complex reasoning for editorial
+decisions and a lighter one for routine work. Check [Claude's current plans](https://claude.com/pricing)
+and [Claude Code Desktop](https://code.claude.com/docs/en/desktop) before choosing.
 
-| Mode | What it allows | When to use it |
+## Codex: connect the working folder
+
+In the [desktop app](https://learn.chatgpt.com/docs/app), open Codex, start a
+**Local** task and choose a dedicated editing folder. Local means the work
+runs on this computer. Keep original footage recoverable and projects outside
+the downloaded pack, so replacing the pack cannot replace your work.
+
+Give the AI the extracted pack and setup message. It should create or reuse
+your private editing profile, then save a pointer in the project's instructions.
+Later edits in that workspace can read it. A new app or unrelated chat may
+need the folder supplied again.
+
+## Permissions: what each setting actually does
+
+Choose a mode in the task's permission menu. Settings may first need enabling
+under **Settings → General → Permissions**. Follow the current labels in your
+app and [OpenAI's permission guide](https://learn.chatgpt.com/docs/permission-modes).
+
+| Mode | What changes | Why choose it? |
 |---|---|---|
-| **Full access** | Codex can edit files outside the project and use the network without asking. | Payton prefers this for his own trusted editing workflow because it avoids repeated stops. Use it only when you understand the wider access, have recoverable files, and have named the exact project and task. |
-| **Approve for me** | Codex stays inside the workspace boundary. Auto-review checks requests that go beyond it. | The supported step down from Full access. This is a sensible starting point when you want fewer prompts without giving unrestricted access. Auto-review can still make mistakes. |
-| **Ask for approval** | Codex stays inside the workspace boundary and asks you before going beyond it. | Use this when you want to review wider file or network access yourself. OpenAI recommends starting here for most work. |
+| **Ask for approval** | Requests beyond the workspace boundary go to you. | Useful while getting familiar with a workflow. |
+| **Approve for me** | Automatic review evaluates requests beyond the same boundary. | Fewer interruptions, with review that can still make mistakes. |
+| **Full access** | File and command access extends beyond the project, including network access, without those approval prompts. | Payton uses it for his established workflow. It reduces stops but also gives mistakes more room to cause damage. |
 
-Full access is Payton's personal choice, not a requirement for this pack. Changing a permission mode also does not install an editor connection or approve a desktop app.
+Full access is optional. It does not install a connector, authorize publishing
+or make downloaded instructions trustworthy. Keep the task specific and
+originals recoverable whichever mode you choose.
 
-### 3. Add Computer Use for visual editor actions
+## Let the AI operate the editor
 
-Open **Plugins → Computer Use → Install plugin**. Enable the Computer Use server and skill if those switches appear, then add Computer Use to a Work or Codex task ([official setup](https://learn.chatgpt.com/docs/computer-use)).
+File access and editor control are different. The assistant should check the
+[connection matrix](EDITOR%20CONNECTIONS.md) and your editor's playbook, then use
+the route that actually works on your installed version. A native connection
+can handle supported operations precisely. Computer Use can operate visible
+controls. A timeline-file route may require you to import a file yourself.
 
-On macOS, approve these prompts when you want local GUI control:
+For Codex Computer Use, follow the [official setup](https://learn.chatgpt.com/docs/computer-use).
+On macOS, **Screen Recording** allows the app to see the interface and
+**Accessibility** allows clicking and typing. These are separate from Codex's
+file permissions. Approve the particular editor when asked. A remembered or
+“always allow” choice, where offered, avoids repeated prompts for that app;
+choose it only for an app and access you intend to keep available.
 
-- **Screen Recording** lets the app see the interface.
-- **Accessibility** lets it click, type, and navigate.
+**Full Disk Access** is a macOS permission for protected data. It is not the
+same as Codex's Full access, and OpenAI does not list it as a standard Computer
+Use requirement. Enable it only when a current, specific setup requirement
+explains why it is needed. More switches turned on does not mean a better edit.
 
-OpenAI's current setup does not list Full Disk Access as a standard requirement. Do not grant it in advance. If a current official prompt asks for it, read the reason and decide then.
+Claude Code Desktop has its own modes, including Manual, Accept edits, Plan
+and Auto. Anthropic reserves Bypass permissions for isolated environments
+such as containers or virtual machines; it is not the equivalent recommendation
+for a normal personal editing computer. Follow its [desktop guide](https://code.claude.com/docs/en/desktop)
+and verify the actual editor connection separately.
 
-Approve DaVinci Resolve or another editor when Computer Use asks for that app. Editor approval is separate from the file and shell permission mode. OpenAI does not specifically promise Resolve support, so prove it on a copied 20 to 60 second clip before using it on valuable work.
+## What “ready” means
 
-### 4. Use the native editor connection and the GUI together
+The AI can find your profile, name its available editing route and explain
+how to hand it a recording. If it needs to test an import or export, it can
+use a harmless disposable fixture within your authorized setup. It should
+report whether a capability is documented, directly tested or unavailable.
+It must not claim it edited or watched a file when it could not.
 
-Use a vendor-native MCP, API, or scripting route for structured operations it officially supports. Use Computer Use for visible controls that the structured connection does not cover. These routes complement each other:
-
-- A native connection is usually better for exact project status, timeline data, and repeatable commands.
-- Computer Use can handle visible dialogs and controls, but layouts and pop-ups can change what it sees.
-- A person still watches and listens to the saved export before calling the edit finished.
-
-For the current Resolve, Final Cut, Premiere, and CapCut routes, use [Editor Connections](EDITOR%20CONNECTIONS.md). This pack does not bundle an MCP server or change editor settings automatically.
-
-### 5. Keep the computer available
-
-For a long local task on macOS, turn on **Settings → General → Prevent sleep while running** ([OpenAI long-running work](https://learn.chatgpt.com/docs/long-running-work)). Local scheduled work also needs the computer on and the ChatGPT desktop app running ([OpenAI automations](https://learn.chatgpt.com/docs/automations)).
-
-OpenAI currently supports background Computer Use tasks on macOS. On Windows, keep the target app visible on the active desktop ([local Work security](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-local-security)).
-
-### 6. Add Chrome only when the task needs your signed-in browser
-
-Use the built-in browser for isolated web research. Use the Chrome extension only when the task needs a site where you are already signed in.
-
-1. Open **Settings → Computer Use → More browsers**.
-2. Choose Chrome and follow the install link.
-3. Confirm **Manage** in the extension flow.
-4. Start a new Work or Codex task and mention **`@Chrome`**. Use **`@Computer`** for approved desktop apps.
-
-OpenAI currently documents Chrome, Edge, Brave, Opera, and Vivaldi support. Availability can vary by rollout and workspace settings ([browser extension setup](https://learn.chatgpt.com/docs/chrome-extension)).
-
-## Claude is a credible alternative
-
-Claude Cowork can work with connected local files and, where available, use approved desktop apps through Computer Use. Claude Code Desktop works with local project files and commands; it needs a separately verified editor connection for editor actions. The exact Claude UI is moving: some Pro and Max accounts now use a combined Chat and Cowork experience, while other accounts still show a Cowork switcher ([Anthropic's current rollout note](https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude)). Follow the labels you actually see.
-
-### Cowork
-
-1. Install [Claude Desktop](https://support.claude.com/en/articles/10065433-install-claude-desktop).
-2. Connect only the folder needed for the project.
-3. Open **Settings → General → Enable computer use**.
-4. Approve the editor when Claude requests it. On macOS, Computer Use needs Accessibility and Screen Recording.
-5. Use **Manual** when you want to approve actions yourself, or **Auto** when you want Claude's safety review. Older interfaces may show **Skip**; do not use Skip as the default on a personal editing computer.
-
-Cowork is currently documented on paid plans, while native Computer Use is currently limited to Pro and Max on macOS and Windows. Computer Use needs the desktop app open and the computer awake. Check the [current Cowork setup](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork) and [Computer Use availability](https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork) before teaching or buying around it.
-
-### Claude Code Desktop
-
-Claude Code is the closer alternative to Codex for local project files, commands, and technical workflows. Current permission choices include **Manual**, **Accept edits**, **Plan**, **Auto**, and **Bypass permissions** ([Claude Code Desktop](https://code.claude.com/docs/en/desktop)).
-
-Do not recommend **Bypass permissions** on a normal personal Mac. Anthropic says to reserve it for isolated containers or virtual machines because it skips permission prompts, including protected paths ([Claude Code permissions](https://code.claude.com/docs/en/permissions)). Manual or Auto is the better fit for an editing computer.
-
-Claude in Chrome uses your signed-in personal browser. Set it up at **Settings → Connectors → Claude in Chrome → Configure**, then enable it for the conversation ([Claude in Chrome](https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome)).
-
-## Prove the setup before the real edit
-
-Use a disposable project and a copied short clip:
-
-1. Confirm the assistant can name the selected folder and editor without changing either.
-2. Import the copied clip.
-3. Make one reversible change.
-4. Save, close, reopen, and export a short review file.
-5. Watch and listen to the export yourself.
-
-Record the result as **documented**, **directly tested**, or **unavailable**. If the editor connection fails, use the pack's manual workflow. The editing method still works when a person performs the named steps.
-
-Current OpenAI plan coverage is listed on the [ChatGPT plans page](https://learn.chatgpt.com/docs/pricing). Current Claude Code plan coverage is listed for [Pro and Max](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan) and [Team and Enterprise](https://support.claude.com/en/articles/11845131-use-claude-code-with-your-team-or-enterprise-plan). Treat those pages, not this dated snapshot, as the final word on availability.
+For long local work, keep the computer awake and the app running. Codex offers
+**Prevent sleep while running** in General settings; see the
+[long-running work guide](https://learn.chatgpt.com/docs/long-running-work).
+Then use your own clips at your own pace. Ask for a complete edit, a small
+experiment or a preview first. The pack defaults to completing the work you
+request and returning the editable project, export and a short report.

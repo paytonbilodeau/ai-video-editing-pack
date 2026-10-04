@@ -25,8 +25,9 @@ project brief. Do not treat a prerequisite checker or connector listing as
 proof of control.
 
 If local access is allowed, inspect only the named working folder and tools.
-Prove a read-only editor connection first. Then use copied footage in a
-disposable project to import, make one reversible change, save, export, and
+Use the [connection matrix](EDITOR%20CONNECTIONS.md) as the route map.
+Prove a read-only editor connection first. If a write check is needed, the AI
+can use synthetic or authorized copied media in a disposable project to import, make one reversible change, save, export, and
 reopen. Record which step succeeded and which failed. A browser-only chat can
 fill in the brief and guide a human through these steps; it cannot claim to
 have run them.
@@ -34,7 +35,8 @@ have run them.
 Keep dated, app-specific permission and setup steps in the user's private
 setup record. Verify the controls in the current UI before changing them.
 
-Use the existing editor and native titles for the first test. Propose a new
+Use the existing editor and verify only the operations the task needs.
+Connection checks are the AI’s job; do not assign the user a test clip. Propose a new
 installation, paid service, model download, wider access, or private-media
 upload only when it solves a stated need and the user approves that action.
 Do not toggle broad security settings just to make a connector work. If a

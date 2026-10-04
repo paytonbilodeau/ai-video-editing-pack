@@ -1,28 +1,37 @@
 ---
 name: vibe-editing-setup
-description: Start the AI Video Editing Pack with a private project brief, verified tools, and a small editable test clip.
+description: Prepare an AI video editor with verified tools and a reusable private profile, without requiring footage or a practice assignment.
 ---
 
-# Start a Video Edit
+# Set Up Your AI Video Editor
 
-Read the pack's [umbrella skill](../../SKILL.md), then use
-[intake](../intake/SKILL.md) and
-[platform refresh](../platform-refresh/SKILL.md). Ask for the user's existing
-editor and tools first. Keep Final Cut, Premiere, CapCut, Resolve, or another
-editor when it fits. If they are choosing from scratch, suggest DaVinci
-Resolve and verify current edition and setup requirements. Read that editor's
-playbook in `references/` before promising any operation; only Resolve Studio
-has a vendor connector, and the other editors work through file import,
-unofficial bridges or computer use.
+Read the [main skill](../../SKILL.md), [AI app guide](../../references/AI%20APP%20SETUP.md)
+and [safety guide](../../references/SAFETY%20AND%20API%20KEYS.md). Inspect the
+existing app, operating system, editor and available tools. Keep the person's
+editor when it suits their work. If they are choosing from scratch, suggest
+DaVinci Resolve and check the current edition's requirements and connection
+options. Do not imply every editor has the same automation support.
 
-Read [Safety and API Keys](../../references/SAFETY%20AND%20API%20KEYS.md)
-before connecting tools. Record approved access and private secret-storage
-locations without copying credentials into the project or editing profile.
+Use [platform refresh](../platform-refresh/SKILL.md) and the editor's playbook
+to establish the route. Make harmless checks yourself, using a disposable
+fixture if an actual import or export test is needed and authorized. Do not
+require the person to find a 20- to 60-second recording, approve a sample, or
+complete an exercise. If setup is blocked, state the exact missing permission
+or component and the next useful action.
 
-Complete a copy of [PROJECT INTAKE](../../templates/PROJECT%20INTAKE.md) in a
-private project folder. Use a copied 20 to 60 second clip for the first test.
-Establish whether the assistant can actually inspect files or control the
-editor; browser chat can guide but cannot perform a local edit. Preserve the
-originals and duplicate the editable timeline. Name the first clean export,
-the human reviewer, and the proof needed to continue. Hand the source to
-[source research](../source-research/SKILL.md) only after this setup is clear.
+Create or reuse a private [editing profile](../../templates/EDITING%20PROFILE.md)
+outside the pack. Record the editor, connection, output preferences, privacy
+limits and any taste already expressed. Unknown taste can use conservative
+starting defaults: complete thoughts, natural pauses, clear speech, neutral
+color and restrained graphics. Label these as defaults, not learned taste.
+Full pass is the default review mode; checkpoints are optional.
+
+Save the profile's location in this assistant's supported project instructions
+and verify that it can be read. Keep credentials in supported secret storage,
+not in the profile. Do not overwrite existing preferences. Explain how to
+reuse the folder with another assistant when necessary.
+
+Finish with a brief readiness report: where the profile lives, the route
+actually available, anything the user must still do, and how to provide a
+video when ready. No footage means setup only. When footage arrives, use
+[intake](../intake/SKILL.md) to fill only the missing project details.

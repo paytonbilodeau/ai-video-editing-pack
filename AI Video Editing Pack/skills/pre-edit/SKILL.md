@@ -1,13 +1,13 @@
 ---
 name: video-pre-edit-local
-description: Offer an optional local no-paid-AI-service first pass using the separate public System 05 tool, with an approved dry plan before rendering.
+description: Offer an optional local no-paid-AI-service first pass using the separate public pre-edit tool, with an inspected dry plan before rendering.
 ---
 
 # Optional Local Pre-Edit
 
 Use this only if the person wants a conservative automatic first pass on a
 talking-head recording. The tool belongs to the separate free
-[System 05 release](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/v4.0.4/05%20Video%20Pre-Edit%20System);
+[pre-edit download](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/v4.0.4/05%20Video%20Pre-Edit%20System);
 it is not bundled in this plugin. Fetch the
 [versioned repository source ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/archive/refs/tags/v4.0.4.zip)
 or use a clean local copy of that release. Read its
@@ -23,7 +23,7 @@ Whisper install and model download, which require separate approval. Start
 with a copied, flattened SDR talking-head file containing one video and one
 audio stream. The tool rejects HDR, multitrack and other unsupported sources.
 
-From the extracted System 05 folder, preview a plan before rendering:
+From the extracted pre-edit folder, preview a plan before rendering:
 
 ```sh
 python3 tools/video_pre_edit.py "/path/to/copied-video.mp4" "/path/to/copied-video_preedit.mp4" --dry-run
@@ -31,7 +31,10 @@ python3 tools/video_pre_edit.py "/path/to/copied-video.mp4" "/path/to/copied-vid
 
 On Windows use `py -3.11`. Read the generated `_dry_run_report.md` and
 `_plan.json`, add protected ranges or less aggressive silence rules as
-needed, rerun the dry plan, and obtain approval. Render from that exact plan:
+needed, then rerun the dry plan. In full-pass mode, inspect and render that
+plan within the authorized brief; do not demand a routine approval. Pause
+when checkpoints were requested or a material uncertainty remains. Render
+from that exact plan:
 
 ```sh
 python3 tools/video_pre_edit.py "/path/to/copied-video.mp4" "/path/to/copied-video_preedit.mp4" --from-plan "/path/to/copied-video_preedit_plan.json"

@@ -122,8 +122,10 @@ the same approval again or claim the agent performed the person's review.
 
 ## 5. Build the visual style and finish
 
-Follow `guides/STYLE FROM REFERENCES.md`. First approve a small style test, then
-place requested graphics against the approved cut and its current word times.
+Follow `guides/STYLE FROM REFERENCES.md`. A small style preview is optional.
+Place requested graphics against the current cut and its current word times.
+Use full-pass mode unless checkpoints were requested; do not require routine
+stage approval for work already covered by the brief.
 Use System 09's beat map and source ledger. Screen recordings, evidence, faces,
 hands and captions have their own protected areas. Graphics need a reason and
 a readable interval; there is no mandatory effect quota.

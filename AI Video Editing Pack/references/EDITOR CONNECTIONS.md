@@ -92,7 +92,8 @@ The pack's exporter writes the first four from one cut list; see
    date in [PROJECT INTAKE](../templates/PROJECT%20INTAKE.md).
 2. Prove a read-only step: Resolve status and version, a bridge's project name,
    a parsed FCPXML export, a parsed CapCut draft.
-3. Create a disposable project from a copied 20 to 60 second clip. Make two cuts
+3. Have the assistant create a disposable project from synthetic or authorized
+   copied media when a write test is needed. No user test clip is required. Make two cuts
    by the chosen route, then read the result back by the same editor's own
    means (API, Export XML, draft file or a zoomed screenshot of the timeline).
 4. Save, reopen, export a short review file, and check its path, duration,

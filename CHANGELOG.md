@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.2.0 - 2026-10-03
+
+- Setup ends ready without a required recording or practice assignment.
+- Full requested edits are the default; checkpoints and sample previews are optional.
+- Private taste profiles start during setup and are reused through project instructions.
+- Revised all 22 email templates for clear, practical advice without daily homework.
+- Refreshed app, plan, model and permission guidance; updated the editing-brief illustration.
+- Warn on unusual probed frame rates and document the observed Resolve EDL import mismatch.
+
+
 ## 4.1.0 - 2026-10-03
 
 Make the pack work the same way on all four editors. Add a per-editor playbook for DaVinci Resolve Studio 21.1, Premiere Pro 26.5, Final Cut Pro 12.4 and CapCut 9.5 desktop: current version facts, every control route (vendor connector, unofficial bridge, file import, computer use), the scripting or interchange surface, default shortcuts, the talking-head workflow in order, a smoke test and a short learning path. Rewrite EDITOR CONNECTIONS around a truthful capability matrix and the interchange formats each editor reads.

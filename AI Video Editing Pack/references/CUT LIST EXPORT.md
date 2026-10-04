@@ -117,3 +117,17 @@ approved. Timecode in the EDL and cut sheet is non-drop-frame counted at the
 integer timebase, so at 29.97 the timecode drifts from wall-clock time while
 frame counts stay exact. A draft generated this way is still a first assembly:
 the fine pass on joins, pauses and takes happens in the editor.
+
+## Frame-rate checks before import
+
+A probed average such as `14985/499` may come from variable-frame-rate footage.
+The exporter warns about unusual probed rates rather than silently choosing a
+standard. Confirm the intended timeline rate and supply `fps` explicitly.
+
+In a local Resolve Studio 21.1 test on October 3, 2026, FCPXML and Premiere XML
+imports preserved the tested 30 fps source and record ranges. EDL did not: its
+import dialog defaulted to 24 fps even with a 30 fps timeline. Prefer the XML
+routes for this case. If using EDL, match the import-dialog rate and verify the
+imported source ranges and total frames. Changing that setting has not yet
+been verified to resolve this particular mismatch. An exported file alone is
+not proof of a frame-accurate import.

@@ -59,7 +59,7 @@ For a concrete local starting route, use the dated
 computer access, permission choices and a Claude alternative. Verify the
 current UI and plan before changing any setting.
 
-You can use the [umbrella skill](SKILL.md) to route the work or use one focused
+You can use the [main skill](SKILL.md) to route the work or use one focused
 skill at a time:
 
 | Step | Skill |
@@ -94,7 +94,7 @@ acceptance checks. [Project intake](templates/PROJECT%20INTAKE.md),
 [edit plan and review](templates/EDIT%20PLAN%20AND%20REVIEW.md), and
 [delivery and learning](templates/DELIVERY%20AND%20LEARNING.md) are copyable
 working records. The [editing profile](templates/EDITING%20PROFILE.md) keeps
-accepted rules privately across projects. Start with a copied 20 to 60 second recording. Keep the
+accepted rules privately across projects. Setup needs no footage; begin editing whenever you have a video you want to use. Keep the
 original media and any approved edit recoverable. A setup check, transcript,
 or AI summary is not proof that an edit works.
 

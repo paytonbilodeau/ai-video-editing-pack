@@ -10,11 +10,11 @@ Prefer to start here? **[Download the pack](https://github.com/paytonbilodeau/ai
 
 ## How it works
 
-1. Give your AI assistant the setup message in START HERE. It asks about your editor, computer, video and editing preferences.
-2. Save your own editing profile in a separate private folder. The assistant checks the available tools and proves a connection on a copied clip.
-3. Work through the edit, review the result and add your final touches. Keep the original footage and your private configuration separate from the downloaded pack.
+1. Give your local AI assistant the pack and setup message in START HERE. It checks your existing editor and tools, then asks only for missing information that matters.
+2. The assistant creates or reuses a private editing profile and saves where to find it. It explains the available editing route and any remaining setup step. No footage is needed yet.
+3. Whenever you're ready, give it a recording and describe the result you want. It completes the requested edit and returns the export, editable project and a short report. Ask for previews along the way if you prefer.
 
-The pack supports DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut. Each has its own playbook in the pack's references folder with current version facts, control routes, shortcuts, workflow and a smoke test, and a capability matrix states plainly what an assistant can script, import, drive by computer use or must leave to you. One reviewed cut list exports to FCPXML, Premiere XML, EDL and a cut sheet, so the same edit decisions reach any of the four editors.
+The pack has guides for DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut. Each editor's playbook explains its connections, controls and limits. The assistant checks which route works on your installed version. Where direct control is unavailable, the included tool can turn planned cuts into timeline files or a readable cut sheet. Support differs by editor; CapCut does not have a verified timeline-import route in this pack.
 
 ## What's included
 
@@ -28,7 +28,7 @@ The pack supports DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut. Each 
 | [Full editing workflow](14%20AI%20Video%20Editing%20System/START%20HERE.md) | Connect an editor, plan post-production and check a finished export. |
 | [Kit email workflow](Kit%20Email%20Workflow/README.md) | Understand the signup, confirmation, immediate first lesson and 22-day sequence, with reusable lesson templates. |
 
-Start with one video and the editor you already use. You can add optional tools when you need them. You keep the creative decisions and final review.
+Keep the editor you already use when it works for you. Try your own clips at your own pace, and add optional tools when they solve a specific need. You keep the creative decisions and final review.
 
 ## Updates and use
 

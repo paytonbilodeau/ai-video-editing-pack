@@ -21,7 +21,7 @@ separately; later timeline shifts do not imply another edit.
 |---|---|---|---|---|
 |  |  |  |  |  |
 
-## Clean-cut acceptance
+## Clean-cut checks and optional feedback
 
 - Opening, complete thoughts, joins, ending and demonstrations checked:
 - Uncertain words, takes, or ranges:
@@ -42,7 +42,7 @@ separately; later timeline shifts do not imply another edit.
 - Timing, reading time, contrast, crop and demonstration visibility:
 - Actual moving composite reviewed with sound; result:
 
-## Requested derivatives, after source approval
+## Requested derivatives, after source timing is settled
 
 | Output | Approved source ranges | Frame/caption/safe-zone check | Human response |
 |---|---|---|---|

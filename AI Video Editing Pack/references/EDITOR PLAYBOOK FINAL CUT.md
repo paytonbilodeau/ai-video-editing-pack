@@ -1,5 +1,9 @@
 # Editor Playbook: Final Cut Pro
 
+Version details are a dated snapshot. Have the AI check current official docs
+and the installed edition before using a version-specific command. Any smoke
+test below is an assistant-run capability check, not homework for the user.
+
 **Checked October 3, 2026** against Apple's release notes, the Final Cut Pro
 12.4 user guide, Apple's FCPXML developer pages and an installed copy of Final
 Cut Pro 12.4 (its AppleScript dictionary, document types and shipped DTDs were

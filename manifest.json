@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "version": "4.1.0",
+  "version": "4.2.0",
   "publicScope": "AI Video Editing Pack only, including supporting editing tools and the Kit email workflow.",
   "systems": [
     {
@@ -161,6 +161,7 @@
     "Kit Email Workflow/CONFIRMATION.md",
     "Kit Email Workflow/README.md",
     "Kit Email Workflow/SEQUENCE.md",
+    "Kit Email Workflow/assets/editing-brief.png",
     "Kit Email Workflow/lessons/01.md",
     "Kit Email Workflow/lessons/02.md",
     "Kit Email Workflow/lessons/03.md",
