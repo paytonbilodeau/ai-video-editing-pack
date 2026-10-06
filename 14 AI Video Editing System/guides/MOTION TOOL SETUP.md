@@ -93,3 +93,13 @@ the command and versions that worked before expanding the scene.
 
 Use System 09's beat map, asset ledger and render plan to scale beyond the test.
 Do not copy a private creator preset or bundle third-party reference assets.
+
+## JavaScript animation: procedural scenes and reusable styles
+
+The standalone pack includes the [JavaScript animation skill](../../AI%20Video%20Editing%20Pack/skills/javascript-animation/SKILL.md).
+Use its contained builder and pinned local Playwright runtime for Canvas
+scenes, seven public style kits, custom project styles and frame-driven
+rendering. Its guide covers voice/music timing, storyboard and reference
+comparison, a Remotion frame adapter, and PNG or ProRes editor handoff. Shipped
+style demos are opaque; transparent overlays require authored transparent
+source. The route adds no account, paid voice provider or global Node package.

@@ -19,10 +19,11 @@ optional adapter and verify current requirements before installation:
 
 | Route | Practical first test | Current source and limit |
 |---|---|---|
+| [JavaScript animation](../skills/javascript-animation/SKILL.md) | Use the bundled local CLI to initialize one of seven styles, build, check and render a short piece. Use its frame adapter inside Remotion or import PNG/ProRes into the editor. | Pinned MIT upstream and optional locked Playwright setup. Shipped styles are opaque; alpha requires authored transparent content. No account or paid provider is required. |
 | Remotion (4.0.532 on October 3, 2026; 5.0 unreleased) | After approval, run `npx create-video@latest`, pin the exact version, make one short composition, and render a sample for import into the editor. Install the vendor's agent skills with `npx skills add remotion-dev/skills` so the assistant can check the current API before coding. | [Remotion docs](https://www.remotion.dev/docs). React and TypeScript; free for individuals and companies of up to three people, otherwise a [company license](https://www.remotion.dev/docs/license/pricing). `@remotion/captions` builds word-by-word pages from transcript JSON; `@remotion/media` is the current video and audio component. |
 | HyperFrames (0.8.x, Apache 2.0) | After approval, follow the [current quick start](https://github.com/heygen-com/hyperframes/blob/main/docs/quickstart.mdx): `npx skills add heygen-com/hyperframes`, run `npx hyperframes doctor` (gate on `.ok` in the JSON; the command always exits 0), `lint` while authoring, `check` as the final gate, then `render`. Pin the version; it publishes several releases a week. | HTML, CSS and GSAP rendered through headless Chrome and FFmpeg; local rendering has no per-render fee; hosted rendering, publishing and telemetry are separate paid or data-sending features to leave off unless chosen. Fonts must be local `@font-face` files; anything visible at frame zero must be in static CSS. |
 
-Do not install both just because they are listed. Pin the tool and dependencies
+Install only the tools the project needs. Pin the tool and dependencies
 for a project whose look must reproduce. A browser preview is not a final
 encoded export. Import the sample, inspect motion and alpha over the shot,
 then watch and listen to the final render.

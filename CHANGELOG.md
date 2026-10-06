@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.3.0 - 2026-10-06
+
+- Add the portable JavaScript animation skill alongside Remotion, Hyperframes and native editor routes. Include seven MIT-attributed public styles, demos and a pinned upstream source.
+- Add isolated lockfile-pinned Playwright setup, contained builds, deterministic frame checks, local beat analysis, storyboards and reference comparison. Keep supplied voice timing local and provider-independent.
+- Add a frame-acknowledged Remotion adapter and PNG/H.264/ProRes handoff. Alpha export preserves authored transparency and rejects an opaque source; H.264 does not preserve alpha.
+- Include runtime sources, regression tests and notices in the standalone ZIP. Bump the native plugin manifests to 1.2.0.
+
 ## 4.2.0 - 2026-10-03
 
 - Setup ends ready without a required recording or practice assignment.
