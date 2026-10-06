@@ -75,6 +75,7 @@ skill at a time:
 | Repair and balance sound | [Audio](skills/audio/SKILL.md) |
 | Correct picture and assess LUTs | [Color](skills/color/SKILL.md) |
 | Create useful graphics and motion | [Style and motion](skills/style-motion/SKILL.md) |
+| Build procedural Canvas animation | [JavaScript animation](skills/javascript-animation/SKILL.md) |
 | Review, export and learn from corrections | [Review and delivery](skills/review-delivery/SKILL.md) |
 | Make approved derivatives | [Waterfall](skills/waterfall/SKILL.md) |
 
@@ -102,8 +103,11 @@ Keep Final Cut, Premiere, CapCut, or another editor you already use when it
 fits the job. If choosing from scratch, DaVinci Resolve is the recommended
 starting editor, subject to a current edition and setup check. Native editor
 titles are enough for a
-first graphic; Remotion and Hyperframes are optional routes for a specific
-need. No new installation, paid service, model download, wider access, or
+first graphic; Remotion, Hyperframes and the included JavaScript animation
+skill are optional routes for a specific need. JavaScript animation includes
+seven public styles, a pinned local browser setup, technical checks, a Remotion
+frame adapter and PNG or ProRes handoff. Read its guide before installing the
+optional runtime. No new installation, paid service, model download, wider access, or
 upload of private footage is part of setup by default. Check your assistant's
 current skill instructions before installing these files. This pack makes no
 universal plugin compatibility claim.

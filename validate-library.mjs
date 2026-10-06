@@ -44,6 +44,7 @@ for (const file of expected) if (!actual.includes(file)) errors.push('Missing de
 for (const file of actual) if (/^(0[1-468]|0[237]|1[123]) /.test(file) || /^(memory|private|customer|credentials)\//.test(file)) errors.push('Outside public editing scope: '+file);
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 const suites=[
+ ['AI Video Editing Pack/skills/javascript-animation',[process.execPath,'--test','tests/animation.test.mjs']],
  ['AI Video Editing Pack',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
  ['05 Video Pre-Edit System',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
  ['09 Visual Storytelling and Motion System',[process.execPath,'--test',...fs.readdirSync(path.join(root,'09 Visual Storytelling and Motion System/tests')).filter(f=>f.endsWith('.test.mjs')).map(f=>'tests/'+f)]],
@@ -52,11 +53,11 @@ const suites=[
 ];
 if (!process.argv.includes('--structure-only')) {
   for (const [dir,command] of suites) {
-    const run=spawnSync(command[0],command.slice(1),{cwd:path.join(root,dir),encoding:'utf8',timeout:90000});
+    const run=spawnSync(command[0],command.slice(1),{cwd:path.join(root,dir),encoding:'utf8',timeout:240000});
     if (run.error || run.status!==0) {
       console.error(dir,run.error||run.stderr||run.stdout);process.exit(1);
     }
     process.stdout.write(dir+': '+(run.stderr||run.stdout).trim()+'\n');
   }
 }
-console.log('Public validation passed: standalone AI Video Editing Pack, '+actual.length+' declared files, no private-system folders, no broken internal links'+(process.argv.includes('--structure-only')?'':', five editing tool suites')+'.');
+console.log('Public validation passed: standalone AI Video Editing Pack, '+actual.length+' declared files, no private-system folders, no broken internal links'+(process.argv.includes('--structure-only')?'':', six editing tool suites')+'.');

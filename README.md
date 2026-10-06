@@ -35,3 +35,8 @@ Keep the editor you already use when it works for you. Try your own clips at you
 This repository contains the AI Video Editing Pack and its supporting tools and email workflow. The numbered folders keep their existing paths so links in earlier lessons continue to work. The other public projects have their own repositories on [my profile](https://github.com/paytonbilodeau).
 
 The files are public templates. Bring your own accounts and save your API keys and editing preferences privately. Read [CHANGELOG.md](CHANGELOG.md) for updates and [LICENSE AND USE.md](LICENSE%20AND%20USE.md) for the terms.
+
+The pack also includes [JavaScript animation](AI%20Video%20Editing%20Pack/skills/javascript-animation/SKILL.md):
+seven public styles, local frame rendering, supplied voice/music timing,
+reference comparison, a Remotion adapter and PNG/ProRes editor handoff. It is
+an additional motion route alongside Remotion, Hyperframes and native editors.

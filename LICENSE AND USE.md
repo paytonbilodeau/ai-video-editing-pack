@@ -25,3 +25,8 @@ Public releases are maintained in this GitHub repository. The free library does 
 ## Your responsibility
 
 You keep source files and backups, review outputs, protect private information, obtain needed permissions, and approve consequential actions. Financial, medical, legal, tax, employment, security, and safety decisions require appropriate qualified review.
+
+The vendored cth9191/animate code and its adaptations retain the upstream MIT
+license. The library restrictions above do not add restrictions to that MIT
+material. See the JavaScript animation skill's `LICENSE.upstream` and
+`THIRD-PARTY.md` for scope and attribution.

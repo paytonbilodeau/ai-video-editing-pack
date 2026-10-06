@@ -34,7 +34,10 @@ invent an answer merely to keep moving.
 4. Improve sound and picture within the brief. Add graphics only when requested
    or clearly needed to explain the content within the agreed style. A clean
    talking-head edit does not require a motion graphic. Use native editor
-   tools first. The [pre-edit tool](skills/pre-edit/SKILL.md) is an optional,
+   tools first. For procedural graphics, the additive
+   [JavaScript animation skill](skills/javascript-animation/SKILL.md) supplies
+   seven styles, frame-controlled rendering and editor handoff alongside
+   Remotion and Hyperframes. The [pre-edit tool](skills/pre-edit/SKILL.md) is an optional,
    narrower route, not a prerequisite.
 5. Use [review and delivery](skills/review-delivery/SKILL.md) to reopen the
    project and check the exact export. Deliver the editable project, export
