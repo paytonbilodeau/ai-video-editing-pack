@@ -26,3 +26,9 @@ are useful explanations to revisit, not assignments to complete.
 - [Email 20: Your next edit starts before you record](lessons/20.md)
 - [Email 21: Did AI actually save time on this edit?](lessons/21.md)
 - [Email 22: Your AI editor, your way](lessons/22.md)
+
+Optional community invitations appear as postscripts in lessons **1, 5, 9,
+13, 18 and 22**. Replace `YOUR_COMMUNITY_URL` with your own destination or remove
+the invitations. Existing postscripts remain in place; a second one is labeled
+P.P.S. See the [workflow](README.md) for customization and the
+[update checklist](UPDATES.md) for keeping lesson content aligned.

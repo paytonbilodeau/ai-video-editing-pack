@@ -20,5 +20,15 @@
     "sunday"
   ],
   "subscribe_only_after_confirmation": true,
-  "require_real_signup_test": true
+  "require_real_signup_test": true,
+  "community_url": "YOUR_COMMUNITY_URL",
+  "community_cta_lesson_positions": [
+    1,
+    5,
+    9,
+    13,
+    18,
+    22
+  ],
+  "community_ctas_optional": true
 }

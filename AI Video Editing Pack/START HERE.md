@@ -50,6 +50,9 @@ Keep original footage, projects and your profile outside the downloaded pack.
 See [Safety and API Keys](references/SAFETY%20AND%20API%20KEYS.md) for connection
 details and [the workflow](references/EDIT%20WORKFLOW.md) for how edits run.
 
+For lessons, setup questions and feedback on your edits, visit the
+[Vibe Editors community](https://www.skool.com/vibeeditors).
+
 ## Optional private-folder setup
 
 The paste message above needs no Python. If you want the included helper to

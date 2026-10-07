@@ -6,6 +6,8 @@ Edit videos faster and better with AI. Free skills, project templates and practi
 
 **[Get the free pack and 22-day email guide at VibeEditors.com](https://vibeeditors.com)**. The first lesson arrives after you confirm your email, and the rest follow daily. You can download the pack immediately.
 
+For lessons, questions and feedback on your edits, visit the [Vibe Editors community](https://www.skool.com/vibeeditors).
+
 Prefer to start here? **[Download the pack](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip)**, unzip it, and open **[START HERE](AI%20Video%20Editing%20Pack/START%20HERE.md)**. GitHub is where the files live. You do not need to understand GitHub or write code to begin.
 
 ## How it works
@@ -34,7 +36,7 @@ Keep the editor you already use when it works for you. Try your own clips at you
 
 This repository contains the AI Video Editing Pack and its supporting tools and email workflow. The numbered folders keep their existing paths so links in earlier lessons continue to work. The other public projects have their own repositories on [my profile](https://github.com/paytonbilodeau).
 
-The files are public templates. Bring your own accounts and save your API keys and editing preferences privately. Read [CHANGELOG.md](CHANGELOG.md) for updates and [LICENSE AND USE.md](LICENSE%20AND%20USE.md) for the terms.
+The files are public templates. Bring your own accounts and save your API keys and editing preferences privately. Read [CHANGELOG.md](CHANGELOG.md) for updates and [LICENSE AND USE.md](LICENSE%20AND%20USE.md) for the terms. Maintainers can use the [funnel update checklist](Kit%20Email%20Workflow/UPDATES.md) to keep the pack, emails and community lessons aligned.
 
 The pack also includes [JavaScript animation](AI%20Video%20Editing%20Pack/skills/javascript-animation/SKILL.md):
 seven public styles, local frame rendering, supplied voice/music timing,
