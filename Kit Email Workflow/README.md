@@ -50,3 +50,22 @@ and can finish without footage. Later emails offer advice to use at the
 reader's pace. Default to complete requested edits; previews, manual finishing
 and staged approval are choices. Do not promise universal editor control or
 that saving a profile retrains a model.
+
+## Optional community invitations
+
+The templates include six short invitations in lessons 1, 5, 9, 13, 18 and 22.
+Use `YOUR_COMMUNITY_URL` for your own community destination, or remove those
+postscripts if your offer has no community. Confirm that the classroom,
+questions space and other resources named in each invitation exist before
+using the copy. Adapt the resource claims and instructor wording to your own
+offer; these templates do not promise access to someone else's community.
+
+Keep each invitation after the main lesson and signature, separated by a blank
+paragraph. Use P.P.S. when the lesson already has a P.S. Preserve the existing
+postscript, illustration and main call to action. Space invitations across the
+sequence instead of adding one to every email. The existing immediate first
+lesson and daily cadence stay the same.
+
+Use the [update checklist](UPDATES.md) when a material change affects the pack,
+email lessons or community classroom. A repository update does not change
+live emails or classroom pages automatically.

@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.3.1 - 2026-10-06
+
+- Align the motion-graphics email template with the existing JavaScript animation route and its Remotion bridge.
+- Add six optional community postscripts, document their spacing, and provide a checklist for keeping GitHub, email lessons and community classroom content aligned.
+- Add a Vibe Editors learning/help link to the repository and setup guide. Preserve the signup and download routes, the 22-lesson cadence, and native plugin version 1.2.0. This release changes documentation and templates, not editing capabilities.
+
 ## 4.3.0 - 2026-10-06
 
 - Add the portable JavaScript animation skill alongside Remotion, Hyperframes and native editor routes. Include seven MIT-attributed public styles, demos and a pinned upstream source.
