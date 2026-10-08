@@ -25,3 +25,15 @@ The [JavaScript animation skill](skills/javascript-animation/SKILL.md) includes
 MIT-licensed code, demos and seven styles from cth9191/animate at a pinned
 commit. Its [third-party notice](skills/javascript-animation/THIRD-PARTY.md)
 records the exact source, retained license and local changes.
+
+The full English automatic transcript of
+[*My Claude Code Edits FULL Videos in One Shot (Here's How)*](https://www.youtube.com/watch?v=mlhhZSHIS-w)
+was reviewed October 7, 2026; visual review of the source video remains pending.
+The narration describes anchored script comments, prepared assets, and targeted
+render review. The pack adopts generic mechanisms: preserve script comments,
+map supporting assets to spoken claims, and inspect exact frames around changed
+seams before checking the complete export. Preserving available comment replies
+is an extension for retaining clarifications; the narration did not establish
+reply export support.
+Provider dependencies, current model or price claims, generated-evidence
+shortcuts, and autonomous or one-pass quality guarantees are not adopted.
