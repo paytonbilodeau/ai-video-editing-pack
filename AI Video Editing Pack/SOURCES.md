@@ -25,3 +25,14 @@ The [JavaScript animation skill](skills/javascript-animation/SKILL.md) includes
 MIT-licensed code, demos and seven styles from cth9191/animate at a pinned
 commit. Its [third-party notice](skills/javascript-animation/THIRD-PARTY.md)
 records the exact source, retained license and local changes.
+
+The script-direction and targeted render-review guidance added in version
+4.3.2 was informed by public workflow demonstrations in
+[YouTube video mlhhZSHIS-w](https://www.youtube.com/watch?v=mlhhZSHIS-w),
+reviewed October 7, 2026. The pack adopts generic mechanisms: preserve anchored
+script comments, map supporting assets to spoken claims, and inspect exact
+frames around changed seams before checking the complete export. Preserving
+available comment replies is an extension for retaining clarifications; the
+demonstration showed comments but did not establish reply export support.
+Provider dependencies, current model or price claims, generated-evidence
+shortcuts, and autonomous or one-pass quality guarantees are not adopted.

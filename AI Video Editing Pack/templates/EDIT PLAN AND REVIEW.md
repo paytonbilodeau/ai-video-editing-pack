@@ -21,6 +21,20 @@ separately; later timeline shifts do not imply another edit.
 |---|---|---|---|---|
 |  |  |  |  |  |
 
+## Script directions and evidence assets
+
+Preserve relevant anchored comment threads when the document tool exposes
+them. Replies may contain the final clarification, but their preservation is a
+compatibility safeguard rather than a promise that every tool can export them.
+
+| Document/version | Anchor text and source time | Comment, replies and author | Open or resolved? | Intended edit and linked asset | Timeline range or uncertainty |
+|---|---|---|---|---|---|
+|  |  |  |  |  |  |
+
+| Spoken cue or claim | What the viewer needs to see | Exact asset and provenance | Visible action or state | Intended interval | Permission, availability and result |
+|---|---|---|---|---|---|
+|  |  |  |  |  |  |
+
 ## Clean-cut checks and optional feedback
 
 - Opening, complete thoughts, joins, ending and demonstrations checked:
@@ -41,6 +55,16 @@ separately; later timeline shifts do not imply another edit.
 - Native editor, Remotion or Hyperframes route and why:
 - Timing, reading time, contrast, crop and demonstration visibility:
 - Actual moving composite reviewed with sound; result:
+
+### Targeted seam review
+
+Use this after the complete playback for changed joins, graphic entrances and
+exits, overlays, masks, or transitions. Sampled frames do not replace watching
+and listening to the exact export.
+
+| Reviewed export and time/frame | Observed defect | Smallest repair | Dependent cues | Rerendered result and seam evidence | Open, verified or blocked |
+|---|---|---|---|---|---|
+|  |  |  |  |  |  |
 
 ## Requested derivatives, after source timing is settled
 

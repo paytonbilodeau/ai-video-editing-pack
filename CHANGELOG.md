@@ -1,5 +1,20 @@
 # Changelog
 
+## 4.3.2 - 2026-10-07
+
+- Preserve available anchored script comments and replies with their document
+  version, source-time match, linked asset, and ambiguity instead of guessing.
+- Add an evidence-aware map from spoken cues and claims to authentic B-roll,
+  screenshots, graphics, provenance, permissions, and visible result.
+- Add bounded exact-frame seam checks for changed transitions and overlays as a
+  supplement to complete playback with sound. Keep broad summaries, technical
+  checks, agent review, and human approval distinct.
+- Credit the public workflow demonstration that informed these generic process
+  additions. The pack remains provider-independent and does not adopt paid
+  B-roll dependencies, model or price claims, or autonomous quality promises.
+- Bump the native plugin manifests to 1.2.1. The default remains a complete
+  requested edit; checkpoints are optional when the person asks for them.
+
 ## 4.3.1 - 2026-10-06
 
 - Align the motion-graphics email template with the existing JavaScript animation route and its Remotion bridge.

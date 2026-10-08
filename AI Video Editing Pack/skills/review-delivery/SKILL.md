@@ -13,6 +13,17 @@ confirm media is online. Decode the exports and check sync and complete ending.
 Then watch and listen to each exact file being delivered, or clearly record
 which intervals remain unreviewed.
 
+Use exact-frame local inspection as a targeted supplement for changed joins,
+graphic entrances and exits, overlays, masks, and transitions. Inspect a short
+contiguous sequence on both sides of the seam and record the exported version,
+time or frame, observed defect, and acceptance evidence in the edit plan. A
+broad video summary can identify a candidate interval; it cannot verify the
+exact seam. Make the smallest suitable repair, render the affected result,
+recheck the seam and its dependent captions, audio, and sync, then confirm the
+complete final file. If two attempts fail the same acceptance check, inspect
+the source and native editor state or report the blocker instead of repeating
+the same request.
+
 Deliver the export, editable project and a short report of changes, route,
 unverified items and suggested review points. Do not require a reply to mark
 the requested editing work delivered. Invite corrections when the person is ready.
