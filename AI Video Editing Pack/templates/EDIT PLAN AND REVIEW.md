@@ -58,9 +58,9 @@ compatibility safeguard rather than a promise that every tool can export them.
 
 ### Targeted seam review
 
-Use this after the complete playback for changed joins, graphic entrances and
-exits, overlays, masks, or transitions. Sampled frames do not replace watching
-and listening to the exact export.
+Use this during render review for changed joins, graphic entrances and exits,
+overlays, masks, or transitions, alongside complete playback with sound.
+Sampled frames do not replace watching and listening to the exact export.
 
 | Reviewed export and time/frame | Observed defect | Smallest repair | Dependent cues | Rerendered result and seam evidence | Open, verified or blocked |
 |---|---|---|---|---|---|
