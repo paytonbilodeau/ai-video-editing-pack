@@ -9,6 +9,8 @@
 - Add bounded exact-frame seam checks for changed transitions and overlays as a
   supplement to complete playback with sound. Keep broad summaries, technical
   checks, agent review, and human approval distinct.
+- Align lessons 3 and 19 with the new script-comment and seam-review guidance
+  while preserving their existing sequence, prompts, and review boundaries.
 - Credit the public workflow demonstration that informed these generic process
   additions. The pack remains provider-independent and does not adopt paid
   B-roll dependencies, model or price claims, or autonomous quality promises.
