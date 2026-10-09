@@ -99,3 +99,17 @@ and record the A/B comparison in [edit review](../templates/EDIT%20PLAN%20AND%20
 Current control names and feature availability should be checked against the
 [Blackmagic Design training and manuals](https://www.blackmagicdesign.com/products/davinciresolve/training)
 or the chosen editor's own documentation.
+
+## Preserve audio demonstrations and accepted tracks
+
+Mark exact ranges that demonstrate untreated, processed, quiet, loud or muted
+audio before finishing. Do not let a global cleanup erase the difference the
+viewer is supposed to hear. When an authorized finishing route processes normal
+narration, preserve the approved comparison ranges through a separately verified
+assembly. Keep any crossfades outside the protected ranges and check sync and
+the complete ending. This does not authorize another paid processing job.
+
+For a caption or framing revision, reuse accepted finished audio when its timing
+matches the approved cut. If a listening-level correction is requested, adjust
+only the agreed level while preserving deliberate contrasts. Record the source,
+protected ranges and intended gain, then verify the actual encoded output.

@@ -109,3 +109,30 @@ output, open the current destination's safe-area guidance or overlay, then
 inspect actual frames with captions, faces, logos, UI controls and screen
 demonstrations together. There is no universal safe-zone rectangle across
 platforms and placements. Review the encoded derivative before approval.
+
+## Connect the visible event to its sound
+
+Name the action and resulting state, then identify the actual event frame in the
+animation. Keep timeline time, composition-local time and frame rate explicit.
+Group a card's picture, border and label under one parent transform so they move
+together. Check the entrance, settled reading hold, exit and available caption space.
+
+Choose a cue for a reason, such as one click for a selection. Keep it independently
+editable; every entrance does not need a whoosh. At normal playback speed:
+
+`timeline useful onset = clip start + useful onset within asset - source trim-in`
+
+Use the same units throughout. For an event at 2.0 seconds and an asset with
+0.2 seconds of leading silence, start the untrimmed clip at 1.8 seconds, or trim
+away that silence and start at 2.0 seconds. Account for retiming separately and
+check available handles before moving a clip earlier.
+
+Inspect the rendered frame before, at and after the event, plus the hold and exit.
+Check the actual composite at phone size and listen to the exported cue with
+dialogue. A waveform can verify timing without proving a pleasing mix. Read
+native keys and placement back instead of relying only on an API return value.
+After a timing change, recheck dependent sound, fades and encoder padding.
+
+If a rendered replacement is needed for playback, retain the editable source and
+record its revision, replacement file, start frame and duration. Verify frame
+rate, endpoints, alpha treatment and contact timing over the real footage.

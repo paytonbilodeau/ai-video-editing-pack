@@ -104,3 +104,25 @@ justify claiming the saved project was inspected.
 
 Use [delivery and learning](../templates/DELIVERY%20AND%20LEARNING.md) for the
 specific correction, evidence, intended scope, and next test.
+
+## Preserve the hook and review the whole retained cut
+
+Record the chosen opening's source ranges, premise, tension, payoff and transition
+before assembly. Check that they survive the final cut. Replacing an opening
+needs an editorial reason that preserves the promised content.
+
+Qualify review playback level with reversible gain and measured export headroom.
+Use a source-relative or normalized signal for pause detection; a threshold that
+worked on a loud recording may miss speech in a quiet one. Do not copy a gain
+value from another project.
+
+Review pauses inside retained clips and both sides of every join. Give each long
+quiet span a specific reason: a visible action, reading time, a deliberate beat,
+or a repair. Do not exempt an entire screen-sharing section. Measure and replay
+the assembled phrase after trimming because adjacent quiet tails add together.
+
+Resolve known restarts with the best complete take or a supported clause splice.
+Keep unresolved defects explicit instead of calling a marker list a finished
+fine cut. ASR and waveform checks locate problems; they do not establish that
+anyone listened. Preserve a returned human timeline and compare exact source
+ranges before acting on old markers or rounding-sensitive API values.

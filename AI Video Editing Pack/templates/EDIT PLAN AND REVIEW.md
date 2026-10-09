@@ -71,3 +71,14 @@ Sampled frames do not replace watching and listening to the exact export.
 | Output | Approved source ranges | Frame/caption/safe-zone check | Human response |
 |---|---|---|---|
 |  |  |  |  |
+
+## Opening, review level and cue evidence
+
+- Chosen hook source ranges, promise, payoff and final-map check:
+- Review gain, measured export headroom and pause-analysis reference:
+- Intra-clip pause and join review coverage; unresolved restart decisions:
+- Protected audio demonstration ranges and accepted-audio reuse decision:
+
+| Visible event and frame rate | Asset and useful onset | Source trim and clip start | Gain/fade | Export timing and listening evidence |
+|---|---|---|---|---|
+|  |  |  |  |  |
