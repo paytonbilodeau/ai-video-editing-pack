@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.3.3 - 2026-10-09
+
+Add hook preservation, whole-cut pause review, audible-onset cue timing and protection for audio comparisons. Lessons 3, 4, 6 and 11 explain the same checks. Plugin version: 1.2.2.
+
 ## 4.3.2 - 2026-10-07
 
 - Preserve available anchored script comments and replies with their document
