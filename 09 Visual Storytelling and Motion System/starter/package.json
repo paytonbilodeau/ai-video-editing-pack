@@ -9,10 +9,10 @@
     "test": "tsc --noEmit"
   },
   "dependencies": {
-    "@remotion/cli": "4.0.499",
+    "@remotion/cli": "4.0.533",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "remotion": "4.0.499"
+    "remotion": "4.0.533"
   },
   "devDependencies": {
     "@types/react": "18.3.1",
