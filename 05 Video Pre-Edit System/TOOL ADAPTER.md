@@ -78,9 +78,9 @@ plan, not the MP4 or source.
 ## When to adapt
 
 - If the user has a desktop editor but cannot run local commands, produce a cut list and say the plan was not rendered.
-- If the source is HDR, multicamera, or multitrack, ask the user to export a flattened SDR working copy.
+- If the source is HDR, multicamera, or multitrack, offer to export a flattened SDR working copy through the authorized editor, or continue with the native timeline if the extra structure must survive.
 - If the destination needs ProRes, XML, captions, chapters, multiple audio tracks, or broadcast loudness compliance, hand the report to a proper editor. Do not pretend this MP4 tool preserves those features.
-- If FFmpeg or Python is missing, give the relevant `INSTALL.md` section. Ask before installing.
+- If FFmpeg or Python is missing, explain its role and offer the installation in `INSTALL.md`. Carry forward permission already given for that installation.
 
 ## Permission boundary
 

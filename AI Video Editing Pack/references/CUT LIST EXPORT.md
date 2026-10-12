@@ -1,10 +1,14 @@
 # Cut List Export
 
-`tools/cut_list_to_timeline.py` turns one reviewed cut list into files every
-editor can open. It is the route that makes the same edit decisions land in
-DaVinci Resolve, Premiere Pro, Final Cut Pro or CapCut without a live
-connection. Standard library Python 3.11 or later; nothing is rendered and the
-source recording is never touched.
+The AI writes a list of the source ranges worth keeping. The included
+`tools/cut_list_to_timeline.py` turns that list into an editable timeline file
+for supported editors, plus a readable cut sheet. You can ask the AI to run it;
+you do not need to write the JSON below yourself.
+
+It needs standard-library Python 3.11 or later. It does not render footage,
+choose the best takes, or change the original recording. It writes **FCPXML,
+Premiere XML, EDL and cut sheets**. **OTIO and CapCut draft export are not included.**
+CapCut has separate optional draft routes in its playbook.
 
 | Output | Opens in | Notes |
 |---|---|---|
@@ -65,7 +69,7 @@ current, `--overwrite` after reviewing an earlier export, and
 copies the DTD to a plain path because xmllint cannot read one from a path with
 spaces). The output folder must be outside the pack. On Windows use `py -3.11`.
 
-Print a plan first: the summary lists clip count, kept duration, markers that
+Review the generated handoff before import: the summary lists clip count, kept duration, markers that
 fell outside the kept ranges and every warning. Read the cut sheet before
 importing anything.
 
@@ -87,13 +91,13 @@ importing anything.
   project appears in an event named after the cut list. Final Cut 12 reads
   versions up to 1.14 and writes 1.14; 1.11 imports cleanly. Media that cannot
   be found imports offline (red) and relinks through File > Relink Files.
-- **CapCut.** CapCut desktop imports none of these formats. Use the cut sheet:
-  with the source on the timeline, type each removed range's start into the
-  playhead, press Command-B (Ctrl-B on Windows), move to the range's end, split
-  again, select the middle and delete with the gap closed; or use Q and W to
-  ripple-delete left and right of the playhead. The Transcript tool and Auto Cut
-  are the in-app alternatives. Writing a draft JSON directly is possible but
-  unofficial; see the [CapCut playbook](EDITOR%20PLAYBOOK%20CAPCUT.md).
+- **CapCut.** A native import for these generated timeline files has not been
+  established. The separate official hosted workflow can produce editable
+  drafts, and the community `capcut-cli` documents draft writing and OTIO import.
+  Those are distinct routes with their own checks. Follow the
+  [CapCut playbook](EDITOR%20PLAYBOOK%20CAPCUT.md) to choose one. A readable cut
+  sheet remains useful when computer use or manual splitting is the suitable
+  route. Do not rename XML to a CapCut extension and call it compatible.
 
 ## Verify after import
 
@@ -112,8 +116,7 @@ importing anything.
 ## Limits
 
 One source recording per cut list. No transitions, titles, effects, speed
-changes or multiple camera angles; add those in the editor after the cut is
-approved. Timecode in the EDL and cut sheet is non-drop-frame counted at the
+changes or multiple camera angles; add those in the editor after the cut has been checked against the brief. Timecode in the EDL and cut sheet is non-drop-frame counted at the
 integer timebase, so at 29.97 the timecode drifts from wall-clock time while
 frame counts stay exact. A draft generated this way is still a first assembly:
 the fine pass on joins, pauses and takes happens in the editor.

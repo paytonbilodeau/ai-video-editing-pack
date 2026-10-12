@@ -1,63 +1,67 @@
 # Start Here: AI Video Editing Pack
 
-Give this pack to an AI assistant that can work with files on your computer,
-such as Codex or Claude Code. It contains editing skills, guides and templates.
-Your AI uses them with your video editor; opening the folder alone does not
-edit a video.
-
-## Get ready
-
-1. [Download the ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip).
-   A ZIP is a compressed folder. Double-click it on a Mac; on Windows,
-   right-click and choose **Extract All**. No GitHub account is needed.
-2. Open your local AI assistant and give it the extracted folder. The
-   [AI app guide](references/AI%20APP%20SETUP.md) explains plans, models and
-   permission settings if you need help choosing.
-3. Paste the message below. Your AI checks the setup and saves a private
-   editing profile with your tools and preferences. No footage is needed yet.
+Give the extracted **Vibe Editors** folder to a local AI assistant such as
+Codex or Claude Code, then paste this message. No footage is needed for setup.
+The full download includes the editing skills, pre-edit and waterfall tools,
+motion resources and 22 lessons. You can start immediately.
 
 ```text
-Set up this AI Video Editing Pack so you're ready to be my video editor.
-Read SKILL.md and skills/vibe-editing-setup/SKILL.md, then follow their linked
-guides. Check my existing AI app, editor and available connections. Ask only
-for missing information that matters, and keep setup moving without requiring
-a test clip or assigning exercises.
+Set up this Vibe Editors folder so you can be my video editor. Read
+AI Video Editing Pack/SKILL.md and
+AI Video Editing Pack/skills/vibe-editing-setup/SKILL.md first. If this is a
+core-only native plugin install, find those files inside the plugin folder,
+check for the complete sibling bundle and help obtain it when needed.
 
-Create or reuse a private editing profile outside the pack. Save its location
-in this assistant's supported project instructions so future edits can find
-it. Use sensible starting preferences where I haven't chosen yet.
+Start by finding out how hands-on I want to be: careful, balanced, or handle
+it for me. Explain the relevant permission choices in my AI app and adapt
+to my answers. Reuse permissions and decisions I've already given you.
 
-Keep originals untouched and work in editable copies. Ask before new installs,
-paid services, uploads or broader access unless already authorized. Verify
-what you can actually do and explain any remaining manual step plainly.
+Inspect my existing editor, tools, skills and workflow in the folder I share.
+Keep what works. Create or reuse my private editing profile outside the pack;
+preserve my preferences and save where to find it for future edits.
 
-For future edits, complete the requested work and deliver the editable project,
-export and short report. Don't pause for routine stage approvals unless I
-request checkpoints. Setup alone is not a request to edit anything.
+Offer the included pre-edit tools and JavaScript, Remotion and HyperFrames
+motion options early. Explain what each adds, recommend what fits, and set up
+the options I choose. Inspect first; install only missing components through
+their official sources after any needed authorization. Don't make me type
+commands you can run. Help with Computer Use if available and wanted.
+
+Use short, clear explanations. Ask only for missing information that changes
+the next step. Keep originals and current projects recoverable. Explain
+specific new access, uploads or costs before using them unless already
+authorized. Respect the app's permission controls.
+
+Verify the available route. Finish with what works, what remains manual,
+where my profile lives, and how to give you my first video. Setup alone is
+not a request to edit. When I request an edit, complete the agreed work
+without routine stage approvals unless I've asked for them.
 ```
 
-Setup is complete when your AI can explain the available editing route, find
-your private profile, and tell you how to hand over a recording. If a connection
-needs permission or an installation, it should name that one remaining step.
-It must not call an untested connection working.
+The AI should inspect first, recommend a setup, explain meaningful choices,
+and carry out the work you authorize. Keep the editor and workflow you already
+use when they fit. Your working pace can change at any time.
 
-When you feel like editing, give it a recording and describe the result you
-want. A short clip, a whole video or a quick experiment is your choice. You can
-also ask for a preview before it continues. The default is a complete pass
-within your brief, followed by files you can watch and adjust.
+[Setup flow](references/SETUP%20FLOW.md) explains the interview and optional
+installs. [AI App Setup](references/AI%20APP%20SETUP.md) explains app choice and
+permissions. Your profile, footage and projects belong outside the pack so
+future updates preserve your work.
 
-Keep original footage, projects and your profile outside the downloaded pack.
-See [Safety and API Keys](references/SAFETY%20AND%20API%20KEYS.md) for connection
-details and [the workflow](references/EDIT%20WORKFLOW.md) for how edits run.
+When ready, hand over a recording and describe the result. Ask for a complete
+edit, one specific improvement or a preview. The AI checks the actual route
+and tells you which steps it can perform and which need your action.
 
-For lessons, setup questions and feedback on your edits, visit the
-[Vibe Editors community](https://www.skool.com/vibeeditors).
+If you installed only the native plugin, use the
+[complete ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip)
+for its supporting tools and teaching guide. Native plugin installation alone
+may cache only the core skill folder. Don't delete a working plugin or project
+just to add the complete download.
 
 ## Optional private-folder setup
 
 The paste message above needs no Python. If you want the included helper to
 create worksheet copies, use Python 3.11 or newer and preview this command
-from the extracted pack folder:
+from the `AI Video Editing Pack` folder inside the extracted `Vibe Editors`
+folder. Your assistant can run it for you:
 
 ```sh
 python3 tools/setup_project.py --project "/path/to/my-video-project" --profile-dir "/path/to/my-private-editing-profile"

@@ -1,5 +1,23 @@
 # Editor Playbook: Final Cut Pro
 
+## Start here
+
+The AI can create an FCPXML file that describes the cuts, then help you open
+it in Final Cut. The result points to your original footage and remains editable.
+Reuse your library, templates and preferred workflow; do the first connection
+test in a separate library or project.
+
+Apple documents File > Import > XML and File > Export XML in its
+[current transfer guide](https://support.apple.com/guide/final-cut-pro/verdbd66ae/mac).
+The assistant can handle available interface steps through approved computer
+use. If it lacks that access, ask for the one required click and continue.
+Check cuts, linked sound and the saved project after import before finishing.
+
+## Detailed operator reference
+
+The detail below retains dated checks. Verify the current app before relying on
+a version-specific setting. A historical test does not certify a newer install.
+
 Version details are a dated snapshot. Have the AI check current official docs
 and the installed edition before using a version-specific command. Any smoke
 test below is an assistant-run capability check, not homework for the user.
@@ -18,7 +36,7 @@ installed app), **reported** (credible third party), **opinion**.
   to Captions; 12.0 (January 2026) added Transcript Search, Visual Search and
   Beat Detection; 12.3 (June 2026) added Generate Captions (styled subtitles or
   closed captions), Auto Mask, a rebuilt Match Color and Edit Detection
-  (documented). A version 13 was rumored for October 2026 (unverified).
+  (documented). Do not use rumors to choose an installation.
 - Apple silicon is required for Transcribe to Captions, Generate Captions,
   Transcript Search, Visual Search and Smooth Slo-Mo; Generate Captions and the
   searches are US English only (documented).

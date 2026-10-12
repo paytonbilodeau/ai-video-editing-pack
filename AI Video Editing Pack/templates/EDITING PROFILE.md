@@ -6,6 +6,9 @@ Save a pointer in your assistant's project instructions so it can find the
 file again. If you change apps, give the new assistant access to this folder.
 
 - Profile owner and private location:
+- Working pace: careful / balanced / handle it for me; reuse the current choice.
+- Existing skills and workflow to preserve:
+- Authorized setup actions, folders and limits (no secrets):
 - Editor, version and verified connection:
 - Usual microphone, footage type and output formats:
 - Audience and examples of the style you like:

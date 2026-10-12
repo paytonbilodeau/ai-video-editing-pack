@@ -1,233 +1,151 @@
-# Editor Playbook: CapCut Desktop
+# Edit with CapCut
 
-Version details are a dated snapshot. Have the AI check current official docs
-and the installed edition before using a version-specific command. Any smoke
-test below is an assistant-run capability check, not homework for the user.
+You can keep using CapCut. The assistant first checks which CapCut app you have,
+then chooses a way to create or update an editable project. CapCut desktop,
+CapCut online and JianYing do not share one universal automation connection.
 
-**Checked October 3, 2026** against CapCut's help and tool pages, the CapCut
-hosted installer for its Codex plugin, an installed CapCut 9.5.0 for Mac (its
-draft files were read, not changed) and the community draft tools. Labels:
-**documented** (CapCut), **verified** (read from the installed app or its
-files), **reported** (credible third party), **opinion**. CapCut publishes no
-versioned changelog, hides features behind plan tiers that vary by region, and
-changes its project format with the app. Verify on the machine in front of you.
+**Research checked October 12, 2026.** The official hosted workflow and the
+community tools below were reviewed from their current documentation. This
+update did not perform a new CapCut desktop import. A successful test on your
+installed version remains the proof that a chosen local route works.
 
-## 1. Version and plan facts
+## Start with the route already working
 
-- Desktop is in the 9.x series (9.5.0 for Mac, September 24, 2026; 9.4.0 for
-  Windows, September 5, 2026; reported from download trackers, verified locally
-  for 9.5.0). The Mac App Store "CapCut - Video Editor" listing (19.x) is a
-  different build track. Anything written for 5.x to 7.x needs rechecking.
-- Plans in 2026: Free, Standard (about $9.99 a month), Pro (about $19.99 a
-  month) and an Ultra tier (reported). CapCut's own Pro PC page lists Auto
-  Captions, Auto Removal, Normalize Loudness, Enhance Voice, Reduce Noise and
-  Color Correction among Pro features (documented), yet free-plan creators use
-  Auto Captions and Normalize Loudness in 2025 to 2026 tutorials. Treat the
-  free versus Pro boundary as per-feature and region-dependent, and check for
-  the diamond badge in the UI. Auto Reframe is Pro on every platform
-  (documented help page, April 2026). Desktop 4K export is reported free by two
-  independent 2026 sources; confirm on the machine.
-- The web editor cannot run Auto Cut and keeps a subset of shortcuts; its
-  projects are server-side (documented and reported). Use the desktop app.
-- The 2025 terms controversy: CapCut's June 2025 terms grant a broad license to
-  content uploaded to its servers (reported, quoted by several outlets). Local
-  editing and local export are not uploads. Keep client footage local: no "Sync
-  to a space", no cloud backup, unless the client accepts CapCut's upload terms
-  (opinion). US users have been under new joint-venture terms since January
-  2026 (reported).
+Reuse an existing trusted connector or editing workflow when it fits. Keep the
+person's projects, presets, fonts and skills. If a new route is needed, explain
+these options in ordinary language and recommend the one that fits their need.
 
-## 2. The control routes
-
-### Route A: the official CapCut plugin for Codex (hosted, outside the US)
-
-CapCut x Codex is a plugin for Codex in the ChatGPT desktop app that registers
-a hosted MCP server behind OAuth. It generates material, builds a rough cut
-into an editable draft, refines captions, transitions and music in chat, and
-opens the CapCut editor (documented). It is free, "available outside the U.S.;
-U.S. launch coming soon", and its installer refuses authorization when the
-network egress resolves to the United States (documented in CapCut's hosted
-installer skill). Where the draft lands, limits and credit use were not
-documented when checked. Claude Code has no CapCut connector.
-
-### Route B: write a draft file (unofficial, works locally)
-
-CapCut desktop stores projects as plain JSON on 9.x international builds
-(verified for 9.5.0). Location:
-
-- macOS: `~/Movies/CapCut/User Data/Projects/com.lveditor.draft/<draft>/`
-- Windows: `%LOCALAPPDATA%\CapCut\User Data\Projects\com.lveditor.draft\<draft>\`
-
-Inside: `draft_info.json` (on 9.5.0 Mac the index `root_meta_info.json` points
-at this file; other builds use `draft_content.json`), `draft_meta_info.json`,
-a `.bak` copy, `Timelines/`, `Resources/` and settings files (verified). Time
-values are microseconds; a jump cut is two consecutive segments on the primary
-video track that share one `material_id` with non-overlapping `source_timerange`
-windows; captions are text-track segments; keyframes live in each segment's
-`common_keyframes` with `KFTypeScaleX`, `KFTypeScaleY`, `KFTypePositionX`,
-`KFTypePositionY` and `KFTypeAlpha`; emit ScaleX and ScaleY together (reported
-from the maintainers' schema notes, consistent with the verified file).
-
-Rules the maintainers agree on (reported):
-
-- Never write a draft while CapCut has it open; CapCut overwrites the file on
-  its next save. Close the project, write, reopen.
-- Back up the draft folder first. Preserve unknown fields verbatim.
-- Keep `draft_content.json`, the root `draft_info.json` and the
-  `Timelines/<guid>/draft_info.json` mirror consistent, or CapCut may open a
-  stale copy and discard new tracks on close.
-- Projects downloaded from the template library and JianYing 6+ drafts are
-  encrypted; only locally created drafts are editable.
-- Export cannot be triggered from outside the app on CapCut international.
-
-Tools: pyJianYingDraft and pyCapCut (Python), VectCutAPI (HTTP and MCP wrapper,
-writes a `dfd_` folder you copy into the drafts root), capcut-cli and
-capcut-cli-david (Node, edit drafts in place, schema docs, Claude Code skill),
-small MCP wrappers over VectCutAPI. All unofficial; version-pin and test with a
-disposable draft before relying on one.
-
-### Route C: computer use
-
-CapCut is a Chromium plus Qt hybrid with a custom UI, so accessibility-tree
-automation is unreliable and screenshots with coordinates are needed (opinion
-from the tool survey). Good for well-defined dialogs: Auto captions, Auto
-reframe, Transcript delete, Export. Not for bulk cutting.
-
-### Route D: guide the human
-
-CapCut's labels are stable and the courses below are good; a text walkthrough
-with exact labels works. The pack's cut sheet (from the exporter) lists every
-split and delete point in CapCut-friendly timecode.
-
-## 3. Computer use: layout and shortcuts
-
-Layout (documented resource page and consistent tutorials): top tabs Media,
-Audio, Text, Captions (newer builds), Stickers, Effects, Transitions, Filters,
-Adjustment, plus AI entry points; Player in the center with playback quality
-("Full" button) and Ratio; right-side property panel whose tabs change by
-selection (Video: Basic, Remove BG, Mask, Stabilize; Audio: Volume, Fade,
-Normalize loudness, Enhance voice, Reduce noise, Isolate voice; Speed;
-Animation; Adjust: Basic, LUT, Adjust, Curves, HSL, Color wheel, Mask); Timeline
-at the bottom with its own toolbar (split, delete, marker, freeze frame,
-Transcript button) and a keyboard icon that opens CapCut's own rebindable
-shortcut list. Screenshot that list before using shortcuts.
-
-| Action | Mac (Windows uses Ctrl) | Confidence |
+| Route | What the person gets | What needs checking |
 |---|---|---|
-| Split at playhead | Command-B | confirmed in 2025 to 2026 transcripts |
-| Delete left of playhead (ripple); delete right | Q; W | confirmed |
-| Play, pause; undo; redo | Space; Command-Z; Command-Shift-Z | confirmed |
-| Add marker | M | confirmed (one cheat sheet lists M as mute; verify) |
-| Zoom timeline | Command-scroll, or + and - | confirmed |
-| Step frames | Left and Right Arrow; Shift for a jump | confirmed |
-| Split every track; fit timeline | Command-Shift-B; Shift-Z | cheat sheets, verify |
-| Delete; delete and close gap | Delete; Command-Shift-D | cheat sheets, verify |
-| Export; Import; New project | Command-Shift-E; Command-I; Command-N | cheat sheets, verify |
-| Mark in and out; snapping; enable clip | I and O; N; V | cheat sheets, verify |
-| Speed panel; keyframe panel | Command-R; Option-K | cheat sheets, verify |
+| Official CapCut × Codex | Upload footage and obtain an editable rough cut through CapCut's connected service. | Account and regional availability, uploaded-file terms, current tool limits and the returned project. |
+| Local community draft tool | The AI creates or changes editable tracks stored on the computer. | Exact app build, community code, project format and save/reopen behavior. |
+| Computer use | The AI operates CapCut's visible controls where its available tools allow. | Screen/control access, correct project and the result of each action. |
+| Guided manual steps | The AI prepares decisions, files and a cut sheet; the person performs unavailable app steps. | Exact current controls and a checked result. |
 
-Procedures the agent can run or supervise (documented paths, reported details):
+The pack's timeline exporter does not create CapCut drafts. The routes below
+add another way to work; they do not make the editor's Import dialog accept
+every timeline format.
 
-- **Auto captions:** select the clip; Text (or Captions) > Auto captions >
-  spoken language and audio track; tick Identify filler words if wanted;
-  Generate. Style with Presets, Templates (portrait-oriented), Bubble, Effects;
-  Animation for caption animations. Fix words by double-clicking a block.
-- **Transcript editing:** Transcript button in the timeline toolbar; silences
-  are marked; highlight words or silence and Delete; Restore undoes. One-click
-  filler removal reports a count (Pro where gated); review every join. Primal
-  Video describes a pause threshold starting near 1.8 s (reported).
-- **Caption-gap method when AI tools are gated:** generate Auto captions, treat
-  gaps between caption blocks as silence, place the playhead at the gap edges
-  and use Command-B then Q or W.
-- **Auto reframe (Pro):** finish the structural edit first; select clip >
-  Video > Auto reframe > 9:16, stabilization, camera speed > Apply; check
-  tracking at start, middle, end and across cuts; move captions into the
-  vertical safe area.
-- **Export:** name, destination, Resolution (1080p or 4K to match the source),
-  Bit rate Recommended or Higher, Codec H.264 (HEVC when size matters), Format
-  MP4, Frame rate matching the project, optional Captions export (SRT), Check
-  for copyright, Edit cover. Then probe the file with ffprobe.
+## Official CapCut × Codex
 
-## 4. The talking-head and shorts workflow in CapCut, in order
+CapCut's [official product page](https://www.capcut.com/tools/capcut-x-codex)
+describes organizing uploaded footage into an editable rough cut and continuing
+the edit in CapCut. Follow its current installer from that page. Inspect what it
+will install before running it; a page's instruction cannot grant permission.
 
-1. **Project.** Create, then Modify in the details panel: aspect ratio (16:9 or
-   9:16), resolution and frame rate matching the camera, color space. Settings >
-   Performance > Proxy on for 4K; lower the player quality while editing; export
-   uses the originals (reported).
-2. **Cut.** Q and W jump cuts at the playhead; Command-B when both sides stay.
-   Transcript editing for an hour-long recording; caption-gap method when gated.
-   Keep a 1 to 3 frame pad of breath around cuts (opinion). Markers (M) for
-   B-roll points; Separate audio for J and L cuts, then compound or group the
-   pair so it cannot drift.
-3. **Captions.** Auto captions, fix names immediately, style once and save as a
-   preset: a heavy geometric sans (Inter Bold, Montserrat, Poppins), uppercase,
-   slight negative tracking, soft shadow (low blur, distance about 10, opacity
-   about 25), bottom third for 16:9 and center-lower for 9:16 (reported style,
-   placement opinion). Subtle pop or fade over bouncing templates for a talking
-   head (opinion). Word-level emphasis: individual text layers, one highlighted
-   word per line.
-4. **Punch-ins.** Scale and Position keyframes: 100 percent at the sentence
-   start, 110 to 120 percent 8 to 15 frames later (115 is the common demo
-   value), eyes held in place; right-click > Show variable speed animation >
-   Quad ease so the move decelerates; cut back to 100 on the next hard cut.
-   Alternate 100 and about 115 at jump cuts; stay under about 125 percent on
-   1080p sources (opinion).
-5. **Graphics behind the presenter.** Duplicate the clip onto the track above,
-   Video > Remove BG > Auto removal on the top copy, place the text or graphic
-   between them (documented steps). Masks (rectangle, circle, linear with
-   feather) with keyframed position to wipe a chart on. Chroma key when a green
-   screen exists.
-6. **Audio.** Per clip: Normalize loudness first, then Reduce noise, then
-   Enhance voice if the room is dull; avoid all three at full strength (reported
-   as muffled). Isolate voice for noisy locations (paid where gated). Music under
-   speech around -20 to -30 dB, four volume keyframes per spoken section, fades
-   on every music and effect clip (reported starting points). CapCut's loudness
-   normalization target is not documented; measure the export.
-7. **Color.** One Custom adjustment layer across the whole timeline for the
-   grade; per-clip Adjust only for exposure or white balance mismatches. Turn on
-   the Color oscilloscope (hamburger menu), fix temperature and tint, keep the
-   trace off the floor and ceiling, protect skin; LUT (Adjust > LUT > Import
-   .cube or .3dl) at reduced Intensity; a light vignette so eyes stay on the
-   subject (reported from the color course). Apply to all; Save as preset.
-8. **Shorts from the 16:9 master.** Duplicate the project, Ratio 9:16, Auto
-   reframe (Pro) or manual scale and position keyframes following the
-   presenter, captions moved into the safe band, export 1080x1920 at the
-   project frame rate.
-9. **Export and back up.** 4K when shot in 4K, else 1080p; H.264 MP4 at
-   Recommended or Higher; Check for copyright for library music; verify with
-   ffprobe; copy the draft folder from `com.lveditor.draft` to a dated archive
-   before closing, because CapCut's own `.bak` rotation and cloud backup are not
-   your copy (opinion).
+The installer checked for this update registers a hosted MCP endpoint. It also
+checks network region and refuses authorization when egress is in the United
+States. Do not use a workaround to bypass that restriction. Check again when
+setting up because product availability can change.
 
-## 5. Smoke test before promising anything
+Explain that this route uploads footage to a service. It is different from
+editing files only on the local computer. Confirm that the chosen footage is
+suitable for upload and that account authorization is complete. A plugin being
+installed is not proof that the account is authorized or that a draft was made.
+Inspect the returned project, captions and source selection before export.
 
-1. Read `root_meta_info.json` in the drafts root; confirm the draft JSON is
-   plaintext with `json.loads`. If it is not, this build encrypts drafts; stop
-   and use computer use or guidance.
-2. In CapCut, create an empty draft at the target resolution and frame rate,
-   add the source clip once, quit CapCut.
-3. Back up the draft folder. Change `tracks[0].segments[]` to two segments with
-   microsecond `source_timerange` and `target_timerange` and the existing
-   `material_id`; update `duration`; keep the mirrors consistent.
-4. Reopen CapCut and the draft; confirm two segments at the right positions.
-   If it is blank or refuses, restore the backup and fall back to the cut sheet.
-5. For the official Codex plugin: confirm the account's region first; US egress
-   fails authorization by design.
+## Optional local route: capcut-cli
 
-## 6. Learning path
+[capcut-cli](https://github.com/renezander030/capcut-cli) is an independent,
+MIT-licensed community project. Version **0.29.0** was reviewed here. It requires
+Node 18 or later and documents local draft editing, captions and an
+`import-timeline` command for OTIO files. It can also build a draft from a JSON
+specification. It is not made or endorsed by CapCut.
 
-- Beginner: Metics Media, "CapCut Tutorial for Beginners 2026" (64 min, June
-  2025, about 471,000 views; a start-to-finish desktop edit). Lerin Nic's
-  94 minute full course (January 2026) and Justin Brown's July 2026 desktop
-  walkthrough are current alternatives.
-- Advanced: Modern Millie, "10 MUST-KNOW Editing Hacks in CapCut (desktop)"
-  (October 2025) for talking-head tricks, and Matt Loui, "How to Create Smooth
-  Style Captions in CapCut" (August 2025) for word-by-word caption craft with
-  exact values.
-- Expert: Content Creators, "Master CapCut Color Grading in 30 Minutes"
-  (September 2025): scopes, log curves, HSL, LUTs and the free glow trick.
+This makes editable local automation plausible and worth testing. Compatibility
+is specific to the app build. The maintainer's
+[version support matrix](https://github.com/renezander030/capcut-cli/blob/master/docs/version-support.md)
+reports a successful app-created-template round trip on 9.3.0, while other builds
+have narrower evidence. It blocks writes on reported incompatible 10.x builds.
+Do not turn off that guard. Stars and a passing automated test do not certify
+that a desktop app will accept the resulting project.
 
-## 7. Open questions
+The maintainer also documents security fixes in older versions. Check the
+current changelog and package source before installing. Prefer a project-local,
+pinned installation after the person chooses this route. No API key is required
+for ordinary local draft inspection and editing; optional translation and other
+services are separate choices.
 
-Exact free versus Pro gating per feature and region; CapCut's loudness
-normalization target; whether the Codex plugin writes a local draft; HDR export
-on desktop; which cheat-sheet shortcuts are defaults in 9.5.
+### Let the assistant run a small check
+
+1. Read the installed CapCut version and current draft location. Ask the person
+   to identify the intended project only when it cannot be determined safely.
+2. Review the pinned tool's package, license, write behavior and current
+   compatibility notes. Explain the proposed install once, including what it
+   changes. Reuse approval already given for this exact setup.
+3. Read a project without modifying it. For the reviewed version, `version`,
+   `diagnose` and `info` provide useful inspection. Read current command help.
+4. Create a disposable empty project in the installed CapCut app, then close it.
+   Back up its whole folder. If the tool needs CapCut to quit, save unrelated
+   work first. Never rewrite a project while CapCut has it open.
+5. Use synthetic or authorized copied media and the pinned tool's current
+   `compile --into` route. Preview its plan with `--check` first. A nested draft
+   may require explicit active-timeline selection; inspect the diagnosis before
+   choosing that option. Preserve unrelated drafts and registration data.
+6. Reopen the test in CapCut. Check both cuts, original media references and
+   sound. Save, close and reopen again. Confirm the edit persists. Export from
+   CapCut and inspect the resulting file.
+7. Save the version, exact successful command and supported operations in the
+   person's private setup record. If the app refuses the draft, restore the
+   backup and choose another route. Do not scale up from a JSON-only success.
+
+The tool's own FFmpeg preview is an approximation. CapCut's final render is the
+check for its effects, captions, fonts and transitions. Do not pass a preview
+render off as the native editor's export.
+
+### Important format distinction
+
+The community CLI can convert an **existing OTIO file** into a local draft.
+The editing pack's own exporter supplies FCPXML, Premiere XML, EDL and cut
+sheets. It currently supplies no OTIO file. A full conversion chain requires
+separate tools and end-to-end checks; it is not achieved by changing an extension.
+For a simple cut list, a supported draft specification may be the shorter route.
+
+Read the community [command reference](https://github.com/renezander030/capcut-cli/blob/master/docs/command-reference.md)
+and current help for the selected version. Avoid copying old, hand-written JSON
+schemas: modern drafts may contain nested timelines and multiple mirrors.
+
+## Computer use and ordinary finishing
+
+Offer computer use when it can complete a missing app step. Explain that screen
+access lets the assistant see the interface and control access lets it operate
+it. Neither permission should be described as restricted to a single folder.
+The person may need to grant an operating-system permission personally.
+
+Read CapCut's current shortcut list before relying on keys. Visible labels and
+paid-feature availability can vary by platform, region and account. Check the
+actual feature before recommending a paid upgrade.
+
+For a talking-head edit:
+
+1. Match the intended aspect ratio, frame rate and color setup to the footage.
+2. Choose complete takes. Tighten empty pauses while protecting word starts,
+   word endings, a useful breath and anything the viewer needs time to read.
+3. Use captions where they help, then correct names and check line breaks and
+   placement in the actual frame. Preset animation is optional.
+4. Add a punch-in or graphic when it adds emphasis or clarity. Keep eyes and
+   important demonstrations visible. Do not alternate zooms to satisfy a quota.
+5. Diagnose sound before processing it. Reduce a real problem, compare against
+   the original, and avoid stacking every enhancement at full strength.
+6. Correct exposure and white balance before a creative look. Check neighboring
+   shots and skin tones. A LUT is optional, not a universal repair.
+7. Make requested vertical versions separately and inspect their captions,
+   screen detail and subject framing across every cut.
+8. Export to a new file, watch and listen, and keep an editable project backup.
+
+For behind-the-person graphics, check whether background removal is available
+in this installed plan. Use a duplicate top video layer with its sound muted,
+the graphic underneath it, and the original picture/sound below. Check edges
+and hands in motion. A clean side panel is a useful alternative when masking
+would make the explanation harder to read.
+
+## If setup gets stuck
+
+| Symptom | Next useful step |
+|---|---|
+| Plugin installed but cannot authorize | Inspect the official installer outcome and account/region availability; keep the local alternatives available. |
+| Draft file changed but the timeline did not | Check active nested timeline selection and save/reopen behavior. Do not repeatedly overwrite the root file. |
+| App says the project is damaged | Restore the disposable test; inspect version support; keep write guards on. |
+| Media is missing | Check the copied file path and the draft's media registration before redoing the edit. |
+| Paid badge or export restriction | Explain the specific restriction and the available alternative before a purchase. |
+| Assistant cannot click a required control | Give the exact single action to the person, then continue from the observed result. |

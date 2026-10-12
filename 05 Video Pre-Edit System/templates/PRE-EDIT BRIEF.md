@@ -1,5 +1,13 @@
 # Pre-Edit Brief
 
+The assistant fills this from the request and existing profile. Ask only about missing choices.
+
+## Working agreement
+
+- **Working pace:** [careful, balanced or handle-it-for-me]
+- **Authorized scope:** [user request reference and allowed actions]
+- **Requested checkpoints:** [named stages or none]
+
 ## Source
 
 - **Copied source file:** [named file inside the approved working folder]
@@ -45,8 +53,10 @@
 
 [Exact command without --overwrite.]
 
-## Render approval
+## Plan review and render authority
 
 - **Dry-run report reviewed:** [yes or no]
 - **Generated plan reviewed:** [yes or no and plan filename]
-- **Exact render command approved:** [same source and output with --from-plan PLAN]
+- **Render authority:** [existing user request or requested checkpoint approval]
+- **Exact render command:** [same source and output with --from-plan PLAN]
+- **Reviewer:** [AI internal check or human review, with actual evidence]

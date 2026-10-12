@@ -9,6 +9,12 @@ Read the private editing profile first. Use [PROJECT INTAKE](../../templates/PRO
 for the actual video, filling only missing details. Inspect what the tools can
 answer before asking. Setup alone can finish without footage or a project brief.
 
+Ask only the missing questions needed now, in this order: requested result and
+source location; existing editor and working pace; protected content/privacy;
+then style decisions that affect this edit. Read discoverable app facts yourself.
+Explain unfamiliar terms in one short sentence. Offer a recommended default
+when the person is unsure. Do not make them fill in the entire template.
+
 Identify the AI app and whether it can read local files or run tools; operating
 system; editor, edition and version; footage, separate audio and camera
 sources; project stage; audience and format; words or demonstrations to

@@ -1,5 +1,31 @@
 # Changelog
 
+## 5.0.0 - 2026-10-12
+
+- Download the complete system in one ZIP: editing skills, pre-edit tools,
+  motion starters, waterfall tools, editor guides and all 22 illustrated lessons.
+  Keep the extracted Vibe Editors folder together. Existing setup and download
+  links continue to work.
+- Choose careful, balanced or handle-it-for-me setup. The assistant checks and
+  reuses existing tools, asks the questions that matter first, and explains the
+  AI app's actual permissions. It can offer optional tools early and perform
+  authorized setup instead of handing back terminal instructions.
+- Preserve private profiles, custom skills and existing projects during setup
+  and updates. The update guide includes a copyable migration prompt and a
+  recoverable path back to the previous setup.
+- Include tested Remotion and HyperFrames starters with ordinary MP4 and
+  transparent ProRes output, alongside the existing JavaScript animation kit.
+- Correct timeline-format claims and explain CapCut's official hosted route,
+  optional community draft tooling and available fallbacks. Connections remain
+  specific to the installed editor, version, region and account.
+- Align pre-edit and waterfall instructions with the chosen working pace.
+  Retain protected ranges, restart confirmation and original-file safeguards.
+  Audio finishing is optional; the pre-edit helper does not apply color grading.
+- Refresh all 22 lessons, preserve their illustrations, add reading times, and
+  explain the complete download and setup choices consistently.
+- Plugin version: 2.0.0. Native plugin installation supplies the core skills;
+  the complete ZIP also supplies the supporting tools and reader guide.
+
 ## 4.3.3 - 2026-10-09
 
 Add hook preservation, whole-cut pause review, audible-onset cue timing and protection for audio comparisons. Lessons 3, 4, 6 and 11 explain the same checks. Plugin version: 1.2.2.

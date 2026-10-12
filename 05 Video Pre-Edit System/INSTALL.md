@@ -11,7 +11,7 @@ Exact spoken-marker detection is optional and has a separate local dependency.
 
 ## 1. Check what is already installed
 
-Open Terminal or PowerShell and run:
+The assistant should run these checks when it has command access. If you prefer manual setup, open Terminal or PowerShell and run:
 
 ```text
 python3 --version
@@ -47,7 +47,7 @@ FFmpeg or x264.
 
 ## 2. Install the core requirements if needed
 
-Ask before installing software. Use the normal package manager for the computer.
+Check the existing setup first. Explain which missing software is needed, its source and what it will do, then offer to install it using the computer's normal package manager. Reuse installation permission already given for this setup; do not ask again for the same scoped action. The user handles any system password prompt.
 
 ### macOS
 
@@ -123,7 +123,7 @@ python -m pip install -r requirements-markers.txt
 release. Pip still resolves their platform-specific transitive dependencies,
 so review the install summary before approving it. The first Whisper run
 downloads the selected model. This needs internet access, disk space, and
-explicit approval. Transcription then runs locally; the included tool does not
+authorization if that download was not already included in the agreed setup. Transcription then runs locally; the included tool does not
 send the recording to an API.
 
 Use the pinned packages rather than downgrading PyTorch to make an old environment work. Older PyTorch releases have known checkpoint-loading vulnerabilities. Load models only through the official Whisper package. If your platform cannot install the supported packages, use `--words-json` with an existing timed transcript instead of installing an unsupported PyTorch version.

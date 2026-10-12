@@ -8,6 +8,7 @@ export const Root: React.FC = () => {
       id="NeutralMotion"
       component={MotionComposition}
       durationInFrames={150}
+      defaultProps={{transparent: false}}
       fps={30}
       width={1920}
       height={1080}

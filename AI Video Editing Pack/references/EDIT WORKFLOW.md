@@ -40,8 +40,9 @@ working folder, never in this public pack.
    it on a separate track. Skip this stage when the recording already explains
    the point clearly and no graphics were requested. Use an authorized reference for a specific purpose, then test its
    timing, reading time, contrast and coverage on moving footage. Native
-   editor tools come first; Remotion or Hyperframes are optional, separately
-   checked routes for a justified shot.
+   editor tools can handle simple titles. JavaScript, Remotion and HyperFrames
+   are complementary options for custom work; use the appropriate route or
+   combine their rendered layers. Follow [Motion Tool Setup](MOTION%20TOOL%20SETUP.md).
 6. **Review and deliver.** Save and reopen the project. Export the exact
    version, check the file decodes and ends properly, then watch and listen
    to it. Record what was technically checked, what a person reviewed, and

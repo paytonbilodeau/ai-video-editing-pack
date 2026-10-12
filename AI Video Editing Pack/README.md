@@ -112,12 +112,13 @@ upload of private footage is part of setup by default. Check your assistant's
 current skill instructions before installing these files. This pack makes no
 universal plugin compatibility claim.
 
-For deeper examples and optional utilities, see the original free systems:
+The complete download includes the supporting free systems:
 [05 Video Pre-Edit](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/main/05%20Video%20Pre-Edit%20System),
 [09 Visual Storytelling and Motion](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/main/09%20Visual%20Storytelling%20and%20Motion%20System),
 [10 Content Waterfall](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/main/10%20Content%20Waterfall%20System),
 and [14 AI Video Editing](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/main/14%20AI%20Video%20Editing%20System).
-These are optional references, not duplicate files in this pack.
+The complete ZIP includes these sibling folders. Native plugin managers may
+cache only the core skills; use the full ZIP when you need the supporting tools.
 
 Updates do not overwrite customized projects. Check the pack and build a
 deterministic standalone ZIP with `python3 tools/build_pack.py --check` and

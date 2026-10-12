@@ -1,27 +1,43 @@
 ---
 name: video-pre-edit-local
-description: Offer an optional local no-paid-AI-service first pass using the separate public pre-edit tool, with an inspected dry plan before rendering.
+description: Offer an optional local no-paid-AI-service first pass using the complete download's local tool, with an inspected dry plan before rendering.
 ---
 
 # Optional Local Pre-Edit
 
-Use this only if the person wants a conservative automatic first pass on a
-talking-head recording. The tool belongs to the separate free
-[pre-edit download](https://github.com/paytonbilodeau/ai-video-editing-pack/tree/v4.0.4/05%20Video%20Pre-Edit%20System);
-it is not bundled in this plugin. Fetch the
-[versioned repository source ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/archive/refs/tags/v4.0.4.zip)
-or use a clean local copy of that release. Read its
-[START HERE](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/v4.0.4/05%20Video%20Pre-Edit%20System/START%20HERE.md),
-[INSTALL](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/v4.0.4/05%20Video%20Pre-Edit%20System/INSTALL.md),
-and [tool source](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/v4.0.4/05%20Video%20Pre-Edit%20System/tools/video_pre_edit.py)
-before execution. Do not pipe a network download into a shell.
+Use this when the person wants a conservative automatic first pass on a
+talking-head recording. The complete download already includes the
+[pre-edit tools](../../../05%20Video%20Pre-Edit%20System/START%20HERE.md).
+Read that folder's [installation guide](../../../05%20Video%20Pre-Edit%20System/INSTALL.md)
+and [tool source](../../../05%20Video%20Pre-Edit%20System/tools/video_pre_edit.py)
+before running it. If this skill arrived through a core-only plugin install and
+those siblings are absent, obtain the complete pack through the main setup flow.
+Don't ask the person to hunt for a separate repository or old release.
+
+Carry forward the careful, balanced or handle-it-for-me preference from
+[setup](../../references/SETUP%20FLOW.md). Fill the brief from known answers and
+inspect the named source yourself. Ask only for unresolved choices that change
+the edit. A dry plan is an internal check unless the person requested a preview.
 
 The core utility needs Python 3.11+, FFmpeg, ffprobe and the `libx264`
 encoder. It runs locally with no paid AI service or API key. Exact spoken
 restart detection is optional; it needs existing timed-word JSON or a local
-Whisper install and model download, which require separate approval. Start
-with a copied, flattened SDR talking-head file containing one video and one
+Whisper install and model download, which need authorization if not already covered by the agreed setup. Explain what is missing and offer to install it. Use
+a copied, flattened SDR talking-head file containing one video and one
 audio stream. The tool rejects HDR, multitrack and other unsupported sources.
+
+Recommend the deliberate markers `cut cut` for a corrected take and
+`full stop restart` to discard everything before the last full restart. Keep
+both off until the person chooses them; ordinary speech could contain those
+words. Markers can be customized. Full restart needs explicit confirmation of
+that removal rule, both CLI flags, and protected-range checks. Never infer it
+from a general request to edit quickly.
+
+Offer local `--enhance-audio` when speech needs cleanup and no existing route
+already handles it. Compare the sound before keeping it. The pre-edit tool
+does not grade color; use the editor's color workflow after inspecting footage.
+For setup testing, create a neutral fixture yourself. The person does not need
+to record a practice clip.
 
 From the extracted pre-edit folder, preview a plan before rendering:
 

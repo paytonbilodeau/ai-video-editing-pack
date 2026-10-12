@@ -11,6 +11,15 @@ For a video, read the existing private profile, then use
 Use only the skills needed for the requested result. Setup can finish without
 footage; it does not authorize an edit, new graphics or derivative clips.
 
+## Speak clearly and preserve existing work
+
+Follow [Setup Flow](references/SETUP%20FLOW.md). Ask about working pace early:
+careful, balanced or handle-it-for-me. Reuse the answers and permissions already
+given. Explain the next meaningful choice briefly, then act within scope. The
+AI app enforces permissions; this preference does not change security settings.
+Keep existing instructions, skills, profiles and projects. Integrate the pack
+without replacing them. Never treat optional paid help as a missing product feature.
+
 ## Default behavior
 
 Complete the requested edit in one pass, with internal quality checks. Do not

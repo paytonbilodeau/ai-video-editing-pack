@@ -1,6 +1,8 @@
 # The AI editing email workflow
 
-This is a reusable version of the free editing-pack funnel. It collects an email, confirms the subscriber, gives access to the pack and starts a 22-lesson guide. It includes the mechanism and editable lesson copy, not subscriber data, account credentials or a live Kit automation export.
+The reader-facing [illustrated guide](SEQUENCE.md) contains all 22 lessons and images. It ships in the complete pack and is available immediately. The emails are an optional way to revisit those lessons over time.
+
+This README, CONFIRMATION.md, UPDATES.md and settings.example.json describe the publishing workflow for maintainers. They stay outside the reader ZIP. They contain no subscriber data, account credentials or live Kit automation export.
 
 ## Reader flow
 
@@ -20,7 +22,7 @@ Before launch, authenticate your sending domain using the provider's current ins
 
 ## The 22 lessons
 
-[The sequence map](SEQUENCE.md) links all lesson templates. Customize the instructor name, URLs and first-person examples before importing. Some first-person examples come from the original guide; replace them with experiences and tool choices you can honestly claim. Add a percentage result only if your own test supports it, and identify it as your experience rather than a reader guarantee. The lesson copy is separate from your provider's unsubscribe footer, which you must retain.
+[The sequence map](SEQUENCE.md) links the actual reader lessons. Their first-person examples and community links refer to Payton's Vibe Editors. When adapting the workflow for another instructor, replace those with experiences, destinations and tool choices that instructor can honestly claim. A percentage result must be identified as the creator's own experience rather than a reader guarantee. The lesson copy is separate from the provider's unsubscribe footer, which must remain in place.
 
 Add an illustration only when it explains the lesson. Put it next to the relevant instructions rather than above an unrelated introduction. Use a public-safe visual style of your own; this workflow does not include a private brand recipe. In the permission lesson, the diagram belongs before the API-key and connector guidance, followed by a plain explanation of the available editing route.
 
@@ -53,14 +55,14 @@ that saving a profile retrains a model.
 
 ## Optional community invitations
 
-The templates include six short invitations in lessons 1, 5, 9, 13, 18 and 22.
-Use `YOUR_COMMUNITY_URL` for your own community destination, or remove those
+The lessons include six short invitations in lessons 1, 5, 9, 13, 18 and 22.
+Replace the Vibe Editors links if adapting this for your own community, or remove those
 postscripts if your offer has no community. Confirm that the classroom,
 questions space and other resources named in each invitation exist before
 using the copy. Adapt the resource claims and instructor wording to your own
 offer; these templates do not promise access to someone else's community.
 
-Keep each invitation after the main lesson and signature, separated by a blank
+Keep each invitation after the main lesson, separated by a blank
 paragraph. Use P.P.S. when the lesson already has a P.S. Preserve the existing
 postscript, illustration and main call to action. Space invitations across the
 sequence instead of adding one to every email. The existing immediate first
@@ -69,3 +71,19 @@ lesson and daily cadence stay the same.
 Use the [update checklist](UPDATES.md) when a material change affects the pack,
 email lessons or community classroom. A repository update does not change
 live emails or classroom pages automatically.
+
+## Reading-time labels
+
+Count visible lesson words, including the prompt and postscript but excluding
+HTML, URLs behind links and the reading-time label itself. Divide by 180 words
+per minute, add 15 seconds for the illustration, and round up to a whole minute.
+This is a conservative reading estimate, not a measured completion time. Compute
+classroom reading time separately when its practice sections add material.
+
+## One complete reader bundle
+
+The full ZIP includes `SEQUENCE.md`, `lessons/01.md` through `lessons/22.md`,
+and their local `assets/`. Lesson links point to the other files in the same
+bundle wherever possible. Retain working public links in actual emails and
+classroom pages. A reader should never need to join the community or finish the
+email sequence to obtain a tool required by the free pack.

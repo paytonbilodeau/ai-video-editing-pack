@@ -8,15 +8,18 @@ Edit videos faster and better with AI. Free skills, project templates and practi
 
 For lessons, questions and feedback on your edits, visit the [Vibe Editors community](https://www.skool.com/vibeeditors).
 
-Prefer to start here? **[Download the pack](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip)**, unzip it, and open **[START HERE](AI%20Video%20Editing%20Pack/START%20HERE.md)**. GitHub is where the files live. You do not need to understand GitHub or write code to begin.
+Prefer to start here? **[Download the pack](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip)**, unzip it, and open **[START HERE](START%20HERE.md)**. GitHub is where the files live. You do not need to understand GitHub or write code to begin.
+
+The download now includes all the tools listed below. Your AI app, editor and
+optional runtimes are installed separately; setup checks and helps prepare them.
 
 ## How it works
 
-1. Give your local AI assistant the pack and setup message in START HERE. It checks your existing editor and tools, then asks only for missing information that matters.
+1. Give your local AI assistant the pack and setup message in START HERE. It checks your existing editor and tools, asks whether you prefer careful, balanced or hands-off setup, then handles the work you authorize. Existing skills and projects are preserved.
 2. The assistant creates or reuses a private editing profile and saves where to find it. It explains the available editing route and any remaining setup step. No footage is needed yet.
 3. Whenever you're ready, give it a recording and describe the result you want. It completes the requested edit and returns the export, editable project and a short report. Ask for previews along the way if you prefer.
 
-The pack has guides for DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut. Each editor's playbook explains its connections, controls and limits. The assistant checks which route works on your installed version. Where direct control is unavailable, the included tool can turn planned cuts into timeline files or a readable cut sheet. Support differs by editor; CapCut does not have a verified timeline-import route in this pack.
+The pack has guides for DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut. Each editor's playbook explains its connections, controls and limits. The assistant checks which route works on your installed version. Where direct control is unavailable, the included tool can turn planned cuts into timeline files or a readable cut sheet. Support differs by editor. The CapCut guide separates its official hosted connection from optional local draft tooling, including the limits and checks for each.
 
 ## What's included
 
@@ -28,7 +31,7 @@ The pack has guides for DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut.
 | [Motion planning](09%20Visual%20Storytelling%20and%20Motion%20System/START%20HERE.md) | Map narration into a visual plan before rendering graphics. |
 | [Repurposing workflow](10%20Content%20Waterfall%20System/START%20HERE.md) | Turn one recording into useful content for different platforms. |
 | [Full editing workflow](14%20AI%20Video%20Editing%20System/START%20HERE.md) | Connect an editor, plan post-production and check a finished export. |
-| [Kit email workflow](Kit%20Email%20Workflow/README.md) | Understand the signup, confirmation, immediate first lesson and 22-day sequence, with reusable lesson templates. |
+| [22-lesson teaching guide](Kit%20Email%20Workflow/SEQUENCE.md) | Read the complete guide now or follow the optional daily emails. |
 
 Keep the editor you already use when it works for you. Try your own clips at your own pace, and add optional tools when they solve a specific need. You keep the creative decisions and final review.
 

@@ -1,0 +1,20 @@
+{
+  "name": "vibe-editors-hyperframes-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Original five-second local HTML motion example.",
+  "scripts": {
+    "doctor": "hyperframes doctor --json",
+    "check": "hyperframes check",
+    "preview": "hyperframes preview",
+    "render": "hyperframes render --output out/one-idea.mp4 --fps 30",
+    "render:overlay": "hyperframes render --variables-file overlay-props.json --format mov --output out/one-idea.mov --fps 30"
+  },
+  "dependencies": {
+    "hyperframes": "0.8.150",
+    "gsap": "3.15.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

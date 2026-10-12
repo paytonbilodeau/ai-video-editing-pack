@@ -1,106 +1,82 @@
-# Editor Connections
+# Connect your AI to your editor
 
-**Checked October 3, 2026.** Recheck the chosen editor's current documentation
-and the installed version before setup. The same pack skills plan an edit for
-any editor, but there is no universal timeline connector, and a browser-only
-chat cannot inspect a local editor or confirm that a project saved.
+Keep the editor, projects, presets, and working tools you already like. The AI
+first checks what you have, then chooses a route that can save an editable result.
+You do not need to learn these technical names before starting.
 
-Only one of the four editors ships a vendor connector for AI assistants:
-DaVinci Resolve Studio 21.1. Everything else is a file handoff, an unofficial
-bridge, or computer use. Say which one you are using. Each editor has its own
-playbook with the version facts, shortcuts, workflow and smoke test:
-[Resolve](EDITOR%20PLAYBOOK%20RESOLVE.md),
-[Premiere](EDITOR%20PLAYBOOK%20PREMIERE.md),
-[Final Cut](EDITOR%20PLAYBOOK%20FINAL%20CUT.md),
-[CapCut](EDITOR%20PLAYBOOK%20CAPCUT.md).
+## What the AI should explain
 
-## Choose the route in the intake interview
+Use one short explanation, tied to the person's next step:
 
-Keep the editor the person already uses when it fits. If they are choosing from
-scratch, recommend DaVinci Resolve (free edition for file-import workflows,
-Studio for the live connection). Ask for editor, edition, version, AI app and
-local tool access, then record the route as **scripted**, **file import**,
-**computer use** or **manual**. Do not switch editors or install connectors
-without asking.
+> Your AI can prepare the cuts and pass them to your editor. To also click buttons
+> and finish steps inside the app, it may need computer access. That lets it see
+> the screen and operate the interface. File access lets it work in the project
+> folder. These are different permissions. The AI will explain which one is needed
+> before asking you to turn it on.
 
-## What each route can do
+Ask only for information that cannot be read safely: the intended editor or
+project, a choice with a cost, or a permission the person must grant. Reuse their
+existing authorization. Offer to perform the approved setup through available
+computer use; if the operating system requires the person's click, show the exact
+setting and continue after that click. Never describe screen or computer access
+as confined to a project folder.
 
-Legend: S scripted (API or vendor connector, no human in the loop); I file
-import (the agent writes a file, the editor imports it); C computer use
-(screenshot-driven GUI control, slow and least deterministic); M manual (a
-person performs the step). Verified means checked on an installed copy or in
-vendor files; the rest is reported from current documentation and community
-sources.
+A local connection sends editing commands to the app. A timeline file hands over
+an editable sequence. Computer use clicks the app's controls. An online service
+receives uploaded files. State which route is being used, especially before an
+upload. One working route is enough to begin.
 
-| Operation | Resolve Studio 21.1 | Resolve Free 21.1 | Premiere 26.5 | Final Cut Pro 12.4 | CapCut 9.5 desktop |
-|---|---|---|---|---|---|
-| Import media | S (verified) | I or C | S via unofficial bridge, I through XML | I (media referenced in FCPXML) | I (paths in a draft) or C |
-| Create a timeline | S | I: File > Import > Timeline | S via bridge, I: FCP7 XML | I: FCPXML project | I: draft folder, or C |
-| Assemble cuts from a cut list | S: append ranges | I: FCPXML or EDL | I: FCP7 XML (preferred), S via bridge | I: FCPXML asset-clips | I: segments in draft JSON (unofficial) |
-| Ripple trim an existing cut | partial: delete with ripple and rebuild; C for one trim | I regenerate, or C | C, or regenerate XML | I regenerate, or C | I rewrite ranges, or C |
-| Audio effects | S partial: normalize, volume, Voice Isolation, Dialogue Leveler; plug-in parameters are C | C or M | S partial via bridge; Essential Sound is C | I partial (volume, some adjustments); effects C | I partial; C safer |
-| Color | S: LUT, CDL, DRX grades, Magic Mask creation | C | S partial via bridge (Lumetri parameters); C | I partial; LUT effects C or M | I partial; C safer |
-| Titles and captions | S: Create Subtitles from Audio, Fusion titles | C or M | S via bridge for tracks; design needs real MOGRTs | I: title and caption elements referencing installed templates | I: text materials and SRT; C |
-| Graphics layers | S: higher tracks, transform properties | I: multi-track FCPXML | I: extra tracks in XML; S via bridge | I: connected clips on lanes | I: extra tracks; C |
-| Person masks | C (Magic Mask clicks are UI) | C | C (Object Mask) | C (Magnetic Mask, Auto Mask) | I partial, C safer |
-| Keyframed zooms | S partial: Dynamic Zoom per clip; C for arbitrary keys | C | S via bridge or C | I: adjust-transform keyframes | I: keyframe arrays; C |
-| Export with presets | S: render presets and jobs | C or M | S via bridge to Media Encoder; C | C or M (Share dialog) | C (Export dialog) |
-| Read project state back | S: full read API | M | S via bridge | I or M: Export XML by hand, then parse | I: parse the draft JSON |
+## Pick the practical route
 
-Notes. The Resolve Free column assumes 21.1, where Python scripting moved to
-Studio (documented). The Premiere column rests on community bridges that run a
-panel inside Premiere after the user turns on Adobe's extension debug mode; Adobe
-has no official connector and its own AI Assistant is in-app only. Final Cut has
-no scripting surface beyond read-only AppleScript; FCPXML is the sanctioned
-exchange and Apple offers no programmatic export. CapCut's draft format is
-undocumented and version-sensitive; the official CapCut plugin for Codex is a
-hosted service that was unavailable to US network egress when checked.
+| Editor | First route to check | Useful fallback | What must be proved locally |
+|---|---|---|---|
+| [DaVinci Resolve](EDITOR%20PLAYBOOK%20RESOLVE.md) | Existing working integration; supported Studio installations include Blackmagic's local MCP connector. | Import the pack's FCPXML or Premiere XML, then use the editor interface. | Correct project, readable state, two cuts, save, reopen, export. |
+| [Final Cut Pro](EDITOR%20PLAYBOOK%20FINAL%20CUT.md) | FCPXML creates an editable project that refers to the original footage. | Computer use for controls, effects and export. | Clips and sound arrive correctly and the saved project reopens. |
+| [Premiere](EDITOR%20PLAYBOOK%20PREMIERE.md) | Existing trusted integration or the pack's Premiere XML. | Native interface; an optional reviewed UXP integration for needs beyond XML. | Imported sequence, frame rate, linked sound and final export. |
+| [CapCut](EDITOR%20PLAYBOOK%20CAPCUT.md) | A working local route already installed; otherwise compare official CapCut × Codex with the optional community draft route. | Computer use with a cut sheet. | Exact app version, draft acceptance, save/reopen persistence and export. |
 
-## Interchange formats that each editor reads
+If choosing an editor from scratch, explain the free and paid routes before a
+purchase. Resolve is a useful starting option because it offers a free editor
+and a separate Studio edition with additional automation. A purchase is not a
+prerequisite for using this pack's file handoff and guides.
 
-| Format | Resolve | Premiere | Final Cut | CapCut |
-|---|---|---|---|---|
-| FCPXML (1.11 to 1.14) | import and export | no (needs a converter) | native | no |
-| Final Cut Pro 7 XML (xmeml) | import and export | native | no | no |
-| EDL (CMX3600) | import and export | import and export | no | no |
-| OTIO | import and export | beta only | no | no |
-| CapCut draft JSON | no | no | no | native, unofficial to write |
+## CapCut can receive an editable draft
 
-The pack's exporter writes the first four from one cut list; see
-[CUT LIST EXPORT](CUT%20LIST%20EXPORT.md).
+There is more than one way to do this. CapCut's official
+[Codex workflow](https://www.capcut.com/tools/capcut-x-codex) describes uploaded
+footage becoming an editable rough cut. Its hosted installer, checked October
+12, 2026, refuses authorization from US network egress. Availability may change;
+check the current installer and account before promising access.
 
-## Permissions each route needs
+The independent [capcut-cli](https://github.com/renezander030/capcut-cli) project
+can write local drafts and documents an OTIO import command. This is a conversion
+through a third-party tool, not proof that CapCut's own Import dialog accepts
+FCPXML, Premiere XML or OTIO. Its [version matrix](https://github.com/renezander030/capcut-cli/blob/master/docs/version-support.md)
+separates fixture tests, user reports, expected compatibility and blocked writes.
+Follow the CapCut playbook to test a disposable draft before using this route.
 
-- Resolve Studio: Preferences > System > General, External scripting Local,
-  Automatic scripted actions Allow safe; File > Setup AI Assistants writes the
-  assistant configuration (documented). Studio 21.1 or later. No Python install.
-- Premiere unofficial bridge: Adobe CEP debug mode (disables the extension
-  signature check), Node.js, a third-party panel inside Premiere. Tell the user
-  plainly that this runs unsigned third-party code with full scripting access.
-  UXP bridges need Premiere 25.6 or later and the UXP Developer Tool.
-- Final Cut: none beyond file access. `open -a "Final Cut Pro" cut.fcpxml`
-  hands the file to the import path.
-- CapCut: file access to the drafts folder. Close the project in CapCut before
-  writing a draft, and back the folder up first.
-- Computer use (either assistant): macOS Accessibility and Screen Recording,
-  per-app approval, and a short scoped session. Both vendors describe it as the
-  broadest and slowest route.
+## What the pack's timeline exporter writes
 
-## Connection smoke test
+The included exporter creates **FCPXML, Premiere XML, EDL and readable cut
+sheets**. It does not create OTIO or CapCut drafts. See
+[CUT LIST EXPORT](CUT%20LIST%20EXPORT.md). Format support in an editor or another
+tool does not add that format to this exporter.
 
-1. Record editor, edition, version, OS, AI app, connector and the documentation
-   date in [PROJECT INTAKE](../templates/PROJECT%20INTAKE.md).
-2. Prove a read-only step: Resolve status and version, a bridge's project name,
-   a parsed FCPXML export, a parsed CapCut draft.
-3. Have the assistant create a disposable project from synthetic or authorized
-   copied media when a write test is needed. No user test clip is required. Make two cuts
-   by the chosen route, then read the result back by the same editor's own
-   means (API, Export XML, draft file or a zoomed screenshot of the timeline).
-4. Save, reopen, export a short review file, and check its path, duration,
-   dimensions, sound and complete ending. Watch and listen to it.
-5. Record each operation as **supported**, **UI fallback** or **unavailable**.
-   Name the unsupported operation instead of calling the whole editor connected.
+## Make setup useful without making the user do technical homework
 
-Community connectors can have different capabilities and trust boundaries from
-vendor tools; choose one only for a stated need and test it separately. The pack
-does not bundle a connector or change any editor setting automatically.
+The assistant runs these checks within the approved setup. Use synthetic media
+or authorized copies; the person does not need to record a test clip.
+
+1. Read the editor's edition/version and the existing connection. Keep unrelated
+   assistant settings, skills and projects intact.
+2. Confirm the intended project without changing it. Record the route in
+   [PROJECT INTAKE](../templates/PROJECT%20INTAKE.md).
+3. In a disposable project, create two source ranges, save and reopen. Check
+   their boundaries and linked audio through the editor's own state or interface.
+4. Export a short sample. Check its frame rate, size, duration, sound and ending.
+5. Report plain results: what now works, what needs a manual click, and the next
+   useful action. An installed connector or a valid file alone is not this result.
+
+If a check fails, inspect the cause and try a suitable documented alternative.
+Do not switch editors, replace a working integration, loosen security settings,
+or force a third-party compatibility override merely to clear an error.
