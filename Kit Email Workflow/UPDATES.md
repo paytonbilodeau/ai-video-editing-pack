@@ -36,11 +36,11 @@ persisted. Check the actual desktop and phone previews, including tracked links.
 Record which lessons were verified; do not call a saved draft a live update.
 
 The optional community invitations in these templates appear only in lessons
-1, 5, 9, 13, 18 and 22. Keep one short P.S. after the signature, with visible
+1, 5, 9, 13, 18 and 22. Keep one short P.S. after the lesson, with visible
 paragraph spacing. Where a P.S. already exists, preserve it and add the
-invitation as P.P.S. Use the invitation that fits the lesson: read ahead, ask
+invitation as P.P.S. Use the invitation that fits the lesson: ask
 for help, explore a style, request feedback, share finished work or stay in
-touch. Replace `YOUR_COMMUNITY_URL`, verify the promised resources, or remove
+touch. Verify the community destination and promised resources, or remove
 the invitation if there is no community. These placements do not change the
 immediate first lesson or daily sequence cadence.
 
@@ -53,7 +53,9 @@ saved content. Readers should receive the same instructions in each location.
 
 After the relevant release and lesson updates are verified, publish a concise
 announcement only to destinations authorized by the owner. Explain what changed,
-who it helps and where to find it. Avoid repeating an announcement for the same
+then give the reader a copyable update prompt. Follow that with Download Latest
+Pack and Release Notes links. Put optional explanation afterward so the useful
+actions are easy to find. Avoid repeating an announcement for the same
 release. Check the actual live post and its links; submitting a post or receiving
 a queued status is not proof that it is visible.
 

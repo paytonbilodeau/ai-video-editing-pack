@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from build_pack import FILES, ROOT, validate
+from build_pack import ARCHIVE_ROOT, CORE_FOLDER, ROOT, bundle_files, validate
 
 
 TEMPLATES = (
@@ -38,8 +38,8 @@ def plan(
     if project.expanduser().absolute().is_symlink():
         raise ValueError("project path must not be a symbolic link")
     project = project.expanduser().resolve()
-    source = root.resolve()
-    public_repo = source.parent if (source.parent / ".git").exists() else None
+    source = root.resolve().parent
+    public_repo = next((folder for folder in (source, *source.parents) if (folder / ".git").exists()), None)
     if project == Path(project.anchor) or inside(project, source) or inside(source, project):
         raise ValueError("project folder must be outside the source pack and filesystem root")
     if public_repo and inside(project, public_repo):
@@ -59,8 +59,8 @@ def plan(
             raise ValueError("project and skills folders must be separate")
         if skills_dir.exists() and (not skills_dir.is_dir() or skills_dir.is_symlink()):
             raise ValueError("skills path must be a real directory or a new path")
-        destination = skills_dir / "AI Video Editing Pack"
-        copies.extend((root / name, destination / name) for name in FILES)
+        destination = skills_dir / ARCHIVE_ROOT
+        copies.extend((root.parent / name, destination / name) for name in bundle_files(root))
     if profile_dir is not None:
         if profile_dir.expanduser().absolute().is_symlink():
             raise ValueError("profile path must not be a symbolic link")
@@ -107,8 +107,8 @@ def apply(copies: list[tuple[Path, Path]]) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--project", required=True, type=Path, help="private working project folder")
-    parser.add_argument("--skills-dir", type=Path, help="optional folder where a portable skill copy will be placed")
+    parser.add_argument("--project", required=True, type=Path, help="private working project folder outside the downloaded bundle")
+    parser.add_argument("--skills-dir", type=Path, help="optional folder where a complete portable bundle copy will be placed")
     parser.add_argument("--profile-dir", type=Path, help="optional durable private folder for a reusable editing profile")
     parser.add_argument("--apply", action="store_true", help="create files after preview; never overwrite edits")
     args = parser.parse_args()
@@ -125,8 +125,10 @@ def main() -> int:
     pending = [destination for _, destination in copies if not destination.exists()]
     print(f"Project: {args.project.expanduser().resolve()}")
     if args.skills_dir:
-        print(f"Portable skill copy: {args.skills_dir.expanduser().resolve() / 'AI Video Editing Pack'}")
+        print(f"Portable bundle copy: {args.skills_dir.expanduser().resolve() / ARCHIVE_ROOT}")
+        print(f"Core skill: {args.skills_dir.expanduser().resolve() / ARCHIVE_ROOT / CORE_FOLDER / 'SKILL.md'}")
         print("Check your AI app's current skill-folder rules; copying files does not activate a plugin.")
+        print("An older AI Video Editing Pack folder is left untouched. Point the assistant at the new bundle after reviewing the update.")
     if args.profile_dir:
         print(f"Reusable private profile: {args.profile_dir.expanduser().resolve() / 'EDITING PROFILE.md'}")
         if (args.profile_dir.expanduser().resolve() / "EDITING PROFILE.md").exists():

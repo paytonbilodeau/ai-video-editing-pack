@@ -2,7 +2,9 @@
 
 - **Map label and hash:** [value]
 - **Source label and hash:** [value]
-- **Reviewer:** [person]
+- **Working pace:** [careful, balanced or handle-it-for-me]
+- **User authority:** [request reference, source and allowed output types]
+- **Reviewer:** [AI internal review or named human reviewer; do not invent human sign-off]
 - **Reviewed:** [YYYY-MM-DD]
 - **Approved output IDs:** [IDs]
 - **Rejected output IDs and reasons:** [IDs and reasons]
@@ -10,7 +12,7 @@
 - **Privacy and rights check:** [pass or fail]
 - **Extraction approval:** [approved or not approved]
 
-Approval covers only the named map and output IDs. A changed map needs a new review.
+Authority covers only the source and output scope the user requested. A changed map needs internal review. Ask the user again only when its scope changes, a material uncertainty remains, or the user requested that checkpoint. Keep the map hash and selected IDs current.
 
 ## Optional approved-source audio acceptance
 

@@ -43,6 +43,12 @@ for (const file of actual) {
 for (const file of expected) if (!actual.includes(file)) errors.push('Missing declared file: '+file);
 for (const file of actual) if (/^(0[1-468]|0[237]|1[123]) /.test(file) || /^(memory|private|customer|credentials)\//.test(file)) errors.push('Outside public editing scope: '+file);
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
+const bundleCheck=spawnSync('python3',['-B','AI Video Editing Pack/tools/build_pack.py','--check'],{cwd:root,encoding:'utf8',timeout:30000});
+if (bundleCheck.error || bundleCheck.status!==0) {
+  console.error('Complete download validation failed:',bundleCheck.error||bundleCheck.stdout||bundleCheck.stderr);
+  process.exit(1);
+}
+process.stdout.write(bundleCheck.stdout);
 const suites=[
  ['AI Video Editing Pack/skills/javascript-animation',[process.execPath,'--test','tests/animation.test.mjs']],
  ['AI Video Editing Pack',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],

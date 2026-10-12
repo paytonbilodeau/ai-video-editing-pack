@@ -1,8 +1,13 @@
 # Motion and LUTs
 
-Use this when the clean cut is ready and graphics or a look fit the brief. Start with a native editor
-title or annotation, then choose a separate motion tool only if the shot needs
-it. Keep the graphic editable and test it over the actual moving footage.
+Motion should help the viewer understand the point. Use the person's existing
+assets and tools first. Offer motion setup during onboarding so it is ready when
+needed, then choose the right tool for each graphic. Native editor graphics,
+Remotion, HyperFrames and the bundled JavaScript kit can work together.
+
+Start with [MOTION TOOL SETUP](MOTION%20TOOL%20SETUP.md) for a plain-language
+choice, optional setup, and a short first render. The assistant performs the
+technical steps after the person chooses what to add.
 
 ## Turn a reference into an original visual
 
@@ -14,31 +19,42 @@ visible. Make a short representative sample. Check its entrance, settled
 state, reading time, exit, sound, and return to the recording. Do not copy an
 exact frame, private style recipe, or unlicensed asset.
 
-Native titles are the first test. For a more involved graphic, choose one
-optional adapter and verify current requirements before installation:
+## Choose and combine the motion tools
 
-| Route | Practical first test | Current source and limit |
+| Route | A useful fit | Editable source retained |
 |---|---|---|
-| [JavaScript animation](../skills/javascript-animation/SKILL.md) | Use the bundled local CLI to initialize one of seven styles, build, check and render a short piece. Use its frame adapter inside Remotion or import PNG/ProRes into the editor. | Pinned MIT upstream and optional locked Playwright setup. Shipped styles are opaque; alpha requires authored transparent content. No account or paid provider is required. |
-| Remotion (4.0.532 on October 3, 2026; 5.0 unreleased) | After approval, run `npx create-video@latest`, pin the exact version, make one short composition, and render a sample for import into the editor. Install the vendor's agent skills with `npx skills add remotion-dev/skills` so the assistant can check the current API before coding. | [Remotion docs](https://www.remotion.dev/docs). React and TypeScript; free for individuals and companies of up to three people, otherwise a [company license](https://www.remotion.dev/docs/license/pricing). `@remotion/captions` builds word-by-word pages from transcript JSON; `@remotion/media` is the current video and audio component. |
-| HyperFrames (0.8.x, Apache 2.0) | After approval, follow the [current quick start](https://github.com/heygen-com/hyperframes/blob/main/docs/quickstart.mdx): `npx skills add heygen-com/hyperframes`, run `npx hyperframes doctor` (gate on `.ok` in the JSON; the command always exits 0), `lint` while authoring, `check` as the final gate, then `render`. Pin the version; it publishes several releases a week. | HTML, CSS and GSAP rendered through headless Chrome and FFmpeg; local rendering has no per-render fee; hosted rendering, publishing and telemetry are separate paid or data-sending features to leave off unless chosen. Fonts must be local `@font-face` files; anything visible at frame zero must be in static CSS. |
+| Native editor | A title, pointer, crop or mask tied closely to the footage. | The editor's project and controls. |
+| Remotion | Reusable React layouts, repeated data-driven scenes and frame-timed sequences. | React/TypeScript project and locked dependencies. |
+| HyperFrames | HTML/CSS compositions, designed explainers and seekable animation. | HTML project, local assets and locked dependencies. |
+| [JavaScript animation](../skills/javascript-animation/SKILL.md) | Procedural drawings, diagrams and the seven supplied public styles. | Scene code, drawing kits and piece configuration. |
 
-Install only the tools the project needs. Pin the tool and dependencies
-for a project whose look must reproduce. A browser preview is not a final
-encoded export. Import the sample, inspect motion and alpha over the shot,
-then watch and listen to the final render.
+These are complementary choices. A JavaScript scene can run through its
+Remotion adapter; a checked rendered layer from any route can be placed in the
+editor. Use one tool to own each scene and one clear final assembly. Converting a
+working project adds work, so do it only for a useful capability.
 
-Hand the graphic to the editor as video with an alpha channel, at the timeline's
-frame rate and size, video only, named with its in-point timecode. Remotion:
-`npx remotion render <comp> out.mov --codec=prores --prores-profile=4444 --pixel-format=yuva444p10le --image-format=png --muted`.
-HyperFrames: `--format mov` (ProRes 4444) or `--format webm` for VP9 alpha, or
-`--format png-sequence` for compositing apps. Resolve, Premiere and Final Cut
-read ProRes 4444 alpha; confirm it on import (Resolve: Clip Attributes > Alpha
-mode) and check one frame over the footage. Route by task: native titles and
-caption tools for a graphic that appears once and must stay editable by a
-person; Remotion when a component library exists or exact transcript cues
-matter; HyperFrames when an HTML and GSAP look or its caption workflows fit.
-Masks of a person are always made in the editor.
+The [setup guide](MOTION%20TOOL%20SETUP.md) includes all three code-based routes.
+Set up one, several, or none according to the person's choice. Never require
+three tool installations before their first edit.
+
+### Hand a graphic to the editor
+
+For an overlay, author transparent corners and render a format that carries an
+alpha channel. Ordinary H.264 MP4 does not preserve transparency. Remotion's
+[transparent-video guide](https://www.remotion.dev/docs/transparent-videos)
+documents ProRes 4444 with PNG frames and `yuva444p10le`. HyperFrames documents
+MOV, WebM and RGBA PNG-sequence outputs in its [CLI guide](https://hyperframes.heygen.com/packages/cli).
+The JavaScript kit can supply PNG frames or ProRes from transparent source.
+
+Use the timeline's frame rate and dimensions. Keep graphic sound separate when
+that avoids duplicated dialogue. Test a short sample over dark, light and actual
+moving footage in the receiving editor. Check the encoded result, not only a
+browser preview. Retain the source and render command so a revision is easy.
+Shipped opaque examples do not become transparent merely by choosing MOV.
+
+For a graphic behind a person, prefer the editor's native mask when it fits.
+Other authorized masks or mattes can work too; their edges and timing need the
+same final composite review.
 
 ## Put a graphic behind the person
 

@@ -1,18 +1,19 @@
 {
-  "name": "ai-mentorship-neutral-motion-starter",
-  "version": "1.0.0",
+  "name": "vibe-editors-remotion-starter",
+  "version": "1.1.0",
   "private": true,
-  "description": "Neutral original Remotion starter for one approved motion plan.",
+  "description": "Original editable explanation with opaque and transparent output options.",
   "scripts": {
     "studio": "remotion studio src/index.ts",
-    "render": "remotion render src/index.ts NeutralMotion out/neutral-motion.mp4 --muted",
-    "test": "tsc --noEmit"
+    "render": "node scripts/render.mjs",
+    "test": "tsc --noEmit",
+    "render:overlay": "node scripts/render.mjs --overlay"
   },
   "dependencies": {
-    "@remotion/cli": "4.0.499",
+    "@remotion/cli": "4.0.535",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "remotion": "4.0.499"
+    "remotion": "4.0.535"
   },
   "devDependencies": {
     "@types/react": "18.3.1",

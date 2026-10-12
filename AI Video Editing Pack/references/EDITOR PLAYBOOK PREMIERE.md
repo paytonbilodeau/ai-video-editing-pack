@@ -1,5 +1,25 @@
 # Editor Playbook: Adobe Premiere Pro
 
+## Start here
+
+Keep any working, trusted integration. Otherwise the pack's Premiere XML
+is a useful first route: the AI prepares the cut, imports it into a new sequence,
+and finishes through available editor controls. Adobe warns that interchange
+can lose some effects and audio details, so check the receiving sequence.
+
+Adobe's [UXP platform](https://developer.adobe.com/premiere-pro/uxp/)
+is an official route for plugins. An external AI still needs a suitable bridge.
+Do not install an unsigned legacy panel or enable debug mode merely because an
+old tutorial lists many tools. Compare it with the existing integration or XML
+route, explain the access needed, and ask only if the change is outside the
+approved setup. Adobe's [installation guide](https://developer.adobe.com/premiere-pro/uxp/plugins/distribution/install/)
+describes the supported installation routes.
+
+## Detailed operator reference
+
+The detail below retains dated checks. Verify the current app before relying on
+a version-specific setting. A historical test does not certify a newer install.
+
 Version details are a dated snapshot. Have the AI check current official docs
 and the installed edition before using a version-specific command. Any smoke
 test below is an assistant-run capability check, not homework for the user.
@@ -80,7 +100,7 @@ agent needs a bridge the plugin exposes, which is how the MCP projects work.
 Enable Preferences > Plugins > developer mode and load with the UXP Developer
 Tool (reported from an Adobe community manager).
 
-### Route D: file import plus computer use (works on every install)
+### Route D: file import plus computer use (check the installed app)
 
 Write a **Final Cut Pro 7 XML** (xmeml) from the reviewed cut list with the
 pack's exporter, import it with File > Import, relink if asked, then finish in

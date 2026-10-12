@@ -15,28 +15,30 @@ Make a cut only because:
 - FFmpeg detected a quiet pause using the approved threshold and padding;
 - the speaker used an exact agreed restart marker and local timed words found it;
 - the user supplied an exact `--cut START-END` range;
-- the user reviewed and approved the dry-run report.
+- the dry plan implements the user's already authorized cut rules.
+
+A dry plan is evidence of intended changes, not permission to invent new ones.
 
 Do not guess that a repeated idea is a bad take. Teaching and natural speech repeat useful points, and similarity alone can delete wanted content.
 
 ## Process
 
-1. Confirm a flattened SDR source with one video and one audio track, plus a new `.mp4` output path.
-2. Keep the original unchanged.
-3. Check the video's duration and streams. Reject HDR, high-bit-depth, multivideo, or multiaudio input and ask for a flattened SDR copy.
-4. Ask the setup questions in `PRE-EDIT BRIEF.md`.
-5. Confirm Python 3.11+, FFmpeg, and ffprobe. Do not install or download anything without approval.
-6. Choose the exact silence, approved-range, protected-range, marker, and audio options.
-7. Mark any protected media or music ranges.
-8. Run `--dry-run`, show the dry-run report and generated plan, and wait for approval.
-9. Render a short copied test with `--from-plan` so every approved option carries forward.
-10. Write a report with every cut and reason.
-11. Verify the output opens, has audio and video, and has the expected duration.
-12. Ask the user to review the flagged cuts before wider use.
+1. Reuse the source, editing profile, working pace and authority already given. Follow the core [setup flow](../AI%20Video%20Editing%20Pack/references/SETUP%20FLOW.md). Fill `PRE-EDIT BRIEF.md` yourself from those facts; ask only for missing decisions.
+2. Inspect the named source. Use a flattened SDR working copy with one video and one audio track and keep the original unchanged. If a copy is needed, offer to create it through the existing editor within the authorized scope.
+3. Check Python 3.11+, FFmpeg, ffprobe and the encoder. Explain missing dependencies and offer to install them from their documented sources. Carry forward installation authority already given.
+4. Choose silence, exact-range, protected-range, optional marker and audio settings that match the request. Protect demonstrations, reading holds, music and deliberate pauses.
+5. Run `--dry-run` and inspect the report and generated plan. Check words around proposed joins and unusually long removals. Adjust the plan if needed.
+6. In careful mode, show the meaningful checkpoint the person requested. In balanced or handle-it-for-me mode, proceed within the agreed cut rules after internal review. Ask when a material ambiguity or new action falls outside that scope.
+7. Render with `--from-plan` so the reviewed options carry forward. Keep source-hash, protected-range, output-path and full-restart confirmation checks intact.
+8. Verify the new MP4's picture, sound, duration and cuts, then save its report. Continue the requested editor finishing or deliver the pre-edit for feedback according to the brief.
+
+If the tool needs a technical check, the assistant generates the neutral fixture
+in `tests/make_fixture.py`. A customer recording is not required just to prove
+that FFmpeg works. Record the actual outcome rather than promising a setup time.
 
 ## Restart rules
 
-The user may choose other phrases. Payton's current working pattern uses:
+The user may choose other phrases. The recommended phrases are:
 
 - `cut cut`: remove the spoken mistake and marker, then keep the corrected restart;
 - `full stop restart`: discard earlier material and begin after the last marker.
@@ -51,7 +53,7 @@ The full-restart rule is also off by default. It requires both `--detect-full-st
 - Adjust one setting at a time after reviewing a dry run.
 - Preserve deliberate pauses when the user wants a slower pace.
 - Add each clip, music section, generated sound, or deliberate pause as a repeatable `--protect START-END` range using original-source timestamps.
-- Review the picture before approving silence cuts. Add silent demonstrations, reading time, and other intentional visual-only sections as protected ranges; low audio level does not mean nothing useful is happening.
+- Review the picture before accepting silence cuts into the plan. Add silent demonstrations, reading time, and other intentional visual-only sections as protected ranges; low audio level does not mean nothing useful is happening.
 - Do not use this tool directly on HDR, multicamera, multitrack audio, subtitle-bearing, or edit-master media. Make a flattened SDR working copy.
 
 ## Audio rules
@@ -61,6 +63,8 @@ Audio cleanup is off by default. `--enhance-audio` applies local high-pass and l
 This is a practical speech starting point, not certified true-peak delivery compliance. Meter again in the final editor when a platform or client has a delivery specification.
 
 The tool does not call paid audio services.
+
+Color is handled in the chosen editor. Inspect the actual footage, correct exposure and white balance, match shots and check skin tones before applying a look. This tool has no color-grading feature; do not add a generic color filter to every input.
 
 Before replacing an established audio workflow, use `templates/AUDIO COMPARISON.md`
 with a suitable editor. Compare matched source, complete processing bypass and
@@ -73,7 +77,7 @@ or change its audio-off default.
 
 If the user has approved the finished main and explicitly authorizes downstream work using that approval plus audio-presence evidence, carry that acceptance forward without making a new listening pass mandatory. Record the approved file's hash, the instruction and its scope, and the actual audio-stream or visible-waveform evidence in the editor handoff. A waveform shows audio activity; it does not establish how the audio sounds. Record whether anyone listened, and never turn technical evidence into a claim of listening.
 
-Before accepting a newly processed output, retain full audio/video decode, audio presence, planned duration and frame count, measured alignment, and complete spoken-word boundaries. Preserve the approved audio in a picture-only revision and compare it with an independent same-length reference; verify copied audio payloads when applicable. These checks need separate evidence beyond this tool's stream and duration probe. A failed or missing technical check still needs resolution. This downstream policy does not approve new cuts, waive the first-pass review, authorize paid processing or publication, or require changes to existing passed review records.
+Before accepting a newly processed output, retain full audio/video decode, audio presence, planned duration and frame count, measured alignment, and complete spoken-word boundaries. Preserve the approved audio in a picture-only revision and compare it with an independent same-length reference; verify copied audio payloads when applicable. These checks need separate evidence beyond this tool's stream and duration probe. A failed or missing technical check still needs resolution. This downstream policy does not approve new cuts, waive technical or editorial checks, authorize paid processing or publication, or require changes to existing passed review records.
 
 ## Output rules
 
@@ -101,7 +105,7 @@ Flag a total reduction above 45 percent and every cut longer than 15 seconds. Ev
 
 ## Success check
 
-The output exists as a new file, contains one video and one audio stream, has the planned duration, preserves protected content, matches the approved rules, and has a report that lets a human review every important change. The user, not the tool, approves the edit.
+The output exists as a new file, contains one video and one audio stream, has the planned duration, preserves protected content, matches the approved rules, and has a report that lets a human review every important change. The report distinguishes AI checks from any human review actually performed.
 
 ## Test and evidence
 
@@ -117,7 +121,7 @@ Save a known-good edit profile only after repeated reviewed runs. Re-run setup a
 
 ## Safety and human review
 
-Keep the source immutable and use a new output name. The tool prepares a first pass, not the final creative edit. A person watches the result, checks every flagged cut, and approves the editor handoff.
+Keep the source immutable and use a new output name. The tool prepares a first pass for the requested editor workflow. Inspect every flagged cut and deliver the result for user feedback; only pause before handoff when the person requested that checkpoint or a material uncertainty remains.
 
 ## Optional staged review and clean companion
 

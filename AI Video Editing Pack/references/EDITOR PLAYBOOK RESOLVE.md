@@ -1,5 +1,26 @@
 # Editor Playbook: DaVinci Resolve
 
+## Start here
+
+Start with the connection already working on this computer. In a supported
+Studio installation, the bundled local MCP lets the AI ask Resolve to perform
+edits. On a file-import route, the AI creates an editable timeline and helps
+import it. Both can use this pack's editing judgment.
+
+The assistant should inspect the installed edition, explain any setting change,
+then perform the approved setup and a disposable save/reopen/export test. Local
+scripting permits local tools to control Resolve; it does not require network
+scripting. See [the connection guide](EDITOR%20CONNECTIONS.md) for permission
+language and [the current Blackmagic support page](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)
+for vendor downloads. A read of the Studio 21.1.1 app bundle on October 12, 2026
+confirmed its vendor MCP package and API-discovery tools; no new app-import test
+was performed for that check.
+
+## Detailed operator reference
+
+The detail below retains dated checks. Verify the current app before relying on
+a version-specific setting. A historical test does not certify a newer install.
+
 Version details are a dated snapshot. Have the AI check current official docs
 and the installed edition before using a version-specific command. Any smoke
 test below is an assistant-run capability check, not homework for the user.

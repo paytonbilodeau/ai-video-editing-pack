@@ -57,8 +57,8 @@ not execute that binary or prove connectivity.
 Use the installed Resolve tools to report the application version and whether
 it is running. Do not modify the current project. Search the installed scripting
 API for the operations needed to create a test project, import a clip, assemble
-a timeline and export it. Show the exact small test and output location first.
-Once that test is authorized, use copied media in a disposable project, save it,
+a timeline and export it. Use the approved setup scope for a small disposable test with synthetic or
+authorized copied media. Explain an extra permission only if one is needed. Save it,
 export a short clip and reopen the project. Report the actual tools used and
 which checks passed. Do not substitute a tool-list response for an exported test.
 ```

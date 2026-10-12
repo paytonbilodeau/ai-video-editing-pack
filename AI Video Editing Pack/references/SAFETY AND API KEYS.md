@@ -54,8 +54,8 @@ the app's approval and access controls in place.
 ## Keep the edit recoverable
 
 Work from copied media and save an editable timeline. Keep a recoverable
-version before applying a large change. Review the plan before allowing the
-helper or editor to write files. Uploading private footage, publishing a video,
+version before applying a large change. The AI reviews its plan before writing files. If you requested checkpoints,
+it shows the relevant plan first; otherwise it continues within the agreed brief. Uploading private footage, publishing a video,
 buying a service and expanding access each need your specific authorization.
 Watch and listen to the exported file before sending it anywhere.
 

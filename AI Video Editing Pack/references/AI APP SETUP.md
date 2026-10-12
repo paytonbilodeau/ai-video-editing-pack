@@ -1,6 +1,6 @@
 # Set Up Your AI App for Video Editing
 
-**Checked October 3, 2026.** Use a local assistant such as Codex or Claude Code
+**Checked October 12, 2026.** Use a local assistant such as Codex or Claude Code
 with a folder on your computer. It can read the pack, work with files and run
 editing tools. A normal browser chat can discuss an edit, but that alone does
 not connect it to your local video editor.
@@ -10,6 +10,29 @@ the pack and its [setup message](../START%20HERE.md). It should inspect the
 available tools, save your private editing profile and explain any missing
 connection. You do not need a recording ready, and there is no practice clip
 to complete before you can use it.
+
+## Choose your working pace first
+
+Tell the AI whether you prefer **careful**, **balanced**, or **handle it for me**.
+Careful means explaining meaningful changes before doing them. Balanced means
+handling routine work and asking about consequential choices. Handle it for me
+means carrying out the agreed setup and reporting results or genuine blockers.
+The AI should use answers and approvals you already gave it.
+
+This preference does not change app permissions. In Codex, Ask for approval
+keeps you involved when work reaches beyond its workspace. Approve for me sends
+eligible requests to automatic review. Full access allows much broader local
+and network actions without those approval prompts. Choose deliberately; the
+AI can explain or open the relevant controls, while you confirm sensitive access.
+You can ask it to slow down or take over more work at any time.
+
+## Why Codex or Claude Code?
+
+They can work with local files and run the pack's tools. Codex is the suggested
+starting route here because the guides cover its project folders and Computer
+Use. Claude Code also works with local projects and tools. Keep the one you
+already use if its available connections meet the job. Neither creates a native
+editor connection just by reading a skill.
 
 ## Which plan and model?
 
@@ -25,8 +48,9 @@ subscription does not include separate API usage for another tool.
 
 For editing, the difficult part is often judgment: choosing the complete take,
 keeping a useful pause, comparing references and diagnosing a bad transition.
-Payton prefers **GPT-6 Astra with High reasoning** for that work. This is a
-workflow preference, not a measured claim that it wins every video-editing task.
+A capable reasoning model is useful for that work. Choose from the models
+available in your account; use a stronger setting when the edit needs it and
+a lighter setting for routine file work.
 
 **GPT-6.1 Sol** is a capable everyday option designed to offer much of Astra's
 capability at lower usage cost. **Luna** suits narrower tasks with clear checks,
@@ -37,9 +61,11 @@ task. See [OpenAI's model guide](https://learn.chatgpt.com/docs/models) and the
 choices available in your own app.
 
 Claude Code is another local route. Anthropic currently includes it in paid
-Claude plans, with usage shared across Claude and Claude Code; API billing is
-separate. Use an available model suited to complex reasoning for editorial
-decisions and a lighter one for routine work. Check [Claude's current plans](https://claude.com/pricing)
+Claude plans, with usage shared across Claude and Claude Code. Check any included
+API credits and their terms separately: a third-party tool using an API can have
+different billing from your normal app sessions. Use an available model suited
+to complex reasoning for editorial decisions and a lighter one for routine work.
+Check [Claude's current plans](https://claude.com/pricing)
 and [Claude Code Desktop](https://code.claude.com/docs/en/desktop) before choosing.
 
 ## Codex: connect the working folder
@@ -64,7 +90,7 @@ app and [OpenAI's permission guide](https://learn.chatgpt.com/docs/permission-mo
 |---|---|---|
 | **Ask for approval** | Requests beyond the workspace boundary go to you. | Useful while getting familiar with a workflow. |
 | **Approve for me** | Automatic review evaluates requests beyond the same boundary. | Fewer interruptions, with review that can still make mistakes. |
-| **Full access** | File and command access extends beyond the project, including network access, without those approval prompts. | Payton uses it for his established workflow. It reduces stops but also gives mistakes more room to cause damage. |
+| **Full access** | File and command access extends beyond the project, including network access, without those approval prompts. | Payton uses it for his established workflow. It reduces approval stops but also gives mistakes more room to cause damage. |
 
 Full access is optional. It does not install a connector, authorize publishing
 or make downloaded instructions trustworthy. Keep the task specific and
@@ -79,9 +105,11 @@ can handle supported operations precisely. Computer Use can operate visible
 controls. A timeline-file route may require you to import a file yourself.
 
 For Codex Computer Use, follow the [official setup](https://learn.chatgpt.com/docs/computer-use).
-On macOS, **Screen Recording** allows the app to see the interface and
+Install or enable the Computer Use plugin when offered. On macOS,
+**Screen Recording** allows the app to see the interface and
 **Accessibility** allows clicking and typing. These are separate from Codex's
-file permissions. Approve the particular editor when asked. A remembered or
+file permissions. On Windows, keep the target app visible in the active desktop
+session; availability depends on region and account. Approve the particular editor when asked. A remembered or
 “always allow” choice, where offered, avoids repeated prompts for that app;
 choose it only for an app and access you intend to keep available.
 

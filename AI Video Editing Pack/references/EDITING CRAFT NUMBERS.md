@@ -124,10 +124,10 @@ match the title and thumbnail. Everything else is practitioner practice:
 - New information or a new question every 10 to 15 s (sourced quote from a
   former MrBeast retention strategist, who warns that cutting speed alone does
   not hold attention).
-- A visual change (punch-in, B-roll, text, graphic, angle) at each new idea and
-  at least every 8 to 12 s in long form; every 3 to 6 s in the first 30 seconds
-  and in passages with nothing demonstrated on screen (opinion; the "every 3 to
-  8 seconds" rule in circulation has no study behind it).
+- Use a visual change (punch-in, B-roll, text, graphic or angle) when it makes
+  an idea or detail easier to follow. Review long static sections, but preserve
+  useful demonstrations and reading time. Timing ranges are practitioner
+  heuristics, never movement quotas (opinion).
 - A real re-engagement (demo, result, story, surprising number) about every 2
   to 3 minutes of a 10 to 15 minute tutorial (opinion, scaled from the leaked
   MrBeast memo's 3 and 6 minute marks; memo origin unconfirmed).
@@ -319,8 +319,8 @@ connects to the first frame so the replay feels continuous; no goodbye.
 | Breath in a kept pause | dip, do not delete | 4 to 8 dB | sharp gasp near the mic: delete whole | sourced plus opinion |
 | Non-speech event 300 ms or longer, under 800 Hz, weak onset | cut with the pause | throat clear 0.44 to 0.48 s | part of a laugh that is content | sourced |
 | Transient under 20 ms inside speech | de-click, do not cut | one or two light passes | it is a plosive: de-plosive instead | sourced |
-| New idea | visual change | at each idea; at least every 8 to 12 s | viewer is reading | opinion |
-| First 30 s | faster cadence, promise stated | visual change every 3 to 6 s | the hook is one demonstration | sourced metric plus opinion |
+| New idea | visual change | at a meaningful idea or visual change; no fixed interval | viewer is reading | opinion |
+| First 30 s | establish and progress the opening promise | meaningful progression, no fixed visual cadence | a clear demonstration needs uninterrupted viewing | sourced metric plus opinion |
 | Jump cut with a head jump or mid-thought removal | hide with punch, B-roll or text | punch 110 to 130 percent of base | already one punch per 8 to 10 s | common practice |
 | Animated zoom | ease out, land on the word | snap 2 to 4 frames; push 6 to 12 frames; slow 0.5 to 1.5 s | viewer is reading | common practice |
 | Full-sentence captions | obey floors | 20 cps, 160 to 180 wpm, 0.8 s minimum, 7 s maximum, 42 chars, 2 lines | word-by-word shorts captions | sourced |

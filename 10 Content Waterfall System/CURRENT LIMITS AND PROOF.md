@@ -17,7 +17,7 @@ The complete system has not processed and passed human review on one real record
 
 1. Use one rights-cleared recording of at least 30 minutes.
 2. Create the real transcript, claim ledger, and strict content map.
-3. Obtain separate human approval of the whole map.
+3. For this production evaluation, obtain human review of the whole map and record it. This is a proof exercise, not a compulsory checkpoint in every customer edit.
 4. Render at least one mid-length clip and two shorts.
 5. Create exact captions and at least one email and two text drafts.
 6. Review A/V sync, crop, readability, source fidelity, privacy, and rights.

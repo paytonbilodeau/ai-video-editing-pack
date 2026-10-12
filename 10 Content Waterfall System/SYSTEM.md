@@ -4,7 +4,9 @@ These instructions are for the AI helping the user.
 
 ## Goal
 
-Turn one approved long source into selected long cutdowns, mid-length clips, shorts, email and text drafts, and captions that remain traceable to the source.
+Turn the requested source into selected long cutdowns, mid-length clips, shorts, email and text drafts, and captions that remain traceable to the source.
+
+Follow the core [setup flow](../AI%20Video%20Editing%20Pack/references/SETUP%20FLOW.md). Fill the worksheets from known answers and inspect the supplied files. The user should not need to complete every template.
 
 ## Source-grounded process
 
@@ -13,11 +15,11 @@ Turn one approved long source into selected long cutdowns, mid-length clips, sho
 3. Build `CLAIM LEDGER.md` with one ID for each usable source claim.
 4. Create a content map with source ranges, claim IDs, format, title, and intended result.
 5. Check that a derivative adds no unsupported fact, result, quote, or implication.
-6. Show the entire map and obtain a separate approval record.
+6. Record the existing user request, authorized formats and review preference in `APPROVAL RECORD.md`. In balanced or handle-it-for-me mode, mark only outputs within that scope as approved and proceed after internal review. In careful mode, honor the requested checkpoint. Ask when a material uncertainty or changed scope remains.
 7. Validate the JSON map before extraction.
 8. Extract only approved video items into a new folder.
 9. Rebase exact word timestamps for each clip and create captions.
-10. Draft platform packages manually from approved claims. Keep publication manual.
+10. Draft the requested platform packages from approved claims. Keep publication outside the extraction task.
 11. Review A/V sync, crop, caption readability, claim fidelity, source immutability, and output receipts.
 12. Record performance only after publication, then write the next-capture brief without changing source facts.
 
@@ -28,7 +30,7 @@ Turn one approved long source into selected long cutdowns, mid-length clips, sho
 - **Short:** 20 to 90 seconds.
 - **Email, text post, and caption:** Any positive approved source range with at least one claim ID.
 
-These ranges are product defaults, not platform guarantees. Check current platform limits before delivery.
+These are enforced limits of the included extraction tool, not platform guarantees or rules for good editing. If a requested clip falls outside them, use the editor route instead of padding or cutting a useful idea to satisfy the tool. Check current platform limits before delivery.
 
 ## Approved source audio
 
@@ -36,7 +38,7 @@ When the user has approved the finished main and explicitly authorizes continued
 
 For each processed master or derivative, retain full audio/video decode, audio presence, expected duration and frame count, measured alignment, and complete spoken-word boundaries. For picture-only revisions, preserve the approved audio, compare against an independent same-length reference, and verify copied audio payloads when applicable. Keep actual crop, caption, editorial and claim checks. The included extraction tool's hash and duration checks do not perform all this review; record the additional evidence separately and resolve failures before delivery.
 
-This policy carries forward source acceptance only. The named map and outputs still need approval, publication remains outside this system, and old completed review records need no rewrite. An unapproved edit or changed audio cannot inherit a listening claim from an earlier file.
+This policy carries forward source acceptance only. The named map and outputs need recorded authority from the existing request or an explicitly requested checkpoint; do not invent human review. Publication remains outside this system, and old completed review records need no rewrite. An unapproved edit or changed audio cannot inherit a listening claim from an earlier file.
 
 ## Clip selection and packaging
 
@@ -69,9 +71,11 @@ not prove chapters appeared.
 
 ## No-new-claims rule
 
-A content map proves traceability, not truth by itself. Every output must cite claim IDs that exist in the ledger, and a person must compare the draft with the cited source. Do not invent context, numbers, outcomes, quotes, endorsements, chronology, certainty, or causal claims. When a transition needs context the source does not contain, label it for the user's addition and reapproval.
+A content map proves traceability, not truth by itself. Every output must cite claim IDs that exist in the ledger, and the assistant must compare the draft with the cited source, requesting user input when a consequential meaning is unclear. Do not invent context, numbers, outcomes, quotes, endorsements, chronology, certainty, or causal claims. When a transition needs context the source does not contain, label it for the user's addition and reapproval.
 
 ## Local tool boundary
+
+Keep the JSON `approved` flag, source-hash checks and `--confirm EXTRACT` CLI requirement. The assistant can set those flags for outputs already authorized in the request, recording that authority once. They are not a reason to demand a second routine confirmation. An output outside that scope stays unapproved.
 
 `transcript_adapter.py` normalizes supplied segment and word timing. It does not transcribe. `content_waterfall.py` validates the map, rebases exact word timings, creates VTT captions, and extracts approved clips with FFmpeg. It refuses absolute paths in shared data, checks the source hash, uses a new output directory, and verifies that the source hash did not change.
 
@@ -91,7 +95,7 @@ After ten runs, use `WINNER REVIEW.md` to compare approved formats, topics, open
 
 ## Safety and human review
 
-Use copied or low-consequence source material for the first run. Keep the original immutable. The user separately approves the content map, reviews every derivative, confirms rights and privacy, and performs publication outside this system.
+Use a neutral synthetic fixture if technical testing is needed. Keep the original immutable. Carry forward the user's source and output instructions, rights and privacy limits, and requested checkpoints. Inspect each derivative and deliver it for feedback. Creating clips does not authorize publication.
 
 ## Choosing a clean source for new crops
 

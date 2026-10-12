@@ -13,4 +13,4 @@
 - **Known failure:** [failure]
 - **Last fixture test:** [date and result]
 
-Profiles are starting points. Show the dry run and obtain approval for every source.
+Profiles are starting points. Inspect a dry plan for every source. Show it when the person requested a checkpoint; otherwise carry out the authorized rules and keep the report for review. Full restart always needs explicit confirmation of its removal rule.

@@ -46,7 +46,7 @@ A transcript from an earlier edit needs either a verified source-to-output edit 
 
 ## Choose the runtime
 
-Keep a working project's components and renderer when they fit the requested output. Use the included Remotion starter for its supported code-driven scenes; an existing HTML timeline or conventional editor can use the same beat and review records. Convert source only when the conversion solves a specific need. To combine engines, render a finished layer and verify its duration, frame rate, transparency, and audio role in the receiving editor.
+Keep a working project's components and renderer when they fit the requested output. Use the included Remotion starter for React compositions, the included HyperFrames starter for HTML/CSS animation, or the pack's JavaScript kit for procedural drawings. Native editor graphics can use the same beat and review records. All three code-based routes receive equal consideration; choose by the scene rather than a default tool ranking. See the pack's [motion setup guide](../AI%20Video%20Editing%20Pack/references/MOTION%20TOOL%20SETUP.md) for guided installation. Convert source only when the conversion solves a specific need. To combine engines, render a finished layer and verify its duration, frame rate, transparency, and audio role in the receiving editor.
 
 Record the runtime version and reproduction command. Check current installation, license, and cost requirements before adding a tool; a provider listed in a tutorial is not authorization to use it. Let one writer own a scene at a time. After a visual editor change, save, reload, and re-render to prove that the source change persisted.
 

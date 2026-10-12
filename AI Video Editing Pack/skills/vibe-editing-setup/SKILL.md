@@ -1,37 +1,52 @@
 ---
 name: vibe-editing-setup
-description: Prepare an AI video editor with verified tools and a reusable private profile, without requiring footage or a practice assignment.
+description: Adapt setup to the user's preferred pace, connect existing editing tools, offer optional runtimes, and save a private profile without requiring footage.
 ---
 
 # Set Up Your AI Video Editor
 
-Read the [main skill](../../SKILL.md), [AI app guide](../../references/AI%20APP%20SETUP.md)
-and [safety guide](../../references/SAFETY%20AND%20API%20KEYS.md). Inspect the
-existing app, operating system, editor and available tools. Keep the person's
-editor when it suits their work. If they are choosing from scratch, suggest
-DaVinci Resolve and check the current edition's requirements and connection
-options. Do not imply every editor has the same automation support.
+Follow [Setup Flow](../../references/SETUP%20FLOW.md) in order. Read the
+[main skill](../../SKILL.md), [AI App Setup](../../references/AI%20APP%20SETUP.md)
+and the relevant editor playbook. Start with the person's desired pace and
+shared working folder, using answers and permissions already supplied.
 
-Use [platform refresh](../platform-refresh/SKILL.md) and the editor's playbook
-to establish the route. Make harmless checks yourself, using a disposable
-fixture if an actual import or export test is needed and authorized. Do not
-require the person to find a 20- to 60-second recording, approve a sample, or
-complete an exercise. If setup is blocked, state the exact missing permission
-or component and the next useful action.
+Explain choices in short, plain sentences. Define unfamiliar terms when they
+matter. Don't talk down to the person or send a long questionnaire. Ask only
+questions that change the next action. Lead with a recommendation and explain
+what it adds. Use careful, balanced or handle-it-for-me as a working preference;
+the host app controls actual permissions. Never add a redundant approval layer.
 
-Create or reuse a private [editing profile](../../templates/EDITING%20PROFILE.md)
-outside the pack. Record the editor, connection, output preferences, privacy
-limits and any taste already expressed. Unknown taste can use conservative
-starting defaults: complete thoughts, natural pauses, clear speech, neutral
-color and restrained graphics. Label these as defaults, not learned taste.
-Full pass is the default review mode; checkpoints are optional.
+Inspect existing tools, skills, project instructions and preferences in the
+shared folder. Reuse and integrate them. Don't replace instructions, rewrite
+private profiles from a blank template, install duplicate runtimes or upgrade
+unrelated software. Offer Computer Use assistance when available and wanted.
+The person confirms sensitive app/OS access decisions; don't silently expand them.
 
-Save the profile's location in this assistant's supported project instructions
-and verify that it can be read. Keep credentials in supported secret storage,
-not in the profile. Do not overwrite existing preferences. Explain how to
-reuse the folder with another assistant when necessary.
+Offer local pre-edit, optional transcription, JavaScript, Remotion, HyperFrames
+and waterfall setup early. Recommend only the components useful for this user's
+work. Follow the included installers/guides through official sources, inspect
+missing prerequisites, obtain any missing specific authorization together, then
+perform the setup. Respect refusal and provide a supported alternative.
 
-Finish with a brief readiness report: where the profile lives, the route
-actually available, anything the user must still do, and how to provide a
-video when ready. No footage means setup only. When footage arrives, use
-[intake](../intake/SKILL.md) to fill only the missing project details.
+Check whether sibling systems 05, 09, 10 and 14 are present. A native plugin
+manager may have cached only the core folder. If so, offer to fetch the full
+release ZIP into a separate approved working location, inspect its release
+notes and archive paths, and preserve the current plugin/profile. The download
+adds source tools; it does not install dependencies or grant editor access.
+
+Use [platform refresh](../platform-refresh/SKILL.md) to verify the actual route.
+Make a harmless disposable test when useful and authorized. Don't require a
+practice recording or treat a documented route as tested. Setup with no footage
+ends in readiness, not an invented edit.
+
+Create or reuse the private [editing profile](../../templates/EDITING%20PROFILE.md)
+outside the pack. Preserve preferences, record working pace and allowed tools,
+and save its location in the assistant's supported project instructions without
+overwriting other content. Start with complete thoughts, clean word boundaries,
+natural sound/color and purposeful visuals. Use the editing judgment guide as
+a starting point; user preferences override its defaults.
+
+Finish with what works, the profile location, any real remaining action and
+how to hand over a video. When footage arrives, use [intake](../intake/SKILL.md)
+to fill only project-specific gaps. A complete requested edit proceeds through
+internal checks without routine stage approvals unless the user chose them.
