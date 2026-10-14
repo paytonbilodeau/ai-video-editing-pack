@@ -1,5 +1,14 @@
 # Motion and LUTs
 
+[Make a graphic](#turn-a-reference-into-an-original-visual) ·
+[Create a color look](#build-a-look-then-decide-if-a-lut-helps) ·
+[Set up a motion tool](MOTION%20TOOL%20SETUP.md)
+
+Describe what the viewer needs to understand and show a useful reference.
+Your AI can handle the code; you do not need to write it. A simple title may
+need only your editor. A custom animation may need one of the tools below.
+Check the result over your actual footage before deciding it works.
+
 Motion should help the viewer understand the point. Use the person's existing
 assets and tools first. Offer motion setup during onboarding so it is ready when
 needed, then choose the right tool for each graphic. Native editor graphics,
@@ -84,6 +93,20 @@ continuing. A graphic the viewer cannot read behind a moving head helps no one.
 
 ## Build a look, then decide if a LUT helps
 
+A LUT is a reusable color treatment. You can show the AI your own footage,
+someone else's video or a movie still to explain the look you like. Also give
+it several frames from the recording being edited. The reference explains the
+style; your frames show the colors and lighting the treatment must work with.
+
+First correct brightness and unwanted color casts, and convert log or HDR
+footage appropriately for its intended display. Then try the creative look.
+Test it on a different clip and reduce its strength if it harms skin or loses
+bright or dark detail. A mask selects part of the picture for a separate local
+adjustment; a LUT cannot identify and brighten just your face.
+
+[The illustrated LUT lesson](../../Kit%20Email%20Workflow/lessons/08.md) includes
+a short prompt. The checks below are for the AI carrying it out.
+
 A `.cube` LUT is a global RGB mapping. It cannot recognize faces, masks,
 windows, movement, or which warm color is skin rather than lighting. An
 unrelated reference image can inspire a look, but a valid LUT file does not
@@ -119,6 +142,15 @@ Exact matching is an observed result on tested footage, not a property of the
 `.cube` file.
 
 ## Protect each derivative's visible area
+
+For 9:16 shorts, check on a phone. For 16:9 videos, check on the intended
+viewing screen. A graphic needs time to be seen and understood, plus reading
+time when it contains words. Match its appearance and hold to the explanation.
+
+Reels, TikTok and Shorts can cover the top, right and bottom with controls.
+Keep essential content in the remaining clear area. Keep the composition
+centered; scale it back or change the layout when necessary. The
+[reframing guide](REFRAMING.md) explains the moving-face case.
 
 An approved horizontal graphic may fail in a vertical crop. For each requested
 output, open the current destination's safe-area guidance or overlay, then

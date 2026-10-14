@@ -11,6 +11,14 @@ available tools, save your private editing profile and explain any missing
 connection. You do not need a recording ready, and there is no practice clip
 to complete before you can use it.
 
+## Start with these three pieces
+
+- **AI assistant:** Codex or Claude Code reads the pack and carries out work.
+- **Video editor:** Resolve, CapCut, Premiere or Final Cut holds the editable timeline.
+- **Editing pack:** these instructions help the assistant connect the two and use your preferences.
+
+Use the [short setup prompt](../START%20HERE.md). Your assistant can handle the detailed checks below and explain only the choices you need to make.
+
 ## Choose your working pace first
 
 Tell the AI whether you prefer **careful**, **balanced**, or **handle it for me**.

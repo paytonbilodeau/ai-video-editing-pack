@@ -107,6 +107,12 @@ schemas: modern drafts may contain nested timelines and multiple mirrors.
 
 ## Computer use and ordinary finishing
 
+For vertical clips, start with [automatic reframing and smooth face following](REFRAMING.md).
+Use the native feature when available, then correct tracking with supported
+controls or position keyframes. Keep the face and the important demonstration
+visible. The pack's standalone crop tool uses a fixed crop, so it is not a
+substitute for this moving-frame route.
+
 Offer computer use when it can complete a missing app step. Explain that screen
 access lets the assistant see the interface and control access lets it operate
 it. Neither permission should be described as restricted to a single folder.

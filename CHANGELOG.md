@@ -1,5 +1,20 @@
 # Changelog
 
+## 5.0.1 - 2026-10-14
+
+- Rewrite the illustrated guide as a connected walkthrough with clearer setup,
+  explanations and prompts. Keep all 22 lessons and their illustrations.
+- Shorten the setup message and explain the assistant, pack and editor together.
+  Preserve existing tools, originals, private profiles and custom skills.
+- Clarify configurable restart markers, clean first-pass video versus editable
+  timelines, feedback, small manual changes and learning before final export.
+- Explain existing native auto-reframe and smooth face-following routes, centered
+  layouts and platform controls. The standalone crop tool still uses a fixed crop.
+- Clarify LUT references, graphics timing and one optional final audio pass after
+  visual work. Keep the pre-service version for revisions and shorts.
+- Documentation repair only; no new executable feature or member-release bypass.
+  Plugin version: 2.0.1.
+
 ## 5.0.0 - 2026-10-12
 
 - Download the complete system in one ZIP: editing skills, pre-edit tools,

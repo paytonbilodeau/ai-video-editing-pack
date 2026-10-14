@@ -6,35 +6,7 @@ The full download includes the editing skills, pre-edit and waterfall tools,
 motion resources and 22 lessons. You can start immediately.
 
 ```text
-Set up this Vibe Editors folder so you can be my video editor. Read
-AI Video Editing Pack/SKILL.md and
-AI Video Editing Pack/skills/vibe-editing-setup/SKILL.md first. If this is a
-core-only native plugin install, find those files inside the plugin folder,
-check for the complete sibling bundle and help obtain it when needed.
-
-Start by finding out how hands-on I want to be: careful, balanced, or handle
-it for me. Explain the relevant permission choices in my AI app and adapt
-to my answers. Reuse permissions and decisions I've already given you.
-
-Inspect my existing editor, tools, skills and workflow in the folder I share.
-Keep what works. Create or reuse my private editing profile outside the pack;
-preserve my preferences and save where to find it for future edits.
-
-Offer the included pre-edit tools and JavaScript, Remotion and HyperFrames
-motion options early. Explain what each adds, recommend what fits, and set up
-the options I choose. Inspect first; install only missing components through
-their official sources after any needed authorization. Don't make me type
-commands you can run. Help with Computer Use if available and wanted.
-
-Use short, clear explanations. Ask only for missing information that changes
-the next step. Keep originals and current projects recoverable. Explain
-specific new access, uploads or costs before using them unless already
-authorized. Respect the app's permission controls.
-
-Verify the available route. Finish with what works, what remains manual,
-where my profile lives, and how to give you my first video. Setup alone is
-not a request to edit. When I request an edit, complete the agreed work
-without routine stage approvals unless I've asked for them.
+Set up this Vibe Editors folder so you can be my video editor. Read its START HERE guide and follow the setup skill. Ask how hands-on I want to be: careful, balanced, or handle it for me. Reuse my existing tools, permissions, skills and preferences. Keep my originals and projects safe, and keep my private editing profile outside the pack. Explain any new access, upload, installation or cost before using it unless already authorized. Offer useful optional tools, then set up what fits. Verify what works and tell me the simplest next step. No footage is needed for setup.
 ```
 
 The AI should inspect first, recommend a setup, explain meaningful choices,

@@ -1,5 +1,22 @@
 # Make the Voice Clearer Without Making It Strange
 
+[Illustrated audio lesson](../../Kit%20Email%20Workflow/lessons/06.md) ·
+[Editor connections](EDITOR%20CONNECTIONS.md)
+
+Start with the right microphone track, fix the problem you can actually hear,
+and compare a short section before and after at similar volume. Headphones make
+small differences easier to hear; an ordinary speaker should also make the
+voice clear. More processing is useful only when it improves the recording.
+
+If you choose Auphonic or another final audio service, use it **after the cuts,
+color, captions and graphics are finished**. Keep the export from before the
+service and process the finished version once. Auphonic offers a free allowance
+and paid additional use; check its [current plan and limits](https://auphonic.com/pricing)
+before uploading. A later short starts from the pre-service version.
+
+If your video demonstrates an audio problem, mark that section to stay
+untreated. The viewer needs to hear the difference you are explaining.
+
 This guide chooses the treatment. Starting values for each stage (high-pass,
 EQ bands, de-esser, compressor, limiter, loudness targets, music ducking), the
 tool names in each editor and the color order live in

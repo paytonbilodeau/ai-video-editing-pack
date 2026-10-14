@@ -1,5 +1,9 @@
 # Clips and posts from a longer video
 
+The full editing pack also works on videos recorded as shorts. This optional waterfall route starts with a longer recording and selects smaller, self-contained ideas from it. Keep enough context for a new viewer. A short can inspire a longer video, but that usually requires new recording.
+
+For moving faces, start with your editor's native automatic reframing and use [the reframing guide](../AI%20Video%20Editing%20Pack/references/REFRAMING.md). The standalone crop tool keeps one fixed frame.
+
 Give the AI a recording and say which outputs you want. It should find useful
 complete ideas, choose their source ranges, prepare the requested clips and
 captions, and keep every claim tied to the original.
