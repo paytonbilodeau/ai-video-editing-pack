@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "version": "5.0.0",
+  "version": "5.0.1",
   "publicScope": "AI Video Editing Pack only, including supporting editing tools and the Kit email workflow.",
   "systems": [
     {
@@ -144,6 +144,7 @@
     "AI Video Editing Pack/references/MOTION AND LUTS.md",
     "AI Video Editing Pack/references/MOTION TOOL SETUP.md",
     "AI Video Editing Pack/references/PROVIDER CHECK.md",
+    "AI Video Editing Pack/references/REFRAMING.md",
     "AI Video Editing Pack/references/SAFETY AND API KEYS.md",
     "AI Video Editing Pack/references/SETUP FLOW.md",
     "AI Video Editing Pack/references/SOUND AND COLOR NUMBERS.md",

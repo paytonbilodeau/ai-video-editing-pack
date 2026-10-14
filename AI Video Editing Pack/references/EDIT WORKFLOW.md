@@ -1,5 +1,13 @@
 # Editing Workflow
 
+**The simple version:** give the AI your recording and a clear brief. Let it
+make the edit, watch the draft, then describe or make your corrections. Save
+useful preferences before exporting. Watch the finished file before posting.
+
+The steps below help the assistant do that work. You can use them for an
+original short or a longer video. You do not need to complete every optional
+stage or fill in every worksheet yourself.
+
 Use only the stages a project needs. Complete the requested work in one pass
 unless the person asks for checkpoints. These stages are the AI's workflow,
 not daily assignments for the user. Setup alone requires no footage. Record exact source and timeline versions
@@ -43,7 +51,12 @@ working folder, never in this public pack.
    editor tools can handle simple titles. JavaScript, Remotion and HyperFrames
    are complementary options for custom work; use the appropriate route or
    combine their rendered layers. Follow [Motion Tool Setup](MOTION%20TOOL%20SETUP.md).
-6. **Review and deliver.** Save and reopen the project. Export the exact
+6. **Review, learn and deliver.** Watch the final draft in its editable timeline.
+   Apply feedback or make small manual changes on a duplicate. Compare the
+   earlier and approved versions through the connection when it can read the
+   relevant state; otherwise use exports and timestamped notes. Save useful
+   recurring preferences, with the reason and when they apply. Keep one-video
+   exceptions in the brief. Then save and reopen the project. Export the exact
    version, check the file decodes and ends properly, then watch and listen
    to it. Record what was technically checked, what a person reviewed, and
    what remains open in [delivery and learning](../templates/DELIVERY%20AND%20LEARNING.md).
@@ -52,11 +65,11 @@ working folder, never in this public pack.
    the pre-service master and verify the returned file before delivery. Build
    derivatives from the pre-service master so each finished version receives
    only one audio pass.
-7. **Learn and optionally repurpose.** Compare manual corrections with the
-   prior version; save narrow accepted preferences with examples. Test them
-   during later suitable work. Once the source timing is settled, make only requested
-   derivatives. Check framing, captions and safe zones for each format and
-   review every exported result. Publishing is separate.
+7. **Reuse what helped.** Test saved preferences on the next suitable video.
+   For a short from a longer video, keep one complete idea with enough setup
+   and a clear payoff. Make only the requested versions. Use the
+   [reframing guide](REFRAMING.md) for moving faces and platform controls, then
+   review each finished file. Publishing is a separate action.
 
 An assistant should stop and report a limitation when it cannot inspect the
 source, operate the selected tool, or verify the exact output. A plan is

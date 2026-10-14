@@ -16,6 +16,12 @@ section when you want a technique adopted (see lesson 10 of the email guide).
 3. Have the AI check the technique on a suitable section; then save a narrow reusable
    instruction in your private editing profile with the condition it applies to.
 
+For visual techniques, have the AI inspect the example itself. A transcript
+can explain the steps but cannot show the movement or whether a cut feels
+right. Ask it to say whether it watched the whole video, sampled moments or
+only read the transcript. Try the relevant part on your own footage. A popular
+tutorial can be easy to discover without being useful for this particular edit.
+
 ## DaVinci Resolve
 
 | Level | Course | Why |

@@ -18,6 +18,10 @@ CapCut has separate optional draft routes in its playbook.
 | `.cut-sheet.md` and `.cut-sheet.csv` | CapCut and any editor, by hand or with computer use | Every kept clip and removed range in timecode and seconds, for split-and-delete work in an editor without timeline import. |
 | `.summary.json` | the assistant | Counts, durations, warnings and SHA-256 of each written file. |
 
+## Which result do you want?
+
+The pre-edit tool normally makes a clean first-pass video you can keep editing. It preserves the source recording and cut report. This separate timeline exporter is useful when you want each source cut to remain individually adjustable in a compatible editor. The AI can create the cut list and run the conversion for you.
+
 ## The cut list
 
 ```json

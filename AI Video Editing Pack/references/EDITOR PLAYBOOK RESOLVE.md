@@ -268,3 +268,11 @@ manual's tables. Console scripting on the free edition after 21.1 is claimed by
 one blog and not confirmed by Blackmagic. The API observations about exclusive
 end frames and single-span batch appends were recorded on 21.1.0.14 and should
 be retested on the installed build before an agent relies on them.
+
+## A small set of finishing controls
+
+Duplicate the timeline before a manual finishing pass. Space plays or pauses; J, K and L are commonly reverse, stop and forward playback. Check Keyboard Customization for your current preset before cutting.
+
+Payton uses a custom preset with **Command-X to split at the playhead**, **Q to ripple the start** and **W to ripple the end**. Those are personal mappings, not Resolve defaults. Command-X may cut to the clipboard in another preset. Learn the command names first and use or assign keys deliberately. Keep linked picture and sound selected together; play each changed join and undo if the wrong section moved.
+
+For small sound or picture changes, select the intended clip, adjust its volume, brightness or contrast slightly, then compare. Ask the AI for the exact current control when uncertain. Keep the previous timeline so the AI can compare your changes and save the reason for a useful preference.
