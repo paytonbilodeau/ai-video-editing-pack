@@ -1,3 +1,7 @@
+# 5.1.1 · Setup and teaching repairs
+
+The complete download now has one primary setup route, an explicit working-workspace/profile readback and the same disposable first test. The independent core/plugin route remains available. Navigation labels describe opening a prompt, and the shown motion looks link directly to their existing source, configuration and render commands. Existing profiles and custom edits keep priority. No new engine, paid service or feature is required.
+
 # Vibe Editors 5.1.0
 
 ## Start from the system behind Payton’s edits

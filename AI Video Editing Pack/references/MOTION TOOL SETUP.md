@@ -6,6 +6,10 @@ Your AI can build animated text, diagrams, callouts and explanations, then place
 them in your video. Start with tools you already have. The assistant can handle
 the technical setup after you choose what to add.
 
+## Match a shown look
+
+For the included Tech Motion, Gentlemen or layered Sketch examples, use [the matching source and render guide](<../../Payton Editing System/motion/flow/README.md>) and [example code](<../../Payton Editing System/motion/flow/src/Examples.tsx>). The starters below check each engine. Their neutral/cut-paper scenes are different examples.
+
 ## A simple choice during setup
 
 The assistant should offer this early, without making it a requirement:

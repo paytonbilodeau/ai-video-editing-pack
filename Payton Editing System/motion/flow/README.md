@@ -2,6 +2,8 @@
 
 Use a **new working copy of the whole motion folder**. Node22 or newer and npm are required. Remotion may download its render browser on the first render. The included Remotion code is subject to [Remotion's license](https://www.remotion.dev/license), including its company-size/commercial licensing rules. Setup does not buy or activate a license.
 
+The compositions shown in the course are defined in [src/Examples.tsx](src/Examples.tsx). Change [customer-config.json](customer-config.json) in your working copy. Choose `TechMotion` for the mint process diagram, `Gentlemen` for handwriting, or `SketchLayers` for the layered folder example.
+
 From the copied `motion/flow` folder:
 
 ```sh

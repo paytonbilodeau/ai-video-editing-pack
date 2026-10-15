@@ -1,4 +1,4 @@
-# Vibe Editors 5.1.0
+# Vibe Editors 5.1.1
 
 **[Download the complete pack](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip) · [Start here](<START HERE.md>) · [Free illustrated email course](https://vibeeditors.com)**
 

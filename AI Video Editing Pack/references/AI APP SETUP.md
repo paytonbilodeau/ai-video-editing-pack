@@ -1,6 +1,8 @@
 # Set Up Your AI App for Video Editing
 
-**Checked October 12, 2026.** Use a local assistant such as Codex or Claude Code
+**Complete download:** use [the full-system setup](<../../Payton Editing System/setup/APP SETUP.md>) and its included lamp first test. This page retains detailed app and permission guidance for the independent core/plugin route.
+
+**Checked October 15, 2026.** Use a local assistant such as Codex or Claude Code
 with a folder on your computer. It can read the pack, work with files and run
 editing tools. A normal browser chat can discuss an edit, but that alone does
 not connect it to your local video editor.
@@ -8,8 +10,7 @@ not connect it to your local video editor.
 Start with the subscription and editor you already have. Give the assistant
 the pack and its [setup message](../START%20HERE.md). It should inspect the
 available tools, save your private editing profile and explain any missing
-connection. You do not need a recording ready, and there is no practice clip
-to complete before you can use it.
+connection. No personal recording is needed for setup. In the complete download, finish the included disposable lamp test before using real work. For a core-only installation, test the selected editor route with a disposable copy and report any native step that remains unverified.
 
 ## Start with these three pieces
 
