@@ -16,6 +16,7 @@ function walk(dir) {
     const full=path.join(dir,entry.name);
     const rel=path.relative(root,full).split(path.sep).join('/');
     if (entry.isSymbolicLink()) { errors.push('Symlink forbidden: '+rel); continue; }
+    if (dir===root && entry.isDirectory() && ['.build','.swiftpm'].includes(entry.name)) continue;
     if (['.git','node_modules','__pycache__','dist','.DS_Store','Thumbs.db'].includes(entry.name)) continue;
     if (entry.isDirectory()) walk(full);
     else actual.push(rel);
