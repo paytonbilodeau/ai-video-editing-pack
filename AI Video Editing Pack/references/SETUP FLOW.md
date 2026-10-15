@@ -1,5 +1,7 @@
 # Setup that moves at your pace
 
+For the complete Vibe Editors download, use [the full-system setup](<../../START HERE.md>). This reference retains the independent core workflow.
+
 This guide tells the AI how to help. The person should not have to fill out
 every template, read every guide or learn terminal commands before starting.
 

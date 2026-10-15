@@ -4,6 +4,10 @@
 
 **[8-step visual walkthrough](../Kit%20Email%20Workflow/visual-guide/README.md)**
 
+## Independent core or plugin route
+
+The instructions below are for the core workflow only. For the complete download with the filled Payton-derived profile, installed skill bridges and lamp first test, use [the full setup message](<../START HERE.md>). The worksheet helper below does not install that complete system.
+
 In Codex, start a **Local** task in a dedicated editing folder. Select the
 extracted **Vibe Editors** folder or give its exact location, then ask the AI
 to list a few files it can read. Use the [AI app setup guide](references/AI%20APP%20SETUP.md)
@@ -42,7 +46,7 @@ just to add the complete download.
 - [Choose a motion tool and run its starter](references/MOTION%20TOOL%20SETUP.md).
 - [Update without losing your preferences](references/UPDATING.md).
 
-## Optional private-folder setup
+## Optional core-only worksheet setup
 
 The paste message above needs no Python. If you want the included helper to
 create worksheet copies, use Python 3.11 or newer and preview this command

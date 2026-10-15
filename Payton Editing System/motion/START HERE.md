@@ -16,6 +16,15 @@ Open the **whole editing-system setup first**. This folder supplies Payton-deriv
 
 Copy the selected project to a new working folder before customizing. The whole-system setup makes the customer profile outside the pack; refer to it rather than changing the shipped defaults. Start with the same mint `#72DFA5`, dark green `#0F583D`, neutral palette, original typography and calm holds. Change colors, wording, avatar and timing only where requested. A new brand never needs Payton's portrait or private media.
 
+
+## Reproduce a shown look
+
+The [matching render guide](flow/README.md) links the [editable example source](flow/src/Examples.tsx) and [customer configuration](flow/customer-config.json). Copy the whole motion folder, then render `TechMotion`, `Gentlemen` or `SketchLayers` using that guide. These are the actual included looks.
+
+> Reproduce the included [Tech Motion, Gentlemen or layered Sketch] example from its matching source in a separate working copy. Reuse my working tools and profile. Show the full render, then change only [words or color] and check the entrance, readable hold and exit. Keep the original source and the editable changed copy. Explain any needed download or license before proceeding.
+
+The JavaScript cut-paper, neutral Remotion and neutral HyperFrames starters are engine checks. Choose them when testing a tool; use the matching example above when reproducing a shown look.
+
 ## Make the actual video clear
 
 One useful idea per visual state. Use real word times from the locked edit, preserve complete phrases and the speaker's meaning, and let the result remain readable. A graphic can explain, prove or compare. It does not have to appear every few seconds. Omit idle motion and repeated headlines. Keep one caption owner and inspect the complete final composite, including the longest subtitle and platform controls.
