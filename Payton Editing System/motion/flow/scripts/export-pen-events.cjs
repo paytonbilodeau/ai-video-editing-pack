@@ -8,4 +8,4 @@ const fps=config.fps,duration=config.duration;const events=layout.events.map(x=>
 // Include the actual underline in the same picture schedule.
 events.push({start:2.5,end:2.95,length:720});
 const motion=Array.from({length:Math.round(duration*fps)},(_,f)=>events.reduce((sum,s)=>sum+Math.max(0,Math.min(f/fps,s.end)-Math.max((f-1)/fps,s.start))/(s.end-s.start)*s.length,0));
-const dest=process.argv[2];if(!dest)throw new Error('Usage: node scripts/export-pen-events.cjs <new-events.json>');if(fs.existsSync(dest))throw new Error('Refusing existing output');fs.writeFileSync(dest,JSON.stringify({fps,duration,motion,strokes:events.map(({start,end})=>({start,end}))},null,2));
+const dest=process.argv[2];if(!dest)throw new Error('Usage: node scripts/export-pen-events.cjs <new-events.json>');if(fs.existsSync(dest))throw new Error('Refusing existing output');fs.writeFileSync(dest,JSON.stringify({fps,duration,motion,strokes:events.map(({start,end})=>({start,end}))},null,2),{flag:"wx"});

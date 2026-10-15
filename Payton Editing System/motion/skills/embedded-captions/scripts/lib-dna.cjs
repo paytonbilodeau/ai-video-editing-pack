@@ -35,11 +35,15 @@ function list() {
 }
 
 function load(name) {
+  if (typeof name !== "string" || !name || path.isAbsolute(name) || /^[a-zA-Z]:/.test(name) || name.includes("\\") || name.split("/").includes(".."))
+    throw new Error("DNA name must stay inside the bundled DNA directory");
   const p = path.join(DNA_DIR, `${name}.json`);
   if (!fs.existsSync(p)) {
     throw new Error(`unknown DNA "${name}". Available: ${list().join(", ")}`);
   }
-  return JSON.parse(fs.readFileSync(p, "utf8"));
+  const root = fs.realpathSync(DNA_DIR), real = fs.realpathSync(p);
+  if (!real.startsWith(root + path.sep)) throw new Error("linked DNA escapes its directory");
+  return JSON.parse(fs.readFileSync(real, "utf8"));
 }
 
 function readJson(p) {

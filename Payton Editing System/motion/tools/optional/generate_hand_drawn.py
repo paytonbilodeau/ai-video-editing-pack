@@ -90,12 +90,18 @@ def detect_brands_in_prompt(prompt, registry):
     the SCENE block. Fall back to whole-prompt scanning if no SCENE block is
     found.
     """
-    match = re.search(
-        r"SCENE:\s*(.*?)(?:\n\s*(?:TEXT|STYLE LOCK|COLOR PALETTE|CHARACTERS|LOGOS AND BRANDS|VARIATION|AVOID|BRAND EMPHASIS):)",
-        prompt,
-        re.DOTALL | re.IGNORECASE,
-    )
-    search_text = (match.group(1) if match else prompt).lower()
+    scene = re.search(r"SCENE:", prompt, re.IGNORECASE)
+    search_text = prompt
+    if scene:
+        lines = prompt[scene.end():].splitlines(keepends=True)
+        headers = {"TEXT", "STYLE LOCK", "COLOR PALETTE", "CHARACTERS",
+                   "LOGOS AND BRANDS", "VARIATION", "AVOID", "BRAND EMPHASIS"}
+        for index, line in enumerate(lines[1:], 1):
+            name, separator, _ = line.lstrip().partition(":")
+            if separator and name.upper() in headers:
+                search_text = "".join(lines[:index])
+                break
+    search_text = search_text.lower()
 
     matched = []
     for brand_key, brand_data in registry.items():
@@ -108,6 +114,22 @@ def detect_brands_in_prompt(prompt, registry):
                 break
 
     return matched
+
+
+def contained_asset_path(directory, filename):
+    """Resolve a manifest asset inside its chosen directory, including symlinks."""
+    if (not isinstance(filename, str) or not filename
+            or any(char in filename for char in ("\\", ":"))
+            or any(ord(char) < 32 or 127 <= ord(char) < 160 for char in filename)):
+        raise ValueError("Asset filename must be a portable relative path")
+    relative = Path(filename)
+    if relative.is_absolute() or any(part in {"", ".", ".."} for part in filename.split("/")):
+        raise ValueError("Asset filename cannot be absolute or contain traversal components")
+    root = Path(directory).resolve()
+    candidate = (root / relative).resolve()
+    if not candidate.is_relative_to(root):
+        raise ValueError("Asset filename escapes its selected directory")
+    return candidate
 
 
 def load_logo_images(brands, registry, logo_dir=None):
@@ -132,7 +154,7 @@ def load_logo_images(brands, registry, logo_dir=None):
             if count >= max_per_brand:
                 break
 
-            filepath = dir_path / filename
+            filepath = contained_asset_path(dir_path, filename)
             ext = filepath.suffix.lower()
 
             if ext not in SUPPORTED_LOGO_FORMATS:

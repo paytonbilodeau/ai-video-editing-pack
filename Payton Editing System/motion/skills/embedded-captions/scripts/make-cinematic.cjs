@@ -235,7 +235,7 @@ function main() {
   // tail compose as ONE bonded ORBIT (context anchored at the hero's edges, diagonal
   // read). DEPTH: context EMBEDS (bg) with the hero — one shared depth; per-line
   // `layer:"fg"` is the escape hatch when the matte eats a context line (gate tells you).
-  const planes = {};
+  const planes = Object.create(null);
   for (const [k, v] of Object.entries(C.planes || {})) {
     if (v == null) continue;
     let css = typeof v === "string" ? v : v.css || "";
@@ -344,7 +344,7 @@ function main() {
   // plane to its best-overlapping measured zone and ladder the treatment:
   //   luma > 150 → opaque (blend:normal) + strong tight scrim — screen/blend washes out
   //   luma 95–150 → keep the DNA blend, strengthen the glyph scrim
-  const planeComp = {};
+  const planeComp = Object.create(null);
   if (sz && sz.zones) {
     const zlist = Object.entries(sz.zones).filter(([, z]) => z && z.meanLuma != null);
     for (const [pk, pv] of Object.entries(C.planes || {})) {
@@ -466,7 +466,7 @@ function main() {
         `[make-cinematic] lockup-b${hRef.bi}: context RATIO-LOCKED to 0.26×hero → ${ratioFrac}·h (${moved} line(s) re-sized)`,
       );
   }
-  const byPlane = {};
+  const byPlane = Object.create(null);
   flat.forEach((l) => {
     (byPlane[l.plane] = byPlane[l.plane] || []).push(l);
   });
@@ -728,7 +728,7 @@ function main() {
       if (!ws.length) return c.cap_bbox ? c.cap_bbox.h : 0;
       return Math.max(...ws.map((w) => w.y + w.h)) - Math.min(...ws.map((w) => w.y));
     };
-    const pagesByKey = {};
+    const pagesByKey = Object.create(null);
     for (const l of flat) {
       const key = l.plane + "|" + (l.pageIdx || 0);
       (pagesByKey[key] = pagesByKey[key] || { t: +(l.out - 0.1).toFixed(2), lines: [] }).lines.push(

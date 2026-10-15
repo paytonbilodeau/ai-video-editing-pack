@@ -23,23 +23,44 @@ import os
 import re
 import sys
 import urllib.request
+from urllib.parse import urlsplit
 from difflib import SequenceMatcher
 
 API = "https://auphonic.com/api"
 
 
+def _download_headers(url, key):
+    parsed = urlsplit(url)
+    if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+        raise ValueError("Auphonic downloads require an HTTPS URL without embedded credentials")
+    return {"Authorization": f"Bearer {key}"} if parsed.hostname == "auphonic.com" and parsed.port in (None, 443) else {}
+
+
+class _SafeDownloadRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        allowed_headers = _download_headers(newurl, "unused")
+        redirected = super().redirect_request(req, fp, code, msg, headers, newurl)
+        if redirected is not None and not allowed_headers:
+            redirected.remove_header("Authorization")
+        return redirected
+
+
 def fetch_speech_json(uuid: str) -> list:
+    if not isinstance(uuid, str) or len(uuid) > 128 or not re.fullmatch(r"[A-Za-z0-9_-]+", uuid):
+        raise ValueError("Invalid Auphonic production identifier")
     key = os.getenv("AUPHONIC_API_KEY")
     if not key:
         sys.exit("AUPHONIC_API_KEY not set (source .env first)")
-    hdr = {"Authorization": f"Bearer {key}"}
-    req = urllib.request.Request(f"{API}/production/{uuid}.json", headers=hdr)
-    data = json.load(urllib.request.urlopen(req))["data"]
+    opener = urllib.request.build_opener(_SafeDownloadRedirect())
+    url = f"{API}/production/{uuid}.json"
+    with opener.open(urllib.request.Request(url, headers=_download_headers(url, key)), timeout=60) as response:
+        data = json.load(response)["data"]
     url = next((f["download_url"] for f in data.get("output_files", [])
                 if f.get("format") == "speech" and f.get("download_url")), None)
     if not url:
         sys.exit("production has no 'speech' JSON output (preset needs speech recognition)")
-    return json.load(urllib.request.urlopen(urllib.request.Request(url, headers=hdr)))
+    with opener.open(urllib.request.Request(url, headers=_download_headers(url, key)), timeout=60) as response:
+        return json.load(response)
 
 
 def word_stream(segments: list) -> list:

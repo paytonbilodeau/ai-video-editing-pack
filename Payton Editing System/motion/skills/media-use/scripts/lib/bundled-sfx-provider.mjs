@@ -1,5 +1,5 @@
-import { existsSync, readFileSync } from "node:fs";
-import { extname, join } from "node:path";
+import { existsSync, readFileSync, realpathSync, statSync } from "node:fs";
+import { extname, join, isAbsolute, sep } from "node:path";
 
 const LIB_DIR =
   process.env.HYPERFRAMES_MEDIA_USE_SFX_DIR ||
@@ -27,6 +27,14 @@ function unhealthy(detail) {
   };
 }
 
+function bundledAssetPath(libraryDir, filename) {
+  if (typeof filename !== "string" || !filename || isAbsolute(filename) || /^[a-zA-Z]:/.test(filename) || filename.includes("\\") || filename.split("/").includes("..")) return null;
+  try {
+    const root = realpathSync(libraryDir), full = realpathSync(join(root, filename));
+    return full.startsWith(root + sep) && statSync(full).isFile() ? full : null;
+  } catch { return null; }
+}
+
 export function inspectBundledSfxAssets(libraryDir = LIB_DIR) {
   const manifestPath = join(libraryDir, "manifest.json");
   if (!existsSync(manifestPath)) return unhealthy(`manifest not found: ${manifestPath}`);
@@ -47,8 +55,8 @@ export function inspectBundledSfxAssets(libraryDir = LIB_DIR) {
     if (!entry?.file || typeof entry.file !== "string") {
       return unhealthy(`manifest entry "${key}" has no file`);
     }
-    const assetPath = join(libraryDir, entry.file);
-    if (!existsSync(assetPath)) return unhealthy(`asset not found: ${assetPath}`);
+    const assetPath = bundledAssetPath(libraryDir, entry.file);
+    if (!assetPath) return unhealthy(`asset missing or outside library: ${entry.file}`);
   }
 
   return {
@@ -92,7 +100,8 @@ export const bundledSfxProvider = {
     const best = ranked[0];
     if (!best) return null;
 
-    const localPath = join(libraryDir, best.entry.file);
+    const localPath = bundledAssetPath(libraryDir, best.entry.file);
+    if (!localPath) throw new BundledSfxAssetsError(unhealthy(`asset missing or outside library: ${best.entry.file}`));
     return {
       localPath,
       ext: extensionForBundledSfxFile(best.entry.file),

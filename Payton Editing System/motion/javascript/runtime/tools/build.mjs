@@ -58,7 +58,19 @@ export function build(dir) {
   const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; font-src data:; connect-src 'none'; frame-src 'self'; base-uri 'none'; form-action 'none'">`;
   html = /<head(?:\s[^>]*)?>/i.test(html) ? html.replace(/<head(?:\s[^>]*)?>/i, match => match + csp) : /^<!doctype[^>]*>/i.test(html) ? html.replace(/^<!doctype[^>]*>/i, match => match + csp) : csp + html;
   const output = path.join(root,'index.html');
-  if (fs.existsSync(output) && fs.lstatSync(output).isSymbolicLink()) throw Error('refusing linked build output');
-  fs.writeFileSync(output,html);
+  // Check and retain the same regular file. A late pathname replacement must
+  // neither redirect the write nor clobber a file created by another process.
+  let previous;
+  try { previous = fs.lstatSync(output); } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  if (previous && !previous.isFile()) throw Error('refusing linked or non-file build output');
+  const fd = fs.openSync(output, previous
+    ? fs.constants.O_WRONLY | fs.constants.O_NONBLOCK | (fs.constants.O_NOFOLLOW || 0)
+    : 'wx');
+  try {
+    const opened = fs.fstatSync(fd);
+    if (!opened.isFile() || (previous && (opened.dev !== previous.dev || opened.ino !== previous.ino))) throw Error('build output changed before opening');
+    fs.writeFileSync(fd,html);
+    fs.ftruncateSync(fd,Buffer.byteLength(html));
+  } finally { fs.closeSync(fd); }
   return {html,meta,output};
 }

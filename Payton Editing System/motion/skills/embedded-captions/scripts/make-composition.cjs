@@ -80,8 +80,14 @@ const defaultTextFilter = (c) =>
   hexLum(c) < 0.45 ? "contrast(1.08)" : "brightness(1.1) contrast(1.05)";
 
 function findTemplate(name) {
+  if (typeof name !== "string" || !name || path.isAbsolute(name) || /^[a-zA-Z]:/.test(name) || name.includes("\\") || name.split("/").includes(".."))
+    throw new Error("template name must stay inside the bundled template directory");
   const p = path.join(TEMPLATES, name, "template.html");
-  if (fs.existsSync(p)) return p;
+  if (fs.existsSync(p)) {
+    const root = fs.realpathSync(TEMPLATES), real = fs.realpathSync(p);
+    if (!real.startsWith(root + path.sep)) throw new Error("linked template escapes its directory");
+    return real;
+  }
   const avail = fs
     .readdirSync(TEMPLATES)
     .filter((d) => fs.existsSync(path.join(TEMPLATES, d, "template.html")))
@@ -142,7 +148,7 @@ function renderCap(g, heroCfg) {
 function buildGroupsHtml(groups, planes, heroCfg) {
   if (!planes) return groups.map((g) => renderCap(g, heroCfg)).join("\n        ");
   const order = Object.keys(planes);
-  const grouped = {};
+  const grouped = Object.create(null);
   order.forEach((p) => (grouped[p] = []));
   const free = [];
   for (const g of groups) {

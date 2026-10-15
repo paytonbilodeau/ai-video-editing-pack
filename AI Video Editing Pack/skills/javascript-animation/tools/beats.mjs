@@ -103,7 +103,7 @@ db.forEach((v, i) => { if (v < med - 15) { if (q0 < 0) q0 = i; } else { if (q0 >
 const out = { source: path.basename(src), start: START, duration: +dur.toFixed(3), bpm: +bpm.toFixed(2), offset: +ph.o.toFixed(3), period: +period.toFixed(4),
   beats, downbeats, hits: hits.map((t) => +t.toFixed(3)), loudest: { t: +(L / 10).toFixed(1), db: +db[L].toFixed(1) }, quiet };
 const file = dest.endsWith('.json') ? dest : path.join(dest, 'beats.json');
-fs.writeFileSync(file, JSON.stringify(out, null, 1));
+fs.writeFileSync(file, JSON.stringify(out, null, 1), {flag: 'wx'});
 console.log(`${out.source}: ${out.duration}s used from ${START}s; ${out.bpm} BPM (beat ${out.period}s = ${(out.period * 24).toFixed(2)} frames at 24fps), first beat ${out.offset}s, ${beats.length} beats, ${downbeats.length} bars (first at ${downbeats[0]}s)`);
 console.log(`hits (the strongest onsets): ${out.hits.slice(0, 12).join(', ')}${out.hits.length > 12 ? ' …' : ''}`);
 console.log(`loudest 100ms: ${out.loudest.t}s (${out.loudest.db} dBFS); drops: ${quiet.length ? quiet.map(([a, b]) => `${a}-${b}s`).join(', ') : 'none'}`);

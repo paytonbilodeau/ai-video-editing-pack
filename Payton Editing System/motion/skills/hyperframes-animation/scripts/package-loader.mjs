@@ -1,6 +1,7 @@
 // package-loader — bootstrap optional helper packages only when missing, with
 // defense-in-depth so a malicious or typo'd dependency can't run on install:
-//   • specs are version-pinned (assertPinnedPackageSpecs) — no floating "latest"
+//   • specs include a version or tag; standalone installs may use @latest
+//     (set HYPERFRAMES_SKILL_PKG_VERSION to choose an exact version)
 //   • install runs `npm install --ignore-scripts` — package lifecycle scripts
 //     never execute
 //   • `--no-save` into a throwaway tmp dir — the host project is left untouched

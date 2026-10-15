@@ -23,7 +23,10 @@ function emptyReport() {
 
 function increment(map, key) {
   if (!key) return;
-  map[key] = (map[key] || 0) + 1;
+  Object.defineProperty(map, key, {
+    value: (Object.hasOwn(map, key) ? map[key] : 0) + 1,
+    enumerable: true, writable: true, configurable: true,
+  });
 }
 
 function timestampOf(record) {
@@ -52,22 +55,22 @@ function normalizeIntent(intent) {
 }
 
 function topMissedIntents(misses) {
-  const grouped = {};
+  const grouped = Object.create(null);
   for (const miss of misses) {
     const type = miss?.type || "unknown";
     const intent = normalizeIntent(miss?.intent);
     if (!intent) continue;
-    grouped[type] ||= {};
+    grouped[type] ||= Object.create(null);
     grouped[type][intent] = (grouped[type][intent] || 0) + 1;
   }
-  const out = {};
+  const out = Object.create(null);
   for (const [type, intents] of Object.entries(grouped)) {
     out[type] = Object.entries(intents)
       .map(([intent, count]) => ({ intent, count }))
       .sort((a, b) => b.count - a.count || a.intent.localeCompare(b.intent))
       .slice(0, TOP_MISSES);
   }
-  return out;
+  return Object.fromEntries(Object.entries(out));
 }
 
 function diskBytes(records) {

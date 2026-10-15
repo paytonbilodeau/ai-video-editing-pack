@@ -94,7 +94,7 @@ def parse_fps(value):
 
 def timecode_to_frames(value, nominal_fps):
     """Convert a non-drop HH:MM:SS:FF label to its integer frame count."""
-    if not isinstance(value, str) or ";" in value:
+    if not isinstance(value, str) or len(value) > 32 or ";" in value:
         raise ValueError("Drop-frame or malformed timecode is unsupported; use non-drop HH:MM:SS:FF.")
     match = re.fullmatch(r"(\d+):(\d{2}):(\d{2}):(\d{2})", value)
     if not match:

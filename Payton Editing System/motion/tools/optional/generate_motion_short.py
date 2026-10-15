@@ -245,6 +245,15 @@ def slugify(text, maxlen=40):
     return s[:maxlen] or "beat"
 
 
+def validate_beat_slug(value):
+    """A storyboard slug is a filename component, never a filesystem path."""
+    if (not isinstance(value, str) or not value or value in {".", ".."}
+            or any(char in value for char in ("/", "\\", ":"))
+            or any(ord(char) < 32 or 127 <= ord(char) < 160 for char in value)):
+        die("beat slug must be a filename without path separators, drive prefixes or control characters")
+    return value
+
+
 def run_ffmpeg(args):
     cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error"] + args
     proc = subprocess.run(cmd, capture_output=True, text=True)
@@ -302,14 +311,17 @@ def load_storyboard(path):
             for field in ("line", "seconds", "keyframe_prompt", "motion_prompt"):
                 if field not in b:
                     die(f"segment '{seg['name']}' beat {i + 1} missing '{field}'")
-            base = b.get("slug") or f"{i + 1:02d}_{slugify(b['line'])}"
+            supplied_slug = b.get("slug")
+            if supplied_slug is not None and supplied_slug != "":
+                validate_beat_slug(supplied_slug)
+            base = supplied_slug or f"{i + 1:02d}_{slugify(b['line'])}"
             if not re.match(r"^\d\d_", base):
                 base = f"{i + 1:02d}_{slugify(base)}"
             slug = f"s{si + 1}_{base}" if multi else base
             if slug in seen_slugs:
                 slug = f"{slug}-{i + 1}"
             seen_slugs.add(slug)
-            b["slug"] = slug
+            b["slug"] = validate_beat_slug(slug)
             b.setdefault("source_image", None)
             b["_segment"] = si
 

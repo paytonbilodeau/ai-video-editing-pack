@@ -25,6 +25,17 @@ def save_wav(path, audio, sr):
         w.writeframes(pcm.tobytes())
 
 
+def finish_audio(audio, sr, output_path, lufs):
+    """Keep intermediate audio in a private directory and clean up on failure."""
+    with tempfile.TemporaryDirectory(prefix="vibe-music-") as temp_dir:
+        temporary_audio = os.path.join(temp_dir, "generated.wav")
+        save_wav(temporary_audio, audio, sr)
+        subprocess.run([
+            "ffmpeg", "-n", "-v", "error", "-i", temporary_audio,
+            "-af", f"loudnorm=I={lufs}:TP=-3:LRA=9",
+            "-ar", "48000", os.path.abspath(output_path)], check=True)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--duration", type=float, required=True)
@@ -87,14 +98,7 @@ def main():
     audio[:fade] *= np.linspace(0, 1, fade)[:, None]
     audio[-fade:] *= np.linspace(1, 0, fade)[:, None]
 
-    tmp = tempfile.mktemp(suffix=".wav")
-    save_wav(tmp, audio, sr)
-    # loudness-normalize to bed level, resample to 48k
-    subprocess.run([
-        "ffmpeg", "-n", "-v", "error", "-i", tmp,
-        "-af", f"loudnorm=I={args.lufs}:TP=-3:LRA=9",
-        "-ar", "48000", args.out], check=True)
-    os.remove(tmp)
+    finish_audio(audio, sr, args.out, args.lufs)
     print(f"wrote {args.out}: {args.duration:.2f}s at ~{args.lufs} LUFS")
 
 

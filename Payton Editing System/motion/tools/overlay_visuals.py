@@ -58,6 +58,22 @@ def get_video_info(video_path: str) -> dict:
     return {"width": width, "height": height, "duration": duration}
 
 
+def contained_asset_path(directory, filename):
+    """Resolve a manifest asset inside its chosen directory, including symlinks."""
+    if (not isinstance(filename, str) or not filename
+            or any(char in filename for char in ("\\", ":"))
+            or any(ord(char) < 32 or 127 <= ord(char) < 160 for char in filename)):
+        raise ValueError("Asset filename must be a portable relative path")
+    relative = Path(filename)
+    if relative.is_absolute() or any(part in {"", ".", ".."} for part in filename.split("/")):
+        raise ValueError("Asset filename cannot be absolute or contain traversal components")
+    root = Path(directory).resolve()
+    candidate = (root / relative).resolve()
+    if not candidate.is_relative_to(root):
+        raise ValueError("Asset filename escapes its selected directory")
+    return candidate
+
+
 def load_manifest(visuals_dir: str) -> list[dict]:
     """Load visual manifest and return successful moments sorted by timestamp."""
     manifest_path = os.path.join(visuals_dir, "visual_manifest.json")
@@ -71,6 +87,8 @@ def load_manifest(visuals_dir: str) -> list[dict]:
         m for m in manifest.get("moments", [])
         if m.get("status") == "success"
     ]
+    for moment in moments:
+        contained_asset_path(visuals_dir, moment["filename"])
     moments.sort(key=lambda m: m["timestamp_seconds"])
 
     return moments
@@ -193,87 +211,79 @@ def overlay_clips_onto_video(
         for i in range(0, len(clip_paths), chunk_size):
             chunks.append((clip_paths[i:i + chunk_size], moments[i:i + chunk_size]))
 
-    current_input = video_path
-    total_passes = len(chunks)
+    with tempfile.TemporaryDirectory(prefix="overlay_passes_") as pass_dir:
+        current_input = video_path
+        total_passes = len(chunks)
 
-    for pi, (clips, moms) in enumerate(chunks):
-        is_last = pi == len(chunks) - 1
-        if is_last:
-            chunk_output = output_path
-        else:
-            stem = Path(output_path).stem
-            ext = Path(output_path).suffix
-            chunk_output = str(Path(output_path).parent / f"{stem}_pass{pi}{ext}")
+        for pi, (clips, moms) in enumerate(chunks):
+            is_last = pi == len(chunks) - 1
+            if is_last:
+                chunk_output = output_path
+            else:
+                stem = Path(output_path).stem
+                ext = Path(output_path).suffix
+                chunk_output = str(Path(pass_dir) / f"{stem}_pass{pi}{ext}")
 
-        pass_label = f"pass {pi+1}/{total_passes}" if total_passes > 1 else "encoding"
-        print(f"\n   Running {pass_label}...")
+            pass_label = f"pass {pi+1}/{total_passes}" if total_passes > 1 else "encoding"
+            print(f"\n   Running {pass_label}...")
 
-        cmd = ["ffmpeg", "-y", "-i", current_input]
-        for clip in clips:
-            cmd.extend(["-i", clip])
+            cmd = ["ffmpeg", "-y", "-i", current_input]
+            for clip in clips:
+                cmd.extend(["-i", clip])
 
-        # Build filter: offset each clip's PTS to its start time, then overlay
-        filter_parts = []
-        current_base = "[0:v]"
-        for i, (clip, mom) in enumerate(zip(clips, moms)):
-            input_idx = i + 1
-            start = mom["start"]
-            end = mom["end"]
+            # Build filter: offset each clip's PTS to its start time, then overlay
+            filter_parts = []
+            current_base = "[0:v]"
+            for i, (clip, mom) in enumerate(zip(clips, moms)):
+                input_idx = i + 1
+                start = mom["start"]
+                end = mom["end"]
 
-            # Shift clip PTS to the right timestamp
-            filter_parts.append(
-                f"[{input_idx}:v]setpts=PTS+{start}/TB[clip{i}]"
-            )
+                # Shift clip PTS to the right timestamp
+                filter_parts.append(
+                    f"[{input_idx}:v]setpts=PTS+{start}/TB[clip{i}]"
+                )
 
-            out_label = f"[v{i}]" if i < len(clips) - 1 else "[vout]"
-            filter_parts.append(
-                f"{current_base}[clip{i}]"
-                f"overlay=0:0:enable='between(t,{start},{end})'"
-                f"{out_label}"
-            )
-            current_base = out_label
+                out_label = f"[v{i}]" if i < len(clips) - 1 else "[vout]"
+                filter_parts.append(
+                    f"{current_base}[clip{i}]"
+                    f"overlay=0:0:enable='between(t,{start},{end})'"
+                    f"{out_label}"
+                )
+                current_base = out_label
 
-        filter_complex = ";".join(filter_parts)
+            filter_complex = ";".join(filter_parts)
 
-        cmd.extend([
-            "-filter_complex", filter_complex,
-            "-map", "[vout]",
-            "-map", "0:a?",
-            "-c:v", "h264_videotoolbox",
-            "-b:v", "20M",
-            "-c:a", "copy",
-            "-shortest",
-            chunk_output
-        ])
+            cmd.extend([
+                "-filter_complex", filter_complex,
+                "-map", "[vout]",
+                "-map", "0:a?",
+                "-c:v", "h264_videotoolbox",
+                "-b:v", "20M",
+                "-c:a", "copy",
+                "-shortest",
+                chunk_output
+            ])
 
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        if result.returncode != 0:
-            print(f"   Hardware encoding failed, trying software fallback...")
-            cmd_sw = [c.replace("h264_videotoolbox", "libx264") for c in cmd]
-            try:
-                bv_idx = cmd_sw.index("-b:v")
-                cmd_sw[bv_idx] = "-crf"
-                cmd_sw[bv_idx + 1] = "18"
-            except ValueError:
-                pass
-            result = subprocess.run(cmd_sw, capture_output=True, text=True)
+            result = subprocess.run(cmd, capture_output=True, text=True)
             if result.returncode != 0:
-                print(f"   FFmpeg error:\n{result.stderr[-500:]}")
-                raise RuntimeError(f"FFmpeg failed on {pass_label}")
+                print(f"   Hardware encoding failed, trying software fallback...")
+                cmd_sw = [c.replace("h264_videotoolbox", "libx264") for c in cmd]
+                try:
+                    bv_idx = cmd_sw.index("-b:v")
+                    cmd_sw[bv_idx] = "-crf"
+                    cmd_sw[bv_idx + 1] = "18"
+                except ValueError:
+                    pass
+                result = subprocess.run(cmd_sw, capture_output=True, text=True)
+                if result.returncode != 0:
+                    print(f"   FFmpeg error:\n{result.stderr[-500:]}")
+                    raise RuntimeError(f"FFmpeg failed on {pass_label}")
 
-        print(f"   ✓ {pass_label} complete")
+            print(f"   ✓ {pass_label} complete")
 
-        if not is_last:
-            current_input = chunk_output
-
-    # Clean up intermediate pass files
-    if total_passes > 1:
-        for pi in range(total_passes - 1):
-            stem = Path(output_path).stem
-            ext = Path(output_path).suffix
-            pass_file = str(Path(output_path).parent / f"{stem}_pass{pi}{ext}")
-            if os.path.exists(pass_file) and pass_file != output_path:
-                os.remove(pass_file)
+            if not is_last:
+                current_input = chunk_output
 
 
 def overlay_visuals(
@@ -308,7 +318,7 @@ def overlay_visuals(
     # Verify image files exist
     missing = []
     for m in moments:
-        img_path = os.path.join(visuals_dir, m["filename"])
+        img_path = str(contained_asset_path(visuals_dir, m["filename"]))
         if not os.path.exists(img_path):
             missing.append(m["filename"])
     if missing:
@@ -340,7 +350,7 @@ def overlay_visuals(
     failed = 0
 
     for i, m in enumerate(moments):
-        img_path = os.path.join(visuals_dir, m["filename"])
+        img_path = str(contained_asset_path(visuals_dir, m["filename"]))
         clip_path = os.path.join(clip_dir, f"clip_{i:03d}.mp4")
         label = m["filename"].replace(".png", "")
         print(f"   [{i+1}/{len(moments)}] {label}...", end="", flush=True)

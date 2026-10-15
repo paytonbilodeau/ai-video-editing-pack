@@ -93,14 +93,14 @@ function validEntry(entry) {
 export function mergedPreferences(projectDir) {
   const user = readPrefsFile(userPrefsPath());
   const project = readPrefsFile(projectPrefsPath(projectDir));
-  const merged = {};
+  const merged = Object.create(null);
   for (const [key, entry] of Object.entries(user.preferences)) {
     if (validEntry(entry)) merged[key] = { ...entry, source: "user" };
   }
   for (const [key, entry] of Object.entries(project.preferences)) {
     if (validEntry(entry)) merged[key] = { ...entry, source: "project" };
   }
-  return merged;
+  return Object.fromEntries(Object.entries(merged));
 }
 
 function dedupe(list) {
@@ -131,7 +131,8 @@ function recordProjectTier(projectDir, fullKey, value, projectName, now) {
 function recordUserSighting(fullKey, value, projectName, now) {
   const path = userPrefsPath();
   const file = readPrefsFile(path);
-  const keySightings = isRecord(file.sightings[fullKey]) ? file.sightings[fullKey] : {};
+  const keySightings = Object.assign(Object.create(null),
+    isRecord(file.sightings[fullKey]) ? file.sightings[fullKey] : {});
   const seenIn = dedupe([
     ...(Array.isArray(keySightings[value]) ? keySightings[value] : []),
     projectName,

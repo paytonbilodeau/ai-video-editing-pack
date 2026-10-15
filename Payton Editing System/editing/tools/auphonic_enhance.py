@@ -29,6 +29,7 @@ import sys
 import tempfile
 import time
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import requests
 from dotenv import load_dotenv
@@ -233,9 +234,15 @@ def _find_output_file(production_data: dict, fmt: str, ending: str = None) -> "s
 
 def _download_file(url: str, output_path: str, label: str = "file") -> bool:
     """Download a file from Auphonic. Returns True on success."""
-    headers = {"Authorization": f"Bearer {AUPHONIC_API_KEY}"}
     try:
-        resp = requests.get(url, headers=headers, stream=True, allow_redirects=True)
+        parsed = urlsplit(url)
+        if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+            raise ValueError("Auphonic downloads require an HTTPS URL without embedded credentials")
+        # Signed CDN URLs need no API key. Requests strips Authorization when a
+        # redirect changes host; never attach it to an unrelated initial URL.
+        headers = ({"Authorization": f"Bearer {AUPHONIC_API_KEY}"}
+                   if parsed.hostname == "auphonic.com" and parsed.port in (None, 443) else {})
+        resp = requests.get(url, headers=headers, stream=True, allow_redirects=True, timeout=60)
         resp.raise_for_status()
         with open(output_path, "wb") as f:
             for chunk in resp.iter_content(chunk_size=8192):

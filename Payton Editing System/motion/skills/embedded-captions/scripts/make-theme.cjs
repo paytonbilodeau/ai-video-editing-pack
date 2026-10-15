@@ -44,7 +44,15 @@ const F = 1 / 24;
 
 // ---------- load inputs ----------
 const theme = JSON.parse(fs.readFileSync(path.join(PROJECT, "theme.json"), "utf8"));
-const dna = JSON.parse(fs.readFileSync(path.join(SKILL, "themes", theme.dna + ".json"), "utf8"));
+function loadThemeDna(name) {
+  if (typeof name !== "string" || !name || path.isAbsolute(name) || /^[a-zA-Z]:/.test(name) || name.includes("\\") || name.split("/").includes(".."))
+    throw new Error("theme DNA name must stay inside the bundled themes directory");
+  const root = fs.realpathSync(path.join(SKILL, "themes"));
+  const real = fs.realpathSync(path.join(root, name + ".json"));
+  if (!real.startsWith(root + path.sep)) throw new Error("linked theme DNA escapes its directory");
+  return JSON.parse(fs.readFileSync(real, "utf8"));
+}
+const dna = loadThemeDna(theme.dna);
 const transcript = JSON.parse(fs.readFileSync(path.join(PROJECT, "transcript.json"), "utf8"));
 const W = theme.width || 1280,
   H = theme.height || 720;
@@ -8522,13 +8530,13 @@ const SETPIECES = {
   ransomnote: setpieceRansomnote,
 };
 
-if (!PARADIGMS[dna.body.paradigm])
+if (!Object.hasOwn(PARADIGMS, dna.body.paradigm))
   throw new Error("[make-theme] unknown body paradigm: " + dna.body.paradigm);
 const body = PARADIGMS[dna.body.paradigm]();
 
 let setp = { css: "", html: "", js: "" };
 if (!heroInline && !HEROLESS) {
-  if (!SETPIECES[dna.hero.setpiece])
+  if (!Object.hasOwn(SETPIECES, dna.hero.setpiece))
     throw new Error("[make-theme] unknown setpiece: " + dna.hero.setpiece);
   setp = SETPIECES[dna.hero.setpiece]();
 }

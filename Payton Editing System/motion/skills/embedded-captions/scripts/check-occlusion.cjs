@@ -100,7 +100,7 @@ async function main() {
   // Hero groups (the ONE big promoted word) are SUPPOSED to sit ON the subject — for them
   // occlusion is a TARGET (~30–55%), not "minimize". Collect their ids for the advisory below.
   const heroIds = new Set();
-  const heroIn = {};
+  const heroIn = Object.create(null);
   for (const g of plan.groups || [])
     if (g && (g.hero === true || /^(hero|crown)$/i.test(g.plane || ""))) {
       heroIds.add(g.id);
@@ -114,8 +114,10 @@ async function main() {
   const frameW = layout.width,
     frameH = layout.height;
 
-  const capStats = {};
+  const capStats = Object.create(null);
   for (const sample of layout.samples) {
+    if (!Number.isSafeInteger(sample.frame_idx) || sample.frame_idx < 1)
+      throw new Error("layout frame_idx must be a positive integer");
     const png = path.join(framesDir, `f_${String(sample.frame_idx).padStart(4, "0")}.png`);
     const mask = await loadAlphaMask(png);
     if (!mask) continue;
@@ -185,7 +187,7 @@ async function main() {
     const capOccls = entry.samples.map((s) => s.cap_occl);
     const avgCap = capOccls.length ? capOccls.reduce((a, b) => a + b, 0) / capOccls.length : 0;
     const peakCap = capOccls.length ? Math.max(...capOccls) : 0;
-    const wordPeaks = {};
+    const wordPeaks = Object.create(null);
     for (const s of entry.samples)
       for (const wd of s.words)
         wordPeaks[wd.text] = Math.max(wordPeaks[wd.text] || 0, wd.occlusion);

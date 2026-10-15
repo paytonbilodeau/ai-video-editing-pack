@@ -19,3 +19,5 @@ Footage, account credentials, private work, existing editor settings and custome
 The same methods and starting choices cannot guarantee an identical result on different footage or in every editor. Judge the actual edit, then save the changes you want for next time.
 
 The download retains the existing setup and latest-release addresses. Customer profiles and working projects remain separate so a reviewed update can preserve them.
+
+The release review also corrected imported filename boundaries, avatar download redirects, temporary-file handling, credential forwarding and reserved JavaScript property names. Focused regression tests cover these cases with local fixtures and mocked service calls. They do not establish that every optional provider or editor route has been exercised.

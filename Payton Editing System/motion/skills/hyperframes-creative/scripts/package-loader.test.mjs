@@ -4,7 +4,7 @@ import { spawnSync } from "node:child_process";
 import { copyFileSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { tmpdir } from "node:os";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { resolveNpmSpawnCommand } from "./package-loader.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -78,11 +78,14 @@ test("hyperframesPackageSpec: env override wins", async () => {
 test("hyperframesPackageSpec: resolvable in-repo version pins it", async () => {
   const prev = process.env[ENV];
   delete process.env[ENV];
+  const fixture = mkdtempSync(join(tmpdir(), "hf-upstream-version-"));
   try {
-    const { hyperframesPackageSpec } = await import("./package-loader.mjs");
-    const spec = hyperframesPackageSpec("@hyperframes/producer");
-    assert.match(spec, /^@hyperframes\/producer@\d+\.\d+\.\d+/);
+    writeFileSync(join(fixture, "package.json"), JSON.stringify({ name: "hyperframes", version: "0.7.55", type: "module" }));
+    copyFileSync(join(HERE, "package-loader.mjs"), join(fixture, "package-loader.mjs"));
+    const { hyperframesPackageSpec } = await import(pathToFileURL(join(fixture, "package-loader.mjs")).href);
+    assert.equal(hyperframesPackageSpec("@hyperframes/producer"), "@hyperframes/producer@0.7.55");
   } finally {
+    rmSync(fixture, { recursive: true, force: true });
     if (prev !== undefined) process.env[ENV] = prev;
   }
 });
