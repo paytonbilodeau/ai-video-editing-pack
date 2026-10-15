@@ -20,6 +20,9 @@ SUPPORTING_FOLDERS = (
     "10 Content Waterfall System",
     "14 AI Video Editing System",
 )
+PERSONAL_FOLDER = "Payton Editing System"
+EXTRA_FOLDERS = (PERSONAL_FOLDER, "Practice")
+ROOT_FILES = {"START HERE.md", "LICENSE AND USE.md", "README.md", "VERSION.txt", "RELEASE NOTES.md", "bundle-manifest.json"}
 IGNORED = {"__pycache__", "node_modules", ".venv", ".venv-markers", "dist", ".DS_Store", "Thumbs.db"}
 
 
@@ -37,8 +40,8 @@ def bundle_files(root: Path = ROOT) -> tuple[str, ...]:
         parts = Path(name).parts
         if not parts or Path(name).is_absolute() or ".." in parts or "\\" in name:
             raise ValueError(f"invalid bundle path: {name}")
-        allowed = name in {"START HERE.md", "LICENSE AND USE.md"} or (
-            parts[0] in (CORE_FOLDER, *SUPPORTING_FOLDERS)
+        allowed = name in ROOT_FILES or (
+            parts[0] in (CORE_FOLDER, *SUPPORTING_FOLDERS, *EXTRA_FOLDERS)
         ) or name == "Kit Email Workflow/SEQUENCE.md" or name.startswith((
             "Kit Email Workflow/lessons/", "Kit Email Workflow/assets/", "Kit Email Workflow/visual-guide/"
         ))
@@ -51,6 +54,10 @@ def bundle_files(root: Path = ROOT) -> tuple[str, ...]:
     required = {"START HERE.md", f"{CORE_FOLDER}/START HERE.md", f"{CORE_FOLDER}/SKILL.md",
                 f"{CORE_FOLDER}/bundle-manifest.json", "Kit Email Workflow/SEQUENCE.md", "Kit Email Workflow/visual-guide/README.md"}
     required.update(f"{scope}/START HERE.md" for scope in SUPPORTING_FOLDERS)
+    required.update({"bundle-manifest.json", "Payton Editing System/setup/SKILL.md",
+                     "Payton Editing System/editing/SKILL.md", "Payton Editing System/motion/SKILL.md",
+                     "Payton Editing System/editing/profiles/PAYTON EDITING PROFILE.md",
+                     "Practice/synthetic-lamp/START HERE.md"})
     required.update(f"Kit Email Workflow/lessons/{n:02}.md" for n in range(1, 23))
     if not required.issubset(names):
         raise ValueError("bundle manifest omits a required entry point or lesson")
@@ -85,9 +92,9 @@ def validate(root: Path = ROOT) -> list[str]:
         return [f"invalid bundle manifest: {exc}"]
     bundle = root.parent
     actual = set()
-    for scope in (CORE_FOLDER, *SUPPORTING_FOLDERS, "Kit Email Workflow/lessons", "Kit Email Workflow/assets", "Kit Email Workflow/visual-guide"):
+    for scope in (CORE_FOLDER, *SUPPORTING_FOLDERS, *EXTRA_FOLDERS, "Kit Email Workflow/lessons", "Kit Email Workflow/assets", "Kit Email Workflow/visual-guide"):
         actual.update(p.relative_to(bundle).as_posix() for p in actual_files(bundle / scope))
-    for name in ("START HERE.md", "LICENSE AND USE.md", "Kit Email Workflow/SEQUENCE.md"):
+    for name in (*ROOT_FILES, "Kit Email Workflow/SEQUENCE.md"):
         if (bundle / name).exists() or (bundle / name).is_symlink():
             actual.add(name)
     for extra in sorted(actual - declared):
@@ -120,8 +127,29 @@ def validate(root: Path = ROOT) -> list[str]:
                 continue
             decoded = unquote(target.split("#", 1)[0])
             linked = (file.parent / decoded).resolve()
-            if not linked.is_relative_to(bundle.resolve()) or linked.relative_to(bundle.resolve()).as_posix() not in declared or not linked.is_file():
+            in_bundle = linked.is_relative_to(bundle.resolve())
+            linked_name = linked.relative_to(bundle.resolve()).as_posix() if in_bundle else ""
+            included = linked_name in declared or (linked.is_dir() and any(n.startswith(linked_name + "/") for n in declared))
+            if not in_bundle or not included or not linked.exists():
                 problems.append(f"broken or escaping link: {relative} -> {target}")
+
+    # The full-system installer consumes its own exact byte manifest.
+    try:
+        installation = json.loads((bundle / "bundle-manifest.json").read_text(encoding="utf-8"))
+        installed_files = installation.get("files")
+        expected_files = declared - {"bundle-manifest.json"}
+        if installation.get("schema") != 1 or not isinstance(installed_files, dict) or set(installed_files) != expected_files:
+            problems.append("installation manifest differs from the downloadable allowlist")
+        else:
+            for name, expected_hash in installed_files.items():
+                source = bundle / name
+                if source.is_file() and not any(p.is_symlink() for p in (source, *source.parents) if p == bundle or p.is_relative_to(bundle)) and hashlib.sha256(source.read_bytes()).hexdigest() != expected_hash:
+                    problems.append(f"installation manifest hash mismatch: {name}")
+        executable_files = installation.get("executables")
+        if not isinstance(executable_files, list) or any(name not in expected_files for name in executable_files):
+            problems.append("installation manifest has an invalid executable list")
+    except (OSError, ValueError, TypeError, AttributeError):
+        problems.append("installation manifest must be valid JSON")
 
     launch = bundle / "START HERE.md"
     if launch.is_file() and launch.read_text(encoding="utf-8").count("```text") != 1:
@@ -162,12 +190,13 @@ def build(output: Path, root: Path = ROOT) -> str:
     if (public_repo / ".git").exists() and output.is_relative_to(public_repo):
         raise ValueError("ZIP output must be outside the public repository")
     output.parent.mkdir(parents=True, exist_ok=True)
+    executable_files = set(json.loads((root.parent / "bundle-manifest.json").read_text())["executables"])
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for relative in bundle_files(root):
             info = zipfile.ZipInfo(f"{ARCHIVE_ROOT}/{relative}", (1980, 1, 1, 0, 0, 0))
             info.create_system = 3
             info.compress_type = zipfile.ZIP_DEFLATED
-            info.external_attr = 0o100644 << 16
+            info.external_attr = (0o100755 if relative in executable_files else 0o100644) << 16
             archive.writestr(info, (root.parent / relative).read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
     return hashlib.sha256(output.read_bytes()).hexdigest()
 

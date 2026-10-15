@@ -1,0 +1,12 @@
+{
+  "clips": [
+    {
+      "id": "demo",
+      "source": "source.mp4",
+      "output": "demo.mp4",
+      "start_frame": 0,
+      "end_frame": 30,
+      "hook": "KEEP THE MEANING"
+    }
+  ]
+}

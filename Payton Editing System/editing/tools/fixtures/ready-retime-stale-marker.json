@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "source_id": "fixture-main",
+  "release_claim": {"ready": true, "label": "fixture only"},
+  "timeline": {
+    "fps": 30,
+    "clips": [
+      {"id": "hook-a", "source_id": "fixture-main", "timeline_start_frame": 0, "duration_frames": 20, "left_offset": 100, "speed_percentage": 100, "reported_source_start": 100, "reported_source_end": 120},
+      {"id": "hook-b", "source_id": "fixture-main", "timeline_start_frame": 20, "duration_frames": 20, "left_offset": 120, "speed_percentage": 100, "reported_source_start": 120, "reported_source_end": 140},
+      {"id": "retimed-c", "source_id": "fixture-main", "timeline_start_frame": 40, "duration_frames": 5, "left_offset": 70, "speed_percentage": 200, "reported_source_start": 140, "reported_source_end": 149}
+    ]
+  },
+  "required_hook": {
+    "expected_start_frame": 0,
+    "ordered_blocks": [
+      {"id": "opening", "source_span": [100, 120]},
+      {"id": "payoff", "source_span": [120, 140]},
+      {"id": "retimed-final-frame", "source_span": [149, 150]}
+    ]
+  },
+  "known_speech_defects": [
+    {
+      "id": "T-stale",
+      "status": "resolved",
+      "resolution": {"method": "source_removed", "source_span": [150, 152], "evidence_refs": ["exact-source-map:test"]}
+    }
+  ],
+  "diagnostic_markers": [
+    {"id": "marker-T-stale", "related_defect_id": "T-stale", "source_frame": 151, "object_remains": true}
+  ],
+  "dead_air_review": {
+    "thresholds": {"detector": "fixture-local", "minimum_candidate_frames": 2, "boundary_peak_dbfs": -55},
+    "context_evidence_refs": ["waveform:test", "frames:test", "asr-a:test", "asr-b:test"],
+    "candidates": [
+      {
+        "id": "DA-intra",
+        "location": {"scope": "intra_clip", "clip_id": "hook-a", "source_span": [110, 114]},
+        "disposition": "retain",
+        "reason_code": "screen_action",
+        "reason": "Cursor selection completes during this silent picture hold.",
+        "evidence_refs": ["frames:test:110-114"]
+      }
+    ]
+  },
+  "review_audio": {
+    "gain_db": 12.0,
+    "measured_true_peak_dbtp": -1.2,
+    "peak_ceiling_dbtp": -1.0,
+    "evidence_refs": ["encoded-render-meter:test"],
+    "measurement_stage": "encoded_render"
+  },
+  "perceptual_review": {
+    "status": "passed",
+    "method": "human_listening",
+    "reviewer": "fixture-reviewer",
+    "evidence_refs": ["audition-receipt:test"]
+  }
+}

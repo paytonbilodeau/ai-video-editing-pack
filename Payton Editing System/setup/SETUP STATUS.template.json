@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "assistant": null,
+  "operating_system": null,
+  "editor": null,
+  "editor_version": null,
+  "profile_relative_path": "Vibe Editor Settings/EDITING PROFILE.md",
+  "selected_route": null,
+  "instruction_files_loaded": [],
+  "capabilities": {
+    "local_file_read": "unknown",
+    "native_editor_control": "unknown",
+    "editable_import": "unknown",
+    "native_save_reopen": "unknown",
+    "export_full_decode": "unknown",
+    "watched_and_listened": "unknown"
+  },
+  "test_project_relative_path": null,
+  "test_export_relative_path": null,
+  "evidence": [],
+  "remaining_manual_step": null
+}

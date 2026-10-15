@@ -5,11 +5,16 @@ description: Set up a file-aware AI video editor, then complete requested edits 
 
 # AI Video Editing Pack
 
-For setup, start with [vibe-editing-setup](skills/vibe-editing-setup/SKILL.md).
+**Using this complete personal edition?** Follow [the adaptive setup](<../Payton Editing System/setup/START HERE.md>) first. It preserves your profile and makes a disposable test. The general references below remain available for other editors and specific tasks.
+
+For the general core-only pack, start with [vibe-editing-setup](skills/vibe-editing-setup/SKILL.md).
+The complete download uses the adaptive setup linked above.
 For a video, read the existing private profile, then use
 [intake](skills/intake/SKILL.md) and [platform refresh](skills/platform-refresh/SKILL.md).
-Use only the skills needed for the requested result. Setup can finish without
-footage; it does not authorize an edit, new graphics or derivative clips.
+Use only the skills needed for the requested result. Your own footage is not
+needed for setup: the complete download includes a disposable practice clip.
+That setup test does not authorize edits to your real videos, new graphics
+or derivative clips.
 
 ## Speak clearly and preserve existing work
 

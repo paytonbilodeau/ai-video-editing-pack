@@ -1,0 +1,1 @@
+Original native-generated Sketch practice artwork, October15 2026. No real person, private footage, brand logo or external illustration is depicted. The sample animates approved layers deterministically; it is not a generative video demonstration.

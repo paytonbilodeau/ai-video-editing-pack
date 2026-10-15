@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "source_id": "fixture-main",
+  "release_claim": {"ready": true, "label": "reversed split-hook fixture"},
+  "timeline": {
+    "fps": 30,
+    "clips": [
+      {"id": "hook-second-half", "source_id": "fixture-main", "timeline_start_frame": 0, "duration_frames": 10, "left_offset": 110, "speed_percentage": 100},
+      {"id": "hook-first-half", "source_id": "fixture-main", "timeline_start_frame": 10, "duration_frames": 10, "left_offset": 100, "speed_percentage": 100}
+    ]
+  },
+  "required_hook": {
+    "expected_start_frame": 0,
+    "ordered_blocks": [
+      {"id": "split-opening", "source_span": [100, 120]}
+    ]
+  },
+  "known_speech_defects": [],
+  "diagnostic_markers": [],
+  "dead_air_review": {
+    "thresholds": {"detector": "fixture-local", "minimum_candidate_frames": 2},
+    "context_evidence_refs": ["frames:split-hook"],
+    "candidates": []
+  },
+  "review_audio": {
+    "gain_db": 4.0,
+    "measured_true_peak_dbtp": -1.5,
+    "peak_ceiling_dbtp": -1.0,
+    "evidence_refs": ["encoded-render-meter:split-hook"],
+    "measurement_stage": "encoded_render"
+  },
+  "perceptual_review": {
+    "status": "passed",
+    "method": "human_listening",
+    "reviewer": "fixture-reviewer",
+    "evidence_refs": ["audition-receipt:split-hook"]
+  }
+}

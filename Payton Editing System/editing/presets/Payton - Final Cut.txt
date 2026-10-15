@@ -1,0 +1,13 @@
+import "Apple Final Cut Pro X"
+
+# Clear the legacy aliases before assigning their modern equivalent.
+editBladeRazor :=
+editM2SplitClip :=
+
+timelineBladeRazor := 
+editCut := Ctrl+B
+editInsertOverwriteActionInsert := 
+trimRippleEndToPlayhead := W | Alt+]
+timelineSplitClip := Ctrl+X
+viewViewerToggle := 
+trimRippleStartToPlayhead := Q | Alt+[

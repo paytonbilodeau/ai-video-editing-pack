@@ -24,7 +24,7 @@ def copy_bundle(destination):
     for name in build_pack.bundle_files():
         target = destination / name
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(build_pack.ROOT.parent / name, target)
+        shutil.copy2(build_pack.ROOT.parent / name, target)
     return destination / build_pack.CORE_FOLDER
 
 
@@ -120,6 +120,10 @@ class PackTests(unittest.TestCase):
             self.assertEqual(build_pack.build(base / "rebuilt.zip", core), build_pack.build(first))
             for relative in (
                 "START HERE.md",
+                "bundle-manifest.json",
+                "Payton Editing System/setup/bootstrap.py",
+                "Payton Editing System/motion/flow/src/Root.tsx",
+                "Practice/synthetic-lamp/START HERE.md",
                 "05 Video Pre-Edit System/tools/video_pre_edit.py",
                 "09 Visual Storytelling and Motion System/starter/src/MotionComposition.tsx",
                 "10 Content Waterfall System/tools/content_waterfall.py",
@@ -140,6 +144,14 @@ class PackTests(unittest.TestCase):
             self.assertIn("Core skill:", completed.stdout)
             installed = base / "private/skills/Vibe Editors/AI Video Editing Pack"
             self.assertEqual(build_pack.validate(installed), [])
+
+    def test_executable_source_mode_survives_zip(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "pack.zip"
+            build_pack.build(output)
+            with zipfile.ZipFile(output) as archive:
+                info = archive.getinfo("Vibe Editors/Payton Editing System/motion/flow/scripts/qa-contact-sheet.sh")
+                self.assertEqual((info.external_attr >> 16) & 0o777, 0o755)
 
     def test_visual_guide_requires_its_entry_point(self):
         with tempfile.TemporaryDirectory() as directory:

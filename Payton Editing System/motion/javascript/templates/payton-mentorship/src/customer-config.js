@@ -1,0 +1,1 @@
+const CUSTOMER={ink:'#FBFEFF',muted:'#BEC3C6',mint:'#72DFA5',depth:'#0F583D',black:'#000000',font:'Arial, sans-serif',labels:['TIME','FRAME','MOTION'],lines:['Pick a moment.','Draw that state.','Play the frames.']};

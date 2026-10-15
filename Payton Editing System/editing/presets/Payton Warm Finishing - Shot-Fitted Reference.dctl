@@ -1,0 +1,63 @@
+// Payton-owned finishing reference, AFTER a separately licensed display rendering.
+// Original behavior retained. Static masks fit one vertical camera composition.
+// Adapt mask positions and compare real footage before use; not a universal grade.
+// Preserves the approved direct-input experiment; does not supply/verify an IDT.
+// Broad STATIC spatial masks: no segmentation, tracking, beauty or grain.
+// Free visual interpretation of local light shaping, glow and warm halation.
+// Face gain is 3.5% in display code values, not 0.035 scene exposure stops.
+__DEVICE__ float clamp01(float x) { return _fminf(1.0f, _fmaxf(0.0f,x)); }
+__DEVICE__ float smooth01(float x) { x=clamp01(x); return x*x*(3.0f-2.0f*x); }
+__DEVICE__ float lum709(float3 c) { return 0.2126f*c.x+0.7152f*c.y+0.0722f*c.z; }
+__DEVICE__ float window(float x,float y,float cx,float cy,float rx,float ry,float inner,float outer) {
+    float dx=(x-cx)/rx, dy=(y-cy)/ry;
+    return 1.0f-smooth01((_sqrtf(dx*dx+dy*dy)-inner)/(outer-inner));
+}
+__DEVICE__ float3 readrgb(__TEXTURE__ r,__TEXTURE__ g,__TEXTURE__ b,int x,int y,int w,int h) {
+    x=(x<0)?0:((x>=w)?w-1:x); y=(y<0)?0:((y>=h)?h-1:y);
+    return make_float3(_tex2D(r,x,y),_tex2D(g,x,y),_tex2D(b,x,y));
+}
+__DEVICE__ float3 finish_pixel(float3 c,float x,float y) {
+    float lum=lum709(c), l=clamp01(lum);
+    // Identical base contrast, saturation and broad edge shaping to review 05.
+    float shaped=l+0.22f*l*(1.0f-l)*(2.0f*l-1.0f);
+    c*=(lum>0.00001f)?shaped/lum:1.0f;
+    c=make_float3(shaped,shaped,shaped)+(c-make_float3(shaped,shaped,shaped))*1.025f;
+    float dx=(x-0.49f)/0.48f, dy=(y-0.44f)/0.62f;
+    c*=1.0f-0.085f*smooth01((dx*dx+dy*dy-0.12f)/1.65f);
+    // Wide, soft plateau covers normal frontal/profile head movement.
+    float face=window(x,y,0.46f,0.36f,0.30f,0.22f,0.90f,1.60f);
+    float subject=window(x,y,0.50f,0.56f,0.45f,0.46f,0.60f,1.30f);
+    float ceiling=window(x,y,0.48f,-0.10f,0.70f,0.34f,0.40f,1.40f);
+    float right=window(x,y,1.10f,0.32f,0.45f,0.56f,0.45f,1.40f);
+    float mids=smooth01(l/0.18f)*(1.0f-smooth01((l-0.76f)/0.20f));
+    c*=1.0f+0.035f*face*mids;
+    // Protect subject; reduce only upper/side distractions very slightly.
+    float bg=1.0f-subject;
+    c*=1.0f-0.016f*bg*ceiling-0.018f*bg*right;
+    return c;
+}
+__DEVICE__ float3 transform(int p_Width,int p_Height,int p_X,int p_Y,__TEXTURE__ p_TexR,__TEXTURE__ p_TexG,__TEXTURE__ p_TexB) {
+    float3 raw=readrgb(p_TexR,p_TexG,p_TexB,p_X,p_Y,p_Width,p_Height);
+    float3 c=finish_pixel(raw,(float)p_X/p_Width,(float)p_Y/p_Height);
+    // Gaussian-weighted highlight diffusion, with separate narrow warm edge spread.
+    // 5x5 sampling avoids hard 9-tap lobes. Threshold leaves ordinary skin alone.
+    float3 glow=make_float3(0.0f,0.0f,0.0f);
+    float halo=0.0f, weight=0.0f;
+    float broad=(float)p_Width*0.006f, narrow=(float)p_Width*0.0028f;
+    for(int yy=-2;yy<=2;yy++) {
+        for(int xx=-2;xx<=2;xx++) {
+            float w=_expf(-0.5f*(float)(xx*xx+yy*yy));
+            float3 q=readrgb(p_TexR,p_TexG,p_TexB,p_X+(int)(xx*broad),p_Y+(int)(yy*broad),p_Width,p_Height);
+            float3 h=readrgb(p_TexR,p_TexG,p_TexB,p_X+(int)(xx*narrow),p_Y+(int)(yy*narrow),p_Width,p_Height);
+            glow+=q*(smooth01((lum709(q)-0.70f)/0.22f)*w);
+            halo+=smooth01((lum709(h)-0.68f)/0.22f)*w;
+            weight+=w;
+        }
+    }
+    glow/=weight;
+    // Subtract highlight core, retain only its spill on neighboring darker pixels.
+    float edge=_fmaxf(0.0f,halo/weight-smooth01((lum709(raw)-0.68f)/0.22f));
+    c+=glow*0.014f;
+    c+=make_float3(1.0f,0.24f,0.06f)*(edge*0.015f);
+    return make_float3(clamp01(c.x),clamp01(c.y),clamp01(c.z));
+}

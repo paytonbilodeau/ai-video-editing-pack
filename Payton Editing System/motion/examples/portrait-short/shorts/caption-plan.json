@@ -1,0 +1,11 @@
+{
+  "demo": {
+    "cues": [
+      {
+        "start": 0,
+        "end": 1,
+        "text": "Synthetic caption-layout test."
+      }
+    ]
+  }
+}

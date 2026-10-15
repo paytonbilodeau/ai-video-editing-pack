@@ -1,0 +1,15 @@
+{
+  "palette": "mentorship",
+  "accent": "#72DFA5",
+  "deep": "#0F583D",
+  "background": "#0A0B0B",
+  "ink": "#FBFEFF",
+  "fontFamily": "Departure Mono",
+  "title": "KEEP THE IDEA",
+  "result": "LOSE THE WAIT",
+  "inkText": "Keep the click.",
+  "inkStart": 0.5,
+  "inkDuration": 1.7,
+  "fps": 30,
+  "duration": 5
+}

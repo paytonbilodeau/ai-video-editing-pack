@@ -1,0 +1,638 @@
+{
+  "schema_version": 1,
+  "component": "Payton Editing System / editing",
+  "version": "1.0.0",
+  "source_policy": "Reviewed user-owned portable extraction. Personal identifiers, footage and accounts are not included. Existing customer profiles win.",
+  "modules": [
+    {
+      "id": "editing-source-001",
+      "source_label": "resolve_control.py",
+      "source_sha256": "5683f97080575df38248e53f1807ec61dbbb56c11db2863b2c15c8c79d1ec51d",
+      "disposition": "ported",
+      "portable": "tools/resolve_control.py"
+    },
+    {
+      "id": "editing-source-002",
+      "source_label": "resolve_source_transcript.py",
+      "source_sha256": "e5a048f86076b9bd63d35166013ade43f0b76620f77f898b74dca4146d9a5146",
+      "disposition": "ported",
+      "portable": "tools/resolve_source_transcript.py"
+    },
+    {
+      "id": "editing-source-003",
+      "source_label": "jump_cut_vad_parallel.py",
+      "source_sha256": "4d16a2f57ead2278325cdd2ee47df1f7c80c3381743540878270af4bd614c498",
+      "disposition": "ported",
+      "portable": "tools/jump_cut_vad_parallel.py"
+    },
+    {
+      "id": "editing-source-004",
+      "source_label": "transcript_analyzer.py",
+      "source_sha256": "3fbee7176ee8abce339e86e3b70e40839120d52e734f7bf78560e95edf033f7f",
+      "disposition": "ported",
+      "portable": "tools/transcript_analyzer.py"
+    },
+    {
+      "id": "editing-source-005",
+      "source_label": "video_word_timing.py",
+      "source_sha256": "82b212fe717e5dfd303fc4e67cb2e9539632439a0d2c500db91a7bb482af6cf3",
+      "disposition": "ported",
+      "portable": "tools/video_word_timing.py"
+    },
+    {
+      "id": "editing-source-006",
+      "source_label": "video_render_check.py",
+      "source_sha256": "8bfe1e4e14b1641c21a12725d22ef7689037ae30f27c9ff01fed3fd5aa33b922",
+      "disposition": "ported",
+      "portable": "tools/video_render_check.py"
+    },
+    {
+      "id": "editing-source-007",
+      "source_label": "protect_demo_audio.py",
+      "source_sha256": "6b06795f1890b311376ffedba2406d89dd0dc623db951a7a8640906e353b4f4d",
+      "disposition": "ported",
+      "portable": "tools/protect_demo_audio.py"
+    },
+    {
+      "id": "editing-source-008",
+      "source_label": "auphonic_enhance.py",
+      "source_sha256": "1e43fc235fc5d08f45ea4ec2bacafdd95a943a5361300fc4f410f8188ca5cd79",
+      "disposition": "ported",
+      "portable": "tools/auphonic_enhance.py"
+    },
+    {
+      "id": "editing-source-009",
+      "source_label": "auphonic_chapter_timer.py",
+      "source_sha256": "d1be14fc68d49f0edb4e68a38de438cfd13c2f2ca28c838c98bb61fedf9d257c",
+      "disposition": "ported",
+      "portable": "tools/auphonic_chapter_timer.py"
+    },
+    {
+      "id": "editing-source-010",
+      "source_label": "rsvp_captions.py",
+      "source_sha256": "3ad6ac7dbc2b3cf009bc538b03ff7278a30c0d40b832d8be87f4684e586879c7",
+      "disposition": "ported",
+      "portable": "tools/rsvp_captions.py"
+    },
+    {
+      "id": "editing-source-011",
+      "source_label": "extract_short_clips.py",
+      "source_sha256": "a478ab3b1a8de5e40e659ceb1f21232edbfbc66e5519bf399eae1e13bdeef50e",
+      "disposition": "ported",
+      "portable": "tools/extract_short_clips.py"
+    },
+    {
+      "id": "editing-source-012",
+      "source_label": "resolve_audio_profile.py",
+      "source_sha256": "d3dfb6d34f023d7554fafbffd3145be75ce256d96c17dbec74b5ad00405df70a",
+      "disposition": "ported",
+      "portable": "tools/resolve_audio_profile.py"
+    },
+    {
+      "id": "editing-source-013",
+      "source_label": "resolve_audio_companion.py",
+      "source_sha256": "00eafea17b14576a592a34d1ec34b408100e050035b36aaf71f36f6d2546bac9",
+      "disposition": "ported",
+      "portable": "tools/resolve_audio_companion.py"
+    },
+    {
+      "id": "editing-source-014",
+      "source_label": "test_resolve_control.py",
+      "source_sha256": "3c52b72efe74cb6974045430915ea74e904f4733df6da0e0726221abc132f066",
+      "disposition": "ported",
+      "portable": "tools/tests/test_resolve_control.py"
+    },
+    {
+      "id": "editing-source-015",
+      "source_label": "test_resolve_source_transcript.py",
+      "source_sha256": "078d1c9ed95f8fcfe42cb341a47989f5a512d11497e492742586a3bc88d13a2f",
+      "disposition": "ported",
+      "portable": "tools/tests/test_resolve_source_transcript.py"
+    },
+    {
+      "id": "editing-source-016",
+      "source_label": "test_protect_demo_audio.py",
+      "source_sha256": "af643ada978c03f3389d2c22dd712d7e98cdaf7b795b5eee52a25db04b86e257",
+      "disposition": "ported",
+      "portable": "tools/tests/test_protect_demo_audio.py"
+    },
+    {
+      "id": "editing-source-017",
+      "source_label": "test_resolve_audio_companion.py",
+      "source_sha256": "8ec946c910ad9c2fb2e972e7162633ffb5864fafc87fa50920ce24a7459dd59a",
+      "disposition": "ported",
+      "portable": "tools/tests/test_resolve_audio_companion.py"
+    },
+    {
+      "id": "editing-source-018",
+      "source_label": "test_video_word_timing.py",
+      "source_sha256": "448f202a1fea2d535b725a27ed577d3f5f3cc931404cbd36d9a1cdb96b962995",
+      "disposition": "ported",
+      "portable": "tools/tests/test_video_word_timing.py"
+    },
+    {
+      "id": "editing-source-019",
+      "source_label": "test_resolve_audio_profile.py",
+      "source_sha256": "c562496ec425733d5b9e06a4410d755211ec6f48ea6c114ef33166a91d5ad87b",
+      "disposition": "ported",
+      "portable": "tools/tests/test_resolve_audio_profile.py"
+    },
+    {
+      "id": "editing-source-020",
+      "source_label": "test_video_render_check.py",
+      "source_sha256": "ad1ae07ed0f36549c5e9bf6c8054cfa86becf858ca6b8e0ebf0ae070296acc95",
+      "disposition": "ported",
+      "portable": "tools/tests/test_video_render_check.py"
+    },
+    {
+      "id": "editing-source-021",
+      "source_label": "test_auphonic_enhance.py",
+      "source_sha256": "64a029d002eb18032033c919fb775c952e26b1bb7935660d78f2d4ff7d55721b",
+      "disposition": "ported",
+      "portable": "tools/tests/test_auphonic_enhance.py"
+    },
+    {
+      "id": "editing-source-022",
+      "source_label": "test_jump_cut_transcription.py",
+      "source_sha256": "47cbef4ee9a1f654653426e0c3b400d66ad6748be4e9664427f2aa5b8623e82f",
+      "disposition": "ported",
+      "portable": "tools/tests/test_jump_cut_transcription.py"
+    },
+    {
+      "id": "editing-source-023",
+      "source_label": "cut_readiness.py",
+      "source_sha256": "029b1ffc91ca6adce26e7c127863bc7f11b484f416bbadb9436f861dbe96150b",
+      "disposition": "ported",
+      "portable": "tools/cut_readiness.py"
+    },
+    {
+      "id": "editing-source-024",
+      "source_label": "cut-readiness.md",
+      "source_sha256": "d557183371d193d7d995f143d96011c795d253f9c3d9f51b474e905bddf6b7dc",
+      "disposition": "ported",
+      "portable": "tools/cut-readiness.md"
+    },
+    {
+      "id": "editing-source-025",
+      "source_label": "test_cut_readiness.py",
+      "source_sha256": "670201fb28058adcc76a24771f220c6f361f3f1fe8bff694e83b78ffb51b4d4d",
+      "disposition": "ported",
+      "portable": "tools/tests/test_cut_readiness.py"
+    },
+    {
+      "id": "editing-source-026",
+      "source_label": "split-hook-reversed.json",
+      "source_sha256": "e96e1326d70d05f9288c6f0bf3895b834c7e798dbd630f4f21ac7bda3565b85b",
+      "disposition": "ported",
+      "portable": "tools/fixtures/split-hook-reversed.json"
+    },
+    {
+      "id": "editing-source-027",
+      "source_label": "ready-retime-stale-marker.json",
+      "source_sha256": "e312c9c816acd97e56de981e088354e160230a15e6ce05d77866b11ddd203f76",
+      "disposition": "ported",
+      "portable": "tools/fixtures/ready-retime-stale-marker.json"
+    },
+    {
+      "id": "editing-source-028",
+      "source_label": "not-ready-unfamiliar.json",
+      "source_sha256": "1876d7cf00cb0d94c029a50ade88fb90930c98e29d798b2e4d9ca75be8c43a2c",
+      "disposition": "ported",
+      "portable": "tools/fixtures/not-ready-unfamiliar.json"
+    },
+    {
+      "id": "editing-source-029",
+      "source_label": "Payton 4K MP4 - Vertical.xml",
+      "source_sha256": "ee8361778669253334347a932e7967b27d7f6358c5e5273760c7cdac996e19b3",
+      "disposition": "ported",
+      "portable": "presets/Payton 4K MP4 - Vertical.xml"
+    },
+    {
+      "id": "editing-source-030",
+      "source_label": "Payton Editing.layout",
+      "source_sha256": "3ce3f8ea990b5d018cfb3aff7c7b529c8c95581e3119e5fc402ae515bfff47be",
+      "disposition": "ported",
+      "portable": "presets/Payton Editing.layout"
+    },
+    {
+      "id": "editing-source-031",
+      "source_label": "Payton 4K MP4 - Landscape.xml",
+      "source_sha256": "35d538d9a72d8064314c51788d109c8440ab057271e35269b1e1a9b211c5f0af",
+      "disposition": "ported",
+      "portable": "presets/Payton 4K MP4 - Landscape.xml"
+    },
+    {
+      "id": "editing-source-032",
+      "source_label": "Payton - Final Cut.txt",
+      "source_sha256": "bc5f7c06beaf5b9fedadc1eb3ca468630c2ad9b2cd8b4056f1cbbc4b0e3c5b1b",
+      "disposition": "ported",
+      "portable": "presets/Payton - Final Cut.txt"
+    },
+    {
+      "id": "editing-source-033",
+      "source_label": "Payton 4K MP4 - Landscape - Loudness -16.xml",
+      "source_sha256": "e5ab5f7288dfcb15faf5c9119f4ca02ce0fb15c975eda3ee1e1fb25889954903",
+      "disposition": "ported",
+      "portable": "presets/Payton 4K MP4 - Landscape - Loudness -16.xml"
+    },
+    {
+      "id": "editing-source-034",
+      "source_label": "DJIshort1_JP_Refined_v2.dctl",
+      "source_sha256": "59e7dd2004238fd4938430a3e8ac544929623225fc2c2255add6da6a65fa6687",
+      "disposition": "ported",
+      "portable": "presets/Payton Warm Finishing - Shot-Fitted Reference.dctl"
+    },
+    {
+      "id": "editing-source-035",
+      "source_label": "waterfall_transcribe.py",
+      "source_sha256": "cdf3d917eb568afbcb32a4c95d2e953dfcf3723f33deb15b4828c96b9c9d8a6e",
+      "disposition": "ported",
+      "portable": "tools/waterfall_transcribe.py"
+    },
+    {
+      "id": "editing-source-036",
+      "source_label": "waterfall_validate.py",
+      "source_sha256": "8fe26fd03e27f469b99688fdac18b76452c0ef65eb3ba647ac534a7727e453f6",
+      "disposition": "ported",
+      "portable": "tools/waterfall_validate.py"
+    },
+    {
+      "id": "editing-source-037",
+      "source_label": "extract_mid_clips.py",
+      "source_sha256": "d96d8e405af490889b566f3a81cc111ebffdb9f8fa736f36a3dac010abd627b7",
+      "disposition": "ported",
+      "portable": "tools/extract_mid_clips.py"
+    },
+    {
+      "id": "editing-source-038",
+      "source_label": "test_waterfall_validate.py",
+      "source_sha256": "7a9b0736887485dafc95e0c755bc8b396e11752bc6b430a5b26297dfb611b326",
+      "disposition": "ported",
+      "portable": "tools/tests/test_waterfall_validate.py"
+    },
+    {
+      "id": "editing-source-039",
+      "source_label": "SKILL.md",
+      "source_sha256": "f4ace5206e86a2bcfcdbe81a8808bee0642edab4c15ac40ea869d88b859ac9b6",
+      "disposition": "adapted",
+      "portable": "SKILL.md;profiles/PAYTON EDITING PROFILE.md"
+    },
+    {
+      "id": "editing-source-040",
+      "source_label": "dji-pocket-4p-capcut.md",
+      "source_sha256": "cd4a344d0438b11c4a97ec09bf790188617f4fff6017777f9fe85bd5bb21fcf0",
+      "disposition": "adapted",
+      "portable": "references/SOURCE AND COLOR.md"
+    },
+    {
+      "id": "editing-source-041",
+      "source_label": "djishort1-v3-approved-lessons.md",
+      "source_sha256": "daaf9500dee41dec36b1f8d6ebcb80c2e975d9990c142401ad9914b929784c01",
+      "disposition": "adapted",
+      "portable": "references/COMPARISONS AND ADVANCED HANDOFFS.md;references/SOURCE AND COLOR.md"
+    },
+    {
+      "id": "editing-source-042",
+      "source_label": "lesson-routing.md",
+      "source_sha256": "82c1d75a9776c8755c53bc9451114e9ed8298760d38f21e7903cd842b6032811",
+      "disposition": "adapted",
+      "portable": "SKILL.md;CONTENTS.md"
+    },
+    {
+      "id": "editing-source-043",
+      "source_label": "naming-map.md",
+      "source_sha256": "4cae4cf505e95138ea490613b3abb2d687251021273ddd17bb0ff6fd6788c80a",
+      "disposition": "adapted",
+      "portable": "SKILL.md;../motion/START HERE.md"
+    },
+    {
+      "id": "editing-source-044",
+      "source_label": "other-editors.md",
+      "source_sha256": "c24b2993ae28e31c9bb5a1c71745ef72e1bbcf630b95cab7a180a362bfe62eb9",
+      "disposition": "adapted",
+      "portable": "references/OTHER EDITORS.md"
+    },
+    {
+      "id": "editing-source-045",
+      "source_label": "tool-and-provider-map.md",
+      "source_sha256": "59674fd69802f11f4dbc302d7aa29b0fb3f74f64bb49525a249025b5ae54380d",
+      "disposition": "adapted",
+      "portable": "references/TOOLS.md;references/AUDIO.md"
+    },
+    {
+      "id": "editing-source-046",
+      "source_label": "SKILL.md",
+      "source_sha256": "a55b459d7686f43061f202f28da4147786d4a8b48f8261dea858b47d8a6d1dad",
+      "disposition": "adapted",
+      "portable": "references/EDITABLE TIMELINE.md;references/CUTS AND PACING.md"
+    },
+    {
+      "id": "editing-source-047",
+      "source_label": "ai-assisted-motion-and-sound.md",
+      "source_sha256": "93665d1c5a5a142024e6cbc87b8bc9a5fcec2a6faeb3e17d68fc4049fb037cd5",
+      "disposition": "adapted",
+      "portable": "references/MOTION AND EDITORIAL CRAFT.md"
+    },
+    {
+      "id": "editing-source-048",
+      "source_label": "approved-landscape-revision.md",
+      "source_sha256": "545dba46eef4fc41181a54c3fc5e0ac208b8cee6a079853614df667388ef5342",
+      "disposition": "adapted",
+      "portable": "references/REVIEW AND DELIVERY.md;references/COMPARISONS AND ADVANCED HANDOFFS.md"
+    },
+    {
+      "id": "editing-source-049",
+      "source_label": "approved-shortform-finishing.md",
+      "source_sha256": "10c066d0c537a37584ad3ac239df88b8ab51f36990968fc1606c415317a7c808",
+      "disposition": "adapted",
+      "portable": "references/CAPTIONS AND FORMATS.md;references/MOTION AND EDITORIAL CRAFT.md"
+    },
+    {
+      "id": "editing-source-050",
+      "source_label": "audio-color-qualification.md",
+      "source_sha256": "08293e0bb07cfc3848eeef3c675c0629833fbeccb9f9ad962150296b612b4b12",
+      "disposition": "adapted",
+      "portable": "references/AUDIO.md;references/SOURCE AND COLOR.md"
+    },
+    {
+      "id": "editing-source-051",
+      "source_label": "clean-master-and-manual-review.md",
+      "source_sha256": "58f94061132546c12afde5767703acf866c5d4fbcc4fe3f720a2872f9cca632a",
+      "disposition": "adapted",
+      "portable": "references/REVIEW AND DELIVERY.md"
+    },
+    {
+      "id": "editing-source-052",
+      "source_label": "comparison-waterfall-lessons.md",
+      "source_sha256": "3075967720cfdd278965e6646ea057f0d053745b16b76505bdb33197e3289f28",
+      "disposition": "adapted",
+      "portable": "references/COMPARISONS AND ADVANCED HANDOFFS.md;references/DERIVATIVES.md"
+    },
+    {
+      "id": "editing-source-053",
+      "source_label": "main-account-capcut-handoff.md",
+      "source_sha256": "72971387b5cb0517992d969994ffaafdfd150e3350cf10b0c8add5cd10591b3d",
+      "disposition": "adapted",
+      "portable": "references/CAPTIONS AND FORMATS.md;references/COMPARISONS AND ADVANCED HANDOFFS.md"
+    },
+    {
+      "id": "editing-source-054",
+      "source_label": "main2-post-edit-lessons.md",
+      "source_sha256": "e3d6dd986fa73540f447a36f7a5c6e862e224986144fa5abeb4169bd93756117",
+      "disposition": "adapted",
+      "portable": "references/MOTION AND EDITORIAL CRAFT.md;references/CUTS AND PACING.md"
+    },
+    {
+      "id": "editing-source-055",
+      "source_label": "main2-pre-edit-checklist.md",
+      "source_sha256": "a28ce477315599455cce558834c0696ed5cc18004368ad27770cd555ff2098df",
+      "disposition": "adapted",
+      "portable": "SKILL.md;references/CUTS AND PACING.md"
+    },
+    {
+      "id": "editing-source-056",
+      "source_label": "more-caption-visual-target.json",
+      "source_sha256": "7643a10b9c261cedf0dcddcfa0077822b965af886e06a8cec2a7b8fea3b16f56",
+      "disposition": "adapted",
+      "portable": "profiles/caption-calibration.json"
+    },
+    {
+      "id": "editing-source-057",
+      "source_label": "more-pre-edit-checklist.md",
+      "source_sha256": "7217b347e91a4945d1bddcefc4f35eb6dfcdee17749cf27433657c33a6b2d9f3",
+      "disposition": "adapted",
+      "portable": "SKILL.md;references/COMPARISONS AND ADVANCED HANDOFFS.md"
+    },
+    {
+      "id": "editing-source-058",
+      "source_label": "motion-and-editorial-craft.md",
+      "source_sha256": "5fb59e2dddcd7bc2409a806b053fe431323b1821835a8415b869f307ac01bce4",
+      "disposition": "adapted",
+      "portable": "references/MOTION AND EDITORIAL CRAFT.md"
+    },
+    {
+      "id": "editing-source-059",
+      "source_label": "native-api-notes.md",
+      "source_sha256": "08392e2cb8dea567fa5afb4638743e8779745fbada37b1909df1b7b8de4283dd",
+      "disposition": "adapted",
+      "portable": "references/EDITABLE TIMELINE.md;references/AUDIO.md"
+    },
+    {
+      "id": "editing-source-060",
+      "source_label": "payton-editing-profile.md",
+      "source_sha256": "d6b1b21cd758566c4babc2e551f22b2180bf8030f45cb36253f297905d0b69d3",
+      "disposition": "adapted",
+      "portable": "profiles/PAYTON EDITING PROFILE.md;profiles/payton-defaults.json"
+    },
+    {
+      "id": "editing-source-061",
+      "source_label": "payton-final-pass-lessons.md",
+      "source_sha256": "28dffd3052ba22de1811e2459157e560ad459d3f9273f14a4fe12ce4ad44a38a",
+      "disposition": "adapted",
+      "portable": "references/CUTS AND PACING.md;profiles/TIGHT TEACHING REFERENCE.md"
+    },
+    {
+      "id": "editing-source-062",
+      "source_label": "protected-demonstration-audio.md",
+      "source_sha256": "5be747076e4ccc43cf9691c0708b133c2d56d3e677cc8da9cf2ec84852fde298",
+      "disposition": "adapted",
+      "portable": "references/PROTECTED AUDIO AND REUSE.md"
+    },
+    {
+      "id": "editing-source-063",
+      "source_label": "quality-review-and-improvement.md",
+      "source_sha256": "e01af8a446b16a1baa619df4d010d7a5ba1c63a42f3badfffd1e4b11564dc107",
+      "disposition": "adapted",
+      "portable": "references/REVIEW AND DELIVERY.md;references/LEARNING AND UPDATES.md"
+    },
+    {
+      "id": "editing-source-064",
+      "source_label": "reference-led-editing.md",
+      "source_sha256": "0b4b0acfdcfb77d1597b26281d6c7d8941857c9eba840b720b0e399db1f5711d",
+      "disposition": "adapted",
+      "portable": "references/EDITORIAL DECISIONS.md"
+    },
+    {
+      "id": "editing-source-065",
+      "source_label": "resolve-21-agent-playbook.md",
+      "source_sha256": "7f118f2fe649aa06a9617ec06a855e6c030e7d9df98cf248515b84383d5f317b",
+      "disposition": "adapted",
+      "portable": "references/EDITABLE TIMELINE.md;references/MOTION AND EDITORIAL CRAFT.md"
+    },
+    {
+      "id": "editing-source-066",
+      "source_label": "source-transcript-review.md",
+      "source_sha256": "c8dc986f734f0b3d41b197c48d5ed7d4d122bbb97c139e0991e9fa8fa19a88d5",
+      "disposition": "adapted",
+      "portable": "references/CUTS AND PACING.md;templates/SOURCE AND REVIEW.md"
+    },
+    {
+      "id": "editing-source-067",
+      "source_label": "story-and-production-control.md",
+      "source_sha256": "c3271de4fc393b87a8e6974e73052ec79f7b94535e004e4b797181a636130a74",
+      "disposition": "adapted",
+      "portable": "references/EDITORIAL DECISIONS.md;references/COMPARISONS AND ADVANCED HANDOFFS.md"
+    },
+    {
+      "id": "editing-source-068",
+      "source_label": "studio-editorial-decisions.md",
+      "source_sha256": "1ae2826721f7781e7e94a1500e419cd2e4c2a313b789bf5d022b51e9c8780868",
+      "disposition": "adapted",
+      "portable": "references/EDITORIAL DECISIONS.md"
+    },
+    {
+      "id": "editing-source-071",
+      "source_label": "SKILL.md",
+      "source_sha256": "02d97ffff8f94d468ff44bb7d4e5855a9eeda100367deee6f812e01b9d471c94",
+      "disposition": "adapted",
+      "portable": "SKILL.md;references/TOOLS.md"
+    },
+    {
+      "id": "editing-source-072",
+      "source_label": "openai.yaml",
+      "source_sha256": "bb23de7dd141d8ab6deafb9a39202c9ddd8eefc14afeef6838ec7cdc3bfb043f",
+      "disposition": "replaced_entry",
+      "portable": "SKILL.md"
+    },
+    {
+      "id": "editing-source-073",
+      "source_label": "SKILL.md",
+      "source_sha256": "82c483a2758024261836d5764d7667e25bc856cd4dd30e5549779bdbf5af35a5",
+      "disposition": "adapted",
+      "portable": "references/AUDIO.md;tools/auphonic_enhance.py"
+    },
+    {
+      "id": "editing-source-074",
+      "source_label": "scripts-reference.md",
+      "source_sha256": "4c9a892b21839f65750e93e3ba41c5ce4e3c3f9088b4bcd7ef98594e2dfcacab",
+      "disposition": "adapted",
+      "portable": "references/AUDIO.md;tools/auphonic_enhance.py"
+    },
+    {
+      "id": "editing-source-075",
+      "source_label": "SKILL.md",
+      "source_sha256": "9de051d402c688d4385602b1996e7fb2b47f1d2068b449fd82b3e57291abade0",
+      "disposition": "adapted",
+      "portable": "references/AUDIO SHOTGUN.md"
+    },
+    {
+      "id": "editing-source-076",
+      "source_label": "SKILL.md",
+      "source_sha256": "5620d8fd07d9d56f2d40f346f6b3831b72d5826db60839ba7fdde4609c256a0a",
+      "disposition": "adapted",
+      "portable": "references/AUDIO DYNAMIC.md"
+    },
+    {
+      "id": "editing-source-077",
+      "source_label": "SKILL.md",
+      "source_sha256": "ff9dffb3ba752c2935c1b67a9c5fb605c7e853bad01325be91da99dee5ab7178",
+      "disposition": "adapted",
+      "portable": "references/AUDIO WIRELESS.md"
+    },
+    {
+      "id": "editing-source-078",
+      "source_label": "SKILL.md",
+      "source_sha256": "9460c8ce919fffcd73b0877f0a782c20db071ea7b27f1c875c04e85bded5fb4e",
+      "disposition": "adapted",
+      "portable": "references/AUDIO BUILT IN.md"
+    },
+    {
+      "id": "editing-source-079",
+      "source_label": "SKILL.md",
+      "source_sha256": "d847aebf42aa21020c58cff301be1904b8a2b7a8ef65618305ed2b5b25201eb6",
+      "disposition": "adapted",
+      "portable": "references/DERIVATIVES.md;tools/extract_short_clips.py"
+    },
+    {
+      "id": "editing-source-080",
+      "source_label": "scripts-reference.md",
+      "source_sha256": "785bd6fca2963869b9cd1bec372d925da2f4b5e1089e1e275359eefded6d8612",
+      "disposition": "adapted",
+      "portable": "references/DERIVATIVES.md;tools/extract_short_clips.py"
+    },
+    {
+      "id": "editing-source-081",
+      "source_label": "SKILL.md",
+      "source_sha256": "8b7c0e4761e83d187e42221f0bd0d7868a6af45d57052c17988b0496454f8816",
+      "disposition": "adapted",
+      "portable": "references/DERIVATIVES.md"
+    },
+    {
+      "id": "editing-source-082",
+      "source_label": "content-map-schema.md",
+      "source_sha256": "8355aff3515d0f6ae817d948e0bb94b296690527edab49a8e41182539dd92be8",
+      "disposition": "adapted",
+      "portable": "references/DERIVATIVES.md;tools/waterfall_validate.py"
+    },
+    {
+      "id": "editing-source-083",
+      "source_label": "text-derivatives.md",
+      "source_sha256": "cfb5f468a062973346ceb70055ba9073eccd46d79adcbce1fe2eaba85424137c",
+      "disposition": "adapted",
+      "portable": "references/DERIVATIVES.md"
+    },
+    {
+      "id": "editing-source-084",
+      "source_label": "video_editing_playbook.md",
+      "source_sha256": "80c11b9a4a24cebd1abf67aa10c6560a6437cf1244bf5299618d65058d6285eb",
+      "disposition": "adapted",
+      "portable": "SKILL.md;references/CUTS AND PACING.md;references/CAPTIONS AND FORMATS.md"
+    },
+    {
+      "id": "editing-source-085",
+      "source_label": "resolve_audio_finishing.md",
+      "source_sha256": "fdd8ccd147b6904159d9b5651b92f929d987e7d2845bee766bc918d538ed258e",
+      "disposition": "adapted",
+      "portable": "references/AUDIO.md"
+    },
+    {
+      "id": "editing-source-086",
+      "source_label": "more_payton_visual_standard.md",
+      "source_sha256": "521e593ef2a31ce690c41c3a810e6b2532919c92c553eefd7b4012dedaa9fe61",
+      "disposition": "adapted",
+      "portable": "profiles/caption-calibration.json;references/CAPTIONS AND FORMATS.md;references/PACKAGING.md"
+    },
+    {
+      "id": "editing-source-087",
+      "source_label": "more_payton_waterfall.md",
+      "source_sha256": "8e49d2219d788bc1bab101f532078f9983e8c5879d2a229b7897d9f16535a85b",
+      "disposition": "adapted",
+      "portable": "references/DERIVATIVES.md;references/COMPARISONS AND ADVANCED HANDOFFS.md"
+    },
+    {
+      "id": "editing-source-088",
+      "source_label": "video_production.md",
+      "source_sha256": "23e806645ea87667a7a1b52fee44c1d262794ca49ba27588c82c8918784e0622",
+      "disposition": "adapted",
+      "portable": "references/REVIEW AND DELIVERY.md"
+    },
+    {
+      "id": "editing-source-089",
+      "source_label": "jump_cut_vad.md",
+      "source_sha256": "60d1dd831911b3c58a04fb017d45291751205bb63871d680ec871c87ad6c46a7",
+      "disposition": "adapted",
+      "portable": "references/CUTS AND PACING.md;tools/jump_cut_vad_parallel.py"
+    },
+    {
+      "id": "editing-source-090",
+      "source_label": "auphonic_enhance.md",
+      "source_sha256": "a705fb95648792da5ec2a3de7b9a5c89f159b7abac65abb90836aabc80ad38d8",
+      "disposition": "adapted",
+      "portable": "references/AUDIO.md"
+    },
+    {
+      "id": "editing-source-091",
+      "source_label": "extract_short_clips.md",
+      "source_sha256": "e0e0cf7fc8f3e4a21cacb1d218a4e266c18213b5a6d9d5ac84074a426379c78d",
+      "disposition": "adapted",
+      "portable": "references/DERIVATIVES.md"
+    },
+    {
+      "id": "editing-source-092",
+      "source_label": "photographic-portrait-qa.md",
+      "source_sha256": "a41da838ac5a6ad0e45741e4c59c8ae21c9fb6fc71e48adcc13a0501f8354041",
+      "disposition": "adapted",
+      "portable": "references/PACKAGING.md"
+    }
+  ]
+}

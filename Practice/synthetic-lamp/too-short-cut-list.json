@@ -1,0 +1,29 @@
+{
+  "source": "source.mp4",
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "duration": 10,
+  "audio_channels": 1,
+  "audio_rate": 48000,
+  "markers": [
+    {
+      "time": 4,
+      "name": "Synthetic switch click",
+      "note": "Keep the click and the following result hold."
+    }
+  ],
+  "name": "lamp-practice-too-short",
+  "keep": [
+    {
+      "start": 2,
+      "end": "00:00:03:23",
+      "note": "Before click"
+    },
+    {
+      "start": "00:00:04:23",
+      "end": 9,
+      "note": "Intentional error: one-second window containing click removed."
+    }
+  ]
+}

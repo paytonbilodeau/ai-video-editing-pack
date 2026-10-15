@@ -1,0 +1,19 @@
+{
+  "id": "feather-squeak-thin-nib",
+  "name": "Feather squeak with Thin nib",
+  "selectedDate": "2026-09-09",
+  "userSelection": "Round 4 D Feather squeak, with a slight blend of A Thin nib",
+  "implementationDecision": "JARVIS chose 85/15 to implement slight; Payton subsequently approved the delivered blend as the default.",
+  "amplitudeWeights": {
+    "D": 0.85,
+    "A": 0.15
+  },
+  "activeRmsDbfs": -39,
+  "reviewBoostDb": 8,
+  "sampleRate": 48000,
+  "recipe": "gentlemen_fine_nib_options.py round 4 D and A, original fixed seeds, int16 audition-equivalent layers, blend then match production level",
+  "approvalStatus": "approved_default",
+  "approvedDate": "2026-09-09",
+  "approvalNote": "Payton explicitly locked the delivered blend as the main sound for now, with future changes allowed.",
+  "customer_note": "Payton-derived starting sound. Keep the visual stroke schedule matched; rebalance under your own dialogue."
+}

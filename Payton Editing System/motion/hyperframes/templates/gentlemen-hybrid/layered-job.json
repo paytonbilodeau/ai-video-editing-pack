@@ -1,0 +1,11 @@
+{
+  "name": "Synthetic Gentlemen layer practice",
+  "fps": "30",
+  "frames": 150,
+  "width": 1920,
+  "height": 1080,
+  "base": "assets/base.mp4",
+  "overlay": "assets/overlay.mov",
+  "sound": "assets/marker.wav",
+  "audioChannels": 1
+}

@@ -1,0 +1,24 @@
+{
+  "source": "source.mp4",
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "duration": 10,
+  "audio_channels": 1,
+  "audio_rate": 48000,
+  "markers": [
+    {
+      "time": 4,
+      "name": "Synthetic switch click",
+      "note": "Keep the click and the following result hold."
+    }
+  ],
+  "name": "lamp-practice-corrected",
+  "keep": [
+    {
+      "start": 2,
+      "end": 9,
+      "note": "Remove only the opening and closing wait."
+    }
+  ]
+}

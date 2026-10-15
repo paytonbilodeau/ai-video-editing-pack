@@ -51,6 +51,8 @@ if (bundleCheck.error || bundleCheck.status!==0) {
 process.stdout.write(bundleCheck.stdout);
 const suites=[
  ['AI Video Editing Pack/skills/javascript-animation',[process.execPath,'--test','tests/animation.test.mjs']],
+ ['Payton Editing System/setup',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
+ ['Payton Editing System/editing',['python3','-B','-m','unittest','discover','-s','tools/tests','-p','test_*.py']],
  ['AI Video Editing Pack',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
  ['05 Video Pre-Edit System',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
  ['09 Visual Storytelling and Motion System',[process.execPath,'--test',...fs.readdirSync(path.join(root,'09 Visual Storytelling and Motion System/tests')).filter(f=>f.endsWith('.test.mjs')).map(f=>'tests/'+f)]],
@@ -66,4 +68,4 @@ if (!process.argv.includes('--structure-only')) {
     process.stdout.write(dir+': '+(run.stderr||run.stdout).trim()+'\n');
   }
 }
-console.log('Public validation passed: standalone AI Video Editing Pack, '+actual.length+' declared files, no private-system folders, no broken internal links'+(process.argv.includes('--structure-only')?'':', six editing tool suites')+'.');
+console.log('Public validation passed: standalone AI Video Editing Pack, '+actual.length+' declared files, no private-system folders, no broken internal links'+(process.argv.includes('--structure-only')?'':', eight editing tool suites')+'.');

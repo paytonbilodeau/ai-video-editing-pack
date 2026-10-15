@@ -6,7 +6,7 @@ Follow one video from setup to a checked export. The pictures lead; copy a promp
 
 The drawings are illustrative examples, not app screenshots or proof of a finished edit. They use a lamp switch to connect the steps.
 
-[Open or download the lamp practice ZIP](https://drive.google.com/file/d/1fhak1vH4Px1Zwk7k2KiNuflmx7yYFAnB/view). It includes the source, an intentional mistake and the corrected edit. The media use synthetic images and a generated click, with no filmed lamp or human voice. Start with [lesson 3](03.md).
+[Open the included lamp practice](<../../Practice/synthetic-lamp/START HERE.md>). It includes the source, an intentional mistake and the corrected edit. The media use synthetic images and a generated click, with no filmed lamp or human voice. Start with [lesson 3](03.md).
 
 1. [Set up your AI editor](01.md)
 2. [Describe your video](02.md)
