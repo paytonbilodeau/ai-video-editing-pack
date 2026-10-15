@@ -34,6 +34,12 @@ for its supporting tools and teaching guide. Native plugin installation alone
 may cache only the core skill folder. Don't delete a working plugin or project
 just to add the complete download.
 
+## Need one specific step?
+
+- [Make your first edit](../Kit%20Email%20Workflow/visual-guide/README.md).
+- [Choose a motion tool and run its starter](references/MOTION%20TOOL%20SETUP.md).
+- [Update without losing your preferences](references/UPDATING.md).
+
 ## Optional private-folder setup
 
 The paste message above needs no Python. If you want the included helper to

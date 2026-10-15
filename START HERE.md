@@ -36,6 +36,7 @@ LUTs, motion tools and repurposing are optional.
 
 - [Choose an AI app and understand permissions](AI%20Video%20Editing%20Pack/references/AI%20APP%20SETUP.md).
 - [See how the setup adapts to you](AI%20Video%20Editing%20Pack/references/SETUP%20FLOW.md).
+- [Choose and set up an optional motion tool](AI%20Video%20Editing%20Pack/references/MOTION%20TOOL%20SETUP.md).
 - [Update an existing setup](AI%20Video%20Editing%20Pack/references/UPDATING.md).
 - [Read the teaching guide at your own pace](Kit%20Email%20Workflow/SEQUENCE.md).
 - [Use the editing skills and templates](AI%20Video%20Editing%20Pack/README.md).
