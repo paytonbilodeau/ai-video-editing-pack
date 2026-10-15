@@ -7,3 +7,5 @@ Thumbs.db
 !.env.example
 dist/
 node_modules/
+.build/
+.swiftpm/
