@@ -96,10 +96,12 @@ Protect the specific audible word, including quiet articulation, instead of
 retaining a broad interval solely because its transcript timing is uncertain.
 Keep purposeful holds and meaningful speech; do not chase a global gap target.
 
-Deliver a polished cut with sound and color but no added graphics for the first
-review, unless the user requested a different sequence. Save the native project,
-timeline snapshot and source map. Keep picture and dialogue linked. While a
-person is editing, leave the project alone.
+Save a clean timeline version with sound and color before adding requested
+graphics, together with the native project and source map. This is an internal
+checkpoint in full-pass mode: continue to the complete requested result. Hand
+it over for an intermediate review only when the user chose that workflow or
+a material decision needs their input. Keep picture and dialogue linked.
+While a person is editing, leave the project alone.
 
 Before handoff, close each known editorial defect within the agreed scope or
 record its exact range, retain reason and remaining review. A planned human

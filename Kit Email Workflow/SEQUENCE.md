@@ -1,8 +1,27 @@
 # Your complete illustrated editing guide
 
+**[8-step visual walkthrough](visual-guide/README.md)**
+
 All 22 email lessons are here from day one, with their illustrations and copyable prompts. Read from the beginning or jump to the part you need. The emails are reminders; they do not unlock parts of the pack.
 
 For setup, open [START HERE](../AI%20Video%20Editing%20Pack/START%20HERE.md). Keep the Vibe Editors folder together so the local links continue to work. The software used for editing and rendering is installed separately when needed.
+
+## Finish your first edit
+
+The shortest route is a clear brief, a usable cut, the corrections your footage
+needs, and a checked export. Use these lessons as you reach each step:
+
+1. [Set up your assistant and editor](lessons/01.md), [choose its permissions](lessons/02.md), then [write the brief](lessons/03.md).
+2. [Check complete words and useful pauses](lessons/04.md).
+3. [Keep speech natural](lessons/06.md) and [correct the picture where needed](lessons/07.md).
+4. [Check captions and any graphics you use](lessons/12.md), then [give precise corrections](lessons/13.md).
+5. [Keep the editable project](lessons/18.md), [watch the actual export](lessons/19.md), and [save useful preferences](lessons/15.md).
+
+The automatic pre-edit tool, creative LUTs, custom graphics and repurposed shorts
+are optional. Add one when it helps the video in front of you. Use the full
+index below when you need another technique.
+
+## All 22 lessons
 
 - [01 · Your AI editing pack is here](lessons/01.md)
 - [02 · Before AI gets the keys to your laptop](lessons/02.md)

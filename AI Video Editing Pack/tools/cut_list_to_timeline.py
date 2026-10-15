@@ -83,18 +83,27 @@ def parse_rate(value: object) -> Fraction:
 
 
 def parse_time(value: object, rate: Fraction) -> int:
-    """Return a frame count from seconds, "MM:SS.sss", "HH:MM:SS.sss" or "HH:MM:SS:FF"."""
+    """Parse elapsed seconds or a four-field NDF label at the nominal timebase."""
     if isinstance(value, bool) or value is None:
         raise CutListError(f"time value is missing or invalid: {value!r}")
     if isinstance(value, (int, float)):
         seconds = float(value)
     else:
         text = str(value).strip()
+        if ";" in text:
+            raise CutListError("drop-frame timecode is not supported; use elapsed seconds or a non-drop-frame HH:MM:SS:FF label")
         parts = text.split(":")
         try:
             if len(parts) == 4:
+                if any(not re.fullmatch(r"[0-9]+", part) for part in parts):
+                    raise ValueError(text)
                 hours, minutes, secs, frames = (int(part) for part in parts)
-                return frames + round(Fraction(hours * 3600 + minutes * 60 + secs) * rate)
+                timebase = int(round(rate))
+                if not (0 <= minutes < 60 and 0 <= secs < 60 and 0 <= frames < timebase):
+                    raise ValueError(text)
+                # NDF labels count nominal frames; elapsed seconds still use the
+                # exact fractional rate below. Match timecode() without changing fps.
+                return (hours * 3600 + minutes * 60 + secs) * timebase + frames
             if len(parts) == 3:
                 seconds = int(parts[0]) * 3600 + int(parts[1]) * 60 + float(parts[2])
             elif len(parts) == 2:

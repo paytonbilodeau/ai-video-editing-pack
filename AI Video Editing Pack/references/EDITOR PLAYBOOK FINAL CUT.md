@@ -190,9 +190,11 @@ Magnetic timeline behavior (documented):
 | New Project; New Event; Import Media | Command-N; Option-N; Command-I | documented |
 
 Creators remap heavily (one widely followed instructor uses X for delete, G and
-H for trim start and end, C for blade); switch the command set to Default before
-automation and read back state in the Timeline Index and Inspector after each
-step (opinion).
+H for trim start and end, C for blade). Inspect the active command set and use
+its mappings or verified menu actions. Preserve the user's custom set. If a
+temporary change is necessary and authorized, record the original selection
+and restore it afterwards. Read back state in the Timeline Index and Inspector
+after each operation; a keystroke alone does not prove the intended edit.
 
 ## 5. The talking-head workflow in Final Cut, in order
 

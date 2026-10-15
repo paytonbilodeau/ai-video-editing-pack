@@ -40,7 +40,7 @@ def bundle_files(root: Path = ROOT) -> tuple[str, ...]:
         allowed = name in {"START HERE.md", "LICENSE AND USE.md"} or (
             parts[0] in (CORE_FOLDER, *SUPPORTING_FOLDERS)
         ) or name == "Kit Email Workflow/SEQUENCE.md" or name.startswith((
-            "Kit Email Workflow/lessons/", "Kit Email Workflow/assets/"
+            "Kit Email Workflow/lessons/", "Kit Email Workflow/assets/", "Kit Email Workflow/visual-guide/"
         ))
         if not allowed or any(part in IGNORED for part in parts):
             raise ValueError(f"outside downloadable editing scope: {name}")
@@ -49,7 +49,7 @@ def bundle_files(root: Path = ROOT) -> tuple[str, ...]:
         if Path(name).suffix in {".pem", ".key", ".pyc"} or Path(name).name.startswith(".env"):
             raise ValueError(f"private or generated file is forbidden: {name}")
     required = {"START HERE.md", f"{CORE_FOLDER}/START HERE.md", f"{CORE_FOLDER}/SKILL.md",
-                f"{CORE_FOLDER}/bundle-manifest.json", "Kit Email Workflow/SEQUENCE.md"}
+                f"{CORE_FOLDER}/bundle-manifest.json", "Kit Email Workflow/SEQUENCE.md", "Kit Email Workflow/visual-guide/README.md"}
     required.update(f"{scope}/START HERE.md" for scope in SUPPORTING_FOLDERS)
     required.update(f"Kit Email Workflow/lessons/{n:02}.md" for n in range(1, 23))
     if not required.issubset(names):
@@ -85,7 +85,7 @@ def validate(root: Path = ROOT) -> list[str]:
         return [f"invalid bundle manifest: {exc}"]
     bundle = root.parent
     actual = set()
-    for scope in (CORE_FOLDER, *SUPPORTING_FOLDERS, "Kit Email Workflow/lessons", "Kit Email Workflow/assets"):
+    for scope in (CORE_FOLDER, *SUPPORTING_FOLDERS, "Kit Email Workflow/lessons", "Kit Email Workflow/assets", "Kit Email Workflow/visual-guide"):
         actual.update(p.relative_to(bundle).as_posix() for p in actual_files(bundle / scope))
     for name in ("START HERE.md", "LICENSE AND USE.md", "Kit Email Workflow/SEQUENCE.md"):
         if (bundle / name).exists() or (bundle / name).is_symlink():

@@ -54,8 +54,59 @@ class TimeTests(unittest.TestCase):
         self.assertEqual(exporter.timecode(108001, Fraction(30)), "01:00:00:01")
         self.assertEqual(exporter.timecode(29, Fraction(30000, 1001)), "00:00:00:29")
 
+    def test_ndf_labels_round_trip_at_fractional_and_integer_rates(self):
+        rates = (Fraction(24000, 1001), Fraction(24), Fraction(25),
+                 Fraction(30000, 1001), Fraction(30), Fraction(50),
+                 Fraction(60000, 1001), Fraction(60))
+        for rate in rates:
+            timebase = round(rate)
+            boundaries = (0, 1, timebase - 1, timebase, 60 * timebase - 1,
+                          60 * timebase, 600 * timebase, 3600 * timebase - 1,
+                          3600 * timebase, 3600 * timebase + 1)
+            for frame in boundaries:
+                with self.subTest(rate=rate, frame=frame):
+                    label = exporter.timecode(frame, rate)
+                    self.assertEqual(exporter.parse_time(label, rate), frame)
+
+    def test_ndf_label_is_distinct_from_elapsed_seconds(self):
+        for rate in (Fraction(24000, 1001), Fraction(30000, 1001), Fraction(60000, 1001)):
+            with self.subTest(rate=rate):
+                self.assertEqual(exporter.parse_time("00:10:00:00", rate), 600 * round(rate))
+                for elapsed in (600, "600", "10:00.000", "00:10:00.000"):
+                    self.assertEqual(exporter.parse_time(elapsed, rate), round(600 * rate))
+
+    def test_ndf_rejects_invalid_fields_and_drop_frame_notation(self):
+        for rate in (Fraction(24000, 1001), Fraction(30000, 1001), Fraction(60000, 1001)):
+            for label in ("-1:00:00:00", "00:-1:00:00", "00:00:-1:00", "00:00:00:-1",
+                          "00:60:00:00", "00:99:00:00", "00:00:60:00", "00:00:00:999",
+                          f"00:00:00:{round(rate)}", "00:00:00:1.5", "00:00::00",
+                          "00:10:00;00", "00:00:00:00 DF"):
+                with self.subTest(rate=rate, label=label), self.assertRaises(exporter.CutListError):
+                    exporter.parse_time(label, rate)
+
 
 class CutListTests(unittest.TestCase):
+    def test_ndf_input_preserves_frame_boundaries_and_fractional_rate_in_export(self):
+        rate = Fraction(30000, 1001)
+        cut = exporter.build_cut_list({"source": "fixture.mp4", "fps": "30000/1001",
+                                       "keep": [["00:10:00:00", "00:10:01:00"]]},
+                                      base_dir=EXAMPLE.parent)
+        self.assertEqual(cut.rate, rate)
+        self.assertEqual((cut.segments[0].source_in, cut.segments[0].source_out), (18000, 18030))
+        self.assertEqual(cut.total_frames, 30)
+        root = ET.fromstring(exporter.write_fcpxml(cut))
+        self.assertEqual(root.find("resources/format").attrib["frameDuration"], "1001/30000s")
+        self.assertEqual(root.find(".//asset-clip").attrib["start"], "3003/5s")
+        self.assertIn("00:10:00:00 00:10:01:00", exporter.write_edl(cut))
+
+    def test_cut_list_rejects_invalid_ndf_range_boundaries(self):
+        for start, end in (("-1:00:00:00", "00:00:01:00"),
+                           ("00:00:00:00", "00:00:00:99"),
+                           ("00:00:00:00", "00:99:00:00")):
+            with self.subTest(start=start, end=end), self.assertRaises(exporter.CutListError):
+                exporter.build_cut_list({"source": "fixture.mp4", "fps": "29.97",
+                                         "keep": [[start, end]]}, base_dir=EXAMPLE.parent)
+
     def test_unusual_probed_rate_warns_without_changing_it(self):
         data = json.loads(EXAMPLE.read_text())
         del data["fps"]

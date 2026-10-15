@@ -1,5 +1,7 @@
 # The AI editing email workflow
 
+**[8-step visual walkthrough](visual-guide/README.md)**
+
 The reader-facing [illustrated guide](SEQUENCE.md) contains all 22 lessons and images. It ships in the complete pack and is available immediately. The emails are an optional way to revisit those lessons over time.
 
 This README, CONFIRMATION.md, UPDATES.md and settings.example.json describe the publishing workflow for maintainers. They stay outside the reader ZIP. They contain no subscriber data, account credentials or live Kit automation export.
@@ -22,7 +24,7 @@ Before launch, authenticate your sending domain using the provider's current ins
 
 ## The 22 lessons
 
-[The sequence map](SEQUENCE.md) links the actual reader lessons. Their first-person examples and community links refer to Payton's Vibe Editors. When adapting the workflow for another instructor, replace those with experiences, destinations and tool choices that instructor can honestly claim. A percentage result must be identified as the creator's own experience rather than a reader guarantee. The lesson copy is separate from the provider's unsubscribe footer, which must remain in place.
+[The sequence map](SEQUENCE.md) links the actual reader lessons. Their first-person examples and community links refer to Payton's Vibe Editors. When adapting the workflow for another instructor, replace those with experiences, destinations and tool choices that instructor can honestly claim. Use only results the instructor can support. If a percentage has no clear denominator, use a nonnumeric explanation rather than presenting it as measured performance. The lesson copy is separate from the provider's unsubscribe footer, which must remain in place.
 
 Add an illustration only when it explains the lesson. Put it next to the relevant instructions rather than above an unrelated introduction. Use a public-safe visual style of your own; this workflow does not include a private brand recipe. In the permission lesson, the diagram belongs before the API-key and connector guidance, followed by a plain explanation of the available editing route.
 
@@ -78,7 +80,9 @@ Count visible lesson words, including the prompt and postscript but excluding
 HTML, URLs behind links and the reading-time label itself. Divide by 180 words
 per minute, add 15 seconds for the illustration, and round up to a whole minute.
 This is a conservative reading estimate, not a measured completion time. Compute
-classroom reading time separately when its practice sections add material.
+classroom reading time separately when its practice sections add material. Recompute labels after
+changing the final copy or illustration count; a source estimate is not a
+measured reading speed or time needed to perform the edit.
 
 ## One complete reader bundle
 
@@ -87,3 +91,20 @@ and their local `assets/`. Lesson links point to the other files in the same
 bundle wherever possible. Retain working public links in actual emails and
 classroom pages. A reader should never need to join the community or finish the
 email sequence to obtain a tool required by the free pack.
+
+## Keep each destination easy to use
+
+In Skool, lead with the local course index and the relevant action link. A link
+that opens another page should say Open, not Copy. Put a short prompt beside
+the action when the reader needs to paste it. Keep essential instructions in
+text as well as in illustrations.
+
+Skool can render adjacent paragraphs without extra vertical space. Use visible
+blank paragraphs between separate answer blocks and inspect the saved page;
+source paragraph tags or CSS margins alone do not establish readable spacing.
+Preserve native attachments when replacing a post body.
+
+Keep the primary course distinct from optional graphics, recording and toolkit
+references. Label earlier release posts as history while preserving their
+version-specific notes and a clear current-download route. These are content
+repairs, not permission to resend the sequence or add announcements.

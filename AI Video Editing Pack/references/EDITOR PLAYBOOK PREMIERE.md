@@ -157,26 +157,32 @@ the focused panel, which is the most common failure in the course transcripts.
 | Export Media; Send to Media Encoder | Command-M; Option-Shift-M | documented |
 | Keyboard Shortcuts dialog | Command-Option-K | documented |
 
-There is no default Close Gap shortcut; assign one (reported from Adobe's own
+There is no default Close Gap shortcut (reported from Adobe's own
 2025 course, which hit a macOS collision on Shift-Command-G). Track targeting
 decides what Command-K cuts; a selection overrides targeting. Linked Selection,
-Sync Lock and Track Lock change what a ripple moves. Reset to the saved
-workspace (Option-Shift-0) before trusting coordinates. Type timecode into the
+Sync Lock and Track Lock change what a ripple moves. Inspect the active shortcut
+set and workspace rather than resetting custom settings to suit automation.
+Verify the current controls before using coordinates. Type timecode into the
 Program Monitor field to position the playhead exactly.
 
 ### Text-Based Editing pause removal, step by step (documented mechanics)
 
 1. Window > Workspaces > Text-Based Editing. Click the Timeline so the Text
    panel shows the sequence transcript, not a source clip. Transcribe if asked.
-2. Text panel menu > Transcript View Options > set the pause threshold. Start at
-   0.5 s; a second pass at 0.3 s only on sections that still feel slow; 0.1 s is
-   the floor (threshold values opinion and reported).
-3. Filter icon > Pauses. Click any pause to audition it. Delete > Extract
-   (ripple) > Delete all. Repeat with the Filler words filter.
-4. Verify in the Timeline: no stray gaps (Sequence > Close Gap), audio still
-   linked, upper-track graphics still aligned. Lock tracks that must not move.
-5. Then punch in on alternating clips or checkerboard two angles (V1 and V2,
-   toggle Enable) to hide the jump cuts.
+2. Duplicate the sequence before trimming. In Transcript View Options, choose
+   a pause threshold to find review candidates; 0.5 s is one starting point,
+   not a rule that longer pauses are unwanted.
+3. Filter icon > Pauses. Listen to each candidate in context, including nearby
+   words and the visible action. Extract only the unwanted pause, preserving
+   complete words, emphasis and reading/demonstration holds. Treat filler-word
+   matches the same way. Do not use Delete all merely because one match was
+   expendable; any bulk operation requires a bounded selection whose matches
+   have all been checked and a recoverable earlier sequence.
+4. Verify every rebuilt join in the Timeline. Keep picture/audio linked and
+   check upper-track graphics and sync. Remove only unintended gaps; inspect
+   locks and targeting before a ripple operation.
+5. Use a punch-in, alternate angle or B-roll only when it improves a distracting
+   join or explains the point. Do not alternate crops on a fixed pattern.
 
 ## 5. The talking-head workflow in Premiere, in order
 
@@ -191,40 +197,48 @@ Program Monitor field to position the playhead exactly.
 3. **Cut.** Text-Based Editing first pass (above), Paper Edit for scripted or
    interview footage, then the keyboard loop: Command-K, Q, W, ripple delete,
    Up and Down to jump edits. Shift-Command-K when B-roll rides above the A-roll.
-4. **Punch-ins.** Scale lives in Motion or the Properties panel. On a 4K source
-   in a 1080 sequence alternate 50 percent and about 60 to 65 percent; on 1080
-   in 1080 alternate 100 and 110 to 120 percent; anchor on the eyes; hold the
-   scale for a hidden cut, or animate 6 to 10 frames with Ease Out for a push
-   (opinion). Morph Cut is slow; apply it late and only where the same framing
-   continues.
-5. **Audio.** Tag clips Dialogue, Loudness > Auto-Match (-23 LUFS reported),
-   then raise the master so the whole mix lands near -14 to -16 LUFS integrated
-   with peaks under -1 dBTP. Repair sliders are 0 to 10: Reduce Noise 2 to 4,
-   Reduce Rumble 2 to 3, DeHum 60 Hz only if present, DeEss 2 to 4, Reduce
-   Reverb 2 to 4 for echoey rooms; Clarity Dynamics 3 to 5, EQ preset "Podcast
-   Voice" or "Vocal Presence" at Amount 4 to 6 (values opinion). Enhance Speech
-   only for bad rooms, Mix Amount 50 to 70 percent to avoid the processed sound
-   (opinion). Music: tag Music, Auto-Match, Essential Sound ducking or rubber
-   band keyframes around -25 dB under speech (reported values). Shift-D on every
-   cut for 2 frame constant power fades (opinion). 26.5's Match Source export
-   honours channel layout; verify stereo 48 kHz on export.
-6. **Color.** Lumetri top to bottom: Basic Correction (Auto, then exposure,
-   white balance, contrast with the Luma waveform between about 5 and 95),
-   Creative for a Look at reduced intensity, Curves (gentle S on RGB; Hue vs Sat
-   for skin and background), Color Wheels, HSL Secondary, Vignette last.
-   Separate Lumetri effects per job, renamed; the shared look on an adjustment
-   layer; Color Match for a B-cam. Check skin on the YUV vectorscope line with a
-   temporary opacity mask (reported). Viewer gamma 2.2 for a YouTube audience,
-   kept constant across videos.
+4. **Punch-ins.** Scale lives in Motion or the Properties panel. Check whether
+   footage was scaled or set to frame size before choosing values: a 4K clip
+   fitted to 1080p may show a different base scale depending on that choice.
+   Increase framing only for useful emphasis or to improve a join, protect the
+   demonstration, and inspect sharpness at delivery size. A short eased push
+   is optional. Morph Cut should be tested where framing and movement make it
+   appropriate; it is not a default repair for every cut.
+5. **Audio.** Listen first and use [the audio guide](AUDIO%20GUIDE.md) to choose
+   only needed treatment. Essential Sound's Dialogue tag exposes Auto-Match,
+   repair and dynamics controls; inspect their actual effect before keeping
+   them. Compare Enhance Speech or noise/reverb repair at matched loudness and
+   reduce it if articulation sounds processed. Ride or duck music when it masks
+   speech. For an audible click at a join, select the intended audio edit and
+   use Apply Audio Transition (default Shift-Command-D on macOS,
+   Shift-Ctrl-D on Windows), or place the chosen audio transition explicitly.
+   Check the active shortcut preset, transition type and duration. Shift-D
+   applies both video and audio defaults and does not guarantee a two-frame
+   fade. Confirm picture cuts are unchanged and listen to the result. Measure
+   the final mix and encoded file against the destination target; respect the
+   chosen single external finishing pass and verify the intended channel layout.
+6. **Color.** Identify the source, working and output spaces before adjusting
+   the image; avoid applying the same technical conversion twice. Use Basic
+   Correction for needed balance and exposure, then the Curves, Color Wheels
+   or HSL Secondary controls that solve an observed problem. A Creative Look,
+   Auto correction or Color Match is an option to compare, not a required step.
+   Keep shared looks separate from authentic screen recordings. Check skin,
+   important detail and scopes without forcing every face to one brightness
+   or hue. Choose viewer gamma for the actual monitoring setup and delivery;
+   keep that setup consistent and verify the encoded export rather than
+   applying 2.2 to every YouTube project. The [sound and color reference](SOUND%20AND%20COLOR%20NUMBERS.md)
+   explains the transform and monitoring checks.
 7. **Graphics behind the presenter.** Duplicate the A-roll above the graphic,
    Object Mask on the person on the top copy (one click, track forward, Smooth
    edge mode for hair), graphic between the copies (documented tool, workflow
    opinion). Classic feathered pen mask with Track Selected Mask Forward when
    Object Mask misfires. One voice path only.
-8. **Captions and titles.** Create captions from the transcript; save a Track
-   Style; single-word layout for shorts; burn in for Shorts, sidecar SRT for
-   long-form. MOGRTs from the Properties or Essential Graphics panel for lower
-   thirds; Responsive Design pinning so intros survive duration changes.
+8. **Captions and titles.** Create captions from the final cut's transcript,
+   correct names and numbers, then save a readable Track Style. Choose phrases
+   or highlighted words to suit the content. Use burned-in captions, a sidecar
+   SRT or both according to the destination; check timing and placement in the
+   actual export. MOGRTs from the Properties or Essential Graphics panel can
+   supply lower thirds; check Responsive Design pinning after duration changes.
 9. **Vertical.** Sequence > Auto Reframe Sequence, 9:16, Default motion, custom
    1080x1920 resolution, "Don't nest" unless there are keyframes or speed
    changes; fix titles afterwards (documented and reported).
@@ -242,7 +256,10 @@ Program Monitor field to position the playhead exactly.
    installed and connected (bridge: `--doctor` or the panel's status line).
 2. Ask the bridge for the project name and sequence list, or import a two-clip
    FCP7 XML written from one copied clip and confirm two linked clipitems with
-   no Link Media dialog. If the dialog appears, the path URL encoding is wrong.
+   media online. If Link Media appears, check whether the source exists, its
+   storage is mounted and accessible, and its actual path and identifying
+   properties match. Inspect XML path/URL encoding if those checks point there;
+   the dialog alone does not identify the cause.
 3. Create a sequence named for the test, insert one clip, read back name, in,
    out and track by the same route, then delete the sequence.
 4. Export a 10 second range through Export mode or Media Encoder and probe the

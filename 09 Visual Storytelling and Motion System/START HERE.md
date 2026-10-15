@@ -8,12 +8,16 @@ Use this system when the words are clear but the screen feels flat or random vis
 
 ## First useful result
 
-In 30 to 60 minutes, map 20 to 60 seconds of approved narration into beats, choose one of four visual lanes for each beat, and validate the plan with `tools/motion_plan.mjs`. Do this before installing Remotion.
+Use the narration already supplied, or choose a short representative passage
+for a first trial. Map its meaning into beats and choose a useful visual for
+each one. Validate the beat map with `tools/motion_plan.mjs` before rendering.
+Setup and rendering time depend on the source, tools and requested result.
+Reuse a working renderer; this step does not require installing Remotion.
 
 ## Give your AI this message
 
 ```text
-Read START HERE.md, SYSTEM.md, INSTALL.md, THIRD-PARTY.md, every file in templates, examples/EXAMPLE MOTION PLAN.md, and tools/motion_plan.mjs. Ask for 20 to 60 seconds of approved narration and the facts that must remain exact. Break it into beats. For each beat choose designed explanation, real evidence, physical metaphor, or restrained hybrid. Explain why the lane supports the meaning. Create an asset ledger, fact-parity check, storyboard, caption plan, and render plan. Use supplied or authorized assets only. Prefer the no-generation path unless I approve a provider after reviewing current cost, privacy, and license terms. Validate the JSON beat map and wait for approval before installing software or rendering.
+Read START HERE.md and SYSTEM.md, then the setup, source and template references needed for this request. Reuse my narration, brief, working pace and existing tools. Ask only for missing facts that materially affect the result. Break the requested narration into meaningful beats. Choose designed explanation, real evidence, physical metaphor or a restrained combination to support each point. Keep source/asset evidence and prepare only the planning documents this project needs. Use supplied or authorized assets and validate the JSON beat map. Complete the already-authorized render and checks without a routine approval stop. Honor any checkpoints I requested. Ask before a new install, provider charge, private upload or broader access when it is not already authorized; explain cost, privacy and licensing where relevant. Report what was actually rendered and reviewed. Publishing remains separate.
 ```
 
 For Resolve/MCP setup, a Hyperframes setup route and integrating motion into a reviewed editable cut, use [System 14](../14%20AI%20Video%20Editing%20System/START%20HERE.md). This system continues to own the beat map and neutral Remotion starter.

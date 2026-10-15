@@ -1,5 +1,19 @@
 # Changelog
 
+## 5.0.2 - 2026-10-14
+
+- Add the eight-step visual walkthrough and its local illustrations to the complete
+  download. The 22 email lessons remain available for more detail.
+- Clarify the assistant, editor and pack roles, permission checks, project briefs,
+  feedback and the checks needed before calling an export finished.
+- Repair fractional-rate non-drop-frame timecode parsing without changing the
+  timeline rate. Reject invalid timecode fields and unsupported drop-frame labels.
+- Replace blanket cutting, audio and color rules with source-dependent guidance.
+  Correct editor shortcut guidance and preserve custom settings and original media.
+- Repair animation documentation references and template timing guidance.
+- These repairs and visual explanations update existing public material.
+  Plugin version: 2.0.2.
+
 ## 5.0.1 - 2026-10-14
 
 - Rewrite the illustrated guide as a connected walkthrough with clearer setup,

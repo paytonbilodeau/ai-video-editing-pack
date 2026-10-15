@@ -6,7 +6,9 @@ vendor manual or a named practitioner's published guidance), **common
 practice**, **opinion**. Every value is a starting point to check against meters
 and ears, never a preset to apply blind. The [audio guide](AUDIO%20GUIDE.md)
 explains how to choose treatment by microphone and defect; this file supplies
-the numbers. Compiled October 3, 2026.
+the numbers. The current brief and the audio guide take precedence. Do not add
+a processor merely because it appears below. Respect a no-processing request
+and preserve a clean source for derivatives. Compiled October 3, 2026.
 
 ## Part A: Sound
 
@@ -17,19 +19,25 @@ the numbers. Compiled October 3, 2026.
   Podcasts asks for -16 LUFS with a 1 dB tolerance and -1 dBTP (sourced). AES
   streaming guidance puts speech around -18 and music around -16 (sourced via a
   summary).
-- YouTube publishes no number. Measurement shows it turns louder uploads down
-  to about -14 LUFS and never raises quiet ones; "Stable Volume" may add dynamic
-  processing on top (sourced for behavior).
-- Recommendation for talking heads (opinion from the above): deliver -14 to
-  -16 LUFS integrated, true peak no higher than -1 dBTP, and nothing louder than
-  -14 because the extra limiting buys nothing. Pick one target and keep it across
+- YouTube playback normalization and optional [Stable Volume](https://support.google.com/youtube/answer/14106294)
+  can change the listening result. Do not rely on playback processing to fix
+  an uneven or quiet mix, or treat an observed playback level as a guaranteed
+  upload requirement.
+- Recommendation for talking heads (opinion from the above): -14 to -16 LUFS
+  integrated with true peak no higher than -1 dBTP is a useful web starting
+  range. Do not raise the level merely to compete with playback normalization.
+  Pick a target suited to
+  the destination and keep comparisons consistent across
   the channel. Measure the encoded export, not the timeline meter, because
   lossy encoding adds peak overshoot.
 
-### A2. The dialogue chain in order
+### A2. Choose only the treatment the recording needs
 
-Each stage changes what the next one sees, so the order matters (consensus of
-the sourced guides).
+These are possible treatments, not a mandatory chain. Their order can change
+the sound, so inspect the actual signal path and compare the result. If Auphonic
+or another final service is the chosen route, finish cuts and visuals first,
+then use that finish once on each delivered export. Do not automatically stack
+this full chain before it. Derivatives start from the pre-finish master.
 
 0. **Edit first, listen raw.** Note what is wrong before processing. Only treat
    what you heard.
@@ -37,67 +45,73 @@ the sourced guides).
    Raw dialogue peaks around -12 to -6 dBFS, body around -20 to -18 dBFS
    (common practice). A leveler first (Resolve Dialogue Leveler, Optimize
    Moderate Levels, Lift Soft Dialogue off on noisy sources) means the
-   compressor later only touches transients (sourced, Curtis Judd).
+   compressor later has less work to do; check whether compression is still
+   needed (practitioner guidance).
 2. **Repair.** De-clip if tops are squared; de-hum at 50 or 60 Hz with
    harmonics; mouth de-click at light sensitivity; de-plosive, or a dynamic cut
    of 3 to 5 dB near 150 Hz on the burst, or a clip-gain dip of 6 to 9 dB on the
    plosive alone (sourced).
 3. **Noise.** Steady hiss and room tone: spectral noise reduction in light
-   passes of 6 to 12 dB, never one heavy pass. Changing background (traffic,
-   HVAC): voice isolation, Resolve 70 to 80 for a noisy room, lower (35 to 50)
-   for a clean shotgun recording (sourced range plus opinion). Listen for watery
+   amounts, starting low and increasing only while the result improves. For
+   changing background noise, compare voice isolation with the original;
+   a clean shotgun recording may need none. Listen for watery
    or robotic voice, chirps in pauses, lost room tone that makes edits jump,
    dulled consonants. Some background noise beats artifacts.
-4. **High-pass.** 80 Hz for male voices, 100 Hz for female, 12 to 18 dB per
-   octave, before the compressor so rumble does not drive it (sourced). Above
-   120 Hz a male voice thins.
+4. **High-pass.** If low rumble is audible, try roughly 70 to 100 Hz at 12 to
+   18 dB per octave, then adjust for this voice and recording (starting values).
+   Stop before the voice loses useful body. Put it before dynamics when rumble
+   is driving the compressor; a clean recording may need no filter.
 5. **Subtractive EQ.** Sweep with a narrow boost to find the resonance, then
    cut with Q 1.5 to 3: mud 200 to 300 Hz (2 to 3 dB; thin voices may want a
    boost instead), boxiness 300 to 800 Hz (2 to 4 dB; chest lavs resonate near
    730 Hz), nasal honk 1 to 2 kHz (2 dB), harsh resonance 2 to 5 kHz (narrow
    only, since it is also presence). Do not static-cut sibilance; use a
    de-esser (sourced).
-6. **Presence and air.** 2 to 3 dB wide boost between 3 and 5 kHz for
-   intelligibility; a 1 to 2 dB high shelf from 10 to 12 kHz only on clean
-   recordings, since it raises hiss as much as voice (sourced for presence,
-   common practice for air). Boosts after compression, cuts before.
+6. **Presence and air.** If a voice remains dull, try a small wide boost around
+   3 to 5 kHz; an optional 1 to 2 dB shelf around 10 to 12 kHz also raises hiss.
+   Check harshness and sibilance. EQ before compression changes what triggers
+   it; EQ after compression changes the finished tone. Choose the placement
+   that solves the audible problem rather than applying a fixed boost rule.
 7. **De-esser.** Band 5 to 8 kHz, 7 kHz center (4 to 5 kHz for deep voices, 8
    to 10 kHz for bright ones), 3 to 6 dB of reduction only on esses, release 50
    to 100 ms; stop before the voice lisps (sourced controls, common practice
    values).
 8. **Compression.** Ratio 2.5:1 to 3:1 (Blackmagic's own dialogue guidance,
-   sourced; 6:1 and above flattens expression), threshold -18 to -22 dBFS just
-   under normal speech, attack 10 to 25 ms to keep consonants, release 100 to
-   200 ms, 2 to 6 dB of reduction on loud words, makeup gain equal to the
-   average reduction (sourced). More than 6 dB means leveling or clip gain was
-   skipped; split into two stages (2:1 slow, then 3:1 to 4:1 fast) instead.
-9. **Limiter.** True-peak limiter on the master, ceiling -1.0 dBTP, barely
-   lighting (sourced ceiling; opinion on behavior). Keep 1.5 dB of headroom if
-   the file goes through another encoder.
-10. **Normalize.** Measure integrated loudness over the whole program and set
-    the master to the target; re-check true peak after the gain change.
+   sourced), attack 10 to 25 ms and release 100 to 200 ms are possible starting
+   points. Set the threshold for the actual input. Compare intelligibility and
+   expression with and without treatment at matched loudness. More than 6 dB
+   of reduction is a reason to listen, not proof that clip gain was skipped.
+9. **Peak control.** After the mix and loudness gain are settled, measure true
+   peak. If peaks exceed the chosen delivery ceiling, use gain adjustment or
+   suitable limiting and compare the result. A -1.0 dBTP ceiling is a common
+   web starting point; the actual destination requirement takes precedence.
+   A file already within target needs no additional limiter simply to pass QC.
+10. **Final loudness.** Measure the whole mix, including music. If a gain change
+    is needed, re-check true peak afterwards and adjust peak control if needed.
+    Verify the encoded file; processing or encoding can change the peaks.
 11. **Room tone and breaths.** Fill gaps with room tone, not digital silence
-    (sourced). Reduce breaths 6 to 12 dB rather than muting; muting switches the
-    room off and on (sourced).
+    when the gap would otherwise sound abruptly gated. Retain natural breaths;
+    reduce only distracting ones and compare in the assembled sentence.
 12. **Music under speech.** 18 to 24 LU below dialogue while speaking (roughly
     -34 to -40 LUFS short-term on the music when speech sits at -14 to -16),
     rising to -22 to -26 LUFS short-term in gaps, intros and B-roll (opinion
     reasoned from the standards). Duck 6 to 12 dB with attack 30 to 80 ms and
     release 250 to 700 ms; Fairlight Ducker 3:1 to 5:1 with the dialogue track as
-    the trigger (sourced). Carve 2 to 4 dB from the music around 1 to 4 kHz where
-    consonants live (common practice).
-13. **Compare at matched loudness.** Louder always sounds better. Equalize with
-    makeup gain or short-term LUFS before judging (sourced).
+    the trigger (sourced). If the music still masks consonants, compare a 2 to
+    4 dB reduction around 1 to 4 kHz with a simple level change (common practice).
+13. **Compare at matched loudness.** A louder version can bias the comparison.
+    Match listening level with gain or a loudness meter, then judge clarity,
+    artifacts and expression. Louder is not automatically better.
 
 ### A3. Per-microphone starting points (mix of sourced and common practice)
 
-| Source | Expect | First moves |
+| Source | Possible issues to listen for | Conditional starting points |
 |---|---|---|
-| Shotgun indoors | boxiness 300 to 800 Hz, hollow early reflections | de-reverb before EQ if the tail is audible; high-pass 80 to 100 Hz; moderate de-ess; otherwise the least EQ |
-| Lav or wireless | exaggerated lows, lost highs under clothing, a resonance near 730 Hz, rustle | high-pass 100 Hz; 2 to 4 dB cut at 400 to 700 Hz; 2 to 6 dB high shelf above 6 kHz if muffled; repair rustle as clip edits |
-| Dynamic broadcast mic | low output, preamp hiss, strong proximity effect | high-pass 80 to 100 Hz; 2 to 3 dB cut at 200 to 300 Hz if boomy; presence 2 to 3 dB at 3 to 5 kHz if the mic's own bump does not cover it |
-| USB condenser | room, keyboard and desk, often bright | noise reduction or isolation first; high-pass 100 Hz; cut 300 to 600 Hz; de-ess harder; skip the air shelf |
-| Phone or camera built-in | wide pattern, heavy room, automatic gain already applied | voice isolation 70 to 80 or Enhance Speech; high-pass 120 Hz; de-reverb; a leveler rather than a compressor |
+| Shotgun indoors | boxiness, hollow early reflections | compare gentle de-reverb if the tail is distracting; filter rumble or de-ess only if audible |
+| Lav or wireless | proximity buildup, muffling under clothing, rustle | locate the actual resonance before EQ; repair rustle without removing speech; do not assume a fixed resonance frequency |
+| Dynamic broadcast mic | preamp hiss, strong proximity effect | try a small low-mid cut if boomy; add presence only if dull, not simply because of the mic type |
+| USB condenser | room, keyboard and desk noise, brightness | compare noise treatment where needed; retain useful demonstration clicks and avoid boosting already harsh highs |
+| Phone or camera built-in | room, automatic gain or processing already applied | compare a light repair with the original; avoid adding another leveler or compressor if it worsens existing gain changes |
 
 ### A4. Where the tools live
 
@@ -155,21 +169,32 @@ truncated first syllable and room tone, not silence, under the opening frames.
 
 ### B1. Order of operations (sourced: Juan Melara, Cullen Kelly, Jarle Leirpoll)
 
-1. Decide color management once: Resolve Color Management or explicit Color
-   Space Transform nodes (they produce identical images; never both, which
-   double-normalizes), Premiere's Lumetri Settings color management (Direct 709
-   default), Final Cut's camera LUT on import.
+1. Identify the source encoding, working space and intended output. For a
+   simple Resolve route, use Color Management with correct input tags, or use
+   explicit CST input/output nodes in an unmanaged project. Do not apply the
+   same normalization twice. A CST can also serve a deliberate conversion
+   inside a managed project; its presence alone does not prove a double
+   transform. Check Premiere's color-management settings or Final Cut's camera
+   interpretation before adding a technical LUT.
 2. Exposure on the waveform: black point, white point, then midtones.
 3. White balance against something neutral and the vectorscope skin line.
 4. Contrast with a pivot, then saturation.
 5. Match shots to the hero (Resolve stills and wipe, Premiere Comparison View
    and Color Match, Final Cut Match Color).
-6. Creative look or LUT on its own node or adjustment layer, late, because LUTs
-   clip destructively.
+6. Put the creative look or LUT on its own adjustable node or effect. Match its
+   expected input space and check for clipping or unwanted color shifts.
 7. Secondaries for skin, background, eyes and teeth.
-8. Output transform to Rec.709 and a limiter for legal levels.
+8. Confirm the output transform matches delivery. For SDR Rec.709, let the
+   chosen managed output or explicit output transform perform that conversion
+   once. Check levels; add a legalizer only if the destination requires it and
+   the signal needs correction.
 
 ### B2. Exposure and balance targets (sourced ranges, opinion placements)
+
+The figures below are comparison points for an SDR example, not values every
+face or scene must hit. Lighting intent, skin reflectance and the chosen view
+transform matter. Preserve the intended scene and confirm by looking as well
+as reading scopes; do not force every complexion onto one target.
 
 On a 0 to 100 waveform of a Rec.709 image: skin falls roughly between 45 and 70
 (light skin 65 to 75 in one guide), middle gray near 45, midtones 33 to 66,
@@ -180,10 +205,11 @@ not read flat; blacks at 2 to 5, not 0, so shadows keep detail on phones
 (opinion). In log before the transform, 18 percent gray sits near 34 to 41
 depending on the curve (sourced), so read scopes after the input transform.
 
-White balance: neutralize a gray or white so its trace sits at the vectorscope
-center, then confirm skin lies on or just clockwise of the skin-tone line (the
-I-line at 123 degrees, sourced). Skin off the line while gray is centered means
-colored lighting on the face: fix with a secondary, not the global balance.
+White balance: use a known neutral reference when one is available, then check
+skin and the rest of the scene. The vectorscope skin-tone line is a reference,
+not a rule that every face must sit exactly on it. If skin differs from a
+neutral reference, inspect lighting, makeup, source interpretation and the
+creative look before choosing a global or selective correction.
 
 Contrast: Resolve contrast 1.05 to 1.15 with the pivot near the face's mid
 level (default pivot 0.435; one colorist uses 0.391 for 18 percent gray in his
@@ -193,40 +219,47 @@ the vectorscope's red and yellow targets is oversaturated.
 
 ### B3. Node and panel order per editor
 
-- **Resolve:** camera input to DaVinci Wide Gamut Intermediate (CST in, or
-  RCM) > balance and exposure > contrast > saturation > parallel fine-tune
-  nodes (temperature, highlights, warper, curves) > power windows > look or
-  LUT (with a Rec.709-to-Cineon CST before a film-print LUT) > CST out to
-  Rec.709 (sourced, Darren Mostyn and Cullen Kelly). Save the empty labelled
-  tree as a PowerGrade. Group pre-clip nodes for per-camera input transforms.
+- **Resolve:** one example uses camera input to DaVinci Wide Gamut/Intermediate,
+  then balance, contrast, saturation and any needed secondaries or look, then
+  the delivery output. In RCM, verify the managed input/output transforms;
+  in a manual CST route, use explicit nodes for them. Do not add a second
+  output conversion because a generic node recipe lists one. A film-print LUT
+  needs its specified gamut/gamma at the input and a known output; do not
+  assume every such LUT expects the same Cineon conversion. Save a reusable
+  empty tree only after documenting its source, working and output spaces.
 - **Premiere (Lumetri, top to bottom):** Basic Correction (Input LUT for
   technical transforms, white balance, exposure, contrast, highlights, shadows,
   whites, blacks, saturation; Whites and Blacks apply before the other sliders
   despite their position) > Creative (Look for creative LUTs, vibrance,
   saturation, split tone) > Curves > Color Wheels and Match > HSL Secondary >
   Vignette (sourced). Separate Lumetri effects per job, renamed; shared look on
-  an adjustment layer; viewer gamma 2.2 for a web audience (sourced).
+  an adjustment layer. Choose viewer gamma for the actual monitoring setup
+  and delivery, then keep that setup consistent; 2.2 is not a universal web rule.
 - **Final Cut:** Apple states no required order (sourced). Practical: Balance
   Color or Color Adjustments (Enhance Light and Color as a start) > Color Wheels
   > Color Curves > Hue/Saturation Curves for secondaries > Custom LUT effect
   last; Auto Mask inside a corrector for skin (common practice).
 - **CapCut:** one adjustment layer across the timeline; Adjust > Basic for
-  temperature, tint, exposure, contrast, highlights, shadows; Curves for log
-  decompression; HSL for one color; LUT at reduced intensity; light vignette
+  temperature, tint, exposure, contrast, highlights, shadows; verify a supported
+  input transform for log rather than treating contrast curves as a defined
+  color-space conversion; HSL for one color; optional creative LUT or vignette
   (reported from the color course).
 
 ### B4. Sources that need different handling
 
-Log: always normalize first; it will look contrasty after the transform and
-that is correct (sourced). Rec.709 camera profiles and webcams: no input
-transform; use curves rather than big contrast moves. Phones: HDR HLG is
-auto-detected by Premiere and handled by RCM; Apple Log is log; reduce phone
-saturation 5 to 10 percent before matching to a camera (common practice).
-Screen recordings and UI captures: do not grade them; they are display-referred
-sRGB graphics, so exclude them from the look and tag them sRGB or Rec.709
-(common practice, and the pack's rule never to alter authentic screenshots).
-Mixed cameras: normalize each to the same working space, balance each to the
-same gray and skin targets, match to the hero, then one shared look (sourced).
+Log: identify the exact camera gamut/gamma and use the appropriate input
+interpretation or transform. Higher contrast after conversion does not by
+itself prove the transform is correct. Rec.709 sources do not need a log-to-709
+LUT, but still need correct tagging and any conversion into the chosen working
+space. Phones may record ordinary SDR, HLG, another HDR format or Apple Log;
+inspect the actual file and verify automatic detection before relying on it.
+Match saturation by comparison, not a mandatory percentage reduction.
+
+Keep screen recordings and authentic UI evidence out of creative looks that
+alter their meaning or appearance. Identify their actual encoding rather than
+assuming every screen capture is sRGB. For mixed sources, map each correctly
+into the working space, balance and match shots, then test a shared creative
+look only on the material it is intended to affect.
 
 ### B5. Skin, eyes, background, vignette (common practice, opinion amounts)
 
@@ -242,14 +275,16 @@ stays invisible. Vignette: a soft oval centered above the face darkening 5 to
 
 ### B6. LUT practice (sourced principles)
 
-Technical LUTs convert encodings and belong at the input; creative LUTs are
-looks and belong late. The node before a LUT must produce what the LUT expects
+Technical LUTs convert defined encodings; place them where that conversion is
+needed. Creative LUTs supply looks. The node before a LUT must produce what it expects
 (feed a LogC LUT LogC). Test on a gray ramp and a chart: the ramp must stay
-monotonic with no shelves at 0 or 100 and no steps (17-point LUTs band; use 33
-for looks, 65 only for sharp knees); skin on the chart should stay near the
-line. A LUT is wrong when inputs mismatch (log LUT on Rec.709 crushes and clips;
-709 LUT on log looks milky), when exposure was not fixed first, when gradients
-band or skin twists. A LUT cannot adapt to exposure or white balance between
+smooth unless the intended look deliberately changes it. A 33-point LUT is a
+useful starting size; grid size, interpolation, the transform and footage all
+affect accuracy. A 17-point LUT does not necessarily show banding, and a larger
+grid does not guarantee a good look. Check skin and gradients on representative
+footage and a different held-out clip. Wrong input/output assumptions can cause
+crushed contrast, clipping or hue shifts; identify the mismatch rather than
+diagnosing it from one appearance alone. A LUT cannot adapt to exposure or white balance between
 shots, hold masks or tracking, or do spatial work; never bake the input
 normalization into a creative LUT or it becomes camera-specific. An
 AI-generated .cube deserves the same ramp and chart test before use; prefer an
@@ -269,39 +304,37 @@ areas show noise.
 
 ### B8. Monitoring: why YouTube looks different
 
-Rec.709 mastering assumes a 2.4 gamma display in a dim room; laptops and phones
-are closer to 2.2 or sRGB, which lifts shadows; macOS QuickTime historically
-interprets Rec.709 at 1.96, so a grade judged in QuickTime looks washed out
-elsewhere (sourced). Premiere offers Lumetri viewer gamma 2.4, 2.2 and 1.96; the
-community advice is 2.2 for a YouTube audience. Resolve colorists split between
-output Gamma 2.2 and 2.4; either works if kept constant, and the Deliver page
-color and gamma tags should read Rec.709 (1-1-1) because YouTube assumes it
-(sourced plus snippet). Check by uploading unlisted and comparing the player to
-the viewer on the same display, then on a phone in daylight and in a dark room;
-keep a reference frame with a gray ramp and a skin patch in the first project.
+The editor viewer, export transform, file tags, player and display can each
+affect appearance. Record the chosen SDR/HDR output and monitoring setup. Tags
+should describe the actual encoded signal; do not relabel a file or change the
+grade merely to compensate for one player's appearance. Check the exact export
+in a color-managed player on the same display, then inspect the intended
+destination and another representative screen. An unlisted upload is an
+external action and needs authorization. A gray ramp and representative skin
+frame can help separate a pipeline mismatch from a creative grading choice.
 
 ### B9. Compact rules
 
 | Trigger | Action | Default | Not when | Label |
 |---|---|---|---|---|
 | Takes differ in level | clip gain before dynamics | peaks -12 to -6 dBFS | within 2 dB already | common practice |
-| Wide dynamics | leveler first, light compression after | Optimize Moderate Levels, Lift Soft off | camera AGC audio: leveler only | sourced |
+| Distracting level changes | compare clip gain or a leveler, then assess remaining dynamics | start gently and compare at matched loudness | existing camera processing or extra compression worsens the voice | conditional treatment |
 | Hum lines at 50 or 60 Hz | de-hum with harmonics | 3 to 5 harmonics | high-pass already removed it | sourced |
-| Changing background noise | voice isolation | 70 to 80 (noisy room), 35 to 50 (clean shotgun) | voice goes watery | sourced plus opinion |
-| All speech | high-pass before the compressor | 80 Hz male, 100 Hz female | deep voice loses body: 70 Hz | sourced |
+| Distracting changing background noise | compare gentle isolation with the original | start low; increase only while useful | clean source, lost articulation or watery voice | conditional starting point |
+| Audible low rumble | try a high-pass before dynamics | roughly 70 to 100 Hz; adjust by listening | no rumble or voice loses body | conditional starting point |
 | Boomy | cut 200 to 300 Hz | 2 to 3 dB, Q 1.5 | thin voice: boost instead | sourced |
 | Boxy | cut 300 to 800 Hz | 2 to 4 dB, Q 2 to 3 | de-reverb solved it | sourced |
 | Buried | presence | plus 2 to 3 dB at 3 to 5 kHz, wide | already harsh | sourced |
 | Piercing esses | de-esser | 5 to 8 kHz, 3 to 6 dB, release 50 to 100 ms | esses fine after reducing presence | common practice |
 | Uneven peaks | compressor | 2.5:1 to 3:1, attack 10 to 25 ms, release 100 to 200 ms, 2 to 6 dB | leveled within 3 dB already | sourced |
-| Any delivery | true-peak limiter | ceiling -1.0 dBTP | never skip | sourced |
-| YouTube delivery | normalize integrated | -14 to -16 LUFS | podcast-first: -16 to -18 | sourced |
-| Loud breaths | attenuate | 6 to 12 dB | breath at an edit: cut and fill room tone | sourced |
+| Delivery check | measure integrated loudness and true peak | use the destination target; -1.0 dBTP is a common web ceiling | measurement does not require another processing pass | measurement plus starting point |
+| Final mix outside the chosen target | adjust gain or suitable peak control, then remeasure the encode | -14 to -16 LUFS is one web speech starting range | already within target, no-processing brief or selected external finish | opinion |
+| Distracting breaths | compare gentle attenuation with the original | retain natural breathing and complete words | the breath carries expression or treatment harms the join | conditional treatment |
 | Music under speech | duck or ride | 18 to 24 LU under dialogue; duck 6 to 12 dB | speech-free passages: -22 to -26 LUFS short-term | opinion |
 | Mono mic | map mono, center | one channel | stereo music | common practice |
-| Log source | input transform first | CST or RCM, auto-detect, camera LUT | Rec.709 source | sourced |
-| Exposure | black and white points, then mid | face 45 to 70, mid gray about 45, blacks 2 to 5 | log scopes before transform | sourced plus opinion |
-| White balance | neutral to center, skin on the line | 123 degree line | skin off, gray centered: secondary | sourced |
+| Known source encoding | map source to the chosen working space | managed interpretation or explicit transform, with output defined | the same conversion is already applied | color-management requirement |
+| Exposure | inspect the scene, output transform and scopes before adjusting | SDR ranges above are examples, not targets for every face | intentional lighting, different skin tone or a different output | conditional judgment |
+| Suspected color cast | inspect known neutrals and source interpretation, then compare skin | vectorscope line is a reference | intentional colored light or no reliable neutral reference | conditional judgment |
 | Creative LUT | late node, ramp and chart test | 33 point | input mismatch, banding, skin twist | sourced |
-| Screen capture | no grade, exclude from look | tag sRGB or Rec.709 | never grade UI | common practice |
-| Export looks flat on YouTube | check tags and viewer gamma | Rec.709 1-1-1; viewer 2.2 or 2.4 kept constant | broadcast: 2.4 | sourced |
+| Screen capture | preserve authentic UI and exclude it from creative looks | identify actual encoding and map it correctly | do not guess sRGB or Rec.709 from the content alone | color-management check |
+| Export differs from the editor | compare output transform, actual tags, player and display | keep the chosen monitoring setup consistent | do not retag or regrade solely to match one player | pipeline check |

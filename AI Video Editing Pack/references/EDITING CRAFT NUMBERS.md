@@ -8,7 +8,10 @@ across working editors and tool vendors, no controlled study) or **opinion** (a
 default proposed because an agent needs a number). Opinion defaults are starting
 points to tune against the person's taste and their retention data. The
 [editing judgment guide](EDITING%20JUDGMENT.md) explains the reasoning; this
-file supplies the numbers. Compiled October 3, 2026.
+file supplies the numbers. The current brief, the actual recording and that
+judgment guide take precedence over these ranges. A duration, similarity score
+or detected sound identifies something to review; it does not authorize a cut.
+Compiled October 3, 2026.
 
 ## 1. Two frameworks behind every rule
 
@@ -23,35 +26,37 @@ file supplies the numbers. Compiled October 3, 2026.
   should rise toward a payoff and relax after it.
 - The viewer-job test (opinion): before each cut, name what the viewer is doing
   (following an argument, reading, watching a demonstration, laughing). Hold
-  until that job is done; cut the instant it is.
+  until that job is done; then judge whether a cut helps the next thought.
 
 ## 2. Takes and restarts
 
 Choosing between repeated attempts (common practice, ordered by weight):
 completeness, clarity (no stumble or mid-word fix), energy that matches the
-neighbors, grammatical and visual continuity with the surrounding sentences,
-eyes open and hands still at the in-point.
+neighbors, grammatical and visual continuity with the surrounding sentences.
+Check distracting blinks or gestures at a join without sacrificing useful speech
+merely to obtain an eyes-open or hands-still frame.
 
-The last take is the default winner because each attempt rehearses the next,
-but not when it is flat from fatigue, rushed (more than about 20 percent faster
-than its neighbors, opinion), drifted off the point, or fixed one word inside a
-long sentence (then splice only the corrected clause if mic distance and pitch
-match).
+Compare the complete takes rather than choosing the last automatically. A later
+attempt may improve the wording or become flat, rushed or off-topic. A change
+of roughly 20 percent in speaking pace is a review cue, not a rejection rule
+(opinion). For a corrected clause, check meaning, pitch and mic distance before
+splicing it into the earlier sentence.
 
 False start versus deliberate repeat (common practice, opinion thresholds): a
 false start is short (1 to 6 words), stops without sentence-final intonation,
 and the retry begins within about 0.3 to 2.0 s sharing its first two or three
-words. If the repeated span is at least 70 percent identical, the first copy is
-shorter, and the gap is under 2 s, keep the later copy. Two complete sentences
-with falling pitch where the second adds no words is probably emphasis; keep
-both only when the beat earns it.
+words. A 70 percent match within 2 s can flag a possible retake; listen to both
+versions before choosing. Repetition can add emphasis, explain a difficult idea
+or support a demonstration even when the wording is identical.
 
-Spoken restart markers ("cut cut", "again", "take two", a clap under 20 ms):
-walk back to the start of the attempted sentence or the last pause over 0.6 s,
-forward past the breath or filler to the retake's first word, remove the whole
-span, then confirm the retake's opening words match what was removed. If they do
-not, the marker may have ended a section; flag it instead of deleting silently.
-Log every removed span with its transcript text.
+Use restart markers only when the creator has explicitly identified them for
+this recording. Words such as "again" or a clap can be meaningful content or a
+sync cue. For an agreed marker, locate the actual failed attempt and corrected
+take by listening; a pause length alone does not identify the boundary. Remove
+only the confirmed failed material within the brief. A full restart can replace
+more than one sentence only when that intent is clear. If the marker or retake
+is ambiguous, retain it and ask a focused question. Log removed source ranges
+and review the rebuilt join with complete words on both sides.
 
 ## 3. Pauses, breaths and word edges
 
@@ -69,18 +74,19 @@ calibrated to the sourced numbers):
 | Between sentences in one thought | 0.20 to 0.40 s | the pause sets up a reveal or number |
 | Between thoughts or sections | 0.40 to 0.70 s | an emotional moment is visible on the face |
 | Before a reveal, answer or punchline | 0.50 to 1.00 s (keep it) | the pause holds a throat clear or click: clean, do not shorten |
-| After a joke or strong line | 0.60 to 1.20 s | shorts |
+| After a joke or strong line | 0.60 to 1.20 s | the delivery needs a different hold; shorts may also need this pause |
 | Mid-sentence hesitation with no content | remove, leave 0.10 to 0.20 s | the join would land inside a breath or a fricative |
 | Viewer must read or watch the screen | hold for the reading time; silence is fine | never shorten below the reading time |
 
-Below about 0.15 s between sentences the join reads as a stutter; a silent
-stretch over about 0.8 s with no picture change reads as dead air (common
-practice). If the new pace makes you tense while listening, you overcut.
+Very short sentence gaps can sound rushed. A longer silent stretch may be dead
+air or essential reading, reaction or demonstration time. Listen in context;
+do not fail either solely because it crosses a duration threshold.
 
-Breaths: keep the breath before a long sentence or a new idea. Dip rather than
-delete, 4 to 8 dB (opinion), or use a tool that only reduces breaths above a
-ceiling. Delete a breath when it is a sharp gasp near the mic or when two breaths
-land within one second after tightening. Never leave half a breath; include it
+Breaths: keep natural breathing, especially before a long sentence or a new idea.
+If a breath distracts, compare a 4 to 8 dB dip (opinion) with the original, or use
+a tool that reduces only the distracting breaths. Review a sharp gasp or doubled
+breath after tightening; reduce or remove it only if the sentence still sounds
+natural and its meaning is preserved. Never leave half a breath; include it
 whole or remove it whole (sourced).
 
 Word edges (sourced acoustics, opinion defaults): stop consonants (p, t, k)
@@ -88,8 +94,9 @@ release in under 60 ms; word-final s and sh run 100 to 150 ms. Protect the tail
 with 80 to 150 ms after the detected end of speech, default 120 ms, 80 ms when
 the word ends on a vowel or nasal. Protect the head with 50 to 100 ms before the
 first word. Automatic speech recognition timestamps are commonly 20 to 80 ms
-late at onsets and early at offsets, so never cut on the raw timestamp. Fade 2
-to 10 ms at every audio join to prevent clicks (common practice). Set a silence
+late at onsets and early at offsets, so never cut on the raw timestamp. If a join
+clicks, try a 2 to 10 ms fade and verify that it preserves articulation; a clean
+join needs no extra fade (common practice). Set a silence
 threshold 10 to 14 dB above the measured room tone and a minimum trip of 250 to
 400 ms, then review (opinion).
 
@@ -107,13 +114,13 @@ threshold 10 to 14 dB above the measured room tone and a minimum trip of 250 to
 | Chair creak | 50 to 400 ms | irregular tonal bursts, not harmonic to the voice | cut in pauses; attenuate under speech | opinion |
 | Keyboard or mouse click | 5 to 30 ms, trains at 100 to 300 ms | broadband 1 to 8 kHz, rhythmic | keep when typing is on screen; attenuate 6 to 12 dB over speech; cut in pauses | opinion |
 | Plosive | 20 to 60 ms | thump under 150 Hz | high-pass or de-plosive; never cut, it is the word | common practice |
-| Clap or slate | under 20 ms | one very loud broadband spike | treat as a restart marker | common practice |
+| Clap or slate | often a short transient | one loud broadband spike | retain unless confirmed as an agreed restart marker or expendable sync cue | context required |
 
-Decision logic (opinion): anything inside a word boundary is speech unless it
-is a transient under 20 ms or a thump under 150 Hz, which are repaired, not cut.
-A non-speech event in a pause that lasts 300 ms or more, weighted under 800 Hz,
-with no speech within 1 s is most likely a throat clear or exhale: cut it. A
-tiny retained clip that contains only a click is a failed cut, not a kept beat.
+Use these signatures to find possible problems, then listen. A short transient
+can be part of a consonant; duration and frequency alone cannot identify an
+unwanted event. Repair an actual click or plosive without removing speech.
+Retain expressive breaths, meaningful sounds and sync cues unless their removal
+is within the brief. Review isolated tiny clips for accidental remnants.
 
 ## 5. Pacing
 
@@ -131,8 +138,9 @@ match the title and thumbnail. Everything else is practitioner practice:
 - A real re-engagement (demo, result, story, surprising number) about every 2
   to 3 minutes of a 10 to 15 minute tutorial (opinion, scaled from the leaked
   MrBeast memo's 3 and 6 minute marks; memo origin unconfirmed).
-- No fast passage longer than 60 to 90 s without a change of rhythm (opinion).
-- Working ranges (opinion): educational talking head 12 to 30 cuts per minute,
+- A sustained fast passage is a reason to check comprehension and fatigue,
+  not an instruction to add a pause or effect on a timer (opinion).
+- Illustrative ranges, not targets (opinion): educational talking head 12 to 30 cuts per minute,
   average shot 2 to 5 s; tutorial with screen recording 6 to 15 cuts per minute,
   shots 4 to 10 s; shorts 20 to 40 cuts per minute, shots 1.5 to 3 s.
 
@@ -149,10 +157,11 @@ or lag of 6 to 24 frames at 24 to 30 fps (opinion).
 
 ## 6. Punch-ins and zooms
 
-A UHD frame delivered at 1080p has twice the pixels in each axis, so any scale up
-to 200 percent is still downsampling (sourced arithmetic). Lens softness, noise
-and compression show before the math does, so the practical ceiling is 160 to
-170 percent (common practice).
+A UHD frame has twice as many pixels per axis as 1080p. When 100 percent means
+the full UHD frame fitted to 1080p, a 200 percent crop reaches roughly one source
+pixel per output pixel. Editors expose different scale values depending on how
+the clip was fitted, so inspect that setting first. Lens softness, focus, noise
+and compression can limit useful enlargement before pixel count does.
 
 | Move | 4K source in a 1080p timeline | Notes |
 |---|---|---|
@@ -173,21 +182,23 @@ in-out; pull back 0.4 to 1.0 s. Keep the eyes on the upper third line within
 about 5 percent of frame height across all scales, anchor the transform between
 the eyes, leave 5 to 10 percent headroom in a medium shot and never crop the
 chin or eyes (sourced rule of thirds, common practice headroom). More than one
-punch-in per 8 to 10 s in long form is a tic (opinion), and never punch while
-the viewer is reading on-screen text.
+punch-in per 8 to 10 s can feel repetitive (opinion). Do not move text the
+viewer is still trying to read. The brief and the purpose of the shot decide
+whether any punch-in is useful.
 
 ## 7. Text, captions and subtitles
 
-Broadcast and streaming floors (sourced, Netflix and BBC guides): no faster
+Examples from broadcast and streaming guides (Netflix and BBC; use the actual
+destination's specification rather than combining these into one universal rule): no faster
 than 20 characters per second sustained (17 for children), 160 to 180 words per
 minute, minimum about 0.8 s per phrase (20 frames at 24 fps), maximum 7 s, 42
 characters per line, 2 lines, a 2 frame gap between consecutive subtitles,
 in-time within 1 to 2 frames of the audio, snap to a shot change when speech
 starts within 0.5 s of it.
 
-YouTube and shorts break these on purpose (word-by-word, centered, larger) but
-the floors still apply: never faster than the speaker, never shorter than about
-150 ms per word on screen (opinion).
+For social captions, choose a readable phrase or highlighted-word style that
+fits the speech. If a word is too brief to read, group it into a phrase instead
+of forcing a rapid word-by-word display. Check timing against the final edit.
 
 Size and weight (vendor measurements, common practice): shorts captions at
 1080x1920, 60 to 75 px cap height (3.1 to 3.9 percent of frame height),
@@ -198,9 +209,11 @@ shimmer under compression. Heavy geometric sans faces: Montserrat Bold or
 ExtraBold, Inter Bold, Instrument Sans ExtraBold or Black; thumbnail-style words
 at weight 800 or heavier.
 
-Safe areas (vendor measurements; platform UI changes, re-measure in the app):
-shorts at 1080x1920 keep essentials out of the top 288 px, the bottom 288 px and
-the right 140 px, roughly a 984x1500 band; captions above 300 px from the bottom.
+Safe areas depend on the destination's current interface. For an arithmetic
+example, a 1080x1920 frame with top and bottom margins of 288 px, a right margin
+of 140 px and a left margin of 0 px leaves 940x1344 px. These are not universal
+platform requirements. Inspect the intended upload preview and adjust all four
+margins so captions, faces and demonstrations stay clear of interface overlays.
 Long-form 16:9: inside a 90 percent title-safe box, the bottom 10 percent clear
 for the progress bar, the lower-right corner clear in the last 20 s for end
 screens (YouTube requires end screens in the last 5 to 20 s of a video at least
@@ -244,12 +257,14 @@ needing more than two lines or a diagram.
 ## 9. Speed without losing quality
 
 Decide the story before cutting: mark the hook, the promise, each section's
-payoff and the ending from the transcript. Then pass 1 removes retakes, markers,
-long silences and off-topic spans; pass 2 tightens gaps and adds punch-ins and
-B-roll; pass 3 adds text and graphics; pass 4 is QC (common practice; several
+payoff and the ending from the transcript. Then pass 1 removes confirmed failed
+takes and unwanted material within the brief; pass 2 refines actual joins and
+uses punch-ins or B-roll where helpful; pass 3 adds requested or useful text and
+graphics; pass 4 is QC (common practice; several
 professional editors describe this order). Keyboard only: JKL transport, split
-at the playhead, trim start and end to the playhead, ripple delete everything
-so no black frames appear. Review at 1.5 to 2x for structure and repetition,
+at the playhead, trim start and end to the playhead. Use ripple deletion only
+when later timing should move; preserve intentionally timed gaps and overlays.
+Review at 1.5 to 2x for structure and repetition if useful,
 then at 1x with headphones for every join, because fast playback hides clicks,
 clipped consonants and flash frames. Batch like work: all captions in one pass,
 all punch-ins in one pass. Templates and presets for captions, titles, the two
@@ -260,25 +275,27 @@ trigger lowers quality (sourced from working editors' interviews).
 ## 10. Quality control before delivery
 
 Structure: the first 5 s state or show the promise and the first 30 s match the
-title and thumbnail; every section pays off; no idea survives twice; the ending
-lands on the payoff without a wind-down.
+title and thumbnail; every section pays off; repeated ideas earn their place
+through explanation, emphasis or demonstration. The ending serves the brief.
 
 Joins and words: every audio join played at 1x with headphones, no click, no
 clipped consonant, no half or doubled breath; the output transcript reads as
-complete sentences; gaps inside the section 3 ranges; no silence over 1.0 s
-without a visual change; eyes open at every in-point.
+complete thoughts; pauses support the meaning and allow reading or watching.
+Check distracting visual discontinuities without cutting useful speech to meet
+a gap, blink or gesture rule.
 
 Picture: no flash frames or black gap frames (scrub every cut frame by frame or
 run a black-frame detector); punch-in scales only at the chosen fixed values
-with a stable eye line; no upsampled frames; B-roll arrives within 0.5 s of its
-word and leaves with the sentence; nothing essential in the bottom 10 percent,
-the lower-right corner in the last 20 s, or outside the shorts safe band.
+with a stable eye line where appropriate; enlarged footage remains acceptably
+sharp at delivery size. B-roll supports the relevant idea and holds long enough
+to understand. Check essential content against the actual destination overlays.
 
 Audio: sync checked at start, middle and end against a hard consonant; dialogue
 consistent within about 3 LU; integrated loudness and true peak at the delivery
 target (see [SOUND AND COLOR NUMBERS](SOUND%20AND%20COLOR%20NUMBERS.md)); no
-pops, hums, clicks or throat clears in kept pauses; music ducked so the voice
-leads; if an external audio finish is used, it runs once on the final export and
+unwanted pops, hums or clicks; meaningful source sounds and expressive pauses
+remain intact. Music stays below speech when intelligibility requires it.
+If an external audio finish is used, it runs once on the final export and
 derivatives come from the untreated master.
 
 Text: every caption word matches the spoken word; timing within 1 to 2 frames
@@ -296,37 +313,37 @@ never a logo or greeting. One well-documented practitioner structure (sourced,
 Jenny Hoyos): hook, a two-line foreshadow within 3 s, "but" and "therefore"
 transitions rather than "and then", a payoff last line written before filming,
 most popular videos around 34 s, a retention floor near 90 percent. Tutorials
-run 25 to 40 s by default; YouTube caps Shorts at 3 minutes and 1080p (sourced).
-Shorten pauses to 0.15 to 0.30 s between sentences, remove breaths that are not
-needed for a long phrase, change the visual at least every 2 to 4 s (vendor
-practice). Captions word-by-word or 1 to 3 words, 60 to 75 px, weight 700 or
-heavier, centered, above 300 px from the bottom. Face in the upper middle with
-eyes near the upper third line inside the safe band. End on a line or image that
-connects to the first frame so the replay feels continuous; no goodbye.
+may need a different length to preserve a complete useful idea. Check the
+destination's current duration and format requirements before export.
+For a fast style, try sentence gaps around 0.15 to 0.30 s, then listen; preserve
+useful breaths, emphasis and demonstration holds. Add a visual change only when
+it helps. Captions may be phrases or highlighted words; test their size, timing
+and placement on a phone. A continuous loop is optional. Use the ending and
+framing that serve this clip rather than forcing every short into one formula.
 
 ## 12. The rules in one table
 
 | Trigger | Action | Default | Not when | Label |
 |---|---|---|---|---|
-| Repeated span, 70 percent match, within 2 s | keep the later take | 70 percent, 2.0 s | both complete with falling pitch and no new words | opinion |
-| Later take 20 percent faster or flat | prefer the earlier complete take | 20 percent | earlier take stumbles | common practice |
-| Restart marker | remove from the failed sentence start through the marker and filler | clap under 20 ms | retake's first words do not match: flag | common practice |
-| Sentence gap in one thought | shorten | 0.20 to 0.40 s | reveal, number, punchline follows | opinion |
-| Gap between thoughts | shorten | 0.40 to 0.70 s | emotional moment on face | opinion |
+| Repeated span, 70 percent match, within 2 s | compare complete takes in context | candidate review only | intentional repetition, emphasis or demonstration | opinion |
+| Later take 20 percent faster or flat | compare clarity, expression and completeness | candidate review only | faster delivery serves the meaning | opinion |
+| Explicitly agreed restart marker | identify failed material and corrected take, then review the rebuilt join | no automatic marker deletion | ambiguous intent, meaningful clap or sync cue | context required |
+| Unused sentence gap in one thought | try shortening, then listen in context | 0.20 to 0.40 s | reveal, number, punchline or reading hold | opinion |
+| Unused gap between thoughts | try shortening, then listen in context | 0.40 to 0.70 s | emotion, emphasis or demonstration needs the hold | opinion |
 | Gap before a reveal | keep | 0.50 to 1.00 s | contains a click or throat clear | common practice |
-| Any cut point | protect word edges | head 50 to 100 ms, tail 80 to 150 ms (120 default) | never skip | sourced acoustics |
-| Any audio join | fade both sides | 2 to 10 ms | never skip | common practice |
-| Breath in a kept pause | dip, do not delete | 4 to 8 dB | sharp gasp near the mic: delete whole | sourced plus opinion |
-| Non-speech event 300 ms or longer, under 800 Hz, weak onset | cut with the pause | throat clear 0.44 to 0.48 s | part of a laugh that is content | sourced |
-| Transient under 20 ms inside speech | de-click, do not cut | one or two light passes | it is a plosive: de-plosive instead | sourced |
-| New idea | visual change | at a meaningful idea or visual change; no fixed interval | viewer is reading | opinion |
+| Any cut point | protect the actual audible word | head 50 to 100 ms, tail 80 to 150 ms as initial handles | source playback requires different handles or pause | acoustics plus opinion |
+| Audible click at an audio join | try a short fade and listen again | 2 to 10 ms | already clean, or fade harms articulation | common practice |
+| Distracting breath in a kept pause | compare a gentle dip with the original | 4 to 8 dB starting point | natural or expressive breath; treatment makes the join unnatural | opinion |
+| Possible unwanted sound in a pause | listen and identify before treating | duration/frequency are review cues | meaningful sound, expressive breath or uncertain classification | context required |
+| Confirmed unwanted click inside speech | compare light repair, preserve the word | duration is only a detection cue | meaningful sound, plosive or lost articulation | conditional repair |
+| New idea | consider whether a visual helps | no fixed interval or effect quota | current shot already explains it, or viewer is reading | opinion |
 | First 30 s | establish and progress the opening promise | meaningful progression, no fixed visual cadence | a clear demonstration needs uninterrupted viewing | sourced metric plus opinion |
-| Jump cut with a head jump or mid-thought removal | hide with punch, B-roll or text | punch 110 to 130 percent of base | already one punch per 8 to 10 s | common practice |
+| Distracting jump cut | compare a better cut with a useful punch, B-roll or text | punch 110 to 130 percent of fitted base is one option | added visual obscures the demonstration or draws more attention | common practice |
 | Animated zoom | ease out, land on the word | snap 2 to 4 frames; push 6 to 12 frames; slow 0.5 to 1.5 s | viewer is reading | common practice |
-| Full-sentence captions | obey floors | 20 cps, 160 to 180 wpm, 0.8 s minimum, 7 s maximum, 42 chars, 2 lines | word-by-word shorts captions | sourced |
-| Shorts captions | word-by-word, heavy sans, centered | 60 to 75 px, weight 700 plus, above 300 px from bottom | dense analytical content | vendor practice |
+| Full-sentence captions | meet the destination's caption rules and check readability | timing and line limits above are example guides | a different delivery specification applies | destination-dependent |
+| Shorts captions | choose readable phrases or highlighted words | preview size, timing and placement on a phone | text covers the demonstration or competes with required reading | conditional judgment |
 | Graphic named by a word | time the entrance to the word | visible within 100 to 200 ms after onset | the graphic is a deliberate reveal | opinion |
-| Review | two speeds | 1.5 to 2x for structure, 1x with headphones for joins | never skip the 1x pass | common practice |
+| Review | watch the full result at normal speed | optional faster structure pass, then 1x with headphones for joins | faster playback cannot replace normal-speed review | common practice |
 | Export | watch the file | first and last 10 s frame by frame | never skip | common practice |
 
 Sourced items above: Murch's Rule of Six; Pearlman's rhythm; YouTube's Intro

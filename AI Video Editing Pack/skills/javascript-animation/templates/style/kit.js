@@ -1,5 +1,6 @@
 // =====================================================================
-//  styles/<name>/kit.js — a blank style to start a new look from (new-style.md), when no shipped kit is close.
+//  styles/<name>/kit.js — a blank style for a new look when no shipped kit is close.
+//  Read GUIDE.md, "Reference matching and custom styles", at the skill root.
 //  Built on kit/core.js (RNG, EZ, geometry, wobble, trace, cameras, TT / ev / popS / DEFER / E0 / SPARK_AT).
 //  Replace the look of every function below; keep the names the piece calls and the STYLE contract at the end.
 //  Never redeclare a core name (styles/README.md -> Names a kit must not reuse): prefix your own helpers (`nx...`).
