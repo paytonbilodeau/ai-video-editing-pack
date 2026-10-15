@@ -22,7 +22,9 @@ A sketchy ink line that boils on 2s, crosshatch and coloured-pencil shading clip
 - Beat-cut pieces: 120 BPM at 24fps, cuts on 8ths, 16ths in the rush; iris in/out (`irisHole`) into the dark world.
 - Dark close-ups on 9:16 need ~1.2× zoom to fill the phone-safe area.
 
-## Frame checklist (on top of grammar/FRAME.md)
+## Frame checklist
+
+Use this list alongside the packaged [reference comparison guide](../../GUIDE.md#reference-matching-and-custom-styles). Review meaning, legibility, framing and the full motion, not just whether a render succeeds.
 
 1. **Every filled shape has a texture** (hatch, cross, pencil or stipple) shaped by light — no flat fills except paper.
 2. **The line boils** — never a perfectly still stroke in a held frame.

@@ -1,5 +1,7 @@
 # AI Video Editing Pack
 
+**[8-step visual walkthrough](Kit%20Email%20Workflow/visual-guide/README.md)**
+
 [![Repository quality](https://github.com/paytonbilodeau/ai-video-editing-pack/actions/workflows/quality.yml/badge.svg)](https://github.com/paytonbilodeau/ai-video-editing-pack/actions/workflows/quality.yml)
 
 Edit videos faster and better with AI. Free skills, project templates and practical guides for cuts, pacing, audio, color, motion graphics and repurposing.
@@ -15,11 +17,13 @@ optional runtimes are installed separately; setup checks and helps prepare them.
 
 ## How it works
 
-1. Give your local AI assistant the pack and setup message in START HERE. It checks your existing editor and tools, asks whether you prefer careful, balanced or hands-off setup, then handles the work you authorize. Existing skills and projects are preserved.
-2. The assistant creates or reuses a private editing profile and saves where to find it. It explains the available editing route and any remaining setup step. No footage is needed yet.
+1. Open a local AI task in your editing folder, supply the extracted pack's exact location, and use the setup message in START HERE. It checks your existing editor and tools, asks whether you prefer careful, balanced or “handle it for me” setup, then handles the work you authorize. Existing skills and projects are preserved.
+2. The assistant lists files it can read, creates or reuses your private editing profile, and shows where it is saved. It separates editor actions it has tested from steps that still need you. No footage is needed yet.
 3. Whenever you're ready, give it a recording and describe the result you want. It completes the requested edit and returns the export, editable project and a short report. Ask for previews along the way if you prefer.
 
 The pack has guides for DaVinci Resolve, Final Cut Pro, Premiere Pro and CapCut. Each editor's playbook explains its connections, controls and limits. The assistant checks which route works on your installed version. Where direct control is unavailable, the included tool can turn planned cuts into timeline files or a readable cut sheet. Support differs by editor. The CapCut guide separates its official hosted connection from optional local draft tooling, including the limits and checks for each.
+
+For one complete edit, use the [8-step visual walkthrough](Kit%20Email%20Workflow/visual-guide/README.md). Extra motion tools, creative LUTs and repurposed shorts can wait until you need them.
 
 ## What's included
 

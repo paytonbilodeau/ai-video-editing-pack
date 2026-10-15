@@ -22,7 +22,9 @@ Torn-edge paper shapes with soft drop shadows, paper grain and crayon in the fil
 - The spark idles on its own: bob, blink, ray sway.
 - Chronologies join worlds with shape morphs (the sun becomes an eye); character pieces cut hard on the beat.
 
-## Frame checklist (on top of grammar/FRAME.md)
+## Frame checklist
+
+Use this list alongside the packaged [reference comparison guide](../../GUIDE.md#reference-matching-and-custom-styles). Review meaning, legibility, framing and the full motion, not just whether a render succeeds.
 
 1. **A character with a face, acting** — the spark, a person, an animal, a mug with eyes. Things happen to it and it reacts (wow, sad, delighted, focused).
 2. **A full-bleed world:** wallpaper, sky, a table, gingham, a starry night or a flat colour card for the beat's mood. Never an object floating on blank paper, unless blank is the stage.

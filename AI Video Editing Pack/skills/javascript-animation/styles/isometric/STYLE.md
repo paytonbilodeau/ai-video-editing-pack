@@ -29,7 +29,7 @@ Palette as `compare.mjs` buckets (crop of the terminal figure vs our t=2.35s): r
 - `inner` `#e0e0e4` — receding and inner lines: rounded-corner creases, bezels, vents, trackpad, steam, contact rings.
 - `accent` `#232327` — the focus: the cursor, the active blade's LED. One per frame. The hero's two eyes use it too.
 - `text` `#5c5c64`, `textD` `#9a9aa2` — captions, labels, typed mono.
-- **Dark variant** (`const ISO_DARK = true;` before the kit, see `demo-dark/`): ground and faces `#101014`, edge `#8e8e9a`, inner `#34343c`, accent `#f4f4f6` (the focus becomes the brightest thing), text `#b4b4be`.
+- **Dark palette** (`const ISO_DARK = true;` before the kit): ground and faces `#101014`, edge `#8e8e9a`, inner `#34343c`, accent `#f4f4f6` (the focus becomes the brightest thing), text `#b4b4be`. The upstream dark demo is not bundled; test this palette in a private copy of the included demo.
 
 ## Line and geometry
 
@@ -47,7 +47,9 @@ Palette as `compare.mjs` buckets (crop of the terminal figure vs our t=2.35s): r
 - Camera: still, or a slow push of a few percent (z ≤ 1.05). No shake, no zoom bumps.
 - Morphs: the renderer's shape morph works on 2D outlines; give it a face outline (`facePts`) on both sides so the morphing shape lies in the same plane in both eras.
 
-## Frame checklist (on top of the skill's grammar/FRAME.md)
+## Frame checklist
+
+Use this list alongside the packaged [reference comparison guide](../../GUIDE.md#reference-matching-and-custom-styles). Review meaning, legibility, framing and the full motion, not just whether a render succeeds.
 
 1. **Every edge sits on an iso axis** (slope ±0.5 or vertical), except a part that is visibly rotating.
 2. **Hairlines are constant** at any zoom and the same weight everywhere (2.0px at 1080); only the colour changes (edge vs inner).
@@ -92,4 +94,4 @@ Palette as `compare.mjs` buckets (crop of the terminal figure vs our t=2.35s): r
 
 ## Proven on
 
-`demo/` (6s, 9:16, 120 BPM, 24fps): a laptop on a stacked plinth drops in, opens on a spring, its keys rise in a wave and a prompt is typed; the dark cursor block morphs at 3.0s into the front of a server blade, which slides out of a rack with the cube-bot riding it. Tile deterministic; `demo-dark/` renders the same piece on the dark ground.
+The included `demo/` (6s, 9:16, 120 BPM, 24fps): a laptop on a stacked plinth drops in, opens on a spring, its keys rise in a wave and a prompt is typed; the dark cursor block morphs at 3.0s into the front of a server blade, which slides out of a rack with the cube-bot riding it. Test repeatable seeking with the packaged tools. The separate upstream dark demo is omitted, as recorded in [THIRD-PARTY](../../THIRD-PARTY.md).

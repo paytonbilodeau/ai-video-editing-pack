@@ -125,6 +125,9 @@ class PackTests(unittest.TestCase):
                 "10 Content Waterfall System/tools/content_waterfall.py",
                 "14 AI Video Editing System/guides/RESOLVE AND MCP.md",
                 "Kit Email Workflow/lessons/22.md",
+                "Kit Email Workflow/visual-guide/README.md",
+                "Kit Email Workflow/visual-guide/08.md",
+                "Kit Email Workflow/visual-guide/assets/09-permissions.png",
             ):
                 self.assertTrue((bundle / relative).is_file(), relative)
             for excluded in ("Kit Email Workflow/settings.example.json", ".git", ".github", "manifest.json"):
@@ -137,6 +140,26 @@ class PackTests(unittest.TestCase):
             self.assertIn("Core skill:", completed.stdout)
             installed = base / "private/skills/Vibe Editors/AI Video Editing Pack"
             self.assertEqual(build_pack.validate(installed), [])
+
+    def test_visual_guide_requires_its_entry_point(self):
+        with tempfile.TemporaryDirectory() as directory:
+            core = copy_bundle(Path(directory) / "bundle")
+            file = core / "bundle-manifest.json"
+            data = json.loads(file.read_text())
+            data["files"].remove("Kit Email Workflow/visual-guide/README.md")
+            file.write_text(json.dumps(data))
+            self.assertTrue(any("omits a required entry point" in p for p in build_pack.validate(core)))
+
+    def test_visual_guide_missing_image_and_unlisted_file_are_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            core = copy_bundle(Path(directory) / "bundle")
+            guide = core.parent / "Kit Email Workflow/visual-guide"
+            (guide / "assets/09-permissions.png").unlink()
+            (guide / "private-notes.txt").write_text("private fixture")
+            problems = build_pack.validate(core)
+            self.assertIn("missing pack file: Kit Email Workflow/visual-guide/assets/09-permissions.png", problems)
+            self.assertIn("undeclared pack file: Kit Email Workflow/visual-guide/private-notes.txt", problems)
+            self.assertTrue(any("broken or escaping link" in p for p in problems))
 
     def test_missing_supporting_tool_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:

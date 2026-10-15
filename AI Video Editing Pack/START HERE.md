@@ -1,12 +1,16 @@
 # Start Here: AI Video Editing Pack
 
-Give the extracted **Vibe Editors** folder to a local AI assistant such as
-Codex or Claude Code, then paste this message. No footage is needed for setup.
+**[8-step visual walkthrough](../Kit%20Email%20Workflow/visual-guide/README.md)**
+
+In Codex, start a **Local** task in a dedicated editing folder. Select the
+extracted **Vibe Editors** folder or give its exact location, then ask the AI
+to list a few files it can read. Use the [AI app setup guide](references/AI%20APP%20SETUP.md)
+for the Claude Code route. Paste the message below. No footage is needed yet.
 The full download includes the editing skills, pre-edit and waterfall tools,
 motion resources and 22 lessons. You can start immediately.
 
 ```text
-Set up this Vibe Editors folder so you can be my video editor. Read its START HERE guide and follow the setup skill. Ask how hands-on I want to be: careful, balanced, or handle it for me. Reuse my existing tools, permissions, skills and preferences. Keep my originals and projects safe, and keep my private editing profile outside the pack. Explain any new access, upload, installation or cost before using it unless already authorized. Offer useful optional tools, then set up what fits. Verify what works and tell me the simplest next step. No footage is needed for setup.
+Set up this Vibe Editors folder so you can be my video editor. Read its START HERE guide and follow the setup skill. Ask how hands-on I want to be: careful, balanced, or handle it for me. Reuse my existing tools, permissions, skills and preferences. Keep my originals and projects safe, and keep my private editing profile outside the pack. Explain any new access, upload, installation or cost before using it unless already authorized. Offer useful optional tools, then set up what fits. List a few files you can read in this pack, show where my private editing profile is saved, and separate editor actions you tested from actions that still need me. Tell me the simplest next step. No footage is needed for setup.
 ```
 
 The AI should inspect first, recommend a setup, explain meaningful choices,
@@ -20,7 +24,9 @@ future updates preserve your work.
 
 When ready, hand over a recording and describe the result. Ask for a complete
 edit, one specific improvement or a preview. The AI checks the actual route
-and tells you which steps it can perform and which need your action.
+and tells you which steps it can perform and which need your action. Use the
+[8-step visual walkthrough](../Kit%20Email%20Workflow/visual-guide/README.md)
+when you want to know what to do next and what can wait.
 
 If you installed only the native plugin, use the
 [complete ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip)

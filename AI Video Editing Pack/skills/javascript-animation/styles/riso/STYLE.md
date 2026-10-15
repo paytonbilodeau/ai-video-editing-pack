@@ -48,7 +48,7 @@ resample → `wobble` on the boil → a tapered ribbon with pressure (`w·(1 + r
 
 ## Frame checklist
 
-Check every key frame (and the sample) against these, on top of `grammar/FRAME.md`:
+Check every key frame and the sample against this list, alongside the packaged [reference comparison guide](../../GUIDE.md#reference-matching-and-custom-styles). Review the full motion too:
 
 1. **Every colour is plate tones.** No RGB in a scene: `{ teal, pink, yellow }` or a `MIX` name. The renderer's hex colours come from `inkRGB(...)`.
 2. **Darks are three-ink overprints** (olive-black), with dropouts and a few specks in them. No pure black pixels anywhere.

@@ -51,7 +51,9 @@ Two places, both deterministic (keyed on `B`):
 - **No camera.** `pieceCam` returns null; move the world instead. A camera on the context is honoured (pans snap to whole pixels) but zooms would make pixels uneven; to "zoom in", cut to a finer resolution.
 - The morph: the old era shrinks into a stepped window on its own grid, the blob morphs while its grid steps from the old era's pixel size to the new one (12 → 10 → 8 → 6 px), and the new era opens from a stepped window on its finer grid.
 
-## Frame checklist (on top of grammar/FRAME.md)
+## Frame checklist
+
+Use this list alongside the packaged [reference comparison guide](../../GUIDE.md#reference-matching-and-custom-styles). Review meaning, legibility, framing and the full motion, not just whether a render succeeds.
 
 1. **Every edge on the pixel grid.** No anti-aliasing, no sub-pixel motion, no arcs, strokes or font text: zoom into a still at full size and every edge is a staircase of equal squares.
 2. **A limited palette per era:** 4 colours for a handheld, 16 for an arcade, each era's own. Enforce with `fx: { pal }`; mixed colours are dithered, never blended.
