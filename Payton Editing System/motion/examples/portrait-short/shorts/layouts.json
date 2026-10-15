@@ -1,0 +1,32 @@
+{
+  "fps": 30,
+  "cam_full": {
+    "type": "full",
+    "crop": [
+      656,
+      0,
+      608,
+      1080
+    ]
+  },
+  "shorts": {
+    "demo": {
+      "segments": [
+        [
+          0,
+          30,
+          "cam_full"
+        ]
+      ],
+      "caption_y": {
+        "cam_full": 2800
+      },
+      "hook": [
+        0,
+        1
+      ],
+      "hook_top_px": 440,
+      "hook_until_layout_change": true
+    }
+  }
+}

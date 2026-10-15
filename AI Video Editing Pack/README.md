@@ -1,5 +1,7 @@
 # Free AI Video Editing Pack
 
+**Using this complete personal edition?** Follow [the adaptive setup](<../Payton Editing System/setup/START HERE.md>) first. It preserves your profile and makes a disposable test. The general references below remain available for other editors and specific tasks.
+
 **[Start setup](START%20HERE.md)** · **[Follow the eight visual lessons](../Kit%20Email%20Workflow/visual-guide/README.md)**
 
 This folder gives your AI editing instructions, project templates and tools
@@ -67,7 +69,7 @@ acceptance checks. [Project intake](templates/PROJECT%20INTAKE.md),
 [edit plan and review](templates/EDIT%20PLAN%20AND%20REVIEW.md), and
 [delivery and learning](templates/DELIVERY%20AND%20LEARNING.md) are copyable
 working records. The [editing profile](templates/EDITING%20PROFILE.md) keeps
-accepted rules privately across projects. Setup needs no footage; begin editing whenever you have a video you want to use. Keep the
+accepted rules privately across projects. Your own footage is not needed for setup; the complete download includes a practice clip. Begin editing your videos when you are ready. Keep the
 original media and any approved edit recoverable. A setup check, transcript,
 or AI summary is not proof that an edit works.
 

@@ -1,0 +1,3 @@
+# Actual rendered examples
+
+These are synthetic practice outputs of the supplied portable code, rendered October15,2026. They show the retained styles and mechanisms, not a customer outcome. The portrait-layout sample uses a synthetic test chart and tone; its caption is a layout label, not a transcript. Pan effect is an optional synthetic motion fixture. Source code, original PNGs and layered assets are in the adjacent engine folders. Frames/duration/full-decode checks are recorded in the verification record. Still images are extracted from these actual movies. No native editor import, continuous audiovisual acceptance or customer approval is implied.

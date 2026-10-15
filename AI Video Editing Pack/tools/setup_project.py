@@ -101,6 +101,8 @@ def apply(copies: list[tuple[Path, Path]]) -> int:
         destination_file.parent.mkdir(parents=True, exist_ok=True)
         with destination_file.open("xb") as stream:
             stream.write(source_file.read_bytes())
+        if source_file.stat().st_mode & 0o111:
+            destination_file.chmod(0o755)
         created += 1
     return created
 

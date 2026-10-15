@@ -1,5 +1,19 @@
 # Changelog
 
+## 5.1.0 - 2026-10-15
+
+- Include the complete portable Payton Editing System: actual editing procedures,
+  starting preferences, reusable motion code, style recipes and licensed assets.
+- Add adaptive setup, a disposable lamp practice edit, and customer-profile
+  preservation with reviewed three-way updates. Keep the independent base pack.
+- Include working Tech Motion, Gentlemen, Sketch, JavaScript and HyperFrames
+  examples, source files, exact setup commands and capability limits.
+- Keep private media, credentials, account bindings and restricted assets out.
+  Preserve third-party notices and describe replacement assets explicitly.
+- Repair the practice entry and default-profile reference links found during
+  clean-room review; existing customized profiles remain unchanged.
+- Plugin version: 2.1.0.
+
 ## 5.0.3 - 2026-10-15
 
 - Put setup, the complete download and the eight visual lessons first. Keep all

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "source_id": "fixture-main",
+  "release_claim": {"ready": true, "label": "deliberately invalid unfamiliar case"},
+  "timeline": {
+    "fps": 30,
+    "clips": [
+      {"id": "second-hook-block-first", "source_id": "fixture-main", "timeline_start_frame": 0, "duration_frames": 20, "left_offset": 120, "speed_percentage": 100},
+      {"id": "first-hook-block-second", "source_id": "fixture-main", "timeline_start_frame": 20, "duration_frames": 20, "left_offset": 100, "speed_percentage": 100}
+    ]
+  },
+  "required_hook": {
+    "expected_start_frame": 0,
+    "ordered_blocks": [
+      {"id": "opening", "source_span": [100, 120]},
+      {"id": "payoff", "source_span": [120, 140]}
+    ]
+  },
+  "known_speech_defects": [
+    {"id": "T08", "status": "unresolved"}
+  ],
+  "diagnostic_markers": [],
+  "dead_air_review": {
+    "thresholds": {"detector": "local", "minimum_candidate_frames": 3},
+    "context_evidence_refs": ["frames:case-b"],
+    "candidates": [
+      {
+        "id": "DA-unexplained-intra",
+        "location": {"scope": "intra_clip", "clip_id": "first-hook-block-second", "source_span": [104, 108]},
+        "disposition": "unresolved",
+        "evidence_refs": ["waveform:case-b"]
+      }
+    ]
+  },
+  "review_audio": {
+    "gain_db": 3.0,
+    "measured_true_peak_dbtp": -1.4,
+    "peak_ceiling_dbtp": -1.0,
+    "evidence_refs": ["source-peak-prediction:case-b"],
+    "measurement_stage": "source_prediction"
+  },
+  "perceptual_review": {
+    "status": "passed",
+    "method": "waveform_and_asr",
+    "reviewer": "fixture-reviewer",
+    "evidence_refs": ["waveform:case-b", "asr:case-b"]
+  }
+}

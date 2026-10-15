@@ -1,0 +1,31 @@
+{
+  "tool": "cut_list_to_timeline",
+  "toolVersion": "1.0.0",
+  "name": "lamp-practice-corrected",
+  "source": "source.mp4",
+  "fps": "24/1",
+  "frameSize": "1280x720",
+  "clips": 1,
+  "keptFrames": 168,
+  "keptSeconds": 7.0,
+  "sourceSeconds": 10.0,
+  "markers": 1,
+  "markersOutsideKeptRanges": 0,
+  "files": {
+    "fcpxml": "lamp-practice-corrected.fcpxml",
+    "xmeml": "lamp-practice-corrected.premiere.xml",
+    "edl": "lamp-practice-corrected.edl",
+    "sheet": "lamp-practice-corrected.cut-sheet.md",
+    "sheet_csv": "lamp-practice-corrected.cut-sheet.csv"
+  },
+  "sha256": {
+    "fcpxml": "b5199edb894c6616817f84da2ebd4285896d70d60c50efb3a76484a7c32091d3",
+    "xmeml": "f6baff85d1bd964026779f84099ff18a7a1d58d4897498f72e1c965138db4350",
+    "edl": "475efd0313d2eda0ceb6da0186759356238423dd747401516a987ad5f1cf2ba1",
+    "sheet": "bdc3ae186c65d828df14e7d03047a907d22a491b6d3e99312f73b27f7fe98375",
+    "sheet_csv": "a3f2a59a404326ceee8236b620aa27be717edbbcb6e0218ecc63a37307de2f5f"
+  },
+  "warnings": [],
+  "notRendered": "These files describe an edit. Open them in the editor and play every join before trusting them.",
+  "mediaPathNote": "Privacy-safe placeholder. Run relink.py here or relink source.mp4 in the editor."
+}

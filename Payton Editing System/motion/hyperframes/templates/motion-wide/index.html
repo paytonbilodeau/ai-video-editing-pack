@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1920, initial-scale=1">
+<link rel="preload" href="assets/InstrumentSans.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="assets/InstrumentSerif-Italic.woff2" as="font" type="font/woff2" crossorigin="">
+<style>
+@font-face{font-family:Instrument Sans;src:url('assets/InstrumentSans.woff2') format('woff2');font-weight:100 900;font-display:block}
+@font-face{font-family:Instrument Serif;src:url('assets/InstrumentSerif-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:block}
+@font-face{font-family:Departure Mono;src:url('assets/DepartureMono.woff2') format('woff2');font-weight:400;font-display:block}
+*{box-sizing:border-box;margin:0}html,body{width:1920px;height:1080px;overflow:hidden;background:#0A0B0B;color:#FBFEFF;font-family:Instrument Sans,sans-serif}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden} .clip{position:absolute;inset:0;width:100%;height:100%}
+#ground{position:absolute;inset:0;background:#0A0B0B}
+#eyebrow{position:absolute;left:116px;top:104px;font:24px Departure Mono,monospace;color:#BEC3C6;letter-spacing:2px;opacity:0}
+#topRule{position:absolute;left:116px;top:160px;width:1664px;height:2px;background:#3A4540;transform-origin:left;transform:scaleX(0)}
+.headline{position:absolute;left:116px;top:228px;width:780px;font-size:118px;font-weight:600;line-height:1.1;letter-spacing:-5px;opacity:0}
+.serif{font:italic 1.16em/1.04 Instrument Serif,serif;color:#72DFA5;letter-spacing:-3px;display:block}
+#meaning,#landing{font-size:110px;letter-spacing:-3px}
+#direction{position:absolute;left:116px;top:690px;color:#BEC3C6;font-size:27px;opacity:0}
+#quote{display:block;margin-top:13px;font-size:48px;line-height:1.3;letter-spacing:-1px;color:#FBFEFF;white-space:nowrap}
+#move{display:inline-block;color:#72DFA5}
+#route{position:absolute;inset:0;width:1920px;height:1080px;pointer-events:none;opacity:0}
+#path{fill:none;stroke:#72DFA5;stroke-width:4;stroke-linecap:butt;stroke-dasharray:2000;stroke-dashoffset:2000}
+#node{position:absolute;left:915px;top:533px;width:18px;height:18px;border-radius:50%;background:#72DFA5;opacity:0}
+#mediaWrap{position:absolute;left:924px;top:300px;width:856px;height:481.5px;overflow:hidden;border-radius:14px;background:#0F1713;opacity:0;transform:scale(.94);transform-origin:center}
+#footage{width:100%;height:100%;object-fit:contain;display:block}
+#frameStroke{position:absolute;left:924px;top:300px;width:856px;height:481.5px;border:3px solid #72DFA5;border-radius:14px;opacity:0;pointer-events:none}
+#mediaLabel{position:absolute;left:924px;top:808.5px;font:22px Departure Mono,monospace;color:#BEC3C6;opacity:0}
+#format{position:absolute;left:116px;top:920px;font:24px Departure Mono,monospace;color:#BEC3C6;opacity:0}
+#format strong{font-weight:400;color:#72DFA5}
+</style></head><body><div data-hf-id="hf-nzh3" id="root" data-composition-id="main" data-start="0" data-duration="12" data-fps="30" data-width="1920" data-height="1080">
+<div data-hf-id="hf-yd2p" id="ground" data-layout-ignore=""></div>
+<div data-hf-id="hf-cl3v" id="visuals" style="position:absolute;inset:0">
+<div data-hf-id="hf-tzjm" id="eyebrow">FROM WORDS TO MOTION</div><div data-hf-id="hf-qm8v" id="topRule" data-layout-ignore=""></div>
+<h1 data-hf-id="hf-hca9" id="opening" class="headline">From words<span data-hf-id="hf-67jp" class="serif">to motion.</span></h1>
+<h2 data-hf-id="hf-j2pz" id="meaning" class="headline">Meaning,<span data-hf-id="hf-m6pj" class="serif">made visible.</span></h2>
+<h2 data-hf-id="hf-op34" id="landing" class="headline">Made for<span data-hf-id="hf-q3dx" class="serif">this frame.</span></h2>
+<div data-hf-id="hf-1sbz" id="direction">Example direction<span data-hf-id="hf-asv9" id="quote">“Make the idea <span data-hf-id="hf-n7mm" id="move">move.</span>”</span></div>
+<svg data-hf-id="hf-ffds" id="route" viewBox="0 0 1920 1080" data-layout-ignore=""><path data-hf-id="hf-dr3w" id="path" d="M 116 798 L 690 798 Q 850 798 850 700 L 850 575 Q 850 542 924 542" /></svg>
+<div data-hf-id="hf-1vbo" id="node" data-layout-ignore=""></div>
+<div data-hf-id="hf-00pr" id="frameStroke" data-layout-ignore=""></div>
+<div data-hf-id="hf-hss7" id="mediaLabel">SYNTHETIC PRACTICE · MUTED</div>
+<div data-hf-id="hf-0gwt" id="format"><strong data-hf-id="hf-mxkc">16:9</strong> · COMPOSED FOR LANDSCAPE</div>
+</div>
+<div data-hf-id="hf-vhwr" id="mediaWrap"><video data-hf-id="hf-heqe" id="footage" src="assets/source.mp4" muted playsinline preload="auto" data-start="4" data-duration="8" data-media-start="2" data-track-index="0"></video></div>
+</div>
+<script src="assets/gsap.min.js"></script><script>
+const tl=gsap.timeline({paused:true});
+tl.to('#eyebrow',{opacity:1,duration:.45},.1);
+tl.fromTo('#topRule',{scaleX:0},{scaleX:1,duration:.7,ease:'power2.out'},.15);
+tl.fromTo('#opening',{opacity:0,y:35},{opacity:1,y:0,duration:.7,ease:'power3.out'},.2);
+tl.fromTo('#direction',{opacity:0,y:20},{opacity:1,y:0,duration:.55,ease:'power2.out'},1.05);
+tl.to('#move',{x:12,duration:.5,ease:'power2.inOut'},2.1);
+tl.to('#move',{x:0,duration:.4,ease:'power2.inOut'},2.6);
+tl.to('#opening',{opacity:0,y:-24,duration:.4,ease:'power2.in'},3.15);
+tl.fromTo('#meaning',{opacity:0,y:32},{opacity:1,y:0,duration:.65,ease:'power3.out'},3.55);
+tl.set('#route',{opacity:1},2.9);
+tl.to('#path',{strokeDashoffset:0,duration:1.65,ease:'power2.inOut'},2.9);
+tl.to('#node',{opacity:1,duration:.2},4.2);
+tl.to('#node',{scale:2.2,opacity:0,duration:.5,ease:'power2.out'},4.5);
+tl.fromTo('#mediaWrap',{opacity:0,scale:.94},{opacity:1,scale:1,duration:.7,ease:'power3.out'},4.4);
+tl.to('#frameStroke',{opacity:1,duration:.45},4.4);
+tl.to('#mediaLabel',{opacity:1,duration:.5},5.1);
+tl.to('#route',{opacity:.25,duration:.6},5.2);
+tl.to('#meaning',{opacity:0,y:-24,duration:.4,ease:'power2.in'},7.25);
+tl.fromTo('#landing',{opacity:0,y:32},{opacity:1,y:0,duration:.65,ease:'power3.out'},7.65);
+tl.to('#direction',{opacity:0,y:16,duration:.4},7.3);
+tl.fromTo('#format',{opacity:0,y:16},{opacity:1,y:0,duration:.5,ease:'power2.out'},8.4);
+tl.to('#route',{opacity:0,duration:.6},8.2);
+tl.to('#frameStroke',{opacity:.45,duration:.5},8.4);
+window.__timelines=window.__timelines||{};window.__timelines.main=tl;
+</script></body></html>

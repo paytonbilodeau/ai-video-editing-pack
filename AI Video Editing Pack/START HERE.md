@@ -1,5 +1,7 @@
 # Start Here: AI Video Editing Pack
 
+**For the complete personal system, [start at the full download’s setup](<../START HERE.md>).** This folder keeps the independent core workflow and optional plugin route available.
+
 **[8-step visual walkthrough](../Kit%20Email%20Workflow/visual-guide/README.md)**
 
 In Codex, start a **Local** task in a dedicated editing folder. Select the

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Doodle Explainers"
+  short_description: "Visual explanations with the little black character"
+  default_prompt: "Use $ian-xiaohei-illustrations to explain this project in hand-drawn scenes with English labels using native Codex image generation."
+policy:
+  allow_implicit_invocation: true

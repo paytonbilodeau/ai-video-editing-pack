@@ -1,0 +1,20 @@
+{
+  "name": "am-time-frame-motion",
+  "title": "Time, frame, motion",
+  "style": "payton-mentorship",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "frames": 270,
+    "duration": 9
+  },
+  "build": [
+    "src/head.html",
+    "src/customer-config.js",
+    "style",
+    "src/scenes.js",
+    "src/renderer.js"
+  ],
+  "purpose": "Silent setup proof. Replace story and timing for production. Transparent canvas; no provider audio process."
+}

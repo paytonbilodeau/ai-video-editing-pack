@@ -1,0 +1,9 @@
+# Optional providers and model downloads
+
+The ordinary examples run without an image/video API key, a music model or a provider account. Choose a provider only when its capability is needed and the customer authorizes its cost, upload and terms. Native assistant generation remains the first image route when available.
+
+`optional/generate_hand_drawn.py` and `generate_motion_short.py` retain the actual storyboard, prompt, job-polling and download mechanisms. They read only the customer's `KIE_API_KEY` environment variable; no private credential discovery remains. Their historical model names, durations and prices are configuration, not a current availability or cost guarantee. Inspect `--help`, use dry-run where supported, check current provider docs and pass the existing explicit paid-use flag only after authorization. No API calls were made in the portable verification.
+
+`optional/flow_music.py` retains the actual MusicGen continuation/crossfade/exact-length mechanism. **Its configured weights are CC-BY-NC4.0, not cleared for a commercial production route.** No weights are bundled or downloaded by setup. The code requires `--accept-model-terms` before loading/downloading them, and refuses an existing output. It is a historical optional research adapter, not the recommended commercial music source. Use a track whose license covers the customer's actual destination. [Official model card](https://huggingface.co/facebook/musicgen-stereo-small).
+
+HyperFrames includes optional local model-backed matte/transcription and optional media, speech, image and video providers. The code/recipes are available; required tools, weights, rights, uploads and accounts are separate choices. Provider examples do not grant permission to spend, publish, upload private footage or install every dependency. Keep secrets outside the pack and never include them in a support report.

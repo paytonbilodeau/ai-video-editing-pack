@@ -1,0 +1,2 @@
+clip,source_in_tc,source_out_tc,source_in_s,source_out_s,frames,output_in_tc,output_out_tc,note
+1,00:00:02:00,00:00:09:00,2.000,9.000,168,00:00:00:00,00:00:07:00,Remove only the opening and closing wait.

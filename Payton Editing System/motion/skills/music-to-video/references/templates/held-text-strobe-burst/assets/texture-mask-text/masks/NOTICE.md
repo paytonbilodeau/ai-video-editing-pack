@@ -1,0 +1,1 @@
+Original seeded abstract masks replace texture photographs whose asset-specific redistribution provenance was absent. Filenames retain the existing template interface; the masks are not samples of named real materials.

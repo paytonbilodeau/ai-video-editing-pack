@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Time, frame, motion</title>
+<style>html,body{margin:0;background:transparent;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+</head><body><canvas id="c" width="1080" height="1920"></canvas><script>
+"use strict";
+const W=1080,H=1920,FPS=30,DURATION=9,NFRAMES=270;
+const TIMELINE={width:W,height:H,fps:FPS,frames:NFRAMES,duration:DURATION,
+  shots:[{id:1,t0:0,t1:3,title:'Choose a moment'},{id:2,t0:3,t1:6,title:'Draw the frame'},{id:3,t0:6,t1:9,title:'Play the frames'}],
+  board:[{t:2,title:'Time selects a state'},{t:5,title:'A frame holds that state'},{t:8,title:'A sequence creates motion'}]};
+window.TIMELINE=TIMELINE;
+const amClamp=x=>Math.max(0,Math.min(1,x));
+const amEase=x=>1-Math.pow(1-amClamp(x),3);
+const amMix=(a,b,x)=>a+(b-a)*x;

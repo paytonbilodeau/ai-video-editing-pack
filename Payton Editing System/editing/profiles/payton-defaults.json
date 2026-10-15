@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "label": "Payton-derived starting choices; existing custom profile wins",
+  "profile_authority": "Human-readable customer profile overrides this JSON",
+  "pace": "tight-natural; context-reviewed, no global gap target",
+  "take_preference": "latest complete clean take, compared for meaning and delivery",
+  "automatic_retake_similarity": false,
+  "automatic_filler_removal": false,
+  "restart_commands": [
+    "cut cut",
+    "full stop restart"
+  ],
+  "restart_requires_source_confirmation": true,
+  "color": {
+    "default": "natural correction",
+    "input_space": "inspect source",
+    "output": "SDR Rec.709 when appropriate to brief",
+    "double_transform": false,
+    "film_look": "optional; verified licensed transform required"
+  },
+  "audio": {
+    "offered_route": "Auphonic single final pass when user chooses and authorizes it",
+    "native_alternative": true,
+    "native_isolation_audition": {
+      "shotgun": 35,
+      "dynamic": 15,
+      "wireless": 25,
+      "built_in": 55
+    },
+    "loudness_target_lufs": -16,
+    "loudness_tolerance_lu": 0.5,
+    "encoded_true_peak_ceiling_dbtp": -1,
+    "pre_aac_start_ceiling_dbtp": -2,
+    "timing_cutters": false
+  },
+  "delivery": {
+    "landscape": [
+      3840,
+      2160
+    ],
+    "portrait": [
+      2160,
+      3840
+    ],
+    "fps": "source rational rate",
+    "codec": "H.264",
+    "audio_codec": "AAC",
+    "sample_rate": 48000,
+    "format": "MP4",
+    "source_detail_warning": "Upscaling does not create native detail"
+  },
+  "portrait_caption_reference": {
+    "canvas": [
+      2160,
+      3840
+    ],
+    "font_px": 92,
+    "column_px": 1640,
+    "placement": "fit actual face/action/platform; not a fixed universal safe area"
+  },
+  "clean_cut_review_before_visuals": true,
+  "publish_authorized": false
+}

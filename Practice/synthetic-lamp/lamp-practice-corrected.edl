@@ -1,0 +1,7 @@
+TITLE: lamp-practice-corrected
+FCM: NON-DROP FRAME
+
+001  AX       AA/V  C        00:00:02:00 00:00:09:00 00:00:00:00 00:00:07:00
+* FROM CLIP NAME: source.mp4
+* COMMENT: Remove only the opening and closing wait.
+* LOC: 00:00:02:00 YELLOW   Synthetic switch click Keep the click and the following result hold.
