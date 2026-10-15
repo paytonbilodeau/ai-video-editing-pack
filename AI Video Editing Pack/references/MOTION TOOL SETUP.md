@@ -1,5 +1,7 @@
 # Set up motion graphics
 
+[JavaScript](#javascript-animation) · [Remotion](#remotion) · [HyperFrames](#hyperframes)
+
 Your AI can build animated text, diagrams, callouts and explanations, then place
 them in your video. Start with tools you already have. The assistant can handle
 the technical setup after you choose what to add.
@@ -10,9 +12,8 @@ The assistant should offer this early, without making it a requirement:
 
 > Want motion graphics ready too? Your editor can already handle simple titles.
 > The pack also supports Remotion, HyperFrames and a JavaScript drawing kit.
-> They cover different kinds of animation. The AI can check what you have and
-> set up the most useful option, or prepare all three if you want that flexibility.
-> You can also leave this for your first video that needs it.
+> The AI can check what you have and set up one suitable option.
+> You can also leave this for the first video that needs it.
 
 Recommend a route from the person's work and explain it in one sentence. Do not
 make a beginner pick a programming language. If they already have a working
@@ -53,18 +54,26 @@ footage or broader permissions needs its own clear choice.
 
 The full download includes an original starter in
 [System 09](../../09%20Visual%20Storytelling%20and%20Motion%20System/INSTALL.md).
-It uses Remotion **4.0.535**, checked October 12, 2026. For a copied starter:
+Copy `09 Visual Storytelling and Motion System/starter` into a separate
+working folder. It uses Remotion **4.0.535**. Your AI can run these commands
+from that copy:
 
 ```text
 npm ci
 npm test
 npm run render
-npm run render:overlay
 ```
 
-The regular render is a muted MP4. The overlay uses transparent source and
-ProRes 4444. Render only the needed version. The render helper uses an installed Chrome/Chromium in a separate process when
+Open `out/neutral-motion.mp4`: the included scene is five seconds long and
+silent. Use `npm run studio` for its editable browser preview. For a transparent
+overlay, run `npm run render:overlay` and check `out/neutral-motion.mov` in
+your editor. That route uses transparent source and ProRes 4444. Render only
+the version you need. The render helper uses an installed Chrome/Chromium in a separate process when
 available; otherwise a browser download may be required on first use. The AI should inspect the completed file and its reading time.
+
+Check Node.js and the current operating-system requirements before installing.
+As checked October 15, 2026, Remotion requires macOS 15 or newer on a Mac;
+the official setup page lists the other platforms.
 
 For a new project, follow the current [official setup](https://www.remotion.dev/docs/)
 and [agent-skills instructions](https://www.remotion.dev/docs/ai/skills).
@@ -95,14 +104,20 @@ npm run check
 npm run render
 ```
 
-`doctor` reports prerequisites; its process can exit successfully while its JSON
-contains a failed check. Read `ok` and the individual findings. A cloud tool or
-optional model is not automatically needed for a local graphic. `check` validates
-the composition. Review the actual render for meaning, motion and readability.
+`doctor` reports prerequisites and optional tools. Its process can exit
+successfully while its JSON says `ok: false`, including when optional voices,
+transcription or Docker are absent. Read each finding: this local silent example
+needs Node, FFmpeg/FFprobe and the browser, not every optional service. Resolve
+missing requirements for the chosen render, then run `check` and inspect the
+actual video for meaning, motion and readability.
 Use `npm run render:overlay` when the receiving editor needs transparency.
 
-For a fresh project, consult the [official quickstart](https://hyperframes.heygen.com/quickstart)
-and [CLI guide](https://hyperframes.heygen.com/packages/cli). The vendor offers
+Open `out/one-idea.mp4`: the supplied scene is five seconds long and silent.
+Use `npm run preview` for the browser preview. The overlay command writes
+`out/one-idea.mov`; check it over the actual footage in your editor.
+
+For a fresh project, consult the [official quickstart](https://hyperframes.app/docs/1-startup/2-quickstart)
+and [CLI guide](https://hyperframes.app/docs/5-packages/cli). The vendor offers
 core skills and larger plugin bundles. Choose the relevant install, inspect its
 destination and avoid overwriting another workflow. Record the installed skill
 revision separately from the rendering version.
@@ -115,8 +130,23 @@ products. They are not needed for the supplied local example.
 
 Read the included [JavaScript skill](../skills/javascript-animation/SKILL.md).
 It contains the builder, seven style kits and an optional pinned browser runtime.
-Its instructions cover setup, scene creation, checking, storyboards and rendering.
-Use its existing lockfile and keep project-specific changes in a copied project.
+Its [guide](../skills/javascript-animation/GUIDE.md) covers setup, checking,
+storyboards and rendering. It needs Node.js 22+, FFmpeg for video, and a browser
+runtime. From `AI Video Editing Pack/skills/javascript-animation`, your AI can
+run the following. Replace `/path/to/private` with your actual working location
+outside the pack; use a new output folder each time. Reuse an existing runtime
+instead of running setup again.
+
+```text
+node tools/animate.mjs setup /path/to/private/motion-runtime
+node tools/animate.mjs init /path/to/private/my-graphic --style cut-paper
+node tools/animate.mjs build /path/to/private/my-graphic
+node tools/animate.mjs check /path/to/private/my-graphic --runtime /path/to/private/motion-runtime --out /path/to/private/check-01
+node tools/animate.mjs render /path/to/private/my-graphic --runtime /path/to/private/motion-runtime --out /path/to/private/render-01 --format mp4
+```
+
+Open `render-01/animation.mp4` and watch the entire animation. This command
+does not add sound. Preserve the editable project and the runtime lockfile.
 
 This route needs no new account or paid generation provider. The shipped examples
 are opaque; an overlay requires a scene authored with transparent areas. Keep

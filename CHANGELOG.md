@@ -1,5 +1,18 @@
 # Changelog
 
+## 5.0.3 - 2026-10-15
+
+- Put setup, the complete download and the eight visual lessons first. Keep all
+  existing tools, illustrations and optional plugin routes available.
+- Shorten the visual lessons to one useful action at a time, with direct image
+  links, clearer examples and the existing speech, caption and relink exercises.
+- Explain the three shipped motion starters with exact commands, output files
+  and required checks. Optional HyperFrames tools are not render prerequisites.
+- Match the email guide and classroom corrections, including protected audio
+  comparisons and conservative reading times.
+- Documentation repair of existing public material; no new editing behavior
+  or held member feature. Plugin version: 2.0.3.
+
 ## 5.0.2 - 2026-10-14
 
 - Add the eight-step visual walkthrough and its local illustrations to the complete

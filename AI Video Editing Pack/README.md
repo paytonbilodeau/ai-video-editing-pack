@@ -1,10 +1,14 @@
 # Free AI Video Editing Pack
 
-This portable set of skills helps a file-aware AI assistant and a human editor
-finish recorded video together. It covers the setup interview, an editable
-first cut, sound and color, useful motion, review, export, and learning from
-corrections. It does not install an editor plugin or grant an assistant control
-of your tools.
+**[Start setup](START%20HERE.md)** · **[Follow the eight visual lessons](../Kit%20Email%20Workflow/visual-guide/README.md)**
+
+This folder gives your AI editing instructions, project templates and tools
+for turning a recording into an editable project and a finished video. Your
+private profile holds the preferences you want to reuse. Keep it outside this
+pack, alongside your own work.
+
+For a first edit, open the visual lessons above. This page is the reference
+index when you need a particular tool or setup route.
 
 **Start with [START HERE.md](START%20HERE.md)** or give your assistant its
 [stable public URL](https://github.com/paytonbilodeau/ai-video-editing-pack/blob/main/AI%20Video%20Editing%20Pack/START%20HERE.md).
@@ -20,39 +24,6 @@ Download the [standalone pack ZIP](https://github.com/paytonbilodeau/ai-video-ed
 the [free repository ZIP](https://github.com/paytonbilodeau/ai-video-editing-pack/archive/refs/heads/main.zip),
 or clone the repository. Extract it, keep one clean reference copy, and put footage, references,
 account information and working projects in a separate private folder.
-
-The folder includes a portable [OpenAI Agent Plugins manifest](plugin.json)
-and a [Claude Code manifest](.claude-plugin/plugin.json). Current
-[OpenAI packaging guidance](https://developers.openai.com/plugins/build/plugins)
-and [Claude plugin guidance](https://code.claude.com/docs/en/plugins) describe
-how their hosts discover `skills/` modules. Installing a plugin does not grant
-editor or computer access; verify the host's current permission and connection
-steps. The copyable setup message in START HERE works without native plugin
-installation.
-
-To install the native plugin through Codex, add this repository's marketplace:
-
-```sh
-codex plugin marketplace add paytonbilodeau/ai-video-editing-pack --ref main
-```
-
-Refresh ChatGPT desktop, then install **ai-video-editing-pack** from the
-**payton-ai-tools** marketplace in the Plugins Directory. Follow the
-[current OpenAI install guide](https://developers.openai.com/plugins/build/plugins)
-if those controls have changed.
-
-In Claude Code, use:
-
-```text
-/plugin marketplace add paytonbilodeau/ai-video-editing-pack
-/plugin install ai-video-editing-pack@payton-ai-tools
-```
-
-The [Claude install guide](https://code.claude.com/docs/en/plugins/install)
-also covers Desktop Code's **+ → Plugins → Add plugin** route. These installs
-add the pack's skills; editor control still needs the separate connection
-and permission checks below. If an installer is unavailable, use the stable
-START HERE URL or standalone ZIP.
 
 For a concrete local starting route, use the dated
 [AI app setup guide](references/AI%20APP%20SETUP.md); it covers Codex Local,
@@ -76,6 +47,7 @@ skill at a time:
 | Correct picture and assess LUTs | [Color](skills/color/SKILL.md) |
 | Create useful graphics and motion | [Style and motion](skills/style-motion/SKILL.md) |
 | Build procedural Canvas animation | [JavaScript animation](skills/javascript-animation/SKILL.md) |
+| Choose a starter and check one render | [JavaScript, Remotion and HyperFrames setup](references/MOTION%20TOOL%20SETUP.md) |
 | Review, export and learn from corrections | [Review and delivery](skills/review-delivery/SKILL.md) |
 | Make approved derivatives | [Waterfall](skills/waterfall/SKILL.md) |
 
@@ -120,7 +92,48 @@ and [14 AI Video Editing](https://github.com/paytonbilodeau/ai-video-editing-pac
 The complete ZIP includes these sibling folders. Native plugin managers may
 cache only the core skills; use the full ZIP when you need the supporting tools.
 
-Updates do not overwrite customized projects. Check the pack and build a
+## Optional native plugin installation
+
+The folder-based setup works without installing a plugin. If you prefer the
+assistant's plugin interface, use one of the supported routes below.
+
+The folder includes a portable [OpenAI Agent Plugins manifest](plugin.json)
+and a [Claude Code manifest](.claude-plugin/plugin.json). Current
+[OpenAI packaging guidance](https://developers.openai.com/plugins/build/plugins)
+and [Claude plugin guidance](https://code.claude.com/docs/en/plugins) describe
+how their hosts discover `skills/` modules. Installing a plugin does not grant
+editor or computer access; verify the host's current permission and connection
+steps. The copyable setup message in START HERE works without native plugin
+installation.
+
+To install the native plugin through Codex, add this repository's marketplace:
+
+```sh
+codex plugin marketplace add paytonbilodeau/ai-video-editing-pack --ref main
+```
+
+Refresh ChatGPT desktop, then install **ai-video-editing-pack** from the
+**payton-ai-tools** marketplace in the Plugins Directory. Follow the
+[current OpenAI install guide](https://developers.openai.com/plugins/build/plugins)
+if those controls have changed.
+
+In Claude Code, use:
+
+```text
+/plugin marketplace add paytonbilodeau/ai-video-editing-pack
+/plugin install ai-video-editing-pack@payton-ai-tools
+```
+
+The [Claude install guide](https://code.claude.com/docs/en/plugins/install)
+also covers Desktop Code's **+ → Plugins → Add plugin** route. These installs
+add the pack's skills; editor control still needs the separate connection
+and permission checks. If an installer is unavailable, use the stable
+START HERE URL or standalone ZIP.
+
+## Maintainer and helper commands
+
+Keep customized projects outside the pack and compare updates before replacing
+files. Check the pack and build a
 deterministic standalone ZIP with `python3 tools/build_pack.py --check` and
 `python3 tools/build_pack.py --output /path/to/AI-Video-Editing-Pack.zip`.
 The optional Python 3.11+ helper previews private worksheets and a durable
