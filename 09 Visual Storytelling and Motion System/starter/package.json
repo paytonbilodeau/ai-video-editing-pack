@@ -1,0 +1,9 @@
+{
+  "name": "ci-compat-motion-starter",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Compatibility entry for the repository quality workflow. The Remotion starter lives in plugins/vibe-edit/skills/remotion/starter.",
+  "scripts": {
+    "test": "cd ../../plugins/vibe-edit/skills/remotion/starter && npm ci --ignore-scripts && npm test && npm audit --audit-level=high"
+  }
+}
