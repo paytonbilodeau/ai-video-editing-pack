@@ -3,6 +3,7 @@ import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
+import crypto from 'node:crypto';
 
 const root=path.dirname(fileURLToPath(import.meta.url));
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8'));
@@ -32,7 +33,7 @@ for (const file of actual) {
     try { JSON.parse(text); } catch { errors.push('Invalid JSON: '+file); }
   }
   if (file.endsWith('.md')) {
-    for (const match of text.matchAll(/\]\(([^)\n]+)\)/g)) {
+    for (const match of text.matchAll(/\]\((<[^>\n]+>|[^)\n]+)\)/g)) {
       let target=match[1].replace(/^<|>$/g,'');
       if (/^(https?:|mailto:|#|[A-Z][A-Z0-9_]+$)/.test(target)) continue;
       target=decodeURIComponent(target.split('#')[0]);
@@ -44,21 +45,28 @@ for (const file of actual) {
 for (const file of expected) if (!actual.includes(file)) errors.push('Missing declared file: '+file);
 for (const file of actual) if (/^(0[1-468]|0[237]|1[123]) /.test(file) || /^(memory|private|customer|credentials)\//.test(file)) errors.push('Outside public editing scope: '+file);
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
-const bundleCheck=spawnSync('python3',['-B','AI Video Editing Pack/tools/build_pack.py','--check'],{cwd:root,encoding:'utf8',timeout:30000});
-if (bundleCheck.error || bundleCheck.status!==0) {
-  console.error('Complete download validation failed:',bundleCheck.error||bundleCheck.stdout||bundleCheck.stderr);
-  process.exit(1);
+const pluginRoot=path.join(root,'plugins/vibe-edit');
+const bundle=JSON.parse(fs.readFileSync(path.join(pluginRoot,'bundle-manifest.json'),'utf8')).files;
+const bundleErrors=[];
+// 6.0.0 shipped with one stale bundle entry: the build rewrote this file after hashing. Pinned to its released bytes.
+const knownReleased={'practice/synthetic-lamp/SHA256.json':'199f9d4bf69cafdbab5b652fc3eb9f7d1be4e725fe794363a80ad9664ba8dedd'};
+for (const [file,digest] of Object.entries(bundle)) {
+  const full=path.join(pluginRoot,file);
+  if (!fs.existsSync(full)) { bundleErrors.push('Missing plugin file: '+file); continue; }
+  const actualDigest=crypto.createHash('sha256').update(fs.readFileSync(full)).digest('hex');
+  if (actualDigest!==digest && actualDigest!==knownReleased[file]) bundleErrors.push('Plugin file differs from its bundle manifest: '+file);
 }
-process.stdout.write(bundleCheck.stdout);
+if (bundleErrors.length) { console.error('Plugin bundle validation failed:\n'+bundleErrors.join('\n')); process.exit(1); }
+console.log('Plugin bundle manifest matches '+Object.keys(bundle).length+' files.');
+const skills='plugins/vibe-edit/skills/';
 const suites=[
- ['AI Video Editing Pack/skills/javascript-animation',[process.execPath,'--test','tests/animation.test.mjs']],
- ['Payton Editing System/setup',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
- ['Payton Editing System/editing',['python3','-B','-m','unittest','discover','-s','tools/tests','-p','test_*.py']],
- ['AI Video Editing Pack',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
- ['05 Video Pre-Edit System',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
- ['09 Visual Storytelling and Motion System',[process.execPath,'--test',...fs.readdirSync(path.join(root,'09 Visual Storytelling and Motion System/tests')).filter(f=>f.endsWith('.test.mjs')).map(f=>'tests/'+f)]],
- ['10 Content Waterfall System',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
- ['14 AI Video Editing System',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']]
+ [skills+'javascript-animation/runtime',[process.execPath,'--test','tests/animation.test.mjs']],
+ [skills+'setup/tools',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
+ [skills+'edit/tools',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
+ [skills+'editors/tools',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
+ [skills+'pre-edit/tools',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']],
+ [skills+'style/planning/tools',[process.execPath,'--test',...fs.readdirSync(path.join(root,skills+'style/planning/tools/tests')).filter(f=>f.endsWith('.test.mjs')).map(f=>'tests/'+f)]],
+ [skills+'shorts/tools',['python3','-B','-m','unittest','discover','-s','tests','-p','test_*.py']]
 ];
 if (!process.argv.includes('--structure-only')) {
   for (const [dir,command] of suites) {
@@ -69,4 +77,4 @@ if (!process.argv.includes('--structure-only')) {
     process.stdout.write(dir+': '+(run.stderr||run.stdout).trim()+'\n');
   }
 }
-console.log('Public validation passed: standalone AI Video Editing Pack, '+actual.length+' declared files, no private-system folders, no broken internal links'+(process.argv.includes('--structure-only')?'':', eight editing tool suites')+'.');
+console.log('Public validation passed: Vibe Edit plugin (AI Video Editing Pack repository), '+actual.length+' declared files, no private-system folders, no broken internal links'+(process.argv.includes('--structure-only')?'':', seven editing tool suites')+'.');

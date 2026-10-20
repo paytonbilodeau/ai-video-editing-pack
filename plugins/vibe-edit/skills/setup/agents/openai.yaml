@@ -1,0 +1,6 @@
+interface:
+  display_name: "Vibe Edit setup"
+  short_description: "Set up Vibe Edit as your video editor and run the practice edit"
+  default_prompt: "Set up Vibe Edit as my video editor and run the practice edit."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "HyperFrames"
+  short_description: "HTML/GSAP compositions, overlays and explainers"
+  default_prompt: "Use $hyperframes to build a short animated graphic I can drop into my edit."
+policy:
+  allow_implicit_invocation: true

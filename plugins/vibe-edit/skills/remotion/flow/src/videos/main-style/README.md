@@ -1,0 +1,3 @@
+# Main-channel portrait mechanism
+
+These are the actual shared settled-type/handwriting geometry and caption components from the Main2 production route, with customer-supplied timed rows replacing private project transcripts. `Basis` scales the1080×1920 design grid to the render width; `Hand` uses actual pen paths; font loading is explicit. The caption component accepts `{startFrame,endFrame,text}` rows and retains the real font/size/shadow/stroke starting treatment. It is separate from the More portrait-short compositor. Do not force either layout onto a different face, demonstration or platform. Read `the edit skill's references/MOTION AND EDITORIAL CRAFT.md` and `CAPTIONS AND FORMATS.md` in the sibling editing module for the complete accepted geometry/decision rules.

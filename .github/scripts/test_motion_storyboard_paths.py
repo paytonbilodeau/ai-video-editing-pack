@@ -9,7 +9,7 @@ import unittest
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / "Payton Editing System/motion/tools/optional/generate_motion_short.py"
+SOURCE = ROOT / "plugins/vibe-edit/skills/style/tools/optional/generate_motion_short.py"
 spec = importlib.util.spec_from_file_location("motion_storyboard_path_review", SOURCE)
 motion = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(motion)

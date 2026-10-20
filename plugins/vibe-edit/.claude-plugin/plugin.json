@@ -1,0 +1,12 @@
+{
+  "name": "vibe-edit",
+  "displayName": "Vibe Edit",
+  "version": "6.0.0",
+  "description": "Vibe Edit (also Vibe Editing, the Vibe Editors pack, formerly the AI Video Editing Pack): Payton Bilodeau's AI video editing system. Set up an AI editor, make editable cuts, fix sound and color, add captions and motion graphics in Tech Motion, Gentlemen, Sketch, Doodle, Editorial or Narrative Motion, cut shorts, and keep a private taste profile. Works with DaVinci Resolve, Premiere, Final Cut and CapCut.",
+  "author": {
+    "name": "Payton Bilodeau"
+  },
+  "homepage": "https://github.com/paytonbilodeau/ai-video-editing-pack",
+  "repository": "https://github.com/paytonbilodeau/ai-video-editing-pack",
+  "keywords": ["video editing", "vibe editing", "davinci resolve", "premiere", "final cut", "capcut", "captions", "motion graphics", "remotion", "hyperframes"]
+}

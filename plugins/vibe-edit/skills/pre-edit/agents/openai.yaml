@@ -1,0 +1,6 @@
+interface:
+  display_name: "Pre-Edit"
+  short_description: "Optional local first pass: silence cuts, restart markers, a reviewed plan"
+  default_prompt: "Run a dry-run pre-edit on this copied recording and show me the plan before rendering."
+policy:
+  allow_implicit_invocation: true

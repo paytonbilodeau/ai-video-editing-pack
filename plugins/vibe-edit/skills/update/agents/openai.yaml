@@ -1,0 +1,6 @@
+interface:
+  display_name: "Vibe Edit update"
+  short_description: "Update Vibe Edit or move from the old folder install"
+  default_prompt: "Update Vibe Edit to the latest version and keep my profile."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Captions"
+  short_description: "Captions from real speech timing, your way"
+  default_prompt: "Use $captions to add captions to my finished edit from the real word timing."
+policy:
+  allow_implicit_invocation: true

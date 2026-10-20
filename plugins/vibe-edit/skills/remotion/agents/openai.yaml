@@ -1,0 +1,6 @@
+interface:
+  display_name: "Remotion"
+  short_description: "Render Tech Motion, Gentlemen and Sketch layers with Flow in Remotion"
+  default_prompt: "Render the Tech Motion graphics for this video with Flow in Remotion."
+policy:
+  allow_implicit_invocation: true

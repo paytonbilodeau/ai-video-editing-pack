@@ -1,0 +1,6 @@
+interface:
+  display_name: "JavaScript Animation"
+  short_description: "Deterministic Canvas graphics in Tech Motion or seven public styles"
+  default_prompt: "Build this diagram as a JavaScript Canvas animation and render it for my edit."
+policy:
+  allow_implicit_invocation: true

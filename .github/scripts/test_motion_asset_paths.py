@@ -12,7 +12,7 @@ import types
 import unittest
 from unittest.mock import patch
 
-ROOT = Path(__file__).resolve().parents[2] / "Payton Editing System/motion/tools"
+ROOT = Path(__file__).resolve().parents[2] / "plugins/vibe-edit/skills/style/tools"
 
 
 def load(name, path):

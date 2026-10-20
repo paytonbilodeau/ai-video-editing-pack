@@ -13,12 +13,12 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "PersonSegment",
-            path: "Payton Editing System/motion/tools",
+            path: "plugins/vibe-edit/skills/style/tools",
             sources: ["person_segment.swift"]
         ),
         .executableTarget(
             name: "VisionSegment",
-            path: "Payton Editing System/motion/tools",
+            path: "plugins/vibe-edit/skills/style/tools",
             sources: ["vision_segment.swift"]
         ),
     ],
