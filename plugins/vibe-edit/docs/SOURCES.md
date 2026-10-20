@@ -1,0 +1,39 @@
+# Source and Scope
+
+Created and maintained by Payton Bilodeau as part of the free
+[AI Video Editing Pack repository](https://github.com/paytonbilodeau/ai-video-editing-pack).
+This portable pack contains original public instructions, working templates,
+and local packaging/setup utilities, plus attributed third-party animation code. It draws on Payton's privately maintained
+pre-edit, motion, waterfall and editing systems without copying their system files or private
+project material. The included free-use terms are the repository's
+[LICENSE AND USE.md](../LICENSE%20AND%20USE.md).
+
+The editor playbooks, capability matrix, craft numbers and learning path were
+researched on October 3, 2026 from vendor documentation, installed copies of
+DaVinci Resolve Studio 21.1, Final Cut Pro 12.4 and CapCut 9.5, public course
+metadata and published standards; each file labels its claims as documented,
+verified, reported or opinion and lists its sources inline. Premiere Pro
+statements are documentary because it was not installed on the checking
+machine.
+
+AI apps, editors, connectors, Remotion, Hyperframes, fonts, models, and media
+remain separate third-party products or materials. Their capabilities and
+terms must be checked at the time of use. Their complete applications are not included, and there is no universal
+installable plugin. The optional local animation runtime is installed separately.
+
+The [JavaScript animation skill](../skills/javascript-animation/references/CORE%20GUIDE.md) includes
+MIT-licensed code, demos and seven styles from cth9191/animate at a pinned
+commit. Its [third-party notice](../skills/javascript-animation/runtime/THIRD-PARTY.md)
+records the exact source, retained license and local changes.
+
+The full English automatic transcript of
+[*My Claude Code Edits FULL Videos in One Shot (Here's How)*](https://www.youtube.com/watch?v=mlhhZSHIS-w)
+was reviewed October 7, 2026; visual review of the source video remains pending.
+The narration describes anchored script comments, prepared assets, and targeted
+render review. The pack adopts generic mechanisms: preserve script comments,
+map supporting assets to spoken claims, and inspect exact frames around changed
+seams before checking the complete export. Preserving available comment replies
+is an extension for retaining clarifications; the narration did not establish
+reply export support.
+Provider dependencies, current model or price claims, generated-evidence
+shortcuts, and autonomous or one-pass quality guarantees are not adopted.

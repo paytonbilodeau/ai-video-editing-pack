@@ -1,0 +1,26 @@
+{
+  "name": "payton-motion-toolkit",
+  "version": "5.2.0",
+  "private": true,
+  "description": "Flow: free code-rendered motion graphics for Payton's videos (Remotion)",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.499",
+    "@remotion/fonts": "4.0.499",
+    "@remotion/google-fonts": "4.0.499",
+    "@remotion/paths": "4.0.499",
+    "lucide-react": "1.26.0",
+    "matter-js": "0.20.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.499"
+  },
+  "devDependencies": {
+    "@types/matter-js": "0.20.2",
+    "@types/react": "18.3.31",
+    "typescript": "5.9.3"
+  }
+}

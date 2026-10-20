@@ -1,15 +1,48 @@
-# Vibe Editors 5.1.1
+# Vibe Edit
 
-**[Download the complete pack](https://github.com/paytonbilodeau/ai-video-editing-pack/releases/latest/download/ai-video-editing-pack.zip) · [Start here](<START HERE.md>) · [Free illustrated email course](https://vibeeditors.com)**
+**Turn Codex or Claude Code into your video editor.** Vibe Edit is a free plugin with Payton Bilodeau's editing system inside: briefs, cuts, sound, color, captions, motion graphics in six looks, shorts, and a private taste profile that updates never touch. Formerly the AI Video Editing Pack.
 
-One download, one setup message, then a small test edit.
+## Install
 
-This complete download combines the full independent editing pack with the portable version of Payton’s personal editing and motion system. It includes his starting preferences, reusable source code, skills, templates and visual recipes. Your existing choices take priority.
+Paste one line into your local AI assistant:
 
-- [What is included](<Payton Editing System/setup/CONTENTS.md>)
-- [See the visual walkthrough](<Kit Email Workflow/visual-guide/README.md>)
-- [Choose a motion style](<Payton Editing System/motion/START HERE.md>)
-- [Update an existing setup](<Payton Editing System/setup/UPDATES.md>)
-- [Read the release notes](<RELEASE NOTES.md>)
+```text
+Read https://raw.githubusercontent.com/paytonbilodeau/ai-video-editing-pack/main/plugins/vibe-edit/INSTALL.md and set up Vibe Edit for me.
+```
 
-Keep the whole folder together. Start with the tools you already use; optional apps, paid services and extra engines are only needed for the route you choose.
+Or run the commands yourself.
+
+Claude Code:
+
+```sh
+claude plugin marketplace add paytonbilodeau/ai-video-editing-pack
+claude plugin install vibe-edit@vibe-editors
+```
+
+Codex:
+
+```sh
+codex plugin marketplace add paytonbilodeau/ai-video-editing-pack
+codex plugin add vibe-edit@vibe-editors
+```
+
+Then reload the plugins (Claude Code: `/reload-plugins`; Codex: start a new session) and say:
+
+```text
+Set up Vibe Edit as my video editor and run the practice edit.
+```
+
+No footage of yours is needed for that. Setup checks the tools you already have, keeps your editing profile outside the plugin and makes one disposable edit from the included practice clip.
+
+## Learn
+
+- [Plugin overview](<plugins/vibe-edit/README.md>) and [INSTALL](<plugins/vibe-edit/INSTALL.md>)
+- [Eight illustrated lessons](<plugins/vibe-edit/lessons/visual/README.md>)
+- [Twenty-two detailed lessons](<plugins/vibe-edit/lessons/README.md>), also delivered as the free email course at https://vibeeditors.com
+- [Vibe Editors community](https://www.skool.com/vibeeditors): questions, feedback on your videos, and each new version one week early
+
+## Update
+
+Claude Code: `/plugin marketplace update vibe-editors`. Codex: `codex plugin marketplace upgrade`. [Changelog](<plugins/vibe-edit/CHANGELOG.md>).
+
+[License and use](<plugins/vibe-edit/LICENSE AND USE.md>) · [Third-party notices](<plugins/vibe-edit/THIRD-PARTY.md>) · [Optional asset bundle](<plugins/vibe-edit/ASSETS.md>)

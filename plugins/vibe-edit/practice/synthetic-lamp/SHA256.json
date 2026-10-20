@@ -1,0 +1,21 @@
+{
+  "ACCEPTED PREFERENCE.md": "51f206a7ccc7006ea943035d438a8468b34dd854c952a06c1bf3093b00da57f9",
+  "BRIEF.md": "d05ae0c429032caf66f3fd910a090dfe6de308cdabf6adbfadc83ea92ae13dc0",
+  "RIGHTS AND LIMITS.md": "1c2a445ba8586cd4e532ef6f0cb538b3206d511264606a6ee3d8ce709c3c5b89",
+  "audio-measurements.json": "62ca957e7bfcff5b5a8934f666149f99e0ade497fb9a14bcad4ef1f3db3e7cae",
+  "corrected.mp4": "b9b410674730b06dfe4e6863d9e0236382719a1d29f55ed04dc52133ae2bb04d",
+  "corrected.srt": "eb5c8c54542317518e9bd02e61c9bd599ed4d2f18cf1068b3f281b4b9e05b003",
+  "cut-list.json": "fc0652ca4d51d1f0c99d2bc887ab203b979fb8313bbbde3186fdb0db937f5a28",
+  "lamp-practice-corrected.cut-sheet.csv": "a3f2a59a404326ceee8236b620aa27be717edbbcb6e0218ecc63a37307de2f5f",
+  "lamp-practice-corrected.cut-sheet.md": "bdc3ae186c65d828df14e7d03047a907d22a491b6d3e99312f73b27f7fe98375",
+  "lamp-practice-corrected.edl": "475efd0313d2eda0ceb6da0186759356238423dd747401516a987ad5f1cf2ba1",
+  "lamp-practice-corrected.fcpxml": "b5199edb894c6616817f84da2ebd4285896d70d60c50efb3a76484a7c32091d3",
+  "lamp-practice-corrected.premiere.xml": "f6baff85d1bd964026779f84099ff18a7a1d58d4897498f72e1c965138db4350",
+  "lamp-practice-corrected.summary.json": "d53585dd6173a8312c8f768a91bef70ab4fd3abf0796a7ba7d58eba633e3a951",
+  "media-probe.json": "f74f8f00082f8d8243e74eef75653206c5faae20635f6731d89bb7d67c19dbb8",
+  "relink.py": "8e553e6e31fab03d74483b0104b8cfbf7f5cd2bdef4e1eb04a7a042bd0a4b237",
+  "source.mp4": "49c6f9eb054b78277bbefe70d8dd811c007a75d94f82a10fe0b11b4457cc43e3",
+  "source.srt": "47db185a390ff8a8a452155463c5e7d79279fa528ce2409e671db47bc5199034",
+  "too-short-cut-list.json": "b33e96e57bfc15d022c8378d6c04b399e4f98746e026fae885ebaf11ddee170f",
+  "too-short.mp4": "befe4e6a45c9392ba1801969ff9e5707e646dde1690931a9b98341dc2d8fa996"
+}

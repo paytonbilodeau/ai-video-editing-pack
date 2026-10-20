@@ -1,0 +1,6 @@
+interface:
+  display_name: "Editors"
+  short_description: "Connect to Resolve, Premiere, Final Cut or CapCut and prove the route"
+  default_prompt: "Connect to my video editor, test the route in a disposable project and tell me what works."
+policy:
+  allow_implicit_invocation: true

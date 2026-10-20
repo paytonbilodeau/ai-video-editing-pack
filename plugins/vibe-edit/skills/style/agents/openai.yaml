@@ -1,0 +1,6 @@
+interface:
+  display_name: "Style"
+  short_description: "Choose Tech Motion, Gentlemen, Sketch, Doodle or another look first"
+  default_prompt: "Pick the right look for this video's graphics and plan the beats before rendering."
+policy:
+  allow_implicit_invocation: true

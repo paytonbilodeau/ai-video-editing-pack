@@ -1,0 +1,6 @@
+interface:
+  display_name: "Shorts and derivatives"
+  short_description: "Shorts, clips and captions cut from an approved recording"
+  default_prompt: "Use $shorts to cut the requested shorts and derivatives from my approved edit, keep every clip traceable to the source, and stop before publishing."
+policy:
+  allow_implicit_invocation: true

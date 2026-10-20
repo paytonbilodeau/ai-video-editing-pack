@@ -9,7 +9,7 @@ updates:
       actions:
         patterns: ["*"]
   - package-ecosystem: npm
-    directory: "/09 Visual Storytelling and Motion System/starter"
+    directory: "/plugins/vibe-edit/skills/remotion/starter"
     schedule:
       interval: weekly
     open-pull-requests-limit: 3
@@ -18,7 +18,7 @@ updates:
         patterns: ["*"]
         update-types: [minor, patch]
   - package-ecosystem: pip
-    directory: "/05 Video Pre-Edit System"
+    directory: "/plugins/vibe-edit/skills/pre-edit/tools"
     schedule:
       interval: weekly
     open-pull-requests-limit: 3

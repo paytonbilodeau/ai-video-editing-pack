@@ -15,9 +15,9 @@ The editing library also requires Node.js and FFmpeg:
 
 ```sh
 node validate-library.mjs
-cd '09 Visual Storytelling and Motion System/starter'
+cd 'plugins/vibe-edit/skills/remotion/starter'
 npm ci --ignore-scripts
 npm test
 ```
 
-Add new public files to `manifest.json`. Rebuild and test the standalone ZIP when its contents change.
+Add new public files to `manifest.json`. The plugin under `plugins/vibe-edit` is rebuilt from each frozen release, so its files must match `plugins/vibe-edit/bundle-manifest.json`.

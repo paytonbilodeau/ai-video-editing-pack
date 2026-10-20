@@ -1,0 +1,6 @@
+interface:
+  display_name: "Vibe Edit help"
+  short_description: "Answers about vibe editing, the plugin and the community"
+  default_prompt: "Where should I start with Vibe Edit?"
+policy:
+  allow_implicit_invocation: true

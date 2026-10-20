@@ -1,0 +1,6 @@
+interface:
+  display_name: "Edit"
+  short_description: "Edit a recording from brief to checked export with your profile"
+  default_prompt: "Edit this recording for YouTube using my editing profile and return the editable project and export."
+policy:
+  allow_implicit_invocation: true

@@ -1,14 +1,14 @@
 {
-  "name": "payton-ai-tools",
+  "name": "vibe-editors",
   "interface": {
-    "displayName": "AI Video Editing Pack"
+    "displayName": "Vibe Editors"
   },
   "plugins": [
     {
-      "name": "ai-video-editing-pack",
+      "name": "vibe-edit",
       "source": {
         "source": "local",
-        "path": "./AI Video Editing Pack"
+        "path": "./plugins/vibe-edit"
       },
       "policy": {
         "installation": "AVAILABLE",

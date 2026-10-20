@@ -1,15 +1,17 @@
 {
-  "name": "payton-ai-tools",
-  "description": "The free AI Video Editing Pack, maintained by Payton Bilodeau.",
+  "name": "vibe-editors",
+  "description": "Vibe Edit, the free AI video editing plugin by Payton Bilodeau.",
   "owner": {
     "name": "Payton Bilodeau"
   },
   "plugins": [
     {
-      "name": "ai-video-editing-pack",
-      "description": "Skills and practical guides for editing your own videos with AI.",
-      "version": "2.1.0",
-      "source": "./AI Video Editing Pack"
+      "name": "vibe-edit",
+      "description": "Turn Codex or Claude Code into your video editor: cuts, sound, color, captions, motion graphics, shorts and a private taste profile.",
+      "source": "./plugins/vibe-edit"
     }
-  ]
+  ],
+  "renames": {
+    "ai-video-editing-pack": "vibe-edit"
+  }
 }
