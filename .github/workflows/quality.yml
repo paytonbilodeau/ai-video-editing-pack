@@ -40,13 +40,13 @@ jobs:
             numpy==2.5.3 soundfile==0.14.0 webvtt-py==0.5.1
           python3 -m pip check
       - name: Install isolated animation test runtime
-        run: node "AI Video Editing Pack/skills/javascript-animation/tools/animate.mjs" setup "$RUNNER_TEMP/animation-runtime"
-      - name: Validate the editing pack and eight tool suites
+        run: node "plugins/vibe-edit/skills/javascript-animation/runtime/tools/animate.mjs" setup "$RUNNER_TEMP/animation-runtime"
+      - name: Validate the editing plugin and seven tool suites
         env:
           ANIMATION_RUNTIME: ${{ runner.temp }}/animation-runtime
         run: node validate-library.mjs
       - name: Check the motion starter
-        working-directory: '09 Visual Storytelling and Motion System/starter'
+        working-directory: 'plugins/vibe-edit/skills/remotion/starter'
         run: |
           npm ci --ignore-scripts
           npm test
