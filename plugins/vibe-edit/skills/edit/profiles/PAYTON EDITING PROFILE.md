@@ -14,6 +14,8 @@ This is a filled-in starting point, adapted from Payton's working system. Copy i
 
 **Graphics:** Explain a relationship, action or change that the viewer needs. Keep the presenter as the narrative spine, reveal one focus at a time and return to useful source footage after the graphic finishes its job. Preserve ordinary landscape framing; do not add constant zooms or decorative motion. The sibling motion component carries the complete visual styles and their editable implementations.
 
+**Colors and fonts:** The mint `#72DFA5` and dark green `#0F583D` palette and the bundled type are Payton's starting look. They are yours to change in one sentence, for example "use a black and white palette" or "use my brand colors #xxxxxx and #xxxxxx and the font Inter"; the AI then saves the choice here and uses it for every graphic and caption.
+
 **Captions:** Use short natural phrases with accurate names and real speech timing. Default to readable white text with restrained emphasis, a soft dark shadow and a subtle stroke when needed. Keep eyes, mouth, controls, pointers and results clear. For a creator finishing captions in CapCut, deliver a clean master and editable sidecars instead of burning them in. Assistant-made phrase captions are the alternate route, not a compulsory second caption layer.
 
 **Formats:** Keep the source's exact frame rate. Prefer 3840×2160 landscape or 2160×3840 portrait H.264/AAC when the source/project and brief support 4K; 4K enlargement does not recover missing detail. Keep 48 kHz audio and progressive-download optimization. Use a high-quality intermediate when another editor or alpha layer needs it. Compose portrait separately rather than cropping blindly.

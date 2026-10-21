@@ -1,6 +1,6 @@
 {
  "schemaVersion": 4,
- "version": "6.0.0",
+ "version": "6.1.0",
  "publicScope": "Vibe Edit plugin (formerly the AI Video Editing Pack): twelve editing skills, lessons, synthetic practice and the Kit email workflow, rebuilt from each frozen release.",
  "systems": [
   {
@@ -1538,6 +1538,8 @@
   "plugins/vibe-edit/skills/update/references/MIGRATE FROM 5.x.md",
   "plugins/vibe-edit/skills/update/references/UPDATES (5.x bootstrap).md",
   "plugins/vibe-edit/skills/update/references/UPDATING (5.x core pack).md",
+  "plugins/vibe-edit/skills/update/tools/fetch_release.py",
+  "plugins/vibe-edit/skills/update/tools/tests/test_fetch_release.py",
   "validate-library.mjs"
  ],
  "repository": "paytonbilodeau/ai-video-editing-pack"

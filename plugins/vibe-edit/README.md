@@ -27,6 +27,6 @@ Ask for what you want in plain language: "edit this recording", "tighten the pac
 
 ## Update
 
-Claude Code: `/plugin marketplace update vibe-editors`. Codex: `codex plugin marketplace upgrade`. A downloaded folder updates by replacing the folder. Your profile, projects and footage are never inside the plugin, so updates never touch them. Details in the `update` skill.
+Claude Code: `/plugin marketplace update vibe-editors`. Codex: `codex plugin marketplace upgrade`. From a downloaded folder, paste the update line from the release post (version, link and hash) and the `update` skill downloads, checks and swaps the folder for you. Each change is offered, not imposed, and your profile, projects and footage are never inside the plugin, so updates never touch them. Details in the `update` skill.
 
 [Changelog](CHANGELOG.md) · [License and use](LICENSE%20AND%20USE.md) · [Third-party notices](THIRD-PARTY.md) · [Optional asset bundle](ASSETS.md)
