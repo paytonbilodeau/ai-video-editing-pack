@@ -242,9 +242,9 @@ After a useful correction, save the reason, an example and when it applies. Pres
 
 Your private profile, footage and projects are never inside the plugin, so an update never touches them.
 
-In Claude Code run `/plugin marketplace update vibe-editors`. In Codex run `codex plugin marketplace upgrade`, then start a new session. If you installed from a downloaded folder, replace the folder. Then say "Update Vibe Edit to the latest version and keep my profile."
+In Claude Code run `/plugin marketplace update vibe-editors`. In Codex run `codex plugin marketplace upgrade`, then start a new session. Then say "Update Vibe Edit to the latest version and keep my profile." If you installed from a downloaded folder, paste the update line from the release post instead; it carries the version, the download link and its hash, and the update skill downloads, checks and swaps the folder for you.
 
-The update skill confirms the new version, re-tests only what changed and keeps your preferences and custom files. If you still have an older folder install (a `Vibe Editor Pack` folder in your workspace), the same skill moves you across without deleting anything.
+The update skill confirms the new version, goes through each change with you (improves your setup, optional, or does not apply), applies only what you accept, keeps your preferences and custom files, and re-tests only what changed. If you still have an older folder install (a `Vibe Editor Pack` folder in your workspace), the same skill moves you across without deleting anything.
 
 If something fails, keep the error and ask for help with the version and step. The version label alone does not prove the update worked; a small test does.
 
@@ -252,7 +252,7 @@ If something fails, keep the error and ask for help with the version and step. T
 
 [Public release history](https://github.com/paytonbilodeau/ai-video-editing-pack/releases)
 
-New tested features go to members first and become eligible for public release seven full days after the member download is actually available. Use the dated Resources & Updates post for that release's version, download and public date.
+New tested features go to members first and become eligible for public release seven full days after the member download is actually available. Use the dated Updates post for that release's version, download and public date.
 
 The seven-day policy does not promise a release every week or mean members always have a different version. Ordinary repairs to already-public teaching can go to both audiences. Separately reviewed urgent fixes can go to both immediately.
 

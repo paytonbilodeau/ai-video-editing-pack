@@ -1,17 +1,11 @@
-# 6.0.0 · Vibe Edit becomes a plugin
+# 6.1.0 · One paste to update, and your colors
 
-The AI Video Editing Pack is now **Vibe Edit**, a plugin for Codex and Claude Code. Same system, one install, no folder to unzip into your project.
+- **Update with one pasted line, even from a downloaded folder.** The release post now opens with "Update Vibe Edit to <version> from <link> with hash <sha256> and keep my profile". The update skill downloads the zip, checks its SHA-256 and refuses anything that does not match, swaps the plugin folder in place (the old folder stays until the check passes), reloads and reads back the installed version. Nobody downloads, unzips or sets up again. GitHub installs keep their one-command update.
+- **Every change is offered, not imposed.** After an update the skill reads your profile and custom files and, for each change, says whether it improves your setup, is optional, or does not apply to how you edit. Only what you accept is applied; every saved preference stays.
+- **Colors and fonts are yours.** One line in the starting profile, the blank profile, the style skill and lesson 5 says how to change them in a sentence, for example "use a black and white palette" or "use my brand colors #xxxxxx and the font Inter". Payton's looks, palette defaults, examples and references are unchanged.
+- **Same editing system as 6.0.0.** No editing skill, tool, look or lesson content changed beyond the update route, the offer step, the colors line and the matching wording in the install page, README, FAQ 22 and lessons 8 and 22. FAQ 23 now names the Updates post, the live community category.
 
-- **Install with two commands or one line.** Add the `vibe-editors` marketplace and install `vibe-edit`, or tell your assistant "Read INSTALL.md and set up Vibe Edit for me." The assistant runs the install, confirms the skills loaded and makes the practice edit. The customer setup prompt is one sentence.
-- **Twelve skills instead of forty-nine.** setup, edit, pre-edit, style, remotion, hyperframes, javascript-animation, captions, shorts, editors, update and help. Every former skill is still here as a guide inside the skill that owns it; the HyperFrames workflow set is complete under hyperframes/workflows.
-- **Smaller download.** Lesson drawings and example stills are WebP; rendered example videos, the Gentlemen hybrid overlay, extra practice audio and texture masks moved to an optional asset bundle described in ASSETS.md. Nothing in setup or an ordinary edit needs it.
-- **Updates are one command.** Claude Code: `/plugin marketplace update vibe-editors`. Codex: `codex plugin marketplace upgrade`. Your profile, projects and footage are never inside the plugin.
-- **Moving from 5.x.** The update skill archives the old `Vibe Editor Pack/` folder, keeps your profile and removes only the old skill bridges. Nothing is deleted.
-- **Same content as 5.2.0.** Editing workflow, profile, presets, tools, the six looks, Narrative Motion, dedicated-short finishing, the eight visual lessons, the twenty-two detailed lessons and the practice clip are the 5.2.0 versions, moved into place. New writing is limited to the install page, the skill routers, the update and help skills, and the lessons that described the old install.
-
-Verification and limits: install was tested on this version's build machine in Claude Code and Codex from a local marketplace; GitHub installs, other agents, real learner outcomes and every editor and device remain untested until reported.
-
-Entries below describe the 5.x folder install, before the plugin.
+Verification and limits: on the build machine, the fetch tool's 13 unit tests, the plugin's Python suites (edit 131, pre-edit 23, editors 23, setup 11, shorts 13) and Node suites (36 and 6, with 5 browser tests skipped) pass, `claude plugin validate` passes, and isolated Claude Code and Codex homes install 6.1.0 with twelve skills. The member route was exercised from a 6.0.0 folder install against a locally served 6.1.0 zip: the correct hash installed and the profile and custom file stayed byte-identical, a wrong hash was refused with nothing changed, and the new skill's own route (tool, swap, offer step, cleanup) was exercised against a scratch 6.1.1. Both 6.0.0 Google Drive links downloaded anonymously through the tool and matched their hashes. Claude Code reads a swapped local folder in place; Codex needs `codex plugin add` again to cache the new version. Real member machines, live Codex sessions and other agents remain untested until reported.
 
 # 5.2.0 · Cleaner short edits and Narrative Motion
 

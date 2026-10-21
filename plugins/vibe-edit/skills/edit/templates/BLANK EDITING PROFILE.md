@@ -12,6 +12,7 @@ file again. If you change apps, give the new assistant access to this folder.
 - Editor, version and verified connection:
 - Usual microphone, footage type and output formats:
 - Audience and examples of the style you like:
+- Colors and fonts: the starting look is the mint and dark green palette with the bundled type; change it in one sentence, for example "use a black and white palette" or "use my brand colors #xxxxxx and the font Inter", and the AI saves the choice here.
 - Privacy limits and permitted services:
 - Review mode: **Full pass** by default. Use **Checkpoints** only if requested.
 - Starting taste: natural pace, complete thoughts, clear speech, neutral color,
